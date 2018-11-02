@@ -28,6 +28,8 @@ class Signature extends React.Component {
   };
 
   render() {
+    
+
     const { name, title, qualifications, mobile, email, twitter, isSupport } = this.props;
     return (
       <div>
@@ -58,8 +60,8 @@ class Signature extends React.Component {
 
                 <p style={{ marginBottom: '10px' }}>
                   <span
-                    className="white-space:nowrap;"><b>M</b>&nbsp;{<span
-                    dangerouslySetInnerHTML={{ __html: this.parseMobile(mobile) }}/> || '+64 400 111 222'}&nbsp;
+                    className="white-space:nowrap;"><b>M</b>&nbsp;{mobile !== '' ? <a href={`tel:${this.parseMobile(mobile).replace(/&nbsp;/g, '')}`}
+                    dangerouslySetInnerHTML={{ __html: this.parseMobile(mobile) }}/> : '+64 400 111 222'}&nbsp;
                     {isSupport ? <span>|&nbsp;<b>Support Hotline</b>&nbsp;1800&nbsp;READIFY<br/></span> :
                       <span>&nbsp;&nbsp;</span>}</span>
                   <span>
@@ -67,12 +69,14 @@ class Signature extends React.Component {
                     &nbsp;
                     <a
                       href={`mailto:${email || 'graeme.strange@readify.net'}`}>{email || 'graeme.strange@readify.net'}</a>
-                    &nbsp;{isSupport ? <span>|&nbsp;<b>Support Email</b>&nbsp;support@readify.net<br/></span> :
+                    &nbsp;{isSupport ? <span>|&nbsp;<b>Support Email</b>&nbsp;<a
+                      href={'mailto:support@readify.net'}>support@readify.net</a><br/></span> :
                     <span>&nbsp;&nbsp;</span>}
                   </span>
                   {twitter ?
-                    <span><b>T</b>&nbsp;{twitter || '@mytwitter'}&nbsp;&nbsp;&nbsp;</span> : null}
-                  <span><b>W</b>&nbsp;readify.net</span>
+                    <span><b>T</b>&nbsp;{<a href={`https://twitter.com/${twitter.replace('@','')}`} target="_blank">{twitter}</a> || '@mytwitter'}&nbsp;&nbsp;&nbsp;</span> : null}
+                  <span><b>W</b>&nbsp;<a
+                    href={'mailto:readify.net'}>readify.net</a></span>
                 </p>
 
                 <p>
