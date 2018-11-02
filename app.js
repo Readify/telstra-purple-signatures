@@ -47,23 +47,32 @@ class Signature extends React.Component {
                   src="https://s3-ap-southeast-2.amazonaws.com/readify-signatures/image001.png"
                   alt="Readify a Telstra Company"/>
               </td>
+
               <td valign="top" style={{ paddingLeft: '20px' }}>
                 <p style={{ marginBottom: '10px' }}>
                   <b>{name || 'Graeme Strange'}</b>
                   <br/>
                   Readify | {title || 'Senior Consultant'}
                 </p>
+
                 {qualifications ? <p style={{ marginBottom: '10px' }}>{qualifications}</p> : null}
+
                 <p style={{ marginBottom: '10px' }}>
                   <span
                     className="white-space:nowrap;"><b>M</b>&nbsp;{<span
                     dangerouslySetInnerHTML={{ __html: this.parseMobile(mobile) }}/> || '+64 400 111 222'}&nbsp;&nbsp;&nbsp;</span>
-                  <span><b>E</b>&nbsp;<a
-                    href={`mailto:${email || 'graeme.strange@readify.net'}`}>{email || 'graeme.strange@readify.net'}</a>&nbsp;&nbsp;&nbsp;</span>
+                  <span>
+                    <b>E</b>
+                    &nbsp;
+                    <a
+                      href={`mailto:${email || 'graeme.strange@readify.net'}`}>{email || 'graeme.strange@readify.net'}</a>
+                    &nbsp;&nbsp;&nbsp;
+                  </span>
                   {twitter ?
                     <span><b>T</b>&nbsp;{twitter || '@mytwitter'}&nbsp;&nbsp;&nbsp;</span> : null}
                   <span><b>W</b>&nbsp;readify.net</span>
                 </p>
+
                 <p>
                   <a style={{ display: 'inline-block', width: '28px', height: '28px' }}
                      href="https://readify.net/links/facebook">
@@ -123,67 +132,43 @@ class Form extends React.Component {
   }
 
   render() {
-    const { name, title, qualifications, mobile, email, twitter } = this.state;
+    const labels = {
+      name: 'Your Name:',
+      title: 'Job Title:',
+      qualifications: 'Email:',
+      mobile: 'Mobile:',
+      email: 'Twitter: (Optional)',
+      twitter: 'Qualifications: (Optional)'
+    };
+
+    const placeholders = {
+      name: 'Graeme Strange',
+      title: 'Senior Consultant',
+      qualifications: 'joe.bloggs@kloud.com.au',
+      mobile: '+61 400 111 222',
+      email: '@myTwitter',
+      twitter: 'Jedi Master | PSM I'
+    };
+
+    const inputs = Object.keys(this.state).map(
+      (inputName) => (<tr key={inputName}>
+        <td className="col-md-4">{labels[inputName]}</td>
+        <td className="col-md-4">
+          <input className="form-control"
+                 placeholder={placeholders[inputName]}
+                 style={{ width: '300px' }}
+                 value={this.state[inputName] || ''}
+                 onChange={(e) => this.handleChange({ [inputName]: e.target.value })}/>
+        </td>
+      </tr>)
+    );
+
     return (<form>
       <div className="form-group">
         <div className="col-md-8">
           <table className="table table-striped">
             <tbody>
-            <tr>
-              <td className="col-md-4">Your Name:</td>
-              <td className="col-md-4">
-                <input className="form-control"
-                       placeholder="Graeme Strange"
-                       style={{ width: '300px' }}
-                       value={name || ''} onChange={(e) => this.handleChange({ name: e.target.value })}/>
-              </td>
-            </tr>
-            <tr>
-              <td className="col-md-4">Job Title:</td>
-              <td className="col-md-4">
-                <input className="form-control"
-                       placeholder="Senior Consultant"
-                       style={{ width: '300px' }}
-                       value={title || ''} onChange={(e) => this.handleChange({ title: e.target.value })}/>
-              </td>
-            </tr>
-            <tr>
-              <td className="col-md-4">Email:</td>
-              <td className="col-md-4">
-                <input className="form-control"
-                       placeholder="joe.bloggs@kloud.com.au"
-                       style={{ width: '300px' }}
-                       value={email || ''} onChange={(e) => this.handleChange({ email: e.target.value })}/>
-              </td>
-            </tr>
-            <tr>
-              <td className="col-md-4">Mobile:</td>
-              <td className="col-md-4">
-                <input className="form-control"
-                       placeholder="+61 400 111 222"
-                       style={{ width: '300px' }}
-                       value={mobile || ''} onChange={(e) => this.handleChange({ mobile: e.target.value })}/>
-              </td>
-            </tr>
-            <tr>
-              <td className="col-md-4">Twitter: (Optional)</td>
-              <td className="col-md-4">
-                <input className="form-control"
-                       placeholder="@myTwitter"
-                       style={{ width: '300px' }}
-                       value={twitter || ''} onChange={(e) => this.handleChange({ twitter: e.target.value })}/>
-              </td>
-            </tr>
-            <tr>
-              <td className="col-md-4">Qualifications: (Optional)</td>
-              <td className="col-md-4">
-                <input className="form-control"
-                       placeholder="Jedi Master | PSM I"
-                       style={{ width: '300px' }}
-                       value={qualifications || ''}
-                       onChange={(e) => this.handleChange({ qualifications: e.target.value })}/>
-              </td>
-            </tr>
+            {inputs}
             </tbody>
           </table>
           <hr/>
