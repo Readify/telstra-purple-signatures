@@ -28,8 +28,7 @@ class Signature extends React.Component {
   };
 
   render() {
-    const { name, title, qualifications, mobile, email, twitter } = this.props;
-
+    const { name, title, qualifications, mobile, email, twitter, isSupport } = this.props;
     return (
       <div>
         <div>
@@ -60,13 +59,16 @@ class Signature extends React.Component {
                 <p style={{ marginBottom: '10px' }}>
                   <span
                     className="white-space:nowrap;"><b>M</b>&nbsp;{<span
-                    dangerouslySetInnerHTML={{ __html: this.parseMobile(mobile) }}/> || '+64 400 111 222'}&nbsp;&nbsp;&nbsp;</span>
+                    dangerouslySetInnerHTML={{ __html: this.parseMobile(mobile) }}/> || '+64 400 111 222'}&nbsp;
+                    {isSupport ? <span>|&nbsp;<b>Support Hotline</b>&nbsp;1800&nbsp;READIFY<br/></span> :
+                      <span>&nbsp;&nbsp;</span>}</span>
                   <span>
                     <b>E</b>
                     &nbsp;
                     <a
                       href={`mailto:${email || 'graeme.strange@readify.net'}`}>{email || 'graeme.strange@readify.net'}</a>
-                    &nbsp;&nbsp;&nbsp;
+                    &nbsp;{isSupport ? <span>|&nbsp;<b>Support Email</b>&nbsp;support@readify.net<br/></span> :
+                    <span>&nbsp;&nbsp;</span>}
                   </span>
                   {twitter ?
                     <span><b>T</b>&nbsp;{twitter || '@mytwitter'}&nbsp;&nbsp;&nbsp;</span> : null}
@@ -122,7 +124,8 @@ class Form extends React.Component {
       qualifications: '',
       mobile: '',
       email: '',
-      twitter: ''
+      twitter: '',
+      isSupport: false,
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -135,30 +138,32 @@ class Form extends React.Component {
     const labels = {
       name: 'Your Name:',
       title: 'Job Title:',
-      qualifications: 'Email:',
+      email: 'Email:',
       mobile: 'Mobile:',
-      email: 'Twitter: (Optional)',
-      twitter: 'Qualifications: (Optional)'
+      twitter: 'Twitter: (Optional)',
+      qualifications: 'Qualifications: (Optional)',
+      isSupport: 'Are you Readify Support?'
     };
 
     const placeholders = {
       name: 'Graeme Strange',
       title: 'Senior Consultant',
-      qualifications: 'joe.bloggs@kloud.com.au',
+      email: 'joe.bloggs@kloud.com.au',
       mobile: '+61 400 111 222',
-      email: '@myTwitter',
-      twitter: 'Jedi Master | PSM I'
+      twitter: '@myTwitter',
+      qualifications: 'Jedi Master | PSM I'
     };
 
     const inputs = Object.keys(this.state).map(
       (inputName) => (<tr key={inputName}>
         <td className="col-md-4">{labels[inputName]}</td>
         <td className="col-md-4">
-          <input className="form-control"
+          <input className={inputName === 'isSupport' ? '' : 'form-control'}
                  placeholder={placeholders[inputName]}
                  style={{ width: '300px' }}
                  value={this.state[inputName] || ''}
-                 onChange={(e) => this.handleChange({ [inputName]: e.target.value })}/>
+                 {...(inputName === 'isSupport' ? { type: 'checkbox' } : {})}
+                 onChange={(e) => this.handleChange({ [inputName]: e.target.type === 'checkbox' ? e.target.checked : e.target.value })}/>
         </td>
       </tr>)
     );
