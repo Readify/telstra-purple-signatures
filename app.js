@@ -111,6 +111,7 @@ class Signature extends React.Component {
     const twitterHtml = twitter ? <span><b>T</b>&nbsp; {twitterLink}&nbsp;&nbsp;&nbsp;</span> : null;
 
     // Note: css classes do not work for email so you need to use inline styles!
+    // Adding a tbody causes the email sig to break in certain clients :'(
     return (
       <div>
         <table border="0" cellSpacing="0" cellPadding="0" width="100%"
@@ -119,7 +120,6 @@ class Signature extends React.Component {
                  fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
                  fontSize: '10.5pt'
                }}>
-          <tbody>
           <tr>
             <td valign="top" style={{ borderRight: '1px solid #3D5567', paddingRight: '20px', width: '76px' }}>
               <img
@@ -140,10 +140,10 @@ class Signature extends React.Component {
                   &nbsp;{mobileHtml}
                   &nbsp;{supportMobile}
                 </span>
+                {isSupport ? null : <span>&nbsp;&nbsp;</span>}
                 <span>
                   <b>E</b>
-                  &nbsp;
-                  {emailHtml}
+                  &nbsp;{emailHtml}
                   &nbsp;{supportEmail}
                 </span>
                 {twitterHtml}
@@ -155,7 +155,6 @@ class Signature extends React.Component {
               <SocialMedia/>
             </td>
           </tr>
-          </tbody>
         </table>
       </div>
     );
