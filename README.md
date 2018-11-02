@@ -9,7 +9,7 @@ This app can be used to create Readify's Email Signature.
 
 ## Tech Stack
 ### ReactJS
-Note, in the interest in time, this app  uses the development version of react, served over CDN. 
+Note, in the interest of saving development time, this app uses the development version of react, served over CDN. 
 
 Because of this it uses a browser version of babel. If you care about performance or stability, 
 you should probably build the app locally and then server a minified version with production react
