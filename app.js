@@ -264,7 +264,7 @@ class Header extends React.Component {
   render() {
     const brandInfo = {
       appName: 'Readify Outlook Signature',
-      brandLink: 'http://kloudoutlooksignature.azurewebsites.net/'
+      brandLink: 'https://readify-signatures.azurewebsites.net/'
     };
 
     return (<div>
