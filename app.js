@@ -54,16 +54,16 @@ class Signature extends React.Component {
 
     const multiSplice = (toAddIndexes, val, array) => toAddIndexes.forEach((index) => array.splice(index, 0, val));
 
-    const mobileFormatted = mobileNum.replace(/\s/g, '');
+    const mobileFormatted = mobileNum.replace(/[\s|+]/g, '');
     const numberArr = mobileFormatted.split('');
 
     if (mobileFormatted.length === 10) {
       multiSplice([4, 8], '&nbsp;', numberArr);
     }
-    else if (mobileNum.length === 11) {
+    else if (mobileFormatted.length === 11) {
       numberArr.splice(0, 0, '+');
       multiSplice([3, 7, 11], '&nbsp;', numberArr);
-    } else if (mobileNum.length === 12) {
+    } else if (mobileFormatted.length === 12) {
       multiSplice([3, 7, 11], '&nbsp;', numberArr);
     }
     else {
@@ -92,9 +92,9 @@ class Signature extends React.Component {
       mobileHtml = <a href={`tel:${this.parseMobile(mobile).replace(/&nbsp;/g, '')}`}
                       dangerouslySetInnerHTML={{ __html: this.parseMobile(mobile) }}/>;
     } else {
-      mobileHtml = placeholders.mobile;
+      mobileHtml = <a href={`tel:${this.parseMobile(placeholders.mobile).replace(/&nbsp;/g, '')}`}
+                      dangerouslySetInnerHTML={{ __html: this.parseMobile(placeholders.mobile) }}/>;
     }
-
     const emailHtml = <a href={`mailto:${email || placeholders.email}`}>{email || placeholders.email}</a>;
 
     let supportMobile, supportEmail = <span>&nbsp;&nbsp;</span>;
@@ -129,7 +129,7 @@ class Signature extends React.Component {
             </td>
             <td valign="top" style={{ paddingLeft: '20px' }}>
               <p style={{ marginBottom: '10px' }}>
-                <b>{name || 'Graeme Strange'}</b>
+                <b>{name || placeholders.name}</b>
                 <br/>
                 {brandInfo.brandName} | {title || placeholders.title}
               </p>
@@ -226,19 +226,20 @@ class Form extends React.Component {
     };
 
     const placeholders = {
-      name: 'Graeme Strange',
-      title: 'Senior Consultant',
-      email: 'graeme.strange@readify.net',
-      mobile: '+61 400 111 222',
+      name: 'Your Name',
+      title: 'Job Title',
+      email: 'your.name@readify.net',
+      mobile: '+61 111 222 333',
       twitter: '@myTwitter',
       qualifications: 'Jedi Master | PSM I'
     };
+
     const formInputs = this.state.inputs;
     const inputs = Object.keys(formInputs).map(
       inputName => (<tr key={inputName}>
         <td className="col-md-4">{labels[inputName]}</td>
         <td className="col-md-4">
-          <input className={inputName === 'isSupport' ? '' : 'form-control'}
+          <input {...(inputName === 'isSupport' ? {} : {className: 'form-control'})}
                  placeholder={placeholders[inputName]}
                  style={{ width: '300px' }}
                  value={formInputs[inputName] || ''}
@@ -306,7 +307,7 @@ class Info extends React.Component {
             Paste selection into signature editor
           </a>
           <ul style={{ paddingLeft: '1rem', listStyleType: 'none', paddingTop: '0.5rem' }}>
-            <li style={{marginBottom: '0.5rem'}}>
+            <li style={{ marginBottom: '0.5rem' }}>
               <span style={{ fontWeight: 'bold' }}>Windows: </span>
               Signature > Signatures from the Message menu
             </li>
