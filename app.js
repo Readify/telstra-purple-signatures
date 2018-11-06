@@ -1,35 +1,34 @@
 class SocialMedia extends React.Component {
-  render() {
-    const brandInfo = [
-      {
-        name: 'FaceBook',
-        link: 'https://readify.net/links/facebook',
-        image: 'https://readifysignatures.blob.core.windows.net/images/image002.png',
-        alt: 'Readify on FaceBook',
-      },
-      {
-        name: 'Twitter',
-        link: 'https://readify.net/links/twitter',
-        image: 'https://readifysignatures.blob.core.windows.net/images/image003.png',
-        alt: 'Readify on Twitter',
-      },
-      {
-        name: 'LinkedIn',
-        link: 'https://readify.net/links/linkedin',
-        image: 'https://readifysignatures.blob.core.windows.net/images/image004.png',
-        alt: 'Readify on LinkedIn',
-      },
-      {
-        name: 'Youtube',
-        link: 'https://readify.net/links/youtube',
-        image: 'https://readifysignatures.blob.core.windows.net/images/image005.png',
-        alt: 'Readify on Youtube',
-      },
-    ];
+  static brandInfo = [
+    {
+      name: 'FaceBook',
+      link: 'https://readify.net/links/facebook',
+      image: 'https://readifysignatures.blob.core.windows.net/images/image002.png',
+      alt: 'Readify on FaceBook',
+    },
+    {
+      name: 'Twitter',
+      link: 'https://readify.net/links/twitter',
+      image: 'https://readifysignatures.blob.core.windows.net/images/image003.png',
+      alt: 'Readify on Twitter',
+    },
+    {
+      name: 'LinkedIn',
+      link: 'https://readify.net/links/linkedin',
+      image: 'https://readifysignatures.blob.core.windows.net/images/image004.png',
+      alt: 'Readify on LinkedIn',
+    },
+    {
+      name: 'Youtube',
+      link: 'https://readify.net/links/youtube',
+      image: 'https://readifysignatures.blob.core.windows.net/images/image005.png',
+      alt: 'Readify on Youtube',
+    },
+  ];
 
-    const links = brandInfo.map(
-      (mediaObj, index, arr) => (
-        <span key={mediaObj.name}>
+  static htmlLinks = () => SocialMedia.brandInfo.map(
+    (mediaObj, index, arr) => (
+      <span key={mediaObj.name}>
           <a style={{ display: 'inline-block', width: '28px', height: '28px' }}
              href={mediaObj.link}>
           <img
@@ -38,18 +37,31 @@ class SocialMedia extends React.Component {
             alt={mediaObj.alt}/>
         </a>{index < (arr.length - 1) ? <span>&nbsp;&nbsp;</span> : null}
         </span>
-      ));
-    return (<p>{links}</p>);
+    ));
+
+  render() {
+    return (<p>{SocialMedia.htmlLinks()}</p>);
   }
 }
 
 class Signature extends React.Component {
+  static brandInfo = {
+    brandName: 'Readify',
+    brandLink: 'https://readify.net',
+    brandLinkName: 'readify.net',
+    brandLogo: {
+      link: 'https://readifysignatures.blob.core.windows.net/images/image001.png',
+      alt: 'Readify a Telstra Company'
+    },
+    supportEmail: 'support@readify.net',
+    supportMobile: '&nbsp;1800&nbsp;READIFY'
+  };
+
   constructor(props) {
     super(props);
-    this.parseMobile = this.parseMobile.bind(this);
   }
 
-  parseMobile(mobileNum) {
+  parseMobile = (mobileNum) => {
     if (mobileNum === undefined) return null;
 
     const multiSplice = (toAddIndexes, val, array) => toAddIndexes.forEach((index) => array.splice(index, 0, val));
@@ -72,40 +84,41 @@ class Signature extends React.Component {
     return numberArr.join('');
   };
 
-  render() {
-    const brandInfo = {
-      brandName: 'Readify',
-      brandLink: 'https://readify.net',
-      brandLinkName: 'readify.net',
-      brandLogo: {
-        link: 'https://readifysignatures.blob.core.windows.net/images/image001.png',
-        alt: 'Readify a Telstra Company'
-      },
-    };
+  renderSupportFields = () => {
+    const { mobile, email, placeholders, isSupport } = this.props;
 
-    const { name, title, qualifications, mobile, email, twitter, isSupport } = this.props;
+    const generateMobileHtml = (number) => <a
+      href={`tel:${this.parseMobile(number).replace(/&nbsp;/g, '')}`}
+      dangerouslySetInnerHTML={{ __html: this.parseMobile(number) }}
+    />;
 
-    const placeholders = this.props.placeholders;
+    const mobileHtml = generateMobileHtml(mobile !== '' ? mobile : placeholders.mobile);
 
-    let mobileHtml;
-    if (mobile !== '') {
-      mobileHtml = <a href={`tel:${this.parseMobile(mobile).replace(/&nbsp;/g, '')}`}
-                      dangerouslySetInnerHTML={{ __html: this.parseMobile(mobile) }}/>;
-    } else {
-      mobileHtml = <a href={`tel:${this.parseMobile(placeholders.mobile).replace(/&nbsp;/g, '')}`}
-                      dangerouslySetInnerHTML={{ __html: this.parseMobile(placeholders.mobile) }}/>;
-    }
     const emailHtml = <a href={`mailto:${email || placeholders.email}`}>{email || placeholders.email}</a>;
 
-    let supportMobile, supportEmail = <span>&nbsp;&nbsp;</span>;
-    if (isSupport) {
-      supportMobile = <span>
-        |&nbsp;<b>Support&nbsp;Hotline</b>&nbsp;1800&nbsp;READIFY<br/>
-      </span>;
-      supportEmail = <span>
-        |&nbsp;<b>Support&nbsp;Email</b>&nbsp;<a href={'mailto:support@readify.net'}>support@readify.net</a><br/>
-      </span>;
-    }
+    const supportHtml = [
+      <span>
+        |&nbsp;<b>Support&nbsp;Hotline</b><span
+        dangerouslySetInnerHTML={{ __html: Signature.brandInfo.supportMobile }}/><br/>
+      </span>,
+      <span>
+        |&nbsp;<b>Support&nbsp;Email</b>&nbsp;<a
+        href={`mailto:${Signature.brandInfo.supportEmail}`}>{Signature.brandInfo.supportEmail}</a><br/>
+      </span>
+    ];
+
+    const [supportMobile, supportEmail] = isSupport ? supportHtml : [<span>&nbsp;&nbsp;</span>,
+      <span>&nbsp;&nbsp;</span>];
+
+    return { mobileHtml, emailHtml, supportMobile, supportEmail };
+  };
+
+  render() {
+    const { brandName, brandLink, brandLinkName, brandLogo } = Signature.brandInfo;
+
+    const { name, title, qualifications, twitter, isSupport, placeholders } = this.props;
+
+    const { mobileHtml, emailHtml, supportMobile, supportEmail } = this.renderSupportFields();
 
     const twitterLink = <a href={`https://twitter.com/${twitter.replace('@', '')}`} target="_blank">{twitter}</a>;
     const twitterHtml = twitter ? <span><b>T</b>&nbsp; {twitterLink}&nbsp;&nbsp;&nbsp;</span> : null;
@@ -124,14 +137,14 @@ class Signature extends React.Component {
             <td valign="top" style={{ borderRight: '1px solid #3D5567', paddingRight: '20px', width: '76px' }}>
               <img
                 width="73" height="53"
-                src={brandInfo.brandLogo.link}
-                alt={brandInfo.brandLogo.alt}/>
+                src={brandLogo.link}
+                alt={brandLogo.alt}/>
             </td>
             <td valign="top" style={{ paddingLeft: '20px' }}>
               <p style={{ marginBottom: '10px' }}>
                 <b>{name || placeholders.name}</b>
                 <br/>
-                {brandInfo.brandName} | {title || placeholders.title}
+                {brandName} | {title || placeholders.title}
               </p>
               {qualifications ? <p style={{ marginBottom: '10px' }}>{qualifications}</p> : null}
               <p style={{ marginBottom: '10px' }}>
@@ -149,7 +162,7 @@ class Signature extends React.Component {
                 {twitterHtml}
                 <span>
                   <b>W</b>&nbsp;
-                  <a href={brandInfo.brandLink}>{brandInfo.brandLinkName}</a>
+                  <a href={brandLink}>{brandLinkName}</a>
                 </span>
               </p>
               <SocialMedia/>
@@ -162,10 +175,29 @@ class Signature extends React.Component {
 }
 
 class Form extends React.Component {
+  static labels = {
+    name: 'Your Name:',
+    title: 'Job Title:',
+    email: 'Email:',
+    mobile: 'Mobile:',
+    twitter: 'Twitter: (Optional)',
+    qualifications: 'Qualifications: (Optional)',
+    isSupport: 'Are you Readify Support?'
+  };
+
+  static placeholders = {
+    name: 'Your Name',
+    title: 'Job Title',
+    email: 'your.name@readify.net',
+    mobile: '+61 111 222 333',
+    twitter: '@myTwitter',
+    qualifications: 'Jedi Master | PSM I'
+  };
+
   constructor(props) {
     super(props);
     this.state = {
-      button: { class: 'btn btn-primary', text: 'Copy Signature' },
+      button: { buttonClass: 'btn btn-primary', buttonText: 'Copy Signature' },
       inputs: {
         name: '',
         title: '',
@@ -176,15 +208,13 @@ class Form extends React.Component {
         isSupport: false,
       },
     };
-    this.handleChange = this.handleChange.bind(this);
-    this.copySignature = this.copySignature.bind(this);
   }
 
-  handleChange(stateObj) {
+  handleChange = (stateObj) => {
     this.setState({ inputs: { ...this.state.inputs, ...stateObj } });
-  }
+  };
 
-  copySignature(props) {
+  copySignature = (props) => {
     // You need to copy the signature as richtext html if you want it to paste nicely into outlook
     // credit: https://stackoverflow.com/questions/34191780/javascript-copy-string-to-clipboard-as-text-html
     const html = ReactDOMServer.renderToStaticMarkup(<Signature {...props}/>);
@@ -210,37 +240,22 @@ class Form extends React.Component {
 
     this.setState(() => ({
       ...this.state,
-      button: { class: 'btn btn-success fadeColor', text: 'Copied!' }
-    }), () => setTimeout(() => this.setState({ button: { class: 'btn btn-primary', text: 'Copy Signature' } }), 1000));
+      button: { buttonClass: 'btn btn-success fadeColor', buttonText: 'Copied!' }
+    }), () => setTimeout(() => this.setState({
+      button: {
+        buttonClass: 'btn btn-primary',
+        buttonText: 'Copy Signature'
+      }
+    }), 1000));
   };
 
-  render() {
-    const labels = {
-      name: 'Your Name:',
-      title: 'Job Title:',
-      email: 'Email:',
-      mobile: 'Mobile:',
-      twitter: 'Twitter: (Optional)',
-      qualifications: 'Qualifications: (Optional)',
-      isSupport: 'Are you Readify Support?'
-    };
-
-    const placeholders = {
-      name: 'Your Name',
-      title: 'Job Title',
-      email: 'your.name@readify.net',
-      mobile: '+61 111 222 333',
-      twitter: '@myTwitter',
-      qualifications: 'Jedi Master | PSM I'
-    };
-
-    const formInputs = this.state.inputs;
-    const inputs = Object.keys(formInputs).map(
+  renderHtmlForInputs = (formInputs) => {
+    return Object.keys(formInputs).map(
       inputName => (<tr key={inputName}>
-        <td className="col-md-4">{labels[inputName]}</td>
+        <td className="col-md-4">{Form.labels[inputName]}</td>
         <td className="col-md-4">
-          <input {...(inputName === 'isSupport' ? {} : {className: 'form-control'})}
-                 placeholder={placeholders[inputName]}
+          <input {...(inputName === 'isSupport' ? {} : { className: 'form-control' })}
+                 placeholder={Form.placeholders[inputName]}
                  style={{ width: '300px' }}
                  value={formInputs[inputName] || ''}
                  {...(inputName === 'isSupport' ? { type: 'checkbox' } : {})}
@@ -248,6 +263,12 @@ class Form extends React.Component {
         </td>
       </tr>)
     );
+  };
+
+  render() {
+    const formInputs = this.state.inputs;
+    const inputs = this.renderHtmlForInputs(formInputs);
+    const { buttonClass, buttonText } = this.state;
 
     return (<form>
       <div className="form-group">
@@ -257,12 +278,12 @@ class Form extends React.Component {
             {inputs}
             </tbody>
           </table>
-          <button type="button" className={this.state.button.class}
-                  onClick={() => (this.copySignature({ ...formInputs, placeholders }))}>
-            {this.state.button.text}
+          <button type="button" className={buttonClass}
+                  onClick={() => (this.copySignature({ ...formInputs, placeholders: Form.placeholders }))}>
+            {buttonText}
           </button>
           <hr/>
-          <Signature {...formInputs} placeholders={placeholders}/>
+          <Signature {...formInputs} placeholders={Form.placeholders}/>
         </div>
         <div className="col-md-4"/>
       </div>
@@ -270,78 +291,67 @@ class Form extends React.Component {
   }
 }
 
-class Header extends React.Component {
-  render() {
-    const brandInfo = {
-      appName: 'Readify Outlook Signature',
-      brandLink: 'https://readify-signatures.azurewebsites.net/'
-    };
-
-    return (<div>
-      <div id="Header" className="col-md-12">
-        <div className="row">
-          <div className="col-md-2"/>
-          <div className="col-md-10" style={{ paddingLeft: '0px' }}>
-            <a className="navbar-brand" href={brandInfo.brandLink}>{brandInfo.appName}</a>
-          </div>
-        </div>
-        <div className="navbar-collapse collapse"/>
-      </div>
-    </div>);
-  }
-}
-
-class Info extends React.Component {
-  render() {
-    return (<div>
-      <h3>Create your signature</h3>
-      <ol>
-        <li>Enter your details.</li>
-        <li>Click the "Copy Signature" button</li>
-        <li>Open outlook</li>
-        <li>
-          <a
-            style={{ fontWeight: 'bold', textDecoration: 'underline' }}
-            href="https://support.office.com/en-us/article/create-and-add-a-signature-to-messages-8ee5d4f4-68fd-464a-a1c1-0e1c80bb27f2"
-            target="_blank">
-            Paste selection into signature editor
-          </a>
-          <ul style={{ paddingLeft: '1rem', listStyleType: 'none', paddingTop: '0.5rem' }}>
-            <li style={{ marginBottom: '0.5rem' }}>
-              <span style={{ fontWeight: 'bold' }}>Windows: </span>
-              Signature > Signatures from the Message menu
-            </li>
-            <li>
-              <span style={{ fontWeight: 'bold' }}>Mac: </span>
-              Preferences > Signatures from the Message menu
-            </li>
-          </ul>
-        </li>
-      </ol>
-      <br/>
-    </div>);
-  }
-}
-
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <Header/>
-        <div>
-          <div className="col-md-2"/>
-          <div className="col-md-8">
-            <Info/>
-            <Form/>
-          </div>
-          <div className="col-md-2"/>
+const Header = ({ brandInfo }) => (
+  <div>
+    <div id="Header" className="col-md-12">
+      <div className="row">
+        <div className="col-md-2"/>
+        <div className="col-md-10" style={{ paddingLeft: '0px' }}>
+          <a className="navbar-brand" href={brandInfo.brandLink}>{brandInfo.appName}</a>
         </div>
       </div>
-    );
-  }
-}
-
-ReactDOM.render(<App/>
-  ,
-  document.getElementById('app')
+      <div className="navbar-collapse collapse"/>
+    </div>
+  </div>
 );
+
+const Info = () => (
+  <div>
+    <h3>Create your signature</h3>
+    <ol>
+      <li>Enter your details.</li>
+      <li>Click the "Copy Signature" button</li>
+      <li>Open outlook</li>
+      <li>
+        <a
+          style={{ fontWeight: 'bold', textDecoration: 'underline' }}
+          href="https://support.office.com/en-us/article/create-and-add-a-signature-to-messages-8ee5d4f4-68fd-464a-a1c1-0e1c80bb27f2"
+          target="_blank">
+          Paste selection into signature editor
+        </a>
+        <ul style={{ paddingLeft: '1rem', listStyleType: 'none', paddingTop: '0.5rem' }}>
+          <li style={{ marginBottom: '0.5rem' }}>
+            <span style={{ fontWeight: 'bold' }}>Windows: </span>
+            Signature > Signatures from the Message menu
+          </li>
+          <li>
+            <span style={{ fontWeight: 'bold' }}>Mac: </span>
+            Preferences > Signatures from the Message menu
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <br/>
+  </div>
+);
+
+const App = () => (
+  <div>
+    <Header brandInfo={
+      {
+        appName: 'Readify Outlook Signature',
+        brandLink: 'https://readify-signatures.azurewebsites.net/'
+      }
+    }/>
+    <div>
+      <div className="col-md-2"/>
+      <div className="col-md-8">
+        <Info/>
+        <Form/>
+      </div>
+      <div className="col-md-2"/>
+    </div>
+  </div>
+);
+
+ReactDOM.render(<App/>,document.getElementById('app'));

@@ -15,7 +15,7 @@ Because of this it uses a browser version of babel. If you care about performanc
 you should probably build the app locally and then server a minified version with production react
 
 ## Looks great, how can I use if for my company?
-All the components in App.js have their brand information extracted into a `brandInfo` variable in the render method.
+All the components in App.js have their brand information extracted into `brandInfo` variables in the various components.
 Just replace the information in their with your own content and you are good to go! 
 
 ## Licence 
