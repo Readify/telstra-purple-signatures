@@ -4,25 +4,25 @@ class SocialMedia extends React.Component {
       {
         name: 'FaceBook',
         link: 'https://readify.net/links/facebook',
-        image: 'https://s3-ap-southeast-2.amazonaws.com/readify-signatures/image002.png',
+        image: 'https://readifysignatures.blob.core.windows.net/images/image002.png',
         alt: 'Readify on FaceBook',
       },
       {
         name: 'Twitter',
         link: 'https://readify.net/links/twitter',
-        image: 'https://s3-ap-southeast-2.amazonaws.com/readify-signatures/image003.png',
+        image: 'https://readifysignatures.blob.core.windows.net/images/image003.png',
         alt: 'Readify on Twitter',
       },
       {
         name: 'LinkedIn',
         link: 'https://readify.net/links/linkedin',
-        image: 'https://s3-ap-southeast-2.amazonaws.com/readify-signatures/image004.png',
+        image: 'https://readifysignatures.blob.core.windows.net/images/image004.png',
         alt: 'Readify on LinkedIn',
       },
       {
         name: 'Youtube',
         link: 'https://readify.net/links/youtube',
-        image: 'https://s3-ap-southeast-2.amazonaws.com/readify-signatures/image005.png',
+        image: 'https://readifysignatures.blob.core.windows.net/images/image005.png',
         alt: 'Readify on Youtube',
       },
     ];
@@ -78,7 +78,7 @@ class Signature extends React.Component {
       brandLink: 'https://readify.net',
       brandLinkName: 'readify.net',
       brandLogo: {
-        link: 'https://s3-ap-southeast-2.amazonaws.com/readify-signatures/image001.png',
+        link: 'https://readifysignatures.blob.core.windows.net/images/image001.png',
         alt: 'Readify a Telstra Company'
       },
     };
