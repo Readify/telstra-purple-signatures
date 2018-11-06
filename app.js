@@ -165,23 +165,26 @@ class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      title: '',
-      qualifications: '',
-      mobile: '',
-      email: '',
-      twitter: '',
-      isSupport: false,
+      button: { class: 'btn btn-primary', text: 'Copy Signature' },
+      inputs: {
+        name: '',
+        title: '',
+        qualifications: '',
+        mobile: '',
+        email: '',
+        twitter: '',
+        isSupport: false,
+      },
     };
     this.handleChange = this.handleChange.bind(this);
-    Form.copySignature = Form.copySignature.bind(this);
+    this.copySignature = this.copySignature.bind(this);
   }
 
   handleChange(stateObj) {
-    this.setState(stateObj);
+    this.setState({ inputs: { ...this.state.inputs, ...stateObj } });
   }
 
-  static copySignature(props) {
+  copySignature(props) {
     // You need to copy the signature as richtext html if you want it to paste nicely into outlook
     // credit: https://stackoverflow.com/questions/34191780/javascript-copy-string-to-clipboard-as-text-html
     const html = ReactDOMServer.renderToStaticMarkup(<Signature {...props}/>);
@@ -204,7 +207,12 @@ class Form extends React.Component {
     document.execCommand('copy');
 
     document.body.removeChild(container);
-  }
+
+    this.setState(() => ({
+      ...this.state,
+      button: { class: 'btn btn-success fadeColor', text: 'Copied!' }
+    }), () => setTimeout(() => this.setState({ button: { class: 'btn btn-primary', text: 'Copy Signature' } }), 1000));
+  };
 
   render() {
     const labels = {
@@ -225,15 +233,15 @@ class Form extends React.Component {
       twitter: '@myTwitter',
       qualifications: 'Jedi Master | PSM I'
     };
-
-    const inputs = Object.keys(this.state).map(
-      (inputName) => (<tr key={inputName}>
+    const formInputs = this.state.inputs;
+    const inputs = Object.keys(formInputs).map(
+      inputName => (<tr key={inputName}>
         <td className="col-md-4">{labels[inputName]}</td>
         <td className="col-md-4">
           <input className={inputName === 'isSupport' ? '' : 'form-control'}
                  placeholder={placeholders[inputName]}
                  style={{ width: '300px' }}
-                 value={this.state[inputName] || ''}
+                 value={formInputs[inputName] || ''}
                  {...(inputName === 'isSupport' ? { type: 'checkbox' } : {})}
                  onChange={(e) => this.handleChange({ [inputName]: e.target.type === 'checkbox' ? e.target.checked : e.target.value })}/>
         </td>
@@ -248,11 +256,12 @@ class Form extends React.Component {
             {inputs}
             </tbody>
           </table>
-          <button type="button" className="btn btn-primary"
-                  onClick={() => Form.copySignature({ ...this.state, placeholders })}>Copy Signature
+          <button type="button" className={this.state.button.class}
+                  onClick={() => (this.copySignature({ ...formInputs, placeholders }))}>
+            {this.state.button.text}
           </button>
           <hr/>
-          <Signature {...this.state} placeholders={placeholders}/>
+          <Signature {...formInputs} placeholders={placeholders}/>
         </div>
         <div className="col-md-4"/>
       </div>
