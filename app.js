@@ -194,10 +194,20 @@ class Form extends React.Component {
     qualifications: 'Jedi Master | PSM I'
   };
 
+  static defaultButtonText = {
+    text: 'Copy Signature (Text only)',
+    html: 'Copy Signature'
+  };
+
   constructor(props) {
     super(props);
     this.state = {
-      button: { buttonClass: 'btn btn-primary', buttonText: 'Copy Signature' },
+      button: {
+        buttonClassHtml: 'btn btn-primary',
+        buttonTextHtml: Form.defaultButtonText.html,
+        buttonClassText: 'btn btn-primary',
+        buttonTextText: Form.defaultButtonText.text,
+      },
       inputs: {
         name: '',
         title: '',
@@ -215,23 +225,23 @@ class Form extends React.Component {
   };
 
   copySignatureText = (props) => {
-    const {name, title, qualifications, mobile, email, twitter, isSupport} = props;
-    const mobileText = Signature.parseMobile(mobile).replace(/&nbsp;/g,' ');
+    const { name, title, qualifications, mobile, email, twitter, isSupport } = props;
+    const mobileText = Signature.parseMobile(mobile).replace(/&nbsp;/g, ' ');
 
     const textArr = [
       '--',
       '',
       name ? name : null,
-      title ? `Readify ${title}` :  null,
+      title ? `Readify | ${title}` : null,
       qualifications ? `${qualifications}` : null,
       '',
-      mobileText? `M ${mobileText}${isSupport ? ` | Support hotline${Signature.brandInfo.supportMobile.replace(/&nbsp;/g,' ')}` : ''}` : null,
-      email ? `E ${email}${isSupport ? ` | Support email ${Signature.brandInfo.supportEmail}`: ''}` : null,
+      mobileText ? `M ${mobileText}${isSupport ? ` | Support hotline${Signature.brandInfo.supportMobile.replace(/&nbsp;/g, ' ')}` : ''}` : null,
+      email ? `E ${email}${isSupport ? ` | Support email ${Signature.brandInfo.supportEmail}` : ''}` : null,
       twitter ? `T ${twitter}` : null,
       'W readify.net',
       '',
       'Find us on: Twitter | LinkedIn | Facebook | Youtube'
-  ];
+    ];
 
     const container = document.createElement('textarea');
     container.value = textArr.filter(val => val !== null).join('\n');
@@ -239,6 +249,21 @@ class Form extends React.Component {
     container.select();
     document.execCommand('copy');
     document.body.removeChild(container);
+
+    this.setState(() => ({
+      ...this.state,
+      button: {
+        ...this.state.button,
+        buttonClassText: 'btn btn-success fadeColor',
+        buttonTextText: 'Copied!'
+      }
+    }), () => setTimeout(() => this.setState({
+      button: {
+        ...this.state.button,
+        buttonClassText: 'btn btn-primary',
+        buttonTextText: Form.defaultButtonText.text
+      }
+    }), 1000));
   };
 
   copySignature = (props) => {
@@ -267,11 +292,16 @@ class Form extends React.Component {
 
     this.setState(() => ({
       ...this.state,
-      button: { buttonClass: 'btn btn-success fadeColor', buttonText: 'Copied!' }
+      button: {
+        ...this.state.button,
+        buttonClassHtml: 'btn btn-success fadeColor',
+        buttonTextHtml: 'Copied!'
+      }
     }), () => setTimeout(() => this.setState({
       button: {
-        buttonClass: 'btn btn-primary',
-        buttonText: 'Copy Signature'
+        ...this.state.button,
+        buttonClassHtml: 'btn btn-primary',
+        buttonTextHtml: Form.defaultButtonText.html
       }
     }), 1000));
   };
@@ -295,7 +325,7 @@ class Form extends React.Component {
   render() {
     const formInputs = this.state.inputs;
     const inputs = this.renderHtmlForInputs(formInputs);
-    const { buttonClass, buttonText } = this.state.button;
+    const { buttonClassHtml, buttonTextHtml, buttonClassText, buttonTextText } = this.state.button;
     return (<form>
       <div className="form-group">
         <div className="col-md-8">
@@ -304,13 +334,13 @@ class Form extends React.Component {
             {inputs}
             </tbody>
           </table>
-          <button type="button" className={buttonClass}
+          <button type="button" className={buttonClassHtml}
                   onClick={() => (this.copySignature({ ...formInputs, placeholders: Form.placeholders }))}>
-            {buttonText}
+            {buttonTextHtml}
           </button>
-          <button type="button" className={buttonClass}
+          <button type="button" className={buttonClassText}
                   onClick={() => (this.copySignatureText({ ...formInputs, placeholders: Form.placeholders }))}>
-            {buttonText} (Text only)
+            {buttonTextText}
           </button>
           <hr/>
           <Signature {...formInputs} placeholders={Form.placeholders}/>
