@@ -11,8 +11,8 @@ This app can be used to create Readify's Email Signature.
 ### ReactJS
 Note, in the interest of saving development time, this app uses the development version of react, served over CDN. 
 
-Because of this it uses a browser version of babel. If you care about performance or stability, 
-you should probably build the app locally and then server a minified version with production react
+Because of this, it uses a browser version of babel. If you care about performance or stability, 
+you should probably build the app locally and then serve a minified version with production react
 
 ## Looks great, how can I use if for my company?
 All the components in App.js have their brand information extracted into `brandInfo` variables in the various components.
