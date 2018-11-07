@@ -44,6 +44,104 @@ class SocialMedia extends React.Component {
   }
 }
 
+const SignatureHtml = props => {
+  const {
+    brandLogo,
+    name,
+    placeholders,
+    brandName,
+    title,
+    isSupport,
+    qualifications,
+    mobileHtml,
+    supportMobile,
+    emailHtml,
+    supportEmail,
+    twitterHtml,
+    brandLink,
+    brandLinkName,
+  } = props;
+  return <div>
+    <table border="0" cellSpacing="0" cellPadding="0" width="100%"
+           style={{
+             color: '#3D5567',
+             fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
+             fontSize: '10.5pt'
+           }}>
+      <tr>
+        <td valign="top" style={{ borderRight: '1px solid #3D5567', paddingRight: '20px', width: '76px' }}>
+          <img
+            width="73" height="53"
+            src={brandLogo.link}
+            alt={brandLogo.alt}/>
+        </td>
+        <td valign="top" style={{ paddingLeft: '20px' }}>
+          <p style={{ marginBottom: '10px' }}>
+            <b>{name || placeholders.name}</b>
+            <br/>
+            {brandName} | {title || placeholders.title}
+          </p>
+          {qualifications ? <p style={{ marginBottom: '10px' }}>{qualifications}</p> : null}
+          <p style={{ marginBottom: '20px' }}>
+                <span>
+                  <b>M</b>
+                  &nbsp;{mobileHtml}
+                  &nbsp;{supportMobile}
+                </span>
+            {isSupport ? null : <span>&nbsp;&nbsp;</span>}
+            <span>
+                  <b>E</b>
+              &nbsp;{emailHtml}
+              &nbsp;{supportEmail}
+                </span>
+            {twitterHtml}
+            <span>
+                  <b>W</b>&nbsp;
+              <a href={brandLink}>{brandLinkName}</a>
+                </span>
+          </p>
+          <SocialMedia/>
+        </td>
+      </tr>
+    </table>
+  </div>;
+};
+
+const RepliesAndForwards = props => {
+  const {
+    name,
+    placeholders,
+    brandName,
+    title,
+    isSupport,
+    mobileHtml,
+    emailHtml,
+    twitterHtml,
+    brandLink,
+    brandLinkName,
+  } = props;
+  const styleObj = {
+    color: '#3D5567',
+    fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
+    fontSize: '10.5pt'
+  };
+  return <div>
+    <p style={styleObj}>
+      --<br/>
+      <b>{name || placeholders.name} | {brandName} {title || placeholders.title}</b><br/>
+      <b>M</b>&nbsp;&nbsp;{mobileHtml}&nbsp;|&nbsp;
+      <b>E</b>&nbsp;&nbsp;{emailHtml}&nbsp;|&nbsp;
+      {twitterHtml ? <span>{twitterHtml}|&nbsp;</span> : null}
+      <b>W</b> <a href={brandLink}>{brandLinkName}</a>
+      {isSupport ? <span>
+        <br/><b>Support&nbsp;Hotline</b>&nbsp;<span
+        dangerouslySetInnerHTML={{ __html: Signature.brandInfo.supportMobile }}/>&nbsp;|&nbsp;
+        <b>Support&nbsp;Email</b>&nbsp;{Signature.brandInfo.supportEmail}
+      </span> : null}
+    </p>
+  </div>;
+};
+
 class Signature extends React.Component {
   static brandInfo = {
     brandName: 'Readify',
@@ -56,10 +154,6 @@ class Signature extends React.Component {
     supportEmail: 'support@readify.net',
     supportMobile: '&nbsp;1800&nbsp;READIFY'
   };
-
-  constructor(props) {
-    super(props);
-  }
 
   static parseMobile = (mobileNum) => {
     if (mobileNum === undefined) return null;
@@ -83,6 +177,25 @@ class Signature extends React.Component {
     }
     return numberArr.join('');
   };
+
+  static defaultButtonText = {
+    text: 'Copy Signature (Text only)',
+    html: 'Copy Signature'
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      button: {
+        buttonClassHtml: 'btn btn-primary',
+        buttonTextHtml: Signature.defaultButtonText.html,
+        buttonClassText: 'btn btn-default',
+        buttonTextText: Signature.defaultButtonText.text,
+        buttonClassRAF: 'btn btn-primary',
+        buttonTextRAF: Signature.defaultButtonText.html,
+      },
+    };
+  }
 
   renderSupportFields = () => {
     const { mobile, email, placeholders, isSupport } = this.props;
@@ -113,116 +226,18 @@ class Signature extends React.Component {
     return { mobileHtml, emailHtml, supportMobile, supportEmail };
   };
 
-  render() {
-    const { brandName, brandLink, brandLinkName, brandLogo } = Signature.brandInfo;
-
-    const { name, title, qualifications, twitter, isSupport, placeholders } = this.props;
-
-    const { mobileHtml, emailHtml, supportMobile, supportEmail } = this.renderSupportFields();
-
-    const twitterLink = <a href={`https://twitter.com/${twitter.replace('@', '')}`} target="_blank">{twitter}</a>;
-    const twitterHtml = twitter ? <span><b>T</b>&nbsp; {twitterLink}&nbsp;&nbsp;&nbsp;</span> : null;
-
-    // Note: css classes do not work for email so you need to use inline styles!
-    // Adding a tbody causes the email sig to break in certain clients :'(
-    return (
-      <div>
-        <table border="0" cellSpacing="0" cellPadding="0" width="100%"
-               style={{
-                 color: '#3D5567',
-                 fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
-                 fontSize: '10.5pt'
-               }}>
-          <tr>
-            <td valign="top" style={{ borderRight: '1px solid #3D5567', paddingRight: '20px', width: '76px' }}>
-              <img
-                width="73" height="53"
-                src={brandLogo.link}
-                alt={brandLogo.alt}/>
-            </td>
-            <td valign="top" style={{ paddingLeft: '20px' }}>
-              <p style={{ marginBottom: '10px' }}>
-                <b>{name || placeholders.name}</b>
-                <br/>
-                {brandName} | {title || placeholders.title}
-              </p>
-              {qualifications ? <p style={{ marginBottom: '10px' }}>{qualifications}</p> : null}
-              <p style={{ marginBottom: '20px' }}>
-                <span>
-                  <b>M</b>
-                  &nbsp;{mobileHtml}
-                  &nbsp;{supportMobile}
-                </span>
-                {isSupport ? null : <span>&nbsp;&nbsp;</span>}
-                <span>
-                  <b>E</b>
-                  &nbsp;{emailHtml}
-                  &nbsp;{supportEmail}
-                </span>
-                {twitterHtml}
-                <span>
-                  <b>W</b>&nbsp;
-                  <a href={brandLink}>{brandLinkName}</a>
-                </span>
-              </p>
-              <SocialMedia/>
-            </td>
-          </tr>
-        </table>
-      </div>
-    );
-  }
-}
-
-class Form extends React.Component {
-  static labels = {
-    name: 'Your Name:',
-    title: 'Job Title:',
-    email: 'Email:',
-    mobile: 'Mobile:',
-    twitter: 'Twitter: (Optional)',
-    qualifications: 'Qualifications: (Optional)',
-    isSupport: 'Are you Readify Support?'
-  };
-
-  static placeholders = {
-    name: 'Your Name',
-    title: 'Job Title',
-    email: 'your.name@readify.net',
-    mobile: '+61 111 222 333',
-    twitter: '@myTwitter',
-    qualifications: 'Jedi Master | PSM I'
-  };
-
-  static defaultButtonText = {
-    text: 'Copy Signature (Text only)',
-    html: 'Copy Signature'
-  };
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      button: {
-        buttonClassHtml: 'btn btn-primary',
-        buttonTextHtml: Form.defaultButtonText.html,
-        buttonClassText: 'btn btn-default',
-        buttonTextText: Form.defaultButtonText.text,
-      },
-      inputs: {
-        name: '',
-        title: '',
-        qualifications: '',
-        mobile: '',
-        email: '',
-        twitter: '',
-        isSupport: false,
-      },
-    };
-  }
-
-  handleChange = (stateObj) => {
-    this.setState({ inputs: { ...this.state.inputs, ...stateObj } });
-  };
+  setStateFunctionMaker = (beforeState, afterState) => () => this.setState((state) => ({
+    ...state,
+    button: {
+      ...state.button,
+      ...beforeState
+    }
+  }), () => setTimeout(() => this.setState(state => ({
+    button: {
+      ...state.button,
+      ...afterState
+    }
+  })), 1000));
 
   copySignatureText = (props) => {
     const { name, title, qualifications, mobile, email, twitter, isSupport } = props;
@@ -250,26 +265,26 @@ class Form extends React.Component {
     document.execCommand('copy');
     document.body.removeChild(container);
 
-    this.setState(() => ({
-      ...this.state,
+    this.setState((state) => ({
+      ...state,
       button: {
-        ...this.state.button,
+        ...state.button,
         buttonClassText: 'btn btn-success fadeColor',
         buttonTextText: 'Copied!'
       }
-    }), () => setTimeout(() => this.setState({
+    }), () => setTimeout(() => this.setState(state => ({
       button: {
-        ...this.state.button,
+        ...state.button,
         buttonClassText: 'btn btn-default',
-        buttonTextText: Form.defaultButtonText.text
+        buttonTextText: Signature.defaultButtonText.text
       }
-    }), 1000));
+    })), 1000));
   };
 
-  copySignature = (props) => {
+  copySignature = (props, SignatureComponent, setStateFunction) => {
     // You need to copy the signature as richtext html if you want it to paste nicely into outlook
     // credit: https://stackoverflow.com/questions/34191780/javascript-copy-string-to-clipboard-as-text-html
-    const html = ReactDOMServer.renderToStaticMarkup(<Signature {...props}/>);
+    const html = ReactDOMServer.renderToStaticMarkup(<SignatureComponent {...props}/>);
 
     const container = document.createElement('div');
     container.innerHTML = html;
@@ -290,20 +305,143 @@ class Form extends React.Component {
 
     document.body.removeChild(container);
 
-    this.setState(() => ({
-      ...this.state,
-      button: {
-        ...this.state.button,
+    setStateFunction();
+  };
+
+  render() {
+    const { brandName, brandLink, brandLinkName, brandLogo } = Signature.brandInfo;
+
+    const { name, title, qualifications, twitter, isSupport, placeholders, mobile } = this.props;
+
+    const { mobileHtml, emailHtml, supportMobile, supportEmail } = this.renderSupportFields();
+
+    const twitterLink = <a href={`https://twitter.com/${twitter.replace('@', '')}`} target="_blank">{twitter}</a>;
+    const twitterHtml = twitter ? <span><b>T</b>&nbsp;{twitterLink}&nbsp;&nbsp;&nbsp;</span> : null;
+
+    // Note: css classes do not work for email so you need to use inline styles!
+    // Adding a tbody causes the email sig to break in certain clients :'(
+    const signatureHtmlProps = {
+      mobile,
+      brandLogo,
+      name,
+      placeholders,
+      brandName,
+      title,
+      isSupport,
+      qualifications,
+      mobileHtml,
+      supportMobile,
+      emailHtml,
+      supportEmail,
+      twitterHtml,
+      brandLink,
+      brandLinkName,
+    };
+
+
+    const setStateFunctionHTML = this.setStateFunctionMaker(
+      {
         buttonClassHtml: 'btn btn-success fadeColor',
         buttonTextHtml: 'Copied!'
-      }
-    }), () => setTimeout(() => this.setState({
-      button: {
-        ...this.state.button,
+      },
+      {
         buttonClassHtml: 'btn btn-primary',
-        buttonTextHtml: Form.defaultButtonText.html
+        buttonTextHtml: Signature.defaultButtonText.html
       }
-    }), 1000));
+    );
+
+    const setStateFunctionRAF = this.setStateFunctionMaker(
+      {
+        buttonClassRAF: 'btn btn-success fadeColor',
+        buttonTextRAF: 'Copied!'
+      },
+      {
+        buttonClassRAF: 'btn btn-primary',
+        buttonTextRAF: Signature.defaultButtonText.html
+      }
+    );
+
+    const { buttonClassHtml, buttonTextHtml, buttonClassText, buttonTextText, buttonClassRAF, buttonTextRAF } = this.state.button;
+
+    const styleRight = {flex: 1, display: 'flex', justifyContent: 'flex-end'};
+    const SignatureButton = <div style={styleRight}>
+      <button type="button" className={buttonClassText}
+              onClick={() => (this.copySignatureText({ ...signatureHtmlProps, placeholders: Form.placeholders }))}>
+        {buttonTextText}
+      </button>
+      <button type="button" className={buttonClassHtml}
+              onClick={() => (this.copySignature({
+                ...signatureHtmlProps,
+                placeholders: Form.placeholders
+              }, SignatureHtml, setStateFunctionHTML))}>
+        {buttonTextHtml}
+      </button>
+    </div>;
+
+    const RepliesAndForwardsButton = <button type="button" className={buttonClassRAF}
+                                             onClick={() => (this.copySignature({
+                                               ...signatureHtmlProps,
+                                               placeholders: Form.placeholders
+                                             }, RepliesAndForwards, setStateFunctionRAF))}>
+      {buttonTextRAF}
+    </button>;
+
+    return <div className="sig-grid">
+      <div className="sig-grid row">
+        <h3 style={{ margin: '0 1rem 1rem 0' }}>Standard Signature</h3>
+        {SignatureButton}
+      </div>
+      <div className="sig-grid row">
+        <SignatureHtml {...signatureHtmlProps} />
+      </div>
+      <div className="sig-grid row" style={{marginTop: '2rem'}}>
+        <h3 style={{ margin: '0 1rem 1rem 0' }}>Replies and Forwards Signature</h3>
+        <div style={styleRight}>{RepliesAndForwardsButton}</div>
+      </div>
+      <div className="sig-grid row">
+        <RepliesAndForwards {...signatureHtmlProps} />
+      </div>
+    </div>;
+  }
+}
+
+class Form extends React.Component {
+  static labels = {
+    name: 'Your Name:',
+    title: 'Job Title:',
+    email: 'Email:',
+    mobile: 'Mobile:',
+    twitter: 'Twitter: (Optional)',
+    qualifications: 'Qualifications: (Optional)',
+    isSupport: 'Are you Readify Support?'
+  };
+
+  static placeholders = {
+    name: 'Your Name',
+    title: 'Job Title',
+    email: 'your.name@readify.net',
+    mobile: '+61 111 222 333',
+    twitter: '@myTwitter',
+    qualifications: 'Jedi Master | PSM I'
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      inputs: {
+        name: '',
+        title: '',
+        qualifications: '',
+        mobile: '',
+        email: '',
+        twitter: '',
+        isSupport: false,
+      },
+    };
+  }
+
+  handleChange = (stateObj) => {
+    this.setState({ inputs: { ...this.state.inputs, ...stateObj } });
   };
 
   renderHtmlForInputs = (formInputs) => {
@@ -324,26 +462,22 @@ class Form extends React.Component {
 
   render() {
     const formInputs = this.state.inputs;
+
     const inputs = this.renderHtmlForInputs(formInputs);
-    const { buttonClassHtml, buttonTextHtml, buttonClassText, buttonTextText } = this.state.button;
+
     return (<form>
       <div className="form-group">
-        <div className="col-md-8">
+        <div className="col-md-10">
           <table className="table table-striped">
             <tbody>
             {inputs}
             </tbody>
           </table>
-          <button type="button" className={buttonClassText}
-                  onClick={() => (this.copySignatureText({ ...formInputs, placeholders: Form.placeholders }))}>
-            {buttonTextText}
-          </button>
-          <button type="button" className={buttonClassHtml}
-                  onClick={() => (this.copySignature({ ...formInputs, placeholders: Form.placeholders }))}>
-            {buttonTextHtml}
-          </button>
           <hr/>
-          <Signature {...formInputs} placeholders={Form.placeholders}/>
+          <Signature
+            {...formInputs}
+            placeholders={Form.placeholders}
+          />
         </div>
         <div className="col-md-4"/>
       </div>
@@ -355,8 +489,8 @@ const Header = ({ brandInfo }) => (
   <div>
     <div id="Header" className="col-md-12">
       <div className="row">
-        <div className="col-md-2"/>
-        <div className="col-md-10" style={{ paddingLeft: '0px' }}>
+        <div className="col-md-1"/>
+        <div className="col-md-11" style={{ paddingLeft: '0px' }}>
           <a className="navbar-brand" href={brandInfo.brandLink}>{brandInfo.appName}</a>
         </div>
       </div>
@@ -404,12 +538,12 @@ const App = () => (
       }
     }/>
     <div>
-      <div className="col-md-2"/>
-      <div className="col-md-8">
+      <div className="col-md-1"/>
+      <div className="col-md-10">
         <Info/>
         <Form/>
       </div>
-      <div className="col-md-2"/>
+      <div className="col-md-1"/>
     </div>
   </div>
 );
