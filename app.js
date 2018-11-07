@@ -40,7 +40,7 @@ class SocialMedia extends React.Component {
     ));
 
   render() {
-    return (<p>{SocialMedia.htmlLinks()}</p>);
+    return (<p style={{marginBottom: '0'}}>{SocialMedia.htmlLinks()}</p>);
   }
 }
 
@@ -147,7 +147,7 @@ class Signature extends React.Component {
                 {brandName} | {title || placeholders.title}
               </p>
               {qualifications ? <p style={{ marginBottom: '10px' }}>{qualifications}</p> : null}
-              <p style={{ marginBottom: '10px' }}>
+              <p style={{ marginBottom: '20px' }}>
                 <span>
                   <b>M</b>
                   &nbsp;{mobileHtml}
@@ -268,8 +268,7 @@ class Form extends React.Component {
   render() {
     const formInputs = this.state.inputs;
     const inputs = this.renderHtmlForInputs(formInputs);
-    const { buttonClass, buttonText } = this.state;
-
+    const { buttonClass, buttonText } = this.state.button;
     return (<form>
       <div className="form-group">
         <div className="col-md-8">
