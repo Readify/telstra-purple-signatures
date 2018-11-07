@@ -205,7 +205,7 @@ class Form extends React.Component {
       button: {
         buttonClassHtml: 'btn btn-primary',
         buttonTextHtml: Form.defaultButtonText.html,
-        buttonClassText: 'btn btn-primary',
+        buttonClassText: 'btn btn-default',
         buttonTextText: Form.defaultButtonText.text,
       },
       inputs: {
@@ -260,7 +260,7 @@ class Form extends React.Component {
     }), () => setTimeout(() => this.setState({
       button: {
         ...this.state.button,
-        buttonClassText: 'btn btn-primary',
+        buttonClassText: 'btn btn-default',
         buttonTextText: Form.defaultButtonText.text
       }
     }), 1000));
@@ -334,13 +334,13 @@ class Form extends React.Component {
             {inputs}
             </tbody>
           </table>
-          <button type="button" className={buttonClassHtml}
-                  onClick={() => (this.copySignature({ ...formInputs, placeholders: Form.placeholders }))}>
-            {buttonTextHtml}
-          </button>
           <button type="button" className={buttonClassText}
                   onClick={() => (this.copySignatureText({ ...formInputs, placeholders: Form.placeholders }))}>
             {buttonTextText}
+          </button>
+          <button type="button" className={buttonClassHtml}
+                  onClick={() => (this.copySignature({ ...formInputs, placeholders: Form.placeholders }))}>
+            {buttonTextHtml}
           </button>
           <hr/>
           <Signature {...formInputs} placeholders={Form.placeholders}/>
