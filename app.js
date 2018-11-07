@@ -40,7 +40,7 @@ class SocialMedia extends React.Component {
     ));
 
   render() {
-    return (<p style={{marginBottom: '0'}}>{SocialMedia.htmlLinks()}</p>);
+    return (<p style={{ marginBottom: '0' }}>{SocialMedia.htmlLinks()}</p>);
   }
 }
 
@@ -61,7 +61,7 @@ class Signature extends React.Component {
     super(props);
   }
 
-  parseMobile = (mobileNum) => {
+  static parseMobile = (mobileNum) => {
     if (mobileNum === undefined) return null;
 
     const multiSplice = (toAddIndexes, val, array) => toAddIndexes.forEach((index) => array.splice(index, 0, val));
@@ -88,8 +88,8 @@ class Signature extends React.Component {
     const { mobile, email, placeholders, isSupport } = this.props;
 
     const generateMobileHtml = (number) => <a
-      href={`tel:${this.parseMobile(number).replace(/&nbsp;/g, '')}`}
-      dangerouslySetInnerHTML={{ __html: this.parseMobile(number) }}
+      href={`tel:${Signature.parseMobile(number).replace(/&nbsp;/g, '')}`}
+      dangerouslySetInnerHTML={{ __html: Signature.parseMobile(number) }}
     />;
 
     const mobileHtml = generateMobileHtml(mobile !== '' ? mobile : placeholders.mobile);
@@ -214,6 +214,33 @@ class Form extends React.Component {
     this.setState({ inputs: { ...this.state.inputs, ...stateObj } });
   };
 
+  copySignatureText = (props) => {
+    const {name, title, qualifications, mobile, email, twitter, isSupport} = props;
+    const mobileText = Signature.parseMobile(mobile).replace(/&nbsp;/g,' ');
+
+    const textArr = [
+      '--',
+      '',
+      name ? name : null,
+      title ? `Readify ${title}` :  null,
+      qualifications ? `${qualifications}` : null,
+      '',
+      mobileText? `M ${mobileText}${isSupport ? ` | Support hotline${Signature.brandInfo.supportMobile.replace(/&nbsp;/g,' ')}` : ''}` : null,
+      email ? `E ${email}${isSupport ? ` | Support email ${Signature.brandInfo.supportEmail}`: ''}` : null,
+      twitter ? `T ${twitter}` : null,
+      'W readify.net',
+      '',
+      'Find us on: Twitter | LinkedIn | Facebook | Youtube'
+  ];
+
+    const container = document.createElement('textarea');
+    container.value = textArr.filter(val => val !== null).join('\n');
+    document.body.appendChild(container);
+    container.select();
+    document.execCommand('copy');
+    document.body.removeChild(container);
+  };
+
   copySignature = (props) => {
     // You need to copy the signature as richtext html if you want it to paste nicely into outlook
     // credit: https://stackoverflow.com/questions/34191780/javascript-copy-string-to-clipboard-as-text-html
@@ -280,6 +307,10 @@ class Form extends React.Component {
           <button type="button" className={buttonClass}
                   onClick={() => (this.copySignature({ ...formInputs, placeholders: Form.placeholders }))}>
             {buttonText}
+          </button>
+          <button type="button" className={buttonClass}
+                  onClick={() => (this.copySignatureText({ ...formInputs, placeholders: Form.placeholders }))}>
+            {buttonText} (Text only)
           </button>
           <hr/>
           <Signature {...formInputs} placeholders={Form.placeholders}/>
@@ -353,4 +384,4 @@ const App = () => (
   </div>
 );
 
-ReactDOM.render(<App/>,document.getElementById('app'));
+ReactDOM.render(<App/>, document.getElementById('app'));
