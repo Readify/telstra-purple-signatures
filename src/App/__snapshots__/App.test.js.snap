@@ -106,6 +106,7 @@ exports[`Renders full dom 1`] = `
               <li>
                 <a
                   href="https://support.office.com/en-us/article/create-and-add-a-signature-to-messages-8ee5d4f4-68fd-464a-a1c1-0e1c80bb27f2"
+                  rel="noopener noreferrer"
                   style={
                     Object {
                       "fontWeight": "bold",
