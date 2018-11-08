@@ -1,4 +1,5 @@
 #!/bin/bash
+git config --global user.email "$AZURE_EMAIL"
 git config --global user.name "$AZURE_USERNAME"
 
 git init
