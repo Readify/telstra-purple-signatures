@@ -79,7 +79,7 @@ const SignatureHtml = props => {
           <p style={{ marginBottom: '10px' }}>
             <b>{name || placeholders.name}</b>
             <br/>
-            {brandName} | {title || placeholders.title}
+            {brandName}&nbsp;|&nbsp;{title || placeholders.title}
           </p>
           {qualifications ? <p style={{ marginBottom: '10px' }}>{qualifications}</p> : null}
           <p style={{ marginBottom: '20px' }}>
@@ -128,7 +128,7 @@ const RepliesAndForwards = props => {
   return <div>
     <p style={styleObj}>
       --<br/>
-      <b>{name || placeholders.name} | {brandName} {title || placeholders.title}</b><br/>
+      <b>{name || placeholders.name}&nbsp;|&nbsp;{brandName} {title || placeholders.title}</b><br/>
       <b>M</b>&nbsp;&nbsp;{mobileHtml}&nbsp;|&nbsp;
       <b>E</b>&nbsp;&nbsp;{emailHtml}&nbsp;|&nbsp;
       {twitterHtml ? <span>{twitterHtml}|&nbsp;</span> : null}
