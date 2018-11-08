@@ -49,7 +49,7 @@ jobs:
             command: yarn build
         - run:
             name: Deploy to Azure
-            command: cd build && ls . && ./scripts/publish.sh production;
+            command: cd build && ./publish.sh production;
 
 workflows:
   version: 2
