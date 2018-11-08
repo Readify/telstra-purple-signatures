@@ -1,0 +1,856 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders App 1`] = `
+<div>
+  <Header
+    brandInfo={
+      Object {
+        "appName": "Readify Outlook Signature",
+        "brandLink": "https://readify-signatures.azurewebsites.net/",
+      }
+    }
+  />
+  <div>
+    <div
+      className="col-md-1"
+    />
+    <div
+      className="col-md-10"
+      style={
+        Object {
+          "paddingBottom": "4rem",
+        }
+      }
+    >
+      <Info />
+      <Form />
+    </div>
+    <div
+      className="col-md-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`Renders full dom 1`] = `
+<App>
+  <div>
+    <Header
+      brandInfo={
+        Object {
+          "appName": "Readify Outlook Signature",
+          "brandLink": "https://readify-signatures.azurewebsites.net/",
+        }
+      }
+    >
+      <div>
+        <div
+          className="col-md-12"
+          id="Header"
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-md-1"
+            />
+            <div
+              className="col-md-11"
+              style={
+                Object {
+                  "paddingLeft": "0px",
+                }
+              }
+            >
+              <a
+                className="navbar-brand"
+                href="https://readify-signatures.azurewebsites.net/"
+              >
+                Readify Outlook Signature
+              </a>
+            </div>
+          </div>
+          <div
+            className="navbar-collapse collapse"
+          />
+        </div>
+      </div>
+    </Header>
+    <div>
+      <div
+        className="col-md-1"
+      />
+      <div
+        className="col-md-10"
+        style={
+          Object {
+            "paddingBottom": "4rem",
+          }
+        }
+      >
+        <Info>
+          <div>
+            <h3>
+              Create your signature
+            </h3>
+            <ol>
+              <li>
+                Enter your details.
+              </li>
+              <li>
+                Click the "Copy Signature" button
+              </li>
+              <li>
+                Open outlook
+              </li>
+              <li>
+                <a
+                  href="https://support.office.com/en-us/article/create-and-add-a-signature-to-messages-8ee5d4f4-68fd-464a-a1c1-0e1c80bb27f2"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "textDecoration": "underline",
+                    }
+                  }
+                  target="_blank"
+                >
+                  Paste selection into signature editor
+                </a>
+                <ul
+                  style={
+                    Object {
+                      "listStyleType": "none",
+                      "paddingLeft": "1rem",
+                      "paddingTop": "0.5rem",
+                    }
+                  }
+                >
+                  <li
+                    style={
+                      Object {
+                        "marginBottom": "0.5rem",
+                      }
+                    }
+                  >
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      Windows: 
+                    </span>
+                    Signature &gt; Signatures from the Message menu
+                  </li>
+                  <li>
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      Mac: 
+                    </span>
+                    Preferences &gt; Signatures from the Message menu
+                  </li>
+                </ul>
+              </li>
+            </ol>
+            <br />
+          </div>
+        </Info>
+        <Form>
+          <form>
+            <div
+              className="form-group"
+            >
+              <div
+                className="col-md-10"
+              >
+                <table
+                  className="table table-striped"
+                >
+                  <tbody>
+                    <tr
+                      key="name"
+                    >
+                      <td
+                        className="col-md-4"
+                      >
+                        Your Name:
+                      </td>
+                      <td
+                        className="col-md-4"
+                      >
+                        <input
+                          className="form-control"
+                          onChange={[Function]}
+                          placeholder="Your Name"
+                          style={
+                            Object {
+                              "width": "300px",
+                            }
+                          }
+                          value=""
+                        />
+                      </td>
+                    </tr>
+                    <tr
+                      key="title"
+                    >
+                      <td
+                        className="col-md-4"
+                      >
+                        Job Title:
+                      </td>
+                      <td
+                        className="col-md-4"
+                      >
+                        <input
+                          className="form-control"
+                          onChange={[Function]}
+                          placeholder="Job Title"
+                          style={
+                            Object {
+                              "width": "300px",
+                            }
+                          }
+                          value=""
+                        />
+                      </td>
+                    </tr>
+                    <tr
+                      key="qualifications"
+                    >
+                      <td
+                        className="col-md-4"
+                      >
+                        Qualifications: (Optional)
+                      </td>
+                      <td
+                        className="col-md-4"
+                      >
+                        <input
+                          className="form-control"
+                          onChange={[Function]}
+                          placeholder="Jedi Master | PSM I"
+                          style={
+                            Object {
+                              "width": "300px",
+                            }
+                          }
+                          value=""
+                        />
+                      </td>
+                    </tr>
+                    <tr
+                      key="mobile"
+                    >
+                      <td
+                        className="col-md-4"
+                      >
+                        Mobile:
+                      </td>
+                      <td
+                        className="col-md-4"
+                      >
+                        <input
+                          className="form-control"
+                          onChange={[Function]}
+                          placeholder="+61 111 222 333"
+                          style={
+                            Object {
+                              "width": "300px",
+                            }
+                          }
+                          value=""
+                        />
+                      </td>
+                    </tr>
+                    <tr
+                      key="email"
+                    >
+                      <td
+                        className="col-md-4"
+                      >
+                        Email:
+                      </td>
+                      <td
+                        className="col-md-4"
+                      >
+                        <input
+                          className="form-control"
+                          onChange={[Function]}
+                          placeholder="your.name@readify.net"
+                          style={
+                            Object {
+                              "width": "300px",
+                            }
+                          }
+                          value=""
+                        />
+                      </td>
+                    </tr>
+                    <tr
+                      key="twitter"
+                    >
+                      <td
+                        className="col-md-4"
+                      >
+                        Twitter: (Optional)
+                      </td>
+                      <td
+                        className="col-md-4"
+                      >
+                        <input
+                          className="form-control"
+                          onChange={[Function]}
+                          placeholder="@myTwitter"
+                          style={
+                            Object {
+                              "width": "300px",
+                            }
+                          }
+                          value=""
+                        />
+                      </td>
+                    </tr>
+                    <tr
+                      key="isSupport"
+                    >
+                      <td
+                        className="col-md-4"
+                      >
+                        Are you Readify Support?
+                      </td>
+                      <td
+                        className="col-md-4"
+                      >
+                        <input
+                          onChange={[Function]}
+                          style={
+                            Object {
+                              "width": "300px",
+                            }
+                          }
+                          type="checkbox"
+                          value=""
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <hr />
+                <Signature
+                  email=""
+                  isSupport={false}
+                  mobile=""
+                  name=""
+                  placeholders={
+                    Object {
+                      "email": "your.name@readify.net",
+                      "mobile": "+61 111 222 333",
+                      "name": "Your Name",
+                      "qualifications": "Jedi Master | PSM I",
+                      "title": "Job Title",
+                      "twitter": "@myTwitter",
+                    }
+                  }
+                  qualifications=""
+                  title=""
+                  twitter=""
+                >
+                  <div
+                    className="sig-grid"
+                  >
+                    <div
+                      className="sig-grid row"
+                    >
+                      <h3
+                        style={
+                          Object {
+                            "margin": "0 1rem 1rem 0",
+                          }
+                        }
+                      >
+                        Standard Signature
+                      </h3>
+                      <div
+                        style={
+                          Object {
+                            "display": "flex",
+                            "flex": 1,
+                            "justifyContent": "flex-end",
+                          }
+                        }
+                      >
+                        <button
+                          className="btn btn-default"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          Copy text only
+                        </button>
+                        <button
+                          className="btn btn-primary"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          Copy Signature
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      className="sig-grid row"
+                    >
+                      <SignatureHtml
+                        brandLink="https://readify.net"
+                        brandLinkName="readify.net"
+                        brandLogo={
+                          Object {
+                            "alt": "Readify a Telstra Company",
+                            "link": "https://readifysignatures.blob.core.windows.net/images/image001.png",
+                          }
+                        }
+                        brandName="Readify"
+                        email=""
+                        emailHtml={
+                          <a
+                            href="mailto:your.name@readify.net"
+                          >
+                            your.name@readify.net
+                          </a>
+                        }
+                        isSupport={false}
+                        mobile=""
+                        mobileHtml={
+                          <a
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+                              }
+                            }
+                            href="tel:+61111222333"
+                          />
+                        }
+                        name=""
+                        placeholders={
+                          Object {
+                            "email": "your.name@readify.net",
+                            "mobile": "+61 111 222 333",
+                            "name": "Your Name",
+                            "qualifications": "Jedi Master | PSM I",
+                            "title": "Job Title",
+                            "twitter": "@myTwitter",
+                          }
+                        }
+                        qualifications=""
+                        supportEmail={
+                          <span>
+                              
+                          </span>
+                        }
+                        supportMobile={
+                          <span>
+                              
+                          </span>
+                        }
+                        title=""
+                        twitter=""
+                        twitterHtml={null}
+                      >
+                        <div>
+                          <table
+                            border="0"
+                            cellPadding="0"
+                            cellSpacing="0"
+                            style={
+                              Object {
+                                "color": "#3D5567",
+                                "fontFamily": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+                                "fontSize": "10.5pt",
+                              }
+                            }
+                            width="100%"
+                          >
+                            <tr>
+                              <td
+                                style={
+                                  Object {
+                                    "borderRight": "1px solid #3D5567",
+                                    "paddingRight": "20px",
+                                    "width": "76px",
+                                  }
+                                }
+                                valign="top"
+                              >
+                                <img
+                                  alt="Readify a Telstra Company"
+                                  height="53"
+                                  src="https://readifysignatures.blob.core.windows.net/images/image001.png"
+                                  width="73"
+                                />
+                              </td>
+                              <td
+                                style={
+                                  Object {
+                                    "paddingLeft": "20px",
+                                  }
+                                }
+                                valign="top"
+                              >
+                                <p
+                                  style={
+                                    Object {
+                                      "marginBottom": "10px",
+                                    }
+                                  }
+                                >
+                                  <b>
+                                    Your Name
+                                  </b>
+                                  <br />
+                                  Readify
+                                   | 
+                                  Job Title
+                                </p>
+                                <p
+                                  style={
+                                    Object {
+                                      "marginBottom": "20px",
+                                    }
+                                  }
+                                >
+                                  <span>
+                                    <b>
+                                      M
+                                    </b>
+                                     
+                                    <a
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+                                        }
+                                      }
+                                      href="tel:+61111222333"
+                                    />
+                                     
+                                    <span>
+                                        
+                                    </span>
+                                  </span>
+                                  <span>
+                                      
+                                  </span>
+                                  <span>
+                                    <b>
+                                      E
+                                    </b>
+                                     
+                                    <a
+                                      href="mailto:your.name@readify.net"
+                                    >
+                                      your.name@readify.net
+                                    </a>
+                                     
+                                    <span>
+                                        
+                                    </span>
+                                  </span>
+                                  <span>
+                                    <b>
+                                      W
+                                    </b>
+                                     
+                                    <a
+                                      href="https://readify.net"
+                                    >
+                                      readify.net
+                                    </a>
+                                  </span>
+                                </p>
+                                <SocialMedia>
+                                  <p
+                                    style={
+                                      Object {
+                                        "marginBottom": "0",
+                                      }
+                                    }
+                                  >
+                                    <span
+                                      key="FaceBook"
+                                    >
+                                      <a
+                                        href="https://readify.net/links/facebook"
+                                        style={
+                                          Object {
+                                            "display": "inline-block",
+                                            "height": "28px",
+                                            "width": "28px",
+                                          }
+                                        }
+                                      >
+                                        <img
+                                          alt="Readify on FaceBook"
+                                          height="28"
+                                          src="https://readifysignatures.blob.core.windows.net/images/image002.png"
+                                          width="28"
+                                        />
+                                      </a>
+                                      <span>
+                                          
+                                      </span>
+                                    </span>
+                                    <span
+                                      key="Twitter"
+                                    >
+                                      <a
+                                        href="https://readify.net/links/twitter"
+                                        style={
+                                          Object {
+                                            "display": "inline-block",
+                                            "height": "28px",
+                                            "width": "28px",
+                                          }
+                                        }
+                                      >
+                                        <img
+                                          alt="Readify on Twitter"
+                                          height="28"
+                                          src="https://readifysignatures.blob.core.windows.net/images/image003.png"
+                                          width="28"
+                                        />
+                                      </a>
+                                      <span>
+                                          
+                                      </span>
+                                    </span>
+                                    <span
+                                      key="LinkedIn"
+                                    >
+                                      <a
+                                        href="https://readify.net/links/linkedin"
+                                        style={
+                                          Object {
+                                            "display": "inline-block",
+                                            "height": "28px",
+                                            "width": "28px",
+                                          }
+                                        }
+                                      >
+                                        <img
+                                          alt="Readify on LinkedIn"
+                                          height="28"
+                                          src="https://readifysignatures.blob.core.windows.net/images/image004.png"
+                                          width="28"
+                                        />
+                                      </a>
+                                      <span>
+                                          
+                                      </span>
+                                    </span>
+                                    <span
+                                      key="Youtube"
+                                    >
+                                      <a
+                                        href="https://readify.net/links/youtube"
+                                        style={
+                                          Object {
+                                            "display": "inline-block",
+                                            "height": "28px",
+                                            "width": "28px",
+                                          }
+                                        }
+                                      >
+                                        <img
+                                          alt="Readify on Youtube"
+                                          height="28"
+                                          src="https://readifysignatures.blob.core.windows.net/images/image005.png"
+                                          width="28"
+                                        />
+                                      </a>
+                                    </span>
+                                  </p>
+                                </SocialMedia>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </SignatureHtml>
+                    </div>
+                    <div
+                      className="sig-grid row"
+                      style={
+                        Object {
+                          "marginTop": "2rem",
+                        }
+                      }
+                    >
+                      <h3
+                        style={
+                          Object {
+                            "margin": "0 1rem 1rem 0",
+                          }
+                        }
+                      >
+                        Replies and Forwards Signature
+                      </h3>
+                      <div
+                        style={
+                          Object {
+                            "display": "flex",
+                            "flex": 1,
+                            "justifyContent": "flex-end",
+                          }
+                        }
+                      >
+                        <button
+                          className="btn btn-default"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          Copy text only
+                        </button>
+                        <button
+                          className="btn btn-primary"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          Copy Signature
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      className="sig-grid row"
+                    >
+                      <RepliesAndForwards
+                        brandLink="https://readify.net"
+                        brandLinkName="readify.net"
+                        brandLogo={
+                          Object {
+                            "alt": "Readify a Telstra Company",
+                            "link": "https://readifysignatures.blob.core.windows.net/images/image001.png",
+                          }
+                        }
+                        brandName="Readify"
+                        email=""
+                        emailHtml={
+                          <a
+                            href="mailto:your.name@readify.net"
+                          >
+                            your.name@readify.net
+                          </a>
+                        }
+                        isSupport={false}
+                        mobile=""
+                        mobileHtml={
+                          <a
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+                              }
+                            }
+                            href="tel:+61111222333"
+                          />
+                        }
+                        name=""
+                        placeholders={
+                          Object {
+                            "email": "your.name@readify.net",
+                            "mobile": "+61 111 222 333",
+                            "name": "Your Name",
+                            "qualifications": "Jedi Master | PSM I",
+                            "title": "Job Title",
+                            "twitter": "@myTwitter",
+                          }
+                        }
+                        qualifications=""
+                        supportEmail={
+                          <span>
+                              
+                          </span>
+                        }
+                        supportMobile={
+                          <span>
+                              
+                          </span>
+                        }
+                        title=""
+                        twitter=""
+                        twitterHtml={null}
+                      >
+                        <div>
+                          <p
+                            style={
+                              Object {
+                                "color": "#3D5567",
+                                "fontFamily": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+                                "fontSize": "10.5pt",
+                              }
+                            }
+                          >
+                            --
+                            <br />
+                            <b>
+                              Your Name
+                               | 
+                              Readify
+                               
+                              Job Title
+                            </b>
+                            <br />
+                            <b>
+                              M
+                            </b>
+                              
+                            <a
+                              dangerouslySetInnerHTML={
+                                Object {
+                                  "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+                                }
+                              }
+                              href="tel:+61111222333"
+                            />
+                             | 
+                            <b>
+                              E
+                            </b>
+                              
+                            <a
+                              href="mailto:your.name@readify.net"
+                            >
+                              your.name@readify.net
+                            </a>
+                             | 
+                            <b>
+                              W
+                            </b>
+                             
+                            <a
+                              href="https://readify.net"
+                            >
+                              readify.net
+                            </a>
+                          </p>
+                        </div>
+                      </RepliesAndForwards>
+                    </div>
+                  </div>
+                </Signature>
+              </div>
+              <div
+                className="col-md-4"
+              />
+            </div>
+          </form>
+        </Form>
+      </div>
+      <div
+        className="col-md-1"
+      />
+    </div>
+  </div>
+</App>
+`;
