@@ -2,7 +2,7 @@
 
 This app can be used to create Readify's Email Signature.
 
-![Readify Signature Generator Screenshot](https://readifysignatures.blob.core.windows.net/images/signature-app-screenshot.png?)
+![Readify Signature Generator Screenshot](https://readifysignatures.blob.core.windows.net/images/signature-app-screenshot.png??)
 
 
 ## Setup
