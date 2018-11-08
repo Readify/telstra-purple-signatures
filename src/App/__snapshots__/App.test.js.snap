@@ -344,7 +344,7 @@ exports[`Renders full dom 1`] = `
                   </tbody>
                 </table>
                 <hr />
-                <Signature
+                <SignatureContainer
                   email=""
                   isSupport={false}
                   mobile=""
@@ -406,7 +406,7 @@ exports[`Renders full dom 1`] = `
                     <div
                       className="sig-grid row"
                     >
-                      <SignatureHtml
+                      <Signature
                         brandLink="https://readify.net"
                         brandLinkName="readify.net"
                         brandLogo={
@@ -679,7 +679,7 @@ exports[`Renders full dom 1`] = `
                             </tr>
                           </table>
                         </div>
-                      </SignatureHtml>
+                      </Signature>
                     </div>
                     <div
                       className="sig-grid row"
@@ -839,7 +839,7 @@ exports[`Renders full dom 1`] = `
                       </RepliesAndForwards>
                     </div>
                   </div>
-                </Signature>
+                </SignatureContainer>
               </div>
               <div
                 className="col-md-4"

@@ -1,0 +1,30 @@
+.btn.btn-primary {
+    transition: background-color 0.125s ease-in;
+}
+
+.btn.btn-success.fadeColor {
+    min-width: 123px;
+    background-color: #449d44;
+    transition: background-color 0.125s ease-out;
+}
+
+.navbar-brand {
+    font-weight: 200;
+}
+.btn {
+    margin: 1rem 0.5rem;
+}
+.sig-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.sig-grid.row {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}

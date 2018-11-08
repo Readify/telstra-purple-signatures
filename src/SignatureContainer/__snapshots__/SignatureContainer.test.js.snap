@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders 1`] = `
+<div
+  className="sig-grid"
+>
+  <div
+    className="sig-grid row"
+  >
+    <h3
+      style={
+        Object {
+          "margin": "0 1rem 1rem 0",
+        }
+      }
+    >
+      Standard Signature
+    </h3>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flex": 1,
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="btn btn-default"
+        onClick={[Function]}
+        type="button"
+      >
+        Copy text only
+      </button>
+      <button
+        className="btn btn-primary"
+        onClick={[Function]}
+        type="button"
+      >
+        Copy Signature
+      </button>
+    </div>
+  </div>
+  <div
+    className="sig-grid row"
+  >
+    <Signature
+      brandLink="https://readify.net"
+      brandLinkName="readify.net"
+      brandLogo={
+        Object {
+          "alt": "Readify a Telstra Company",
+          "link": "https://readifysignatures.blob.core.windows.net/images/image001.png",
+        }
+      }
+      brandName="Readify"
+      email="your.name@readify.net"
+      emailHtml={
+        <a
+          href="mailto:your.name@readify.net"
+        >
+          your.name@readify.net
+        </a>
+      }
+      isSupport={false}
+      mobile="+61 111 222 333"
+      mobileHtml={
+        <a
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+            }
+          }
+          href="tel:+61111222333"
+        />
+      }
+      name="your name"
+      placeholders={
+        Object {
+          "email": "your.name@readify.net",
+          "mobile": "+61 111 222 333",
+          "name": "Your Name",
+          "qualifications": "Jedi Master | PSM I",
+          "title": "Job Title",
+          "twitter": "@myTwitter",
+        }
+      }
+      supportEmail={
+        <span>
+            
+        </span>
+      }
+      supportMobile={
+        <span>
+            
+        </span>
+      }
+      title="Job Title"
+      twitter="@myTwitter"
+      twitterHtml={
+        <span>
+          <b>
+            T
+          </b>
+           
+          <a
+            href="https://twitter.com/myTwitter"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            @myTwitter
+          </a>
+             
+        </span>
+      }
+    />
+  </div>
+  <div
+    className="sig-grid row"
+    style={
+      Object {
+        "marginTop": "2rem",
+      }
+    }
+  >
+    <h3
+      style={
+        Object {
+          "margin": "0 1rem 1rem 0",
+        }
+      }
+    >
+      Replies and Forwards Signature
+    </h3>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flex": 1,
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="btn btn-default"
+        onClick={[Function]}
+        type="button"
+      >
+        Copy text only
+      </button>
+      <button
+        className="btn btn-primary"
+        onClick={[Function]}
+        type="button"
+      >
+        Copy Signature
+      </button>
+    </div>
+  </div>
+  <div
+    className="sig-grid row"
+  >
+    <RepliesAndForwards
+      brandLink="https://readify.net"
+      brandLinkName="readify.net"
+      brandLogo={
+        Object {
+          "alt": "Readify a Telstra Company",
+          "link": "https://readifysignatures.blob.core.windows.net/images/image001.png",
+        }
+      }
+      brandName="Readify"
+      email="your.name@readify.net"
+      emailHtml={
+        <a
+          href="mailto:your.name@readify.net"
+        >
+          your.name@readify.net
+        </a>
+      }
+      isSupport={false}
+      mobile="+61 111 222 333"
+      mobileHtml={
+        <a
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+            }
+          }
+          href="tel:+61111222333"
+        />
+      }
+      name="your name"
+      placeholders={
+        Object {
+          "email": "your.name@readify.net",
+          "mobile": "+61 111 222 333",
+          "name": "Your Name",
+          "qualifications": "Jedi Master | PSM I",
+          "title": "Job Title",
+          "twitter": "@myTwitter",
+        }
+      }
+      supportEmail={
+        <span>
+            
+        </span>
+      }
+      supportMobile={
+        <span>
+            
+        </span>
+      }
+      title="Job Title"
+      twitter="@myTwitter"
+      twitterHtml={
+        <span>
+          <b>
+            T
+          </b>
+           
+          <a
+            href="https://twitter.com/myTwitter"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            @myTwitter
+          </a>
+             
+        </span>
+      }
+    />
+  </div>
+</div>
+`;

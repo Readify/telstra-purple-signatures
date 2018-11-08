@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders 1`] = `
+<form>
+  <div
+    className="form-group"
+  >
+    <div
+      className="col-md-10"
+    >
+      <table
+        className="table table-striped"
+      >
+        <tbody>
+          <tr
+            key="name"
+          >
+            <td
+              className="col-md-4"
+            >
+              Your Name:
+            </td>
+            <td
+              className="col-md-4"
+            >
+              <input
+                className="form-control"
+                onChange={[Function]}
+                placeholder="Your Name"
+                style={
+                  Object {
+                    "width": "300px",
+                  }
+                }
+                value=""
+              />
+            </td>
+          </tr>
+          <tr
+            key="title"
+          >
+            <td
+              className="col-md-4"
+            >
+              Job Title:
+            </td>
+            <td
+              className="col-md-4"
+            >
+              <input
+                className="form-control"
+                onChange={[Function]}
+                placeholder="Job Title"
+                style={
+                  Object {
+                    "width": "300px",
+                  }
+                }
+                value=""
+              />
+            </td>
+          </tr>
+          <tr
+            key="qualifications"
+          >
+            <td
+              className="col-md-4"
+            >
+              Qualifications: (Optional)
+            </td>
+            <td
+              className="col-md-4"
+            >
+              <input
+                className="form-control"
+                onChange={[Function]}
+                placeholder="Jedi Master | PSM I"
+                style={
+                  Object {
+                    "width": "300px",
+                  }
+                }
+                value=""
+              />
+            </td>
+          </tr>
+          <tr
+            key="mobile"
+          >
+            <td
+              className="col-md-4"
+            >
+              Mobile:
+            </td>
+            <td
+              className="col-md-4"
+            >
+              <input
+                className="form-control"
+                onChange={[Function]}
+                placeholder="+61 111 222 333"
+                style={
+                  Object {
+                    "width": "300px",
+                  }
+                }
+                value=""
+              />
+            </td>
+          </tr>
+          <tr
+            key="email"
+          >
+            <td
+              className="col-md-4"
+            >
+              Email:
+            </td>
+            <td
+              className="col-md-4"
+            >
+              <input
+                className="form-control"
+                onChange={[Function]}
+                placeholder="your.name@readify.net"
+                style={
+                  Object {
+                    "width": "300px",
+                  }
+                }
+                value=""
+              />
+            </td>
+          </tr>
+          <tr
+            key="twitter"
+          >
+            <td
+              className="col-md-4"
+            >
+              Twitter: (Optional)
+            </td>
+            <td
+              className="col-md-4"
+            >
+              <input
+                className="form-control"
+                onChange={[Function]}
+                placeholder="@myTwitter"
+                style={
+                  Object {
+                    "width": "300px",
+                  }
+                }
+                value=""
+              />
+            </td>
+          </tr>
+          <tr
+            key="isSupport"
+          >
+            <td
+              className="col-md-4"
+            >
+              Are you Readify Support?
+            </td>
+            <td
+              className="col-md-4"
+            >
+              <input
+                onChange={[Function]}
+                style={
+                  Object {
+                    "width": "300px",
+                  }
+                }
+                type="checkbox"
+                value=""
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <hr />
+      <SignatureContainer
+        email=""
+        isSupport={false}
+        mobile=""
+        name=""
+        placeholders={
+          Object {
+            "email": "your.name@readify.net",
+            "mobile": "+61 111 222 333",
+            "name": "Your Name",
+            "qualifications": "Jedi Master | PSM I",
+            "title": "Job Title",
+            "twitter": "@myTwitter",
+          }
+        }
+        qualifications=""
+        title=""
+        twitter=""
+      />
+    </div>
+    <div
+      className="col-md-4"
+    />
+  </div>
+</form>
+`;
