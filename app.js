@@ -179,7 +179,7 @@ class Signature extends React.Component {
   };
 
   static defaultButtonText = {
-    text: 'Copy Signature (Text only)',
+    text: 'Copy text only',
     html: 'Copy Signature'
   };
 
@@ -189,8 +189,10 @@ class Signature extends React.Component {
       button: {
         buttonClassHtml: 'btn btn-primary',
         buttonTextHtml: Signature.defaultButtonText.html,
-        buttonClassText: 'btn btn-default',
-        buttonTextText: Signature.defaultButtonText.text,
+        buttonClassTextSig: 'btn btn-default',
+        buttonTextTextSig: Signature.defaultButtonText.text,
+        buttonClassTextRAF: 'btn btn-default',
+        buttonTextTextRAF: Signature.defaultButtonText.text,
         buttonClassRAF: 'btn btn-primary',
         buttonTextRAF: Signature.defaultButtonText.html,
       },
@@ -226,18 +228,29 @@ class Signature extends React.Component {
     return { mobileHtml, emailHtml, supportMobile, supportEmail };
   };
 
-  setStateFunctionMaker = (beforeState, afterState) => () => this.setState((state) => ({
-    ...state,
-    button: {
-      ...state.button,
-      ...beforeState
-    }
-  }), () => setTimeout(() => this.setState(state => ({
-    button: {
-      ...state.button,
-      ...afterState
-    }
-  })), 1000));
+  setStateFunctionMaker = (beforeState, afterState) => () => this.setState(
+    (state) => ({
+      ...state,
+      button: {
+        ...state.button,
+        ...beforeState
+      }
+    }),
+    () => setTimeout(() => this.setState(state => ({
+      button: {
+        ...state.button,
+        ...afterState
+      }
+    })), 1000));
+
+  copyText = (text) => {
+    const container = document.createElement('textarea');
+    container.value = text;
+    document.body.appendChild(container);
+    container.select();
+    document.execCommand('copy');
+    document.body.removeChild(container);
+  };
 
   copySignatureText = (props) => {
     const { name, title, qualifications, mobile, email, twitter, isSupport } = props;
@@ -258,27 +271,43 @@ class Signature extends React.Component {
       'Find us on: Twitter | LinkedIn | Facebook | Youtube'
     ];
 
-    const container = document.createElement('textarea');
-    container.value = textArr.filter(val => val !== null).join('\n');
-    document.body.appendChild(container);
-    container.select();
-    document.execCommand('copy');
-    document.body.removeChild(container);
+    this.copyText(textArr.filter(val => val !== null).join('\n'));
 
-    this.setState((state) => ({
-      ...state,
-      button: {
-        ...state.button,
-        buttonClassText: 'btn btn-success fadeColor',
-        buttonTextText: 'Copied!'
+    this.setStateFunctionMaker(
+      {
+        buttonClassTextSig: 'btn btn-success fadeColor',
+        buttonTextTextSig: 'Copied!'
+      },
+      {
+        buttonClassTextSig: 'btn btn-default',
+        buttonTextTextSig: Signature.defaultButtonText.text
       }
-    }), () => setTimeout(() => this.setState(state => ({
-      button: {
-        ...state.button,
-        buttonClassText: 'btn btn-default',
-        buttonTextText: Signature.defaultButtonText.text
+    )();
+  };
+
+  copyRepliesAndForwardsText = (props) => {
+    const { name, title, mobile, email, twitter, isSupport } = props;
+    const mobileText = Signature.parseMobile(mobile).replace(/&nbsp;/g, ' ');
+
+    const textArr = [
+      '--',
+      `${name}, Readify | ${title}`,
+      `M ${mobileText} | E ${email}${twitter ? ` | T ${twitter}` : ''} | W ${Signature.brandInfo.brandLinkName}`,
+      isSupport ? `Support hotline${Signature.brandInfo.supportMobile.replace(/&nbsp;/g, ' ')} | Support email ${Signature.brandInfo.supportEmail}` : null,
+    ];
+
+    this.copyText(textArr.filter(val => val !== null).join('\n'));
+
+    this.setStateFunctionMaker(
+      {
+        buttonClassTextRAF: 'btn btn-success fadeColor',
+        buttonTextTextRAF: 'Copied!'
+      },
+      {
+        buttonClassTextRAF: 'btn btn-default',
+        buttonTextTextRAF: Signature.defaultButtonText.text
       }
-    })), 1000));
+    )();
   };
 
   copySignature = (props, SignatureComponent, setStateFunction) => {
@@ -311,15 +340,13 @@ class Signature extends React.Component {
   render() {
     const { brandName, brandLink, brandLinkName, brandLogo } = Signature.brandInfo;
 
-    const { name, title, qualifications, twitter, isSupport, placeholders, mobile } = this.props;
+    const { name, title, qualifications, twitter, isSupport, placeholders, mobile, email } = this.props;
 
     const { mobileHtml, emailHtml, supportMobile, supportEmail } = this.renderSupportFields();
 
     const twitterLink = <a href={`https://twitter.com/${twitter.replace('@', '')}`} target="_blank">{twitter}</a>;
     const twitterHtml = twitter ? <span><b>T</b>&nbsp;{twitterLink}&nbsp;&nbsp;&nbsp;</span> : null;
 
-    // Note: css classes do not work for email so you need to use inline styles!
-    // Adding a tbody causes the email sig to break in certain clients :'(
     const signatureHtmlProps = {
       mobile,
       brandLogo,
@@ -332,6 +359,8 @@ class Signature extends React.Component {
       mobileHtml,
       supportMobile,
       emailHtml,
+      email,
+      twitter,
       supportEmail,
       twitterHtml,
       brandLink,
@@ -361,42 +390,62 @@ class Signature extends React.Component {
       }
     );
 
-    const { buttonClassHtml, buttonTextHtml, buttonClassText, buttonTextText, buttonClassRAF, buttonTextRAF } = this.state.button;
+    const {
+      buttonClassHtml,
+      buttonTextHtml,
+      buttonClassTextSig,
+      buttonTextTextSig,
+      buttonClassRAF,
+      buttonTextRAF,
+      buttonClassTextRAF,
+      buttonTextTextRAF
+    } = this.state.button;
 
-    const styleRight = {flex: 1, display: 'flex', justifyContent: 'flex-end'};
-    const SignatureButton = <div style={styleRight}>
-      <button type="button" className={buttonClassText}
-              onClick={() => (this.copySignatureText({ ...signatureHtmlProps, placeholders: Form.placeholders }))}>
-        {buttonTextText}
-      </button>
-      <button type="button" className={buttonClassHtml}
-              onClick={() => (this.copySignature({
-                ...signatureHtmlProps,
-                placeholders: Form.placeholders
-              }, SignatureHtml, setStateFunctionHTML))}>
-        {buttonTextHtml}
-      </button>
-    </div>;
+    const styleRight = { flex: 1, display: 'flex', justifyContent: 'flex-end' };
 
-    const RepliesAndForwardsButton = <button type="button" className={buttonClassRAF}
-                                             onClick={() => (this.copySignature({
-                                               ...signatureHtmlProps,
-                                               placeholders: Form.placeholders
-                                             }, RepliesAndForwards, setStateFunctionRAF))}>
-      {buttonTextRAF}
-    </button>;
 
+    // Note: css classes do not work for email so you need to use inline styles!
+    // Adding a tbody causes the email sig to break in certain clients :'(
     return <div className="sig-grid">
       <div className="sig-grid row">
         <h3 style={{ margin: '0 1rem 1rem 0' }}>Standard Signature</h3>
-        {SignatureButton}
+        <div style={styleRight}>
+          <button type="button" className={buttonClassTextSig}
+                  onClick={() => (this.copySignatureText({ ...signatureHtmlProps, placeholders: Form.placeholders }))}>
+            {buttonTextTextSig}
+          </button>
+          <button type="button" className={buttonClassHtml}
+                  onClick={
+                    () => (this.copySignature({
+                        ...signatureHtmlProps,
+                        placeholders: Form.placeholders
+                      }, SignatureHtml, setStateFunctionHTML)
+                    )}>
+            {buttonTextHtml}
+          </button>
+        </div>
       </div>
       <div className="sig-grid row">
         <SignatureHtml {...signatureHtmlProps} />
       </div>
-      <div className="sig-grid row" style={{marginTop: '2rem'}}>
+      <div className="sig-grid row" style={{ marginTop: '2rem' }}>
         <h3 style={{ margin: '0 1rem 1rem 0' }}>Replies and Forwards Signature</h3>
-        <div style={styleRight}>{RepliesAndForwardsButton}</div>
+        <div style={styleRight}>
+          <button type="button" className={buttonClassTextRAF}
+                  onClick={() => (this.copyRepliesAndForwardsText({ ...signatureHtmlProps, placeholders: Form.placeholders }))}>
+            {buttonTextTextRAF}
+          </button>
+          <button type="button" className={buttonClassRAF}
+                  onClick={
+                    () => (
+                      this.copySignature({
+                        ...signatureHtmlProps,
+                        placeholders: Form.placeholders
+                      }, RepliesAndForwards, setStateFunctionRAF)
+                    )}>
+            {buttonTextRAF}
+          </button>
+        </div>
       </div>
       <div className="sig-grid row">
         <RepliesAndForwards {...signatureHtmlProps} />
@@ -539,7 +588,7 @@ const App = () => (
     }/>
     <div>
       <div className="col-md-1"/>
-      <div className="col-md-10">
+      <div className="col-md-10" style={{paddingBottom: '4rem'}}>
         <Info/>
         <Form/>
       </div>
