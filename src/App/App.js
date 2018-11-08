@@ -348,7 +348,7 @@ class Signature extends Component {
 
     const { mobileHtml, emailHtml, supportMobile, supportEmail } = this.renderSupportFields();
 
-    const twitterLink = <a href={`https://twitter.com/${twitter.replace('@', '')}`} target="_blank">{twitter}</a>;
+    const twitterLink = <a href={`https://twitter.com/${twitter.replace('@', '')}`} rel='noopener noreferrer' target="_blank">{twitter}</a>;
     const twitterHtml = twitter ? <span><b>T</b>&nbsp;{twitterLink}&nbsp;&nbsp;&nbsp;</span> : null;
 
     const signatureHtmlProps = {
@@ -563,6 +563,7 @@ const Info = () => (
         <a
           style={{ fontWeight: 'bold', textDecoration: 'underline' }}
           href="https://support.office.com/en-us/article/create-and-add-a-signature-to-messages-8ee5d4f4-68fd-464a-a1c1-0e1c80bb27f2"
+          rel='noopener noreferrer'
           target="_blank">
           Paste selection into signature editor
         </a>
