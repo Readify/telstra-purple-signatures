@@ -175,13 +175,11 @@ exports[`Renders full dom 1`] = `
                 >
                   <tbody>
                     <tr
-                      key="signatureType"
+                      key="signatureTypes"
                     >
                       <td
                         className="col-md-4"
-                      >
-                        Signature Type
-                      </td>
+                      />
                       <td
                         className="col-md-4"
                       >
@@ -394,6 +392,22 @@ exports[`Renders full dom 1`] = `
                     }
                   }
                   qualifications=""
+                  signatureTypes={
+                    Array [
+                      Object {
+                        "checked": true,
+                        "text": "Readify",
+                      },
+                      Object {
+                        "checked": false,
+                        "text": "Readify Support",
+                      },
+                      Object {
+                        "checked": false,
+                        "text": "BTS Digital",
+                      },
+                    ]
+                  }
                   title=""
                   twitter=""
                 >
