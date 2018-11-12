@@ -7,7 +7,28 @@ import RepliesAndForwards from '../RepliesAndForwards';
 
 class SignatureContainer extends Component {
 
-  static parseMobile = (mobileNum) => {
+  static defaultButtonText = {
+    text: 'Copy text only',
+    html: 'Copy Signature'
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      button: {
+        buttonClassHtml: 'btn btn-primary',
+        buttonTextHtml: SignatureContainer.defaultButtonText.html,
+        buttonClassTextSig: 'btn btn-default',
+        buttonTextTextSig: SignatureContainer.defaultButtonText.text,
+        buttonClassTextRAF: 'btn btn-default',
+        buttonTextTextRAF: SignatureContainer.defaultButtonText.text,
+        buttonClassRAF: 'btn btn-primary',
+        buttonTextRAF: SignatureContainer.defaultButtonText.html,
+      },
+    };
+  }
+
+  parseMobile = (mobileNum) => {
     if (mobileNum === undefined) return null;
 
     const multiSplice = (toAddIndexes, val, array) => toAddIndexes.forEach((index) => array.splice(index, 0, val));
@@ -30,33 +51,12 @@ class SignatureContainer extends Component {
     return numberArr.join('');
   };
 
-  static defaultButtonText = {
-    text: 'Copy text only',
-    html: 'Copy Signature'
-  };
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      button: {
-        buttonClassHtml: 'btn btn-primary',
-        buttonTextHtml: SignatureContainer.defaultButtonText.html,
-        buttonClassTextSig: 'btn btn-default',
-        buttonTextTextSig: SignatureContainer.defaultButtonText.text,
-        buttonClassTextRAF: 'btn btn-default',
-        buttonTextTextRAF: SignatureContainer.defaultButtonText.text,
-        buttonClassRAF: 'btn btn-primary',
-        buttonTextRAF: SignatureContainer.defaultButtonText.html,
-      },
-    };
-  }
-
   renderSupportFields = () => {
     const { mobile, email, placeholders, isSupport } = this.props;
 
     const generateMobileHtml = (number) => <a
-      href={`tel:${SignatureContainer.parseMobile(number).replace(/&nbsp;/g, '')}`}
-      dangerouslySetInnerHTML={{ __html: SignatureContainer.parseMobile(number) }}
+      href={`tel:${this.parseMobile(number).replace(/&nbsp;/g, '')}`}
+      dangerouslySetInnerHTML={{ __html: this.parseMobile(number) }}
     />;
 
     const mobileHtml = generateMobileHtml(mobile !== '' ? mobile : placeholders.mobile);
@@ -106,7 +106,7 @@ class SignatureContainer extends Component {
 
   copySignatureText = (props) => {
     const { name, title, qualifications, mobile, email, twitter, isSupport } = props;
-    const mobileText = SignatureContainer.parseMobile(mobile).replace(/&nbsp;/g, ' ');
+    const mobileText = this.parseMobile(mobile).replace(/&nbsp;/g, ' ');
 
     const textArr = [
       '--',
@@ -139,7 +139,7 @@ class SignatureContainer extends Component {
 
   copyRepliesAndForwardsText = (props) => {
     const { name, title, mobile, email, twitter, isSupport } = props;
-    const mobileText = SignatureContainer.parseMobile(mobile).replace(/&nbsp;/g, ' ');
+    const mobileText = this.parseMobile(mobile).replace(/&nbsp;/g, ' ');
 
     const textArr = [
       '--',

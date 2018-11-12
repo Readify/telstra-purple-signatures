@@ -10,6 +10,7 @@ class Form extends Component {
     name: 'Your Name:',
     title: 'Job Title:',
     email: 'Email:',
+    phone: 'Phone:',
     mobile: 'Mobile:',
     twitter: 'Twitter: (Optional)',
     qualifications: 'Qualifications: (Optional)',
@@ -19,18 +20,20 @@ class Form extends Component {
     super(props);
     this.state = {
       isSupport: false,
-      inputs: {
-        signatureType: [{ text: 'Readify', checked: true }, {
-          text: 'Readify Support',
-          checked: false
-        }, { text: 'BTS Digital', checked: false }],
-        name: '',
-        title: '',
-        qualifications: '',
-        mobile: '',
-        email: '',
-        twitter: '',
-      },
+      inputs: [
+        {
+          signatureType: [{ text: 'Readify', checked: true }, {
+            text: 'Readify Support',
+            checked: false
+          }, { text: 'BTS Digital', checked: false }], order: 1
+        },
+        { name: '', order: 2 },
+        { title: '', order: 3 },
+        { qualifications: '', order: 4 },
+        { mobile: '', order: 5 },
+        { email: '', order: 6 },
+        { twitter: '', order: 7 },
+      ],
     };
   }
 
@@ -42,16 +45,19 @@ class Form extends Component {
     const newSignatureTypes = this.state.inputs.signatureType.map(
       (sigObj, sigIndex) => ({ ...sigObj, ...(sigIndex === index ? { checked: true } : { checked: false }) })
     );
+    const isSupport = newSignatureTypes[1].checked;
+    const isBTS = newSignatureTypes[2].checked;
+    const baseInputs = isBTS ? { phone: '', ...this.state.inputs } : omit(this.state.inputs, ['phone']);
     this.setState({
-      inputs: { ...this.state.inputs, signatureType: newSignatureTypes },
-      isSupport: newSignatureTypes[1].checked
+      inputs: { ...baseInputs, signatureType: newSignatureTypes },
+      isSupport: isSupport
     });
   };
 
-  inputHtml = (inputName, formInputs) => {
+  inputHtml = (inputName, inputVal) => {
     if (inputName === 'signatureType') {
       return <div>
-        {formInputs[inputName].map(
+        {inputVal.map(
           (inputObj, index) => {
             return <div className="radio-inline" key={index}>
               <label>
@@ -71,18 +77,21 @@ class Form extends Component {
     return <input className='form-control'
                   placeholder={placeholders[inputName]}
                   style={{ width: '300px' }}
-                  value={formInputs[inputName] || ''}
+                  value={inputVal || ''}
                   onChange={(e) => this.handleChange({ [inputName]: e.target.value })}/>;
   };
 
   renderHtmlForInputs = (formInputs) => {
-    return Object.keys(formInputs).map(
-      inputName => (<tr key={inputName}>
-        <td className="col-md-4">{Form.labels[inputName]}</td>
-        <td className="col-md-4">
-          {this.inputHtml(inputName, formInputs)}
-        </td>
-      </tr>)
+    return formInputs.sort((a, b) => a.order - b.order).map(obj => omit(obj, 'order')).map(
+      inputObj => {
+        const inputName = Object.keys(inputObj).pop();
+        return <tr key={inputName}>
+          <td className="col-md-4">{Form.labels[inputName]}</td>
+          <td className="col-md-4">
+            {this.inputHtml(inputName, inputObj[inputName])}
+          </td>
+        </tr>;
+      }
     );
   };
 
@@ -91,10 +100,17 @@ class Form extends Component {
 
     const inputs = this.renderHtmlForInputs(formInputs);
 
+    const firstKey = inputObj => Object.keys(inputObj).pop();
+    const firstValue = inputObj => Object.values(inputObj).pop();
+
     const SignatureContainerProps = {
       placeholders,
       isSupport: this.state.isSupport,
-      ...omit(formInputs, ['signatureType'])
+      ...formInputs
+        .map(obj => omit(obj, 'order'))
+        .filter(inputObj => firstKey(inputObj) !== 'signatureType')
+        .reduce((result, item) => Object.assign(result, { [firstKey(item)]: firstValue(item) }), {})
+
     };
 
     return (<form>
