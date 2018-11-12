@@ -1,8 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders 1`] = `
-<div>
-  <h3>
+<div
+  className="content"
+>
+  <h3
+    className="title"
+  >
     Create your signature
   </h3>
   <ol>
@@ -33,6 +37,7 @@ exports[`Renders 1`] = `
         style={
           Object {
             "listStyleType": "none",
+            "margin": "0",
             "paddingLeft": "1rem",
             "paddingTop": "0.5rem",
           }

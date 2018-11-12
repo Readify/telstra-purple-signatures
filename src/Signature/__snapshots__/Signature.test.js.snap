@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders 1`] = `
-<div>
+<div
+  className="content"
+>
   <table
     border="0"
     cellPadding="0"
@@ -21,7 +23,7 @@ exports[`Renders 1`] = `
           Object {
             "borderRight": "1px solid #3D5567",
             "paddingRight": "20px",
-            "width": "76px",
+            "width": "96px",
           }
         }
         valign="top"

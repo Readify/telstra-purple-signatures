@@ -1,36 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders 1`] = `
-<div>
+<nav
+  aria-label="main navigation"
+  className="navbar"
+  role="navigation"
+>
   <div
-    className="col-md-12"
-    id="Header"
+    className="navbar-brand"
   >
-    <div
-      className="row"
+    <a
+      className="navbar-item"
+      href="https://brand-link"
     >
-      <div
-        className="col-md-1"
-      />
-      <div
-        className="col-md-11"
-        style={
-          Object {
-            "paddingLeft": "0px",
-          }
-        }
-      >
-        <a
-          className="navbar-brand"
-          href="https://brand-link"
-        >
-          Test App
-        </a>
-      </div>
-    </div>
-    <div
-      className="navbar-collapse collapse"
-    />
+      Test App
+    </a>
   </div>
-</div>
+</nav>
 `;
