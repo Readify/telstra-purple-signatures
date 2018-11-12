@@ -1,6 +1,4 @@
 body {
-  margin: 0;
-  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -11,27 +9,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-#Header {
-  background-color: #141b33;
-  color: white;
-}
-
-#Header a {
-  color: white;
-  font-size: 26px;
-}
-
-#savePath {
-  max-width: 400px;
-  word-break: break-word;
-}
-
-.navbar-brand {
-  background: url(https://labs.readify.net/Content/readify-device.png) no-repeat 15px 50%;
-  padding-left: 60px;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 100;
 }

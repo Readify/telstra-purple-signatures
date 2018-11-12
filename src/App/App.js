@@ -7,20 +7,24 @@ import Info from '../Info';
 
 const App = () => (
   <div>
-    <Header brandInfo={
-      {
+    <Header
+      brandInfo={{
         appName: 'Readify Outlook Signature',
         brandLink: 'https://readify-signatures.azurewebsites.net/'
-      }
-    }/>
-    <div>
-      <div className="col-md-1"/>
-      <div className="col-md-10" style={{ paddingBottom: '4rem' }}>
-        <Info/>
-        <Form/>
+      }}
+    />
+    <section className="section">
+      <div className="columns">
+        <div className="column" />
+        <div className="column is-three-quarters">
+          <div className="container">
+            <Info />
+            <Form />
+          </div>
+        </div>
+        <div className="column" />
       </div>
-      <div className="col-md-1"/>
-    </div>
+    </section>
   </div>
 );
 

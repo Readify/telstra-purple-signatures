@@ -1,0 +1,15 @@
+.navbar {
+  background-color: #141b33;
+  color: white;
+
+  .navbar-brand {
+    background: url(https://labs.readify.net/Content/readify-device.png) no-repeat 15px 50%;
+    padding-left: 50px;
+
+    a {
+      color: white;
+      font-size: 26px;
+      font-weight: 200;
+    }
+  }
+}

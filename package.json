@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bulma": "0.7.2",
     "lodash": "4.17.11",
+    "node-sass": "4.10.0",
     "react": "^16.6.1",
     "react-dom": "^16.6.1"
   },
@@ -44,7 +46,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+    "src/**/*.{js,jsx}": [
       "eslint",
       "git add"
     ]

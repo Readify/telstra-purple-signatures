@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { omit, mapValues } from 'lodash/object';
 
+import './Form.scss';
 import { placeholders } from '../constants';
 import SignatureContainer from '../SignatureContainer';
 
 class Form extends Component {
   static labels = {
-    signatureType: 'Signature Type',
+    signatureTypes: 'Signature Type',
     name: 'Your Name:',
     title: 'Job Title:',
     email: 'Email:',
@@ -78,12 +79,13 @@ class Form extends Component {
   inputHtml = (inputName, inputVal) => {
     if (inputName === 'signatureTypes') {
       return (
-        <div>
-          {inputVal.map((inputObj, index) => {
-            return (
-              <div className="radio-inline" key={index}>
-                <label>
+        <div className="field is-narrow">
+          <div className="control">
+            {inputVal.map((inputObj, index) => {
+              return (
+                <label className="radio" key={index}>
                   <input
+                    className="radioInput"
                     type="radio"
                     name="signatureTypeOpt"
                     onChange={() => this.handleRadioChange(index)}
@@ -91,16 +93,16 @@ class Form extends Component {
                   />
                   {inputObj.text}
                 </label>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       );
     }
 
     return (
       <input
-        className="form-control"
+        className="input"
         placeholder={placeholders[inputName]}
         style={{ width: '300px' }}
         value={inputVal || ''}
@@ -116,12 +118,18 @@ class Form extends Component {
       .map(inputObj => {
         const inputName = inputObj.key;
         return (
-          <tr key={inputName}>
-            <td className="col-md-4">{Form.labels[inputName]}</td>
-            <td className="col-md-4">
-              {this.inputHtml(inputName, inputObj.text)}
-            </td>
-          </tr>
+          <div className="field is-horizontal" key={inputName}>
+            <div className="field-label is-normal">
+              <label className="label field-label">
+                {Form.labels[inputName]}
+              </label>
+            </div>
+            <div className="field-body">
+              <div className="control" key={inputName}>
+                {this.inputHtml(inputName, inputObj.text)}
+              </div>
+            </div>
+          </div>
         );
       });
   };
@@ -139,16 +147,9 @@ class Form extends Component {
 
     return (
       <form>
-        <div className="form-group">
-          <div className="col-md-10">
-            <table className="table table-striped">
-              <tbody>{inputs}</tbody>
-            </table>
-            <hr />
-            <SignatureContainer {...SignatureContainerProps} />
-          </div>
-          <div className="col-md-4" />
-        </div>
+        {inputs}
+        <hr />
+        <SignatureContainer {...SignatureContainerProps} />
       </form>
     );
   }

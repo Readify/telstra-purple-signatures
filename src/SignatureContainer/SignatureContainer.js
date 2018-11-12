@@ -5,6 +5,8 @@ import { brandInfo, placeholders } from '../constants';
 import Signature from '../Signature';
 import RepliesAndForwards from '../RepliesAndForwards';
 
+import './SignatureContainer.scss';
+
 class SignatureContainer extends Component {
   static defaultButtonText = {
     text: 'Copy text only',
@@ -325,15 +327,13 @@ class SignatureContainer extends Component {
       buttonTextTextRAF
     } = this.state.button;
 
-    const styleRight = { flex: 1, display: 'flex', justifyContent: 'flex-end' };
-
-    // Note: css classes do not work for email so you need to use inline styles!
-    // Adding a tbody causes the email sig to break in certain clients :'(
     return (
-      <div className="sig-grid">
-        <div className="sig-grid row">
-          <h3 style={{ margin: '0 1rem 1rem 0' }}>Standard Signature</h3>
-          <div style={styleRight}>
+      <div className="content">
+        <div className="level">
+          <div className="level-left">
+            <h3 className="level-item">Standard Signature</h3>
+          </div>
+          <div className="level-right">
             <button
               type="button"
               className={buttonClassTextSig}
@@ -364,14 +364,12 @@ class SignatureContainer extends Component {
             </button>
           </div>
         </div>
-        <div className="sig-grid row">
-          <Signature {...signatureHtmlProps} />
-        </div>
-        <div className="sig-grid row" style={{ marginTop: '2rem' }}>
-          <h3 style={{ margin: '0 1rem 1rem 0' }}>
-            Replies and Forwards Signature
-          </h3>
-          <div style={styleRight}>
+        <Signature {...signatureHtmlProps} />
+        <div className="level">
+          <div className="level-left">
+            <h3 className="level-item">Replies and Forwards Signature</h3>
+          </div>
+          <div className="level-right">
             <button
               type="button"
               className={buttonClassTextRAF}
@@ -402,9 +400,7 @@ class SignatureContainer extends Component {
             </button>
           </div>
         </div>
-        <div className="sig-grid row">
-          <RepliesAndForwards {...signatureHtmlProps} />
-        </div>
+        <RepliesAndForwards {...signatureHtmlProps} />
       </div>
     );
   }
