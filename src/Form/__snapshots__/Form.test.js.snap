@@ -13,6 +13,63 @@ exports[`Renders 1`] = `
       >
         <tbody>
           <tr
+            key="signatureType"
+          >
+            <td
+              className="col-md-4"
+            >
+              Signature Type
+            </td>
+            <td
+              className="col-md-4"
+            >
+              <div>
+                <div
+                  className="radio-inline"
+                  key="0"
+                >
+                  <label>
+                    <input
+                      checked={true}
+                      name="signatureTypeOpt"
+                      onChange={[Function]}
+                      type="radio"
+                    />
+                    Readify
+                  </label>
+                </div>
+                <div
+                  className="radio-inline"
+                  key="1"
+                >
+                  <label>
+                    <input
+                      checked={false}
+                      name="signatureTypeOpt"
+                      onChange={[Function]}
+                      type="radio"
+                    />
+                    Readify Support
+                  </label>
+                </div>
+                <div
+                  className="radio-inline"
+                  key="2"
+                >
+                  <label>
+                    <input
+                      checked={false}
+                      name="signatureTypeOpt"
+                      onChange={[Function]}
+                      type="radio"
+                    />
+                    BTS Digital
+                  </label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr
             key="name"
           >
             <td
@@ -152,29 +209,6 @@ exports[`Renders 1`] = `
                     "width": "300px",
                   }
                 }
-                value=""
-              />
-            </td>
-          </tr>
-          <tr
-            key="isSupport"
-          >
-            <td
-              className="col-md-4"
-            >
-              Are you Readify Support?
-            </td>
-            <td
-              className="col-md-4"
-            >
-              <input
-                onChange={[Function]}
-                style={
-                  Object {
-                    "width": "300px",
-                  }
-                }
-                type="checkbox"
                 value=""
               />
             </td>
