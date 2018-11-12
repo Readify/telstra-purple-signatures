@@ -1,8 +1,4 @@
-import React, { Component } from 'react';
-import ReactDOMServer from 'react-dom/server';
-import './App.css';
-
-class SocialMedia extends Component {
+class SocialMedia extends React.Component {
   static brandInfo = [
     {
       name: 'FaceBook',
@@ -146,7 +142,7 @@ const RepliesAndForwards = props => {
   </div>;
 };
 
-class Signature extends Component {
+class Signature extends React.Component {
   static brandInfo = {
     brandName: 'Readify',
     brandLink: 'https://readify.net',
@@ -458,7 +454,7 @@ class Signature extends Component {
   }
 }
 
-class Form extends Component {
+class Form extends React.Component {
   static labels = {
     name: 'Your Name:',
     title: 'Job Title:',
@@ -601,4 +597,4 @@ const App = () => (
   </div>
 );
 
-export default App
+ReactDOM.render(<App/>, document.getElementById('app'));
