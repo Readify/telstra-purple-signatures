@@ -54,14 +54,33 @@ exports[`Renders full dom 1`] = `
         role="navigation"
       >
         <div
-          className="navbar-brand"
+          className="columns"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
         >
-          <a
-            className="navbar-item"
-            href="https://readify-signatures.azurewebsites.net/"
+          <div
+            className="column"
+          />
+          <div
+            className="column is-three-quarters"
           >
-            Readify Outlook Signature
-          </a>
+            <div
+              className="navbar-brand"
+            >
+              <a
+                className="navbar-item"
+                href="https://readify-signatures.azurewebsites.net/"
+              >
+                Readify Outlook Signature
+              </a>
+            </div>
+          </div>
+          <div
+            className="column"
+          />
         </div>
       </nav>
     </Header>

@@ -7,14 +7,33 @@ exports[`Renders 1`] = `
   role="navigation"
 >
   <div
-    className="navbar-brand"
+    className="columns"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
   >
-    <a
-      className="navbar-item"
-      href="https://brand-link"
+    <div
+      className="column"
+    />
+    <div
+      className="column is-three-quarters"
     >
-      Test App
-    </a>
+      <div
+        className="navbar-brand"
+      >
+        <a
+          className="navbar-item"
+          href="https://brand-link"
+        >
+          Test App
+        </a>
+      </div>
+    </div>
+    <div
+      className="column"
+    />
   </div>
 </nav>
 `;
