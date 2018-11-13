@@ -1,24 +1,20 @@
 import React from 'react';
 
 import SocialMedia from '../SocialMedia';
+import { brandInfo } from '../constants';
+import { parseMobile } from '../util';
 
 const Signature = props => {
   const {
-    brandLogo,
     name,
-    placeholders,
-    brandName,
     title,
-    isSupport,
     qualifications,
-    mobileHtml,
-    supportMobile,
-    emailHtml,
-    supportEmail,
+    mobile,
+    email,
     twitterHtml,
-    brandLink,
-    brandLinkName
+    isSupport
   } = props;
+  const { brandLogo, brandName, brandLink, brandLinkName } = brandInfo;
 
   // Note: css classes do not work for email so you need to use inline styles!
   // Adding a tbody causes the email sig to break in certain clients :'(
@@ -53,9 +49,9 @@ const Signature = props => {
           </td>
           <td valign="top" style={{ paddingLeft: '20px' }}>
             <p style={{ marginBottom: '10px' }}>
-              <b>{name || placeholders.name}</b>
+              <b>{name}</b>
               <br />
-              {brandName}&nbsp;|&nbsp;{title || placeholders.title}
+              {brandName}&nbsp;|&nbsp;{title}
             </p>
             {qualifications ? (
               <p style={{ marginBottom: '10px' }}>{qualifications}</p>
@@ -63,14 +59,43 @@ const Signature = props => {
             <p style={{ marginBottom: '20px' }}>
               <span>
                 <b>M</b>
-                &nbsp;{mobileHtml}
-                &nbsp;{supportMobile}
+                &nbsp;
+                <a
+                  href={`tel:${parseMobile(mobile).replace(/&nbsp;/g, '')}`}
+                  dangerouslySetInnerHTML={{ __html: parseMobile(mobile) }}
+                />
+                &nbsp;
+                {isSupport ? (
+                  <span>
+                    |&nbsp;<b>Support&nbsp;Hotline</b>
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: brandInfo.supportMobile
+                      }}
+                    />
+                    <br />
+                  </span>
+                ) : (
+                  <span>&nbsp;&nbsp;</span>
+                )}
               </span>
-              {isSupport ? null : <span>&nbsp;&nbsp;</span>}
+              <span>&nbsp;&nbsp;</span>
               <span>
                 <b>E</b>
-                &nbsp;{emailHtml}
-                &nbsp;{supportEmail}
+                &nbsp;
+                <a href={`mailto:${email}`}>{email}</a>
+                &nbsp;
+                {isSupport ? (
+                  <span>
+                    |&nbsp;<b>Support&nbsp;Email</b>&nbsp;
+                    <a href={`mailto:${brandInfo.supportEmail}`}>
+                      {brandInfo.supportEmail}
+                    </a>
+                    <br />
+                  </span>
+                ) : (
+                  <span>&nbsp;&nbsp;</span>
+                )}
               </span>
               {twitterHtml}
               <span>
@@ -85,4 +110,5 @@ const Signature = props => {
     </div>
   );
 };
+
 export default Signature;

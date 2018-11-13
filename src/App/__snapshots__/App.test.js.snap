@@ -508,76 +508,127 @@ exports[`Renders full dom 1`] = `
                       <div
                         className="level-right"
                       >
-                        <button
-                          className="button"
-                          onClick={[Function]}
-                          type="button"
+                        <withState(withState(withHandlers(mapProps(Button))))
+                          classAfter="button is-success"
+                          classBefore="button"
+                          onClickHandler={[Function]}
+                          textAfter="Copied!"
+                          textBefore="Copy text only"
                         >
-                          Copy text only
-                        </button>
-                        <button
-                          className="button is-link"
-                          onClick={[Function]}
-                          type="button"
+                          <withState(withHandlers(mapProps(Button)))
+                            classAfter="button is-success"
+                            classBefore="button"
+                            classState="button"
+                            onClickHandler={[Function]}
+                            setClass={[Function]}
+                            textAfter="Copied!"
+                            textBefore="Copy text only"
+                          >
+                            <withHandlers(mapProps(Button))
+                              classAfter="button is-success"
+                              classBefore="button"
+                              classState="button"
+                              onClickHandler={[Function]}
+                              setClass={[Function]}
+                              setText={[Function]}
+                              textAfter="Copied!"
+                              textBefore="Copy text only"
+                              textState="Copy text only"
+                            >
+                              <mapProps(Button)
+                                classAfter="button is-success"
+                                classBefore="button"
+                                classState="button"
+                                onClick={[Function]}
+                                onClickHandler={[Function]}
+                                setClass={[Function]}
+                                setText={[Function]}
+                                textAfter="Copied!"
+                                textBefore="Copy text only"
+                                textState="Copy text only"
+                              >
+                                <Button
+                                  classState="button"
+                                  onClick={[Function]}
+                                  textState="Copy text only"
+                                >
+                                  <button
+                                    className="button"
+                                    onClick={[Function]}
+                                    type="button"
+                                  >
+                                    Copy text only
+                                  </button>
+                                </Button>
+                              </mapProps(Button)>
+                            </withHandlers(mapProps(Button))>
+                          </withState(withHandlers(mapProps(Button)))>
+                        </withState(withState(withHandlers(mapProps(Button))))>
+                        <withState(withState(withHandlers(mapProps(Button))))
+                          classAfter="button is-success"
+                          classBefore="button is-primary"
+                          onClickHandler={[Function]}
+                          textAfter="Copied!"
+                          textBefore="Copy signature"
                         >
-                          Copy Signature
-                        </button>
+                          <withState(withHandlers(mapProps(Button)))
+                            classAfter="button is-success"
+                            classBefore="button is-primary"
+                            classState="button is-primary"
+                            onClickHandler={[Function]}
+                            setClass={[Function]}
+                            textAfter="Copied!"
+                            textBefore="Copy signature"
+                          >
+                            <withHandlers(mapProps(Button))
+                              classAfter="button is-success"
+                              classBefore="button is-primary"
+                              classState="button is-primary"
+                              onClickHandler={[Function]}
+                              setClass={[Function]}
+                              setText={[Function]}
+                              textAfter="Copied!"
+                              textBefore="Copy signature"
+                              textState="Copy signature"
+                            >
+                              <mapProps(Button)
+                                classAfter="button is-success"
+                                classBefore="button is-primary"
+                                classState="button is-primary"
+                                onClick={[Function]}
+                                onClickHandler={[Function]}
+                                setClass={[Function]}
+                                setText={[Function]}
+                                textAfter="Copied!"
+                                textBefore="Copy signature"
+                                textState="Copy signature"
+                              >
+                                <Button
+                                  classState="button is-primary"
+                                  onClick={[Function]}
+                                  textState="Copy signature"
+                                >
+                                  <button
+                                    className="button is-primary"
+                                    onClick={[Function]}
+                                    type="button"
+                                  >
+                                    Copy signature
+                                  </button>
+                                </Button>
+                              </mapProps(Button)>
+                            </withHandlers(mapProps(Button))>
+                          </withState(withHandlers(mapProps(Button)))>
+                        </withState(withState(withHandlers(mapProps(Button))))>
                       </div>
                     </div>
                     <Signature
-                      brandLink="https://readify.net"
-                      brandLinkName="readify.net"
-                      brandLogo={
-                        Object {
-                          "alt": "Readify a Telstra Company",
-                          "link": "https://readifysignatures.blob.core.windows.net/images/image001.png",
-                        }
-                      }
-                      brandName="Readify"
-                      email=""
-                      emailHtml={
-                        <a
-                          href="mailto:your.name@readify.net"
-                        >
-                          your.name@readify.net
-                        </a>
-                      }
+                      email="your.name@readify.net"
                       isSupport={false}
-                      mobile=""
-                      mobileHtml={
-                        <a
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
-                            }
-                          }
-                          href="tel:+61111222333"
-                        />
-                      }
-                      name=""
-                      placeholders={
-                        Object {
-                          "email": "your.name@readify.net",
-                          "mobile": "+61 111 222 333",
-                          "name": "Your Name",
-                          "qualifications": "Jedi Master | PSM I",
-                          "title": "Job Title",
-                          "twitter": "@myTwitter",
-                        }
-                      }
+                      mobile="+61 111 222 333"
+                      name="Your Name"
                       qualifications=""
-                      supportEmail={
-                        <span>
-                            
-                        </span>
-                      }
-                      supportMobile={
-                        <span>
-                            
-                        </span>
-                      }
-                      title=""
-                      twitter=""
+                      title="Job Title"
                       twitterHtml={null}
                     >
                       <div
@@ -815,76 +866,127 @@ exports[`Renders full dom 1`] = `
                       <div
                         className="level-right"
                       >
-                        <button
-                          className="button"
-                          onClick={[Function]}
-                          type="button"
+                        <withState(withState(withHandlers(mapProps(Button))))
+                          classAfter="button is-success"
+                          classBefore="button"
+                          onClickHandler={[Function]}
+                          textAfter="Copied!"
+                          textBefore="Copy text only"
                         >
-                          Copy text only
-                        </button>
-                        <button
-                          className="button is-link"
-                          onClick={[Function]}
-                          type="button"
+                          <withState(withHandlers(mapProps(Button)))
+                            classAfter="button is-success"
+                            classBefore="button"
+                            classState="button"
+                            onClickHandler={[Function]}
+                            setClass={[Function]}
+                            textAfter="Copied!"
+                            textBefore="Copy text only"
+                          >
+                            <withHandlers(mapProps(Button))
+                              classAfter="button is-success"
+                              classBefore="button"
+                              classState="button"
+                              onClickHandler={[Function]}
+                              setClass={[Function]}
+                              setText={[Function]}
+                              textAfter="Copied!"
+                              textBefore="Copy text only"
+                              textState="Copy text only"
+                            >
+                              <mapProps(Button)
+                                classAfter="button is-success"
+                                classBefore="button"
+                                classState="button"
+                                onClick={[Function]}
+                                onClickHandler={[Function]}
+                                setClass={[Function]}
+                                setText={[Function]}
+                                textAfter="Copied!"
+                                textBefore="Copy text only"
+                                textState="Copy text only"
+                              >
+                                <Button
+                                  classState="button"
+                                  onClick={[Function]}
+                                  textState="Copy text only"
+                                >
+                                  <button
+                                    className="button"
+                                    onClick={[Function]}
+                                    type="button"
+                                  >
+                                    Copy text only
+                                  </button>
+                                </Button>
+                              </mapProps(Button)>
+                            </withHandlers(mapProps(Button))>
+                          </withState(withHandlers(mapProps(Button)))>
+                        </withState(withState(withHandlers(mapProps(Button))))>
+                        <withState(withState(withHandlers(mapProps(Button))))
+                          classAfter="button is-success"
+                          classBefore="button is-primary"
+                          onClickHandler={[Function]}
+                          textAfter="Copied!"
+                          textBefore="Copy signature"
                         >
-                          Copy Signature
-                        </button>
+                          <withState(withHandlers(mapProps(Button)))
+                            classAfter="button is-success"
+                            classBefore="button is-primary"
+                            classState="button is-primary"
+                            onClickHandler={[Function]}
+                            setClass={[Function]}
+                            textAfter="Copied!"
+                            textBefore="Copy signature"
+                          >
+                            <withHandlers(mapProps(Button))
+                              classAfter="button is-success"
+                              classBefore="button is-primary"
+                              classState="button is-primary"
+                              onClickHandler={[Function]}
+                              setClass={[Function]}
+                              setText={[Function]}
+                              textAfter="Copied!"
+                              textBefore="Copy signature"
+                              textState="Copy signature"
+                            >
+                              <mapProps(Button)
+                                classAfter="button is-success"
+                                classBefore="button is-primary"
+                                classState="button is-primary"
+                                onClick={[Function]}
+                                onClickHandler={[Function]}
+                                setClass={[Function]}
+                                setText={[Function]}
+                                textAfter="Copied!"
+                                textBefore="Copy signature"
+                                textState="Copy signature"
+                              >
+                                <Button
+                                  classState="button is-primary"
+                                  onClick={[Function]}
+                                  textState="Copy signature"
+                                >
+                                  <button
+                                    className="button is-primary"
+                                    onClick={[Function]}
+                                    type="button"
+                                  >
+                                    Copy signature
+                                  </button>
+                                </Button>
+                              </mapProps(Button)>
+                            </withHandlers(mapProps(Button))>
+                          </withState(withHandlers(mapProps(Button)))>
+                        </withState(withState(withHandlers(mapProps(Button))))>
                       </div>
                     </div>
                     <RepliesAndForwards
-                      brandLink="https://readify.net"
-                      brandLinkName="readify.net"
-                      brandLogo={
-                        Object {
-                          "alt": "Readify a Telstra Company",
-                          "link": "https://readifysignatures.blob.core.windows.net/images/image001.png",
-                        }
-                      }
-                      brandName="Readify"
-                      email=""
-                      emailHtml={
-                        <a
-                          href="mailto:your.name@readify.net"
-                        >
-                          your.name@readify.net
-                        </a>
-                      }
+                      email="your.name@readify.net"
                       isSupport={false}
-                      mobile=""
-                      mobileHtml={
-                        <a
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
-                            }
-                          }
-                          href="tel:+61111222333"
-                        />
-                      }
-                      name=""
-                      placeholders={
-                        Object {
-                          "email": "your.name@readify.net",
-                          "mobile": "+61 111 222 333",
-                          "name": "Your Name",
-                          "qualifications": "Jedi Master | PSM I",
-                          "title": "Job Title",
-                          "twitter": "@myTwitter",
-                        }
-                      }
+                      mobile="+61 111 222 333"
+                      name="Your Name"
                       qualifications=""
-                      supportEmail={
-                        <span>
-                            
-                        </span>
-                      }
-                      supportMobile={
-                        <span>
-                            
-                        </span>
-                      }
-                      title=""
-                      twitter=""
+                      title="Job Title"
                       twitterHtml={null}
                     >
                       <div>

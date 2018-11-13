@@ -5,23 +5,13 @@ import RepliesAndForwards from './RepliesAndForwards';
 
 it('Renders', () => {
   const props = {
-    emailHtml: <div>your.name@readify.net</div>,
+    email: 'your.name@readify.net',
     isSupport: false,
-    mobileHtml: <div>+61 111 222 333</div>,
+    mobile: '+61 111 222 333',
     name: 'your name',
-    placeholders: {
-      email: 'your.name@readify.net',
-      mobile: '+61 111 222 333',
-      name: 'Your Name',
-      qualifications: 'Jedi Master | PSM I',
-      title: 'Job Title',
-      twitter: '@myTwitter',
-    },
+    qualifications: 'Jedi Master | PSM I',
     title: 'Job Title',
-    twitterHtml: <div>@myTwitter</div>,
-    brandLink: 'https://test.com',
-    brandName: 'Test',
-    brandLinkName: 'Test Link Name'
+    twitterHtml: <span>@myTwitter</span>
   };
 
   const tree = shallow(<RepliesAndForwards {...props} />);

@@ -16,7 +16,7 @@ exports[`Renders 1`] = `
     <b>
       your name
        | 
-      Test
+      Readify
        
       Job Title
     </b>
@@ -25,22 +25,29 @@ exports[`Renders 1`] = `
       M
     </b>
       
-    <div>
-      +61 111 222 333
-    </div>
+    <a
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+        }
+      }
+      href="tel:+61111222333"
+    />
      | 
     <b>
       E
     </b>
       
-    <div>
+    <a
+      href="mailto:your.name@readify.net"
+    >
       your.name@readify.net
-    </div>
+    </a>
      | 
     <span>
-      <div>
+      <span>
         @myTwitter
-      </div>
+      </span>
       | 
     </span>
     <b>
@@ -48,9 +55,9 @@ exports[`Renders 1`] = `
     </b>
      
     <a
-      href="https://test.com"
+      href="https://readify.net"
     >
-      Test Link Name
+      readify.net
     </a>
   </p>
 </div>

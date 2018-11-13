@@ -9,20 +9,9 @@ it('Renders', () => {
     isSupport: false,
     mobile: '+61 111 222 333',
     name: 'your name',
-    placeholders: {
-      email: 'your.name@readify.net',
-      mobile: '+61 111 222 333',
-      name: 'Your Name',
-      qualifications: 'Jedi Master | PSM I',
-      title: 'Job Title',
-      twitter: '@myTwitter',
-    },
     qualifications: 'Jedi Master | PSM I',
     title: 'Job Title',
-    twitter: '@myTwitter',
-    brandLink: 'https://test.com',
-    brandLinkName: 'Test',
-    brandLogo: 'https://test.com/test-image'
+    twitterHtml: <span>@myTwitter</span>
   };
 
   const tree = shallow(<Signature {...props} />);

@@ -29,8 +29,9 @@ exports[`Renders 1`] = `
         valign="top"
       >
         <img
+          alt="Readify a Telstra Company"
           height="53"
-          src={[Function]}
+          src="https://readifysignatures.blob.core.windows.net/images/image001.png"
           width="73"
         />
       </td>
@@ -53,6 +54,7 @@ exports[`Renders 1`] = `
             your name
           </b>
           <br />
+          Readify
            | 
           Job Title
         </p>
@@ -77,7 +79,18 @@ exports[`Renders 1`] = `
               M
             </b>
              
+            <a
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+                }
+              }
+              href="tel:+61111222333"
+            />
              
+            <span>
+                
+            </span>
           </span>
           <span>
               
@@ -87,7 +100,18 @@ exports[`Renders 1`] = `
               E
             </b>
              
+            <a
+              href="mailto:your.name@readify.net"
+            >
+              your.name@readify.net
+            </a>
              
+            <span>
+                
+            </span>
+          </span>
+          <span>
+            @myTwitter
           </span>
           <span>
             <b>
@@ -95,9 +119,9 @@ exports[`Renders 1`] = `
             </b>
              
             <a
-              href="https://test.com"
+              href="https://readify.net"
             >
-              Test
+              readify.net
             </a>
           </span>
         </p>

@@ -7,7 +7,8 @@
     "lodash": "4.17.11",
     "node-sass": "4.10.0",
     "react": "^16.6.1",
-    "react-dom": "^16.6.1"
+    "react-dom": "^16.6.1",
+    "recompose": "0.30.0"
   },
   "devDependencies": {
     "enzyme": "3.7.0",
