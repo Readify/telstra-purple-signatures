@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders 1`] = `
+<nav
+  aria-label="main navigation"
+  className="navbar"
+  role="navigation"
+>
+  <div
+    className="columns"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="column"
+    />
+    <div
+      className="column is-three-quarters"
+    >
+      <div
+        className="navbar-brand"
+      >
+        <a
+          className="navbar-item"
+          href="https://brand-link"
+        >
+          Test App
+        </a>
+      </div>
+    </div>
+    <div
+      className="column"
+    />
+  </div>
+</nav>
+`;

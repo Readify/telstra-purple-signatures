@@ -1,0 +1,6 @@
+{
+  "main": "./Signature.js",
+  "name": "Signature",
+  "version": "0.0.0",
+  "private": true
+}

@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders 1`] = `
+<div
+  className="content"
+>
+  <div
+    className="level"
+  >
+    <div
+      className="level-left"
+    >
+      <h3
+        className="level-item"
+      >
+        Standard Signature
+      </h3>
+    </div>
+    <div
+      className="level-right"
+    >
+      <withState(withState(withHandlers(mapProps(Button))))
+        classAfter="button is-success"
+        classBefore="button"
+        onClickHandler={[Function]}
+        textAfter="Copied!"
+        textBefore="Copy text only"
+      />
+      <withState(withState(withHandlers(mapProps(Button))))
+        classAfter="button is-success"
+        classBefore="button is-primary"
+        onClickHandler={[Function]}
+        textAfter="Copied!"
+        textBefore="Copy signature"
+      />
+    </div>
+  </div>
+  <Signature
+    email="your.name@readify.net"
+    isSupport={false}
+    mobile="+61 111 222 333"
+    name="your name"
+    title="Job Title"
+    twitterHtml={
+      <span>
+        <b>
+          T
+        </b>
+         
+        <a
+          href="https://twitter.com/myTwitter"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          @myTwitter
+        </a>
+           
+      </span>
+    }
+  />
+  <div
+    className="level"
+  >
+    <div
+      className="level-left"
+    >
+      <h3
+        className="level-item"
+      >
+        Replies and Forwards Signature
+      </h3>
+    </div>
+    <div
+      className="level-right"
+    >
+      <withState(withState(withHandlers(mapProps(Button))))
+        classAfter="button is-success"
+        classBefore="button"
+        onClickHandler={[Function]}
+        textAfter="Copied!"
+        textBefore="Copy text only"
+      />
+      <withState(withState(withHandlers(mapProps(Button))))
+        classAfter="button is-success"
+        classBefore="button is-primary"
+        onClickHandler={[Function]}
+        textAfter="Copied!"
+        textBefore="Copy signature"
+      />
+    </div>
+  </div>
+  <RepliesAndForwards
+    email="your.name@readify.net"
+    isSupport={false}
+    mobile="+61 111 222 333"
+    name="your name"
+    title="Job Title"
+    twitterHtml={
+      <span>
+        <b>
+          T
+        </b>
+         
+        <a
+          href="https://twitter.com/myTwitter"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          @myTwitter
+        </a>
+           
+      </span>
+    }
+  />
+</div>
+`;
+
+exports[`Renders with support fields 1`] = `
+<div
+  className="content"
+>
+  <div
+    className="level"
+  >
+    <div
+      className="level-left"
+    >
+      <h3
+        className="level-item"
+      >
+        Standard Signature
+      </h3>
+    </div>
+    <div
+      className="level-right"
+    >
+      <withState(withState(withHandlers(mapProps(Button))))
+        classAfter="button is-success"
+        classBefore="button"
+        onClickHandler={[Function]}
+        textAfter="Copied!"
+        textBefore="Copy text only"
+      />
+      <withState(withState(withHandlers(mapProps(Button))))
+        classAfter="button is-success"
+        classBefore="button is-primary"
+        onClickHandler={[Function]}
+        textAfter="Copied!"
+        textBefore="Copy signature"
+      />
+    </div>
+  </div>
+  <Signature
+    email="your.name@readify.net"
+    isSupport={true}
+    mobile="+61 111 222 333"
+    name="your name"
+    title="Job Title"
+    twitterHtml={
+      <span>
+        <b>
+          T
+        </b>
+         
+        <a
+          href="https://twitter.com/myTwitter"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          @myTwitter
+        </a>
+           
+      </span>
+    }
+  />
+  <div
+    className="level"
+  >
+    <div
+      className="level-left"
+    >
+      <h3
+        className="level-item"
+      >
+        Replies and Forwards Signature
+      </h3>
+    </div>
+    <div
+      className="level-right"
+    >
+      <withState(withState(withHandlers(mapProps(Button))))
+        classAfter="button is-success"
+        classBefore="button"
+        onClickHandler={[Function]}
+        textAfter="Copied!"
+        textBefore="Copy text only"
+      />
+      <withState(withState(withHandlers(mapProps(Button))))
+        classAfter="button is-success"
+        classBefore="button is-primary"
+        onClickHandler={[Function]}
+        textAfter="Copied!"
+        textBefore="Copy signature"
+      />
+    </div>
+  </div>
+  <RepliesAndForwards
+    email="your.name@readify.net"
+    isSupport={true}
+    mobile="+61 111 222 333"
+    name="your name"
+    title="Job Title"
+    twitterHtml={
+      <span>
+        <b>
+          T
+        </b>
+         
+        <a
+          href="https://twitter.com/myTwitter"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          @myTwitter
+        </a>
+           
+      </span>
+    }
+  />
+</div>
+`;

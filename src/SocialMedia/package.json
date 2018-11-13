@@ -1,0 +1,6 @@
+{
+  "main": "./SocialMedia.js",
+  "name": "SocialMedia",
+  "version": "0.0.0",
+  "private": true
+}

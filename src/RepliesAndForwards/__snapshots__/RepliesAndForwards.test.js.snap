@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders 1`] = `
+<div>
+  <p
+    style={
+      Object {
+        "color": "#3D5567",
+        "fontFamily": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+        "fontSize": "10.5pt",
+      }
+    }
+  >
+    --
+    <br />
+    <b>
+      your name
+       | 
+      Readify
+       
+      Job Title
+    </b>
+    <br />
+    <b>
+      M
+    </b>
+      
+    <a
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+        }
+      }
+      href="tel:+61111222333"
+    />
+     | 
+    <b>
+      E
+    </b>
+      
+    <a
+      href="mailto:your.name@readify.net"
+    >
+      your.name@readify.net
+    </a>
+     | 
+    <span>
+      <span>
+        @myTwitter
+      </span>
+      | 
+    </span>
+    <b>
+      W
+    </b>
+     
+    <a
+      href="https://readify.net"
+    >
+      readify.net
+    </a>
+  </p>
+</div>
+`;

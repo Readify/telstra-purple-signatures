@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders 1`] = `
+<div
+  className="content"
+>
+  <h3
+    className="title"
+  >
+    Create your signature
+  </h3>
+  <ol>
+    <li>
+      Enter your details.
+    </li>
+    <li>
+      Click the "Copy Signature" button
+    </li>
+    <li>
+      Open outlook
+    </li>
+    <li>
+      <a
+        href="https://support.office.com/en-us/article/create-and-add-a-signature-to-messages-8ee5d4f4-68fd-464a-a1c1-0e1c80bb27f2"
+        rel="noopener noreferrer"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "textDecoration": "underline",
+          }
+        }
+        target="_blank"
+      >
+        Paste selection into signature editor
+      </a>
+      <ul
+        style={
+          Object {
+            "listStyleType": "none",
+            "margin": "0",
+            "paddingLeft": "1rem",
+            "paddingTop": "0.5rem",
+          }
+        }
+      >
+        <li
+          style={
+            Object {
+              "marginBottom": "0.5rem",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Windows: 
+          </span>
+          Signature &gt; Signatures from the Message menu
+        </li>
+        <li>
+          <span
+            style={
+              Object {
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Mac: 
+          </span>
+          Preferences &gt; Signatures from the Message menu
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <br />
+</div>
+`;

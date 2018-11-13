@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders 1`] = `
+<p
+  style={
+    Object {
+      "marginBottom": "0",
+    }
+  }
+>
+  <span
+    key="FaceBook"
+  >
+    <a
+      href="https://readify.net/links/facebook"
+      style={
+        Object {
+          "display": "inline-block",
+          "height": "28px",
+          "width": "28px",
+        }
+      }
+    >
+      <img
+        alt="Readify on FaceBook"
+        height="28"
+        src="https://readifysignatures.blob.core.windows.net/images/image002.png"
+        width="28"
+      />
+    </a>
+    <span>
+        
+    </span>
+  </span>
+  <span
+    key="Twitter"
+  >
+    <a
+      href="https://readify.net/links/twitter"
+      style={
+        Object {
+          "display": "inline-block",
+          "height": "28px",
+          "width": "28px",
+        }
+      }
+    >
+      <img
+        alt="Readify on Twitter"
+        height="28"
+        src="https://readifysignatures.blob.core.windows.net/images/image003.png"
+        width="28"
+      />
+    </a>
+    <span>
+        
+    </span>
+  </span>
+  <span
+    key="LinkedIn"
+  >
+    <a
+      href="https://readify.net/links/linkedin"
+      style={
+        Object {
+          "display": "inline-block",
+          "height": "28px",
+          "width": "28px",
+        }
+      }
+    >
+      <img
+        alt="Readify on LinkedIn"
+        height="28"
+        src="https://readifysignatures.blob.core.windows.net/images/image004.png"
+        width="28"
+      />
+    </a>
+    <span>
+        
+    </span>
+  </span>
+  <span
+    key="Youtube"
+  >
+    <a
+      href="https://readify.net/links/youtube"
+      style={
+        Object {
+          "display": "inline-block",
+          "height": "28px",
+          "width": "28px",
+        }
+      }
+    >
+      <img
+        alt="Readify on Youtube"
+        height="28"
+        src="https://readifysignatures.blob.core.windows.net/images/image005.png"
+        width="28"
+      />
+    </a>
+  </span>
+</p>
+`;

@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders 1`] = `
+<div
+  className="content"
+>
+  <table
+    border="0"
+    cellPadding="0"
+    cellSpacing="0"
+    style={
+      Object {
+        "color": "#3D5567",
+        "fontFamily": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+        "fontSize": "10.5pt",
+      }
+    }
+    width="100%"
+  >
+    <tr>
+      <td
+        style={
+          Object {
+            "borderRight": "1px solid #3D5567",
+            "paddingRight": "20px",
+            "width": "96px",
+          }
+        }
+        valign="top"
+      >
+        <img
+          alt="Readify a Telstra Company"
+          height="53"
+          src="https://readifysignatures.blob.core.windows.net/images/image001.png"
+          width="73"
+        />
+      </td>
+      <td
+        style={
+          Object {
+            "paddingLeft": "20px",
+          }
+        }
+        valign="top"
+      >
+        <p
+          style={
+            Object {
+              "marginBottom": "10px",
+            }
+          }
+        >
+          <b>
+            your name
+          </b>
+          <br />
+          Readify
+           | 
+          Job Title
+        </p>
+        <p
+          style={
+            Object {
+              "marginBottom": "10px",
+            }
+          }
+        >
+          Jedi Master | PSM I
+        </p>
+        <p
+          style={
+            Object {
+              "marginBottom": "20px",
+            }
+          }
+        >
+          <span>
+            <b>
+              M
+            </b>
+             
+            <a
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+                }
+              }
+              href="tel:+61111222333"
+            />
+             
+            <span>
+                
+            </span>
+          </span>
+          <span>
+              
+          </span>
+          <span>
+            <b>
+              E
+            </b>
+             
+            <a
+              href="mailto:your.name@readify.net"
+            >
+              your.name@readify.net
+            </a>
+             
+            <span>
+                
+            </span>
+          </span>
+          <span>
+            @myTwitter
+          </span>
+          <span>
+            <b>
+              W
+            </b>
+             
+            <a
+              href="https://readify.net"
+            >
+              readify.net
+            </a>
+          </span>
+        </p>
+        <SocialMedia />
+      </td>
+    </tr>
+  </table>
+</div>
+`;
