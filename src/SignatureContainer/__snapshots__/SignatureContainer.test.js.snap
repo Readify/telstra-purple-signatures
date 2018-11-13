@@ -20,14 +20,14 @@ exports[`Renders 1`] = `
       className="level-right"
     >
       <button
-        className="btn btn-default"
+        className="button"
         onClick={[Function]}
         type="button"
       >
         Copy text only
       </button>
       <button
-        className="btn btn-primary"
+        className="button is-link"
         onClick={[Function]}
         type="button"
       >
@@ -121,14 +121,14 @@ exports[`Renders 1`] = `
       className="level-right"
     >
       <button
-        className="btn btn-default"
+        className="button"
         onClick={[Function]}
         type="button"
       >
         Copy text only
       </button>
       <button
-        className="btn btn-primary"
+        className="button is-link"
         onClick={[Function]}
         type="button"
       >
@@ -229,14 +229,14 @@ exports[`Renders with support fields 1`] = `
       className="level-right"
     >
       <button
-        className="btn btn-default"
+        className="button"
         onClick={[Function]}
         type="button"
       >
         Copy text only
       </button>
       <button
-        className="btn btn-primary"
+        className="button is-link"
         onClick={[Function]}
         type="button"
       >
@@ -351,14 +351,14 @@ exports[`Renders with support fields 1`] = `
       className="level-right"
     >
       <button
-        className="btn btn-default"
+        className="button"
         onClick={[Function]}
         type="button"
       >
         Copy text only
       </button>
       <button
-        className="btn btn-primary"
+        className="button is-link"
         onClick={[Function]}
         type="button"
       >

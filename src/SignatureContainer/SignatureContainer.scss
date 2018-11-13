@@ -8,3 +8,17 @@
     }
   }
 }
+
+.button {
+  min-width: 140px;
+  margin: 0 1rem;
+  transition: background-color 0.175s ease-in;
+
+  &.is-success {
+    min-width: 140px;
+
+    &.fadeColor {
+      transition: background-color 0.175s ease-out;
+    }
+  }
+}

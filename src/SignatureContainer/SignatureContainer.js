@@ -17,13 +17,13 @@ class SignatureContainer extends Component {
     super(props);
     this.state = {
       button: {
-        buttonClassHtml: 'btn btn-primary',
+        buttonClassHtml: 'button is-link',
         buttonTextHtml: SignatureContainer.defaultButtonText.html,
-        buttonClassTextSig: 'btn btn-default',
+        buttonClassTextSig: 'button',
         buttonTextTextSig: SignatureContainer.defaultButtonText.text,
-        buttonClassTextRAF: 'btn btn-default',
+        buttonClassTextRAF: 'button',
         buttonTextTextRAF: SignatureContainer.defaultButtonText.text,
-        buttonClassRAF: 'btn btn-primary',
+        buttonClassRAF: 'button is-link',
         buttonTextRAF: SignatureContainer.defaultButtonText.html
       }
     };
@@ -168,11 +168,11 @@ class SignatureContainer extends Component {
 
     this.setStateFunctionMaker(
       {
-        buttonClassTextSig: 'btn btn-success fadeColor',
+        buttonClassTextSig: 'button is-success fadeColor',
         buttonTextTextSig: 'Copied!'
       },
       {
-        buttonClassTextSig: 'btn btn-default',
+        buttonClassTextSig: 'button',
         buttonTextTextSig: SignatureContainer.defaultButtonText.text
       }
     )();
@@ -200,11 +200,11 @@ class SignatureContainer extends Component {
 
     this.setStateFunctionMaker(
       {
-        buttonClassTextRAF: 'btn btn-success fadeColor',
+        buttonClassTextRAF: 'button is-success fadeColor',
         buttonTextTextRAF: 'Copied!'
       },
       {
-        buttonClassTextRAF: 'btn btn-default',
+        buttonClassTextRAF: 'button',
         buttonTextTextRAF: SignatureContainer.defaultButtonText.text
       }
     )();
@@ -296,22 +296,22 @@ class SignatureContainer extends Component {
 
     const setStateFunctionHTML = this.setStateFunctionMaker(
       {
-        buttonClassHtml: 'btn btn-success fadeColor',
+        buttonClassHtml: 'button is-success fadeColor',
         buttonTextHtml: 'Copied!'
       },
       {
-        buttonClassHtml: 'btn btn-primary',
+        buttonClassHtml: 'button is-link',
         buttonTextHtml: SignatureContainer.defaultButtonText.html
       }
     );
 
     const setStateFunctionRAF = this.setStateFunctionMaker(
       {
-        buttonClassRAF: 'btn btn-success fadeColor',
+        buttonClassRAF: 'button is-success fadeColor',
         buttonTextRAF: 'Copied!'
       },
       {
-        buttonClassRAF: 'btn btn-primary',
+        buttonClassRAF: 'button is-link',
         buttonTextRAF: SignatureContainer.defaultButtonText.html
       }
     );
