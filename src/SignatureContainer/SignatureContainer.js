@@ -4,11 +4,14 @@ import { entries } from 'lodash/object';
 import constants from '../constants';
 import Signature from '../Signature';
 import RepliesAndForwards from '../RepliesAndForwards';
+import BtsRepliesAndForwards from '../BtsRepliesAndForwards';
 import BtsSignature from '../BtsSignature';
 import {
   copySignatureText,
   copyRepliesAndForwardsText,
-  copySignature
+  copySignature,
+  copyBtsSignatureText,
+  copyBtsRepliesAndForwardsText
 } from '../util';
 import Button from '../Button';
 
@@ -45,7 +48,13 @@ const ReadifySignatureContainer = ({
   </div>
 );
 
-const BtsSignatureContainer = ({ btsProps, CopyBtsSigText, CopyBtsHtml }) => (
+const BtsSignatureContainer = ({
+  btsProps,
+  CopyBtsSigText,
+  CopyBtsHtml,
+  CopyBtsRepliesAndForwardsText,
+  CopyBtsRepliesAndForwardsHtml
+}) => (
   <div className="content">
     <div className="level">
       <div className="level-left">
@@ -57,6 +66,16 @@ const BtsSignatureContainer = ({ btsProps, CopyBtsSigText, CopyBtsHtml }) => (
       </div>
     </div>
     <BtsSignature {...btsProps} />
+    <div className="level">
+      <div className="level-left">
+        <h3 className="level-item">Replies and Forwards Signature</h3>
+      </div>
+      <div className="level-right">
+        {CopyBtsRepliesAndForwardsText}
+        {CopyBtsRepliesAndForwardsHtml}
+      </div>
+    </div>
+    <BtsRepliesAndForwards {...btsProps} />
   </div>
 );
 
@@ -93,7 +112,7 @@ class SignatureContainer extends Component {
     );
   };
 
-  createButtons = (signatureProps, placeholders) => {
+  createButtons = (signatureProps, btsProps, placeholders) => {
     const CopySignatureText = this.buttonMaker(
       () =>
         copySignatureText({
@@ -132,11 +151,55 @@ class SignatureContainer extends Component {
         ),
       false
     );
+
+    const CopyBtsSigText = this.buttonMaker(
+      () =>
+        copyBtsSignatureText({
+          ...btsProps,
+          placeholders: placeholders
+        }),
+      true
+    );
+    const CopyBtsHtml = this.buttonMaker(
+      () =>
+        copySignature(
+          {
+            ...btsProps,
+            placeholders: placeholders
+          },
+          BtsSignature
+        ),
+      false
+    );
+
+    const CopyBtsRepliesAndForwardsText = this.buttonMaker(
+      () =>
+        copyBtsRepliesAndForwardsText({
+          ...btsProps,
+          placeholders: placeholders
+        }),
+      true
+    );
+    const CopyBtsRepliesAndForwardsHtml = this.buttonMaker(
+      () =>
+        copySignature(
+          {
+            ...btsProps,
+            placeholders: placeholders
+          },
+          BtsRepliesAndForwards
+        ),
+      false
+    );
     return {
       CopySignatureText,
       CopySignatureHtml,
       CopyRepliesAndForwardsText,
-      CopyRepliesAndForwardsHtml
+      CopyRepliesAndForwardsHtml,
+      CopyBtsSigText,
+      CopyBtsHtml,
+      CopyBtsRepliesAndForwardsText,
+      CopyBtsRepliesAndForwardsHtml
     };
   };
 
@@ -196,8 +259,10 @@ class SignatureContainer extends Component {
       CopyRepliesAndForwardsText,
       CopyRepliesAndForwardsHtml,
       CopyBtsSigText,
-      CopyBtsHtml
-    } = this.createButtons(signatureProps);
+      CopyBtsHtml,
+      CopyBtsRepliesAndForwardsText,
+      CopyBtsRepliesAndForwardsHtml
+    } = this.createButtons(signatureProps, btsProps, placeholders);
 
     const readifySignatureContainerProps = {
       signatureProps,
@@ -209,7 +274,9 @@ class SignatureContainer extends Component {
     const BtsSignatureContainerProps = {
       btsProps,
       CopyBtsSigText,
-      CopyBtsHtml
+      CopyBtsHtml,
+      CopyBtsRepliesAndForwardsText,
+      CopyBtsRepliesAndForwardsHtml
     };
 
     return sigType === 'bts' ? (

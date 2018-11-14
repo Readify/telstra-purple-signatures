@@ -1,5 +1,5 @@
 import React from 'react';
-import { readify } from '../constants';
+import { readify, btsDigital } from '../constants';
 import ReactDOMServer from 'react-dom/server';
 const { brandInfo } = readify;
 
@@ -32,6 +32,31 @@ const copyText = text => {
   container.select();
   document.execCommand('copy');
   document.body.removeChild(container);
+};
+
+export const copyBtsSignatureText = props => {
+  const { brandInfo } = btsDigital;
+  const { email, mobile, phone, name, qualifications, title } = props;
+  const mobileText = parseMobile(mobile).replace(/&nbsp;/g, ' ');
+  const phoneText = parseMobile(phone).replace(/&nbsp;/g, ' ');
+
+  const textArr = [
+    '--',
+    '',
+    name ? name : null,
+    title ? title : null,
+    brandInfo.brandName,
+    brandInfo.brandSecondaryText,
+    qualifications ? `${qualifications}` : null,
+    '',
+    mobileText ? `M ${mobileText}` : null,
+    phoneText ? `P ${phoneText}` : null,
+    email ? `E ${email}` : null,
+    `W ${brandInfo.brandLinkName}`,
+    ''
+  ];
+
+  copyText(textArr.filter(val => val !== null).join('\n'));
 };
 
 export const copySignatureText = props => {
@@ -72,6 +97,24 @@ export const copySignatureText = props => {
     `W ${brandInfo.brandLinkName}`,
     '',
     'Find us on: Twitter | LinkedIn | Facebook | Youtube'
+  ];
+
+  copyText(textArr.filter(val => val !== null).join('\n'));
+};
+
+export const copyBtsRepliesAndForwardsText = props => {
+  const { brandInfo } = btsDigital;
+  const { name, title, mobile, email, phone } = props;
+  const mobileText = parseMobile(mobile).replace(/&nbsp;/g, ' ');
+  const phoneText = parseMobile(phone).replace(/&nbsp;/g, ' ');
+
+  const textArr = [
+    '--',
+    `${name} | ${title}`,
+    `${brandInfo.brandName} | ${brandInfo.brandSecondaryText}`,
+    `M ${mobileText} | E ${email} | P ${phoneText} | W ${
+      brandInfo.brandLinkName
+    }`
   ];
 
   copyText(textArr.filter(val => val !== null).join('\n'));

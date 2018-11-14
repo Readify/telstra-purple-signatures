@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders 1`] = `
+<div
+  className="content"
+>
+  <table
+    border="0"
+    cellPadding="0"
+    cellSpacing="0"
+    style={
+      Object {
+        "color": "#3A576B",
+        "fontFamily": "Ariel, sans-serif",
+        "fontSize": "10.5px",
+      }
+    }
+    width="100%"
+  >
+    <tr>
+      <td
+        valign="top"
+      >
+        <p
+          style={
+            Object {
+              "color": "#333333",
+              "fontSize": "12px",
+              "lineHeight": "15px",
+              "margin": "0",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "color": "#3A576B",
+                "fontWeight": "bold",
+              }
+            }
+          >
+            your name
+          </span>
+          <br />
+          <span
+            style={
+              Object {
+                "color": "#3A576B",
+              }
+            }
+          >
+            Job Title
+          </span>
+          <br />
+          Business Technology Services
+           | 
+          Telstra Enterprise Services
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td
+        valign="top"
+      >
+        <span
+          style={
+            Object {
+              "color": "#333333",
+              "fontSize": "12px",
+              "lineHeight": "15px",
+              "margin": "0",
+            }
+          }
+        >
+          P  
+          <a
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "+61&nbsp;123&nbsp;456&nbsp;789",
+              }
+            }
+            href="tel:+61123456789"
+            style={
+              Object {
+                "fontFamily": "Ariel, sans-serif",
+                "fontWeight": "200",
+              }
+            }
+          />
+        </span>
+        <span
+          style={
+            Object {
+              "color": "#333333",
+              "fontSize": "12px",
+              "lineHeight": "15px",
+              "margin": "0",
+            }
+          }
+        >
+            M  
+          <a
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+              }
+            }
+            href="tel:+61111222333"
+            style={
+              Object {
+                "fontFamily": "Ariel, sans-serif",
+                "fontWeight": "200",
+              }
+            }
+          />
+        </span>
+        <span
+          style={
+            Object {
+              "color": "#333333",
+              "fontSize": "12px",
+              "lineHeight": "15px",
+              "margin": "0",
+            }
+          }
+        >
+            E  
+          <a
+            href="mailto:your.name@readify.net"
+            style={
+              Object {
+                "fontFamily": "Ariel, sans-serif",
+                "fontWeight": "200",
+              }
+            }
+          >
+            your.name@readify.net
+          </a>
+        </span>
+        <span
+          style={
+            Object {
+              "color": "#333333",
+              "fontSize": "12px",
+              "lineHeight": "15px",
+              "margin": "0",
+            }
+          }
+        >
+            W  
+          <a
+            href="https://telstra.com"
+            style={
+              Object {
+                "fontFamily": "Ariel, sans-serif",
+                "fontWeight": "200",
+              }
+            }
+          >
+            www.telstra.com
+          </a>
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td
+        valign="top"
+      >
+        <p
+          style={
+            Object {
+              "color": "#333333",
+              "fontSize": "10px",
+              "lineHeight": "11px",
+              "margin": "0",
+            }
+          }
+        >
+          This email may contain confidential information.
+          <br />
+          If I've sent it to you by accident, please delete it immediately
+        </p>
+      </td>
+    </tr>
+  </table>
+</div>
+`;
