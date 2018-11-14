@@ -1,8 +1,9 @@
 import React from 'react';
 
 import SocialMedia from '../SocialMedia';
-import { brandInfo } from '../constants';
+import { readify } from '../constants';
 import { parseMobile } from '../util';
+const { brandInfo } = readify;
 
 const Signature = props => {
   const {
@@ -11,7 +12,7 @@ const Signature = props => {
     qualifications,
     mobile,
     email,
-    twitterHtml,
+    twitter,
     isSupport
   } = props;
   const { brandLogo, brandName, brandLink, brandLinkName } = brandInfo;
@@ -97,7 +98,19 @@ const Signature = props => {
                   <span>&nbsp;&nbsp;</span>
                 )}
               </span>
-              {twitterHtml}
+              {twitter ? (
+                <span>
+                  <b>T</b>&nbsp;{' '}
+                  <a
+                    href={`https://twitter.com/${twitter.replace('@', '')}`}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {twitter}
+                  </a>
+                  &nbsp;&nbsp;&nbsp;
+                </span>
+              ) : null}
               <span>
                 <b>W</b>&nbsp;
                 <a href={brandLink}>{brandLinkName}</a>

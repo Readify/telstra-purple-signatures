@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { entries } from 'lodash/object';
 
-import { placeholders } from '../constants';
+import constants from '../constants';
 import Signature from '../Signature';
 import RepliesAndForwards from '../RepliesAndForwards';
+import BtsSignature from '../BtsSignature';
 import {
   copySignatureText,
   copyRepliesAndForwardsText,
@@ -11,6 +13,52 @@ import {
 import Button from '../Button';
 
 import './SignatureContainer.scss';
+
+const ReadifySignatureContainer = ({
+  signatureProps,
+  CopySignatureText,
+  CopySignatureHtml,
+  CopyRepliesAndForwardsText,
+  CopyRepliesAndForwardsHtml
+}) => (
+  <div className="content">
+    <div className="level">
+      <div className="level-left">
+        <h3 className="level-item">Standard Signature</h3>
+      </div>
+      <div className="level-right">
+        {CopySignatureText}
+        {CopySignatureHtml}
+      </div>
+    </div>
+    <Signature {...signatureProps} />
+    <div className="level">
+      <div className="level-left">
+        <h3 className="level-item">Replies and Forwards Signature</h3>
+      </div>
+      <div className="level-right">
+        {CopyRepliesAndForwardsText}
+        {CopyRepliesAndForwardsHtml}
+      </div>
+    </div>
+    <RepliesAndForwards {...signatureProps} />
+  </div>
+);
+
+const BtsSignatureContainer = ({ btsProps, CopyBtsSigText, CopyBtsHtml }) => (
+  <div className="content">
+    <div className="level">
+      <div className="level-left">
+        <h3 className="level-item">Standard Signature</h3>
+      </div>
+      <div className="level-right">
+        {CopyBtsSigText}
+        {CopyBtsHtml}
+      </div>
+    </div>
+    <BtsSignature {...btsProps} />
+  </div>
+);
 
 class SignatureContainer extends Component {
   static defaultButtonText = {
@@ -45,42 +93,7 @@ class SignatureContainer extends Component {
     );
   };
 
-  render() {
-    const {
-      name,
-      title,
-      qualifications,
-      twitter,
-      isSupport,
-      mobile,
-      email
-    } = this.props;
-
-    const twitterLink = (
-      <a
-        href={`https://twitter.com/${twitter.replace('@', '')}`}
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        {twitter}
-      </a>
-    );
-    const twitterHtml = twitter ? (
-      <span>
-        <b>T</b>&nbsp;{twitterLink}&nbsp;&nbsp;&nbsp;
-      </span>
-    ) : null;
-
-    const signatureProps = {
-      name: name || placeholders.name,
-      title: title || placeholders.title,
-      qualifications,
-      mobile: mobile || placeholders.mobile,
-      email: email || placeholders.email,
-      twitterHtml,
-      isSupport
-    };
-
+  createButtons = (signatureProps, placeholders) => {
     const CopySignatureText = this.buttonMaker(
       () =>
         copySignatureText({
@@ -119,29 +132,90 @@ class SignatureContainer extends Component {
         ),
       false
     );
-    return (
-      <div className="content">
-        <div className="level">
-          <div className="level-left">
-            <h3 className="level-item">Standard Signature</h3>
-          </div>
-          <div className="level-right">
-            {CopySignatureText}
-            {CopySignatureHtml}
-          </div>
-        </div>
-        <Signature {...signatureProps} />
-        <div className="level">
-          <div className="level-left">
-            <h3 className="level-item">Replies and Forwards Signature</h3>
-          </div>
-          <div className="level-right">
-            {CopyRepliesAndForwardsText}
-            {CopyRepliesAndForwardsHtml}
-          </div>
-        </div>
-        <RepliesAndForwards {...signatureProps} />
-      </div>
+    return {
+      CopySignatureText,
+      CopySignatureHtml,
+      CopyRepliesAndForwardsText,
+      CopyRepliesAndForwardsHtml
+    };
+  };
+
+  assignPlaceholders = (props, placeholders) => {
+    const isBlank = a => a === '' || a === null || a === undefined;
+    return entries(props).reduce((result, item) => {
+      const [key, value] = item;
+      return Object.assign(result, {
+        [key]: isBlank(value) ? placeholders[key] : value
+      });
+    }, {});
+  };
+
+  render() {
+    const {
+      name,
+      title,
+      qualifications,
+      twitter,
+      sigType,
+      mobile,
+      email,
+      phone
+    } = this.props;
+
+    const placeholders =
+      constants[sigType === 'bts' ? 'btsDigital' : 'readify'].placeholders;
+
+    const signatureProps = this.assignPlaceholders(
+      {
+        name,
+        title,
+        qualifications,
+        mobile,
+        email,
+        twitter,
+        isSupport: sigType === 'support'
+      },
+      placeholders
+    );
+
+    const btsProps = this.assignPlaceholders(
+      {
+        name,
+        title,
+        qualifications,
+        mobile,
+        phone,
+        email
+      },
+      placeholders
+    );
+
+    const {
+      CopySignatureText,
+      CopySignatureHtml,
+      CopyRepliesAndForwardsText,
+      CopyRepliesAndForwardsHtml,
+      CopyBtsSigText,
+      CopyBtsHtml
+    } = this.createButtons(signatureProps);
+
+    const readifySignatureContainerProps = {
+      signatureProps,
+      CopySignatureText,
+      CopySignatureHtml,
+      CopyRepliesAndForwardsText,
+      CopyRepliesAndForwardsHtml
+    };
+    const BtsSignatureContainerProps = {
+      btsProps,
+      CopyBtsSigText,
+      CopyBtsHtml
+    };
+
+    return sigType === 'bts' ? (
+      <BtsSignatureContainer {...BtsSignatureContainerProps} />
+    ) : (
+      <ReadifySignatureContainer {...readifySignatureContainerProps} />
     );
   }
 }

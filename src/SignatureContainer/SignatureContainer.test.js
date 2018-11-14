@@ -6,11 +6,11 @@ import SignatureContainer from './SignatureContainer';
 it('Renders', () => {
   const props = {
     email: 'your.name@readify.net',
-    isSupport: false,
+    sigType: 'readify',
     mobile: '+61 111 222 333',
     name: 'your name',
     title: 'Job Title',
-    twitter: '@myTwitter',
+    twitter: '@myTwitter'
   };
 
   const tree = shallow(<SignatureContainer {...props} />);
@@ -20,11 +20,11 @@ it('Renders', () => {
 it('Renders with support fields', () => {
   const props = {
     email: 'your.name@readify.net',
-    isSupport: true,
+    sigType: 'support',
     mobile: '+61 111 222 333',
     name: 'your name',
     title: 'Job Title',
-    twitter: '@myTwitter',
+    twitter: '@myTwitter'
   };
 
   const tree = shallow(<SignatureContainer {...props} />);

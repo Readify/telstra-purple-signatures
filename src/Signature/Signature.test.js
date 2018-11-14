@@ -6,12 +6,12 @@ import Signature from './Signature';
 it('Renders', () => {
   const props = {
     email: 'your.name@readify.net',
-    isSupport: false,
+    sigType: false,
     mobile: '+61 111 222 333',
     name: 'your name',
     qualifications: 'Jedi Master | PSM I',
     title: 'Job Title',
-    twitterHtml: <span>@myTwitter</span>
+    twitter: '@myTwitter'
   };
 
   const tree = shallow(<Signature {...props} />);

@@ -457,7 +457,6 @@ exports[`Renders full dom 1`] = `
                 <hr />
                 <SignatureContainer
                   email=""
-                  isSupport={false}
                   mobile=""
                   name=""
                   placeholders={
@@ -471,75 +470,116 @@ exports[`Renders full dom 1`] = `
                     }
                   }
                   qualifications=""
+                  sigType={false}
                   signatureTypes={
                     Array [
                       Object {
                         "checked": true,
                         "text": "Readify",
+                        "type": "readify",
                       },
                       Object {
                         "checked": false,
                         "text": "Readify Support",
+                        "type": "support",
                       },
                       Object {
                         "checked": false,
                         "text": "BTS Digital",
+                        "type": "bts",
                       },
                     ]
                   }
                   title=""
                   twitter=""
                 >
-                  <div
-                    className="content"
+                  <ReadifySignatureContainer
+                    CopyRepliesAndForwardsHtml={
+                      <withState(withState(withHandlers(mapProps(Button))))
+                        classAfter="button is-success"
+                        classBefore="button is-primary"
+                        onClickHandler={[Function]}
+                        textAfter="Copied!"
+                        textBefore="Copy signature"
+                      />
+                    }
+                    CopyRepliesAndForwardsText={
+                      <withState(withState(withHandlers(mapProps(Button))))
+                        classAfter="button is-success"
+                        classBefore="button"
+                        onClickHandler={[Function]}
+                        textAfter="Copied!"
+                        textBefore="Copy text only"
+                      />
+                    }
+                    CopySignatureHtml={
+                      <withState(withState(withHandlers(mapProps(Button))))
+                        classAfter="button is-success"
+                        classBefore="button is-primary"
+                        onClickHandler={[Function]}
+                        textAfter="Copied!"
+                        textBefore="Copy signature"
+                      />
+                    }
+                    CopySignatureText={
+                      <withState(withState(withHandlers(mapProps(Button))))
+                        classAfter="button is-success"
+                        classBefore="button"
+                        onClickHandler={[Function]}
+                        textAfter="Copied!"
+                        textBefore="Copy text only"
+                      />
+                    }
+                    signatureProps={
+                      Object {
+                        "email": "your.name@readify.net",
+                        "isSupport": false,
+                        "mobile": "+61 111 222 333",
+                        "name": "Your Name",
+                        "qualifications": "Jedi Master | PSM I",
+                        "title": "Job Title",
+                        "twitter": "@myTwitter",
+                      }
+                    }
                   >
                     <div
-                      className="level"
+                      className="content"
                     >
                       <div
-                        className="level-left"
+                        className="level"
                       >
-                        <h3
-                          className="level-item"
+                        <div
+                          className="level-left"
                         >
-                          Standard Signature
-                        </h3>
-                      </div>
-                      <div
-                        className="level-right"
-                      >
-                        <withState(withState(withHandlers(mapProps(Button))))
-                          classAfter="button is-success"
-                          classBefore="button"
-                          onClickHandler={[Function]}
-                          textAfter="Copied!"
-                          textBefore="Copy text only"
+                          <h3
+                            className="level-item"
+                          >
+                            Standard Signature
+                          </h3>
+                        </div>
+                        <div
+                          className="level-right"
                         >
-                          <withState(withHandlers(mapProps(Button)))
+                          <withState(withState(withHandlers(mapProps(Button))))
                             classAfter="button is-success"
                             classBefore="button"
-                            classState="button"
                             onClickHandler={[Function]}
-                            setClass={[Function]}
                             textAfter="Copied!"
                             textBefore="Copy text only"
                           >
-                            <withHandlers(mapProps(Button))
+                            <withState(withHandlers(mapProps(Button)))
                               classAfter="button is-success"
                               classBefore="button"
                               classState="button"
                               onClickHandler={[Function]}
                               setClass={[Function]}
-                              setText={[Function]}
                               textAfter="Copied!"
                               textBefore="Copy text only"
-                              textState="Copy text only"
                             >
-                              <mapProps(Button)
+                              <withHandlers(mapProps(Button))
                                 classAfter="button is-success"
                                 classBefore="button"
                                 classState="button"
-                                onClick={[Function]}
                                 onClickHandler={[Function]}
                                 setClass={[Function]}
                                 setText={[Function]}
@@ -547,55 +587,55 @@ exports[`Renders full dom 1`] = `
                                 textBefore="Copy text only"
                                 textState="Copy text only"
                               >
-                                <Button
+                                <mapProps(Button)
+                                  classAfter="button is-success"
+                                  classBefore="button"
                                   classState="button"
                                   onClick={[Function]}
+                                  onClickHandler={[Function]}
+                                  setClass={[Function]}
+                                  setText={[Function]}
+                                  textAfter="Copied!"
+                                  textBefore="Copy text only"
                                   textState="Copy text only"
                                 >
-                                  <button
-                                    className="button"
+                                  <Button
+                                    classState="button"
                                     onClick={[Function]}
-                                    type="button"
+                                    textState="Copy text only"
                                   >
-                                    Copy text only
-                                  </button>
-                                </Button>
-                              </mapProps(Button)>
-                            </withHandlers(mapProps(Button))>
-                          </withState(withHandlers(mapProps(Button)))>
-                        </withState(withState(withHandlers(mapProps(Button))))>
-                        <withState(withState(withHandlers(mapProps(Button))))
-                          classAfter="button is-success"
-                          classBefore="button is-primary"
-                          onClickHandler={[Function]}
-                          textAfter="Copied!"
-                          textBefore="Copy signature"
-                        >
-                          <withState(withHandlers(mapProps(Button)))
+                                    <button
+                                      className="button"
+                                      onClick={[Function]}
+                                      type="button"
+                                    >
+                                      Copy text only
+                                    </button>
+                                  </Button>
+                                </mapProps(Button)>
+                              </withHandlers(mapProps(Button))>
+                            </withState(withHandlers(mapProps(Button)))>
+                          </withState(withState(withHandlers(mapProps(Button))))>
+                          <withState(withState(withHandlers(mapProps(Button))))
                             classAfter="button is-success"
                             classBefore="button is-primary"
-                            classState="button is-primary"
                             onClickHandler={[Function]}
-                            setClass={[Function]}
                             textAfter="Copied!"
                             textBefore="Copy signature"
                           >
-                            <withHandlers(mapProps(Button))
+                            <withState(withHandlers(mapProps(Button)))
                               classAfter="button is-success"
                               classBefore="button is-primary"
                               classState="button is-primary"
                               onClickHandler={[Function]}
                               setClass={[Function]}
-                              setText={[Function]}
                               textAfter="Copied!"
                               textBefore="Copy signature"
-                              textState="Copy signature"
                             >
-                              <mapProps(Button)
+                              <withHandlers(mapProps(Button))
                                 classAfter="button is-success"
                                 classBefore="button is-primary"
                                 classState="button is-primary"
-                                onClick={[Function]}
                                 onClickHandler={[Function]}
                                 setClass={[Function]}
                                 setText={[Function]}
@@ -603,301 +643,325 @@ exports[`Renders full dom 1`] = `
                                 textBefore="Copy signature"
                                 textState="Copy signature"
                               >
-                                <Button
+                                <mapProps(Button)
+                                  classAfter="button is-success"
+                                  classBefore="button is-primary"
                                   classState="button is-primary"
                                   onClick={[Function]}
+                                  onClickHandler={[Function]}
+                                  setClass={[Function]}
+                                  setText={[Function]}
+                                  textAfter="Copied!"
+                                  textBefore="Copy signature"
                                   textState="Copy signature"
                                 >
-                                  <button
-                                    className="button is-primary"
+                                  <Button
+                                    classState="button is-primary"
                                     onClick={[Function]}
-                                    type="button"
+                                    textState="Copy signature"
                                   >
-                                    Copy signature
-                                  </button>
-                                </Button>
-                              </mapProps(Button)>
-                            </withHandlers(mapProps(Button))>
-                          </withState(withHandlers(mapProps(Button)))>
-                        </withState(withState(withHandlers(mapProps(Button))))>
+                                    <button
+                                      className="button is-primary"
+                                      onClick={[Function]}
+                                      type="button"
+                                    >
+                                      Copy signature
+                                    </button>
+                                  </Button>
+                                </mapProps(Button)>
+                              </withHandlers(mapProps(Button))>
+                            </withState(withHandlers(mapProps(Button)))>
+                          </withState(withState(withHandlers(mapProps(Button))))>
+                        </div>
                       </div>
-                    </div>
-                    <Signature
-                      email="your.name@readify.net"
-                      isSupport={false}
-                      mobile="+61 111 222 333"
-                      name="Your Name"
-                      qualifications=""
-                      title="Job Title"
-                      twitterHtml={null}
-                    >
-                      <div
-                        className="content"
+                      <Signature
+                        email="your.name@readify.net"
+                        isSupport={false}
+                        mobile="+61 111 222 333"
+                        name="Your Name"
+                        qualifications="Jedi Master | PSM I"
+                        title="Job Title"
+                        twitter="@myTwitter"
                       >
-                        <table
-                          border="0"
-                          cellPadding="0"
-                          cellSpacing="0"
-                          style={
-                            Object {
-                              "color": "#3D5567",
-                              "fontFamily": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
-                              "fontSize": "10.5pt",
-                            }
-                          }
-                          width="100%"
+                        <div
+                          className="content"
                         >
-                          <tr>
-                            <td
-                              style={
-                                Object {
-                                  "borderRight": "1px solid #3D5567",
-                                  "paddingRight": "20px",
-                                  "width": "96px",
-                                }
+                          <table
+                            border="0"
+                            cellPadding="0"
+                            cellSpacing="0"
+                            style={
+                              Object {
+                                "color": "#3D5567",
+                                "fontFamily": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+                                "fontSize": "10.5pt",
                               }
-                              valign="top"
-                            >
-                              <img
-                                alt="Readify a Telstra Company"
-                                height="53"
-                                src="https://readifysignatures.blob.core.windows.net/images/image001.png"
-                                width="73"
-                              />
-                            </td>
-                            <td
-                              style={
-                                Object {
-                                  "paddingLeft": "20px",
-                                }
-                              }
-                              valign="top"
-                            >
-                              <p
+                            }
+                            width="100%"
+                          >
+                            <tr>
+                              <td
                                 style={
                                   Object {
-                                    "marginBottom": "10px",
+                                    "borderRight": "1px solid #3D5567",
+                                    "paddingRight": "20px",
+                                    "width": "96px",
                                   }
                                 }
+                                valign="top"
                               >
-                                <b>
-                                  Your Name
-                                </b>
-                                <br />
-                                Readify
-                                 | 
-                                Job Title
-                              </p>
-                              <p
+                                <img
+                                  alt="Readify a Telstra Company"
+                                  height="53"
+                                  src="https://readifysignatures.blob.core.windows.net/images/image001.png"
+                                  width="73"
+                                />
+                              </td>
+                              <td
                                 style={
                                   Object {
-                                    "marginBottom": "20px",
+                                    "paddingLeft": "20px",
                                   }
                                 }
+                                valign="top"
                               >
-                                <span>
-                                  <b>
-                                    M
-                                  </b>
-                                   
-                                  <a
-                                    dangerouslySetInnerHTML={
-                                      Object {
-                                        "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
-                                      }
-                                    }
-                                    href="tel:+61111222333"
-                                  />
-                                   
-                                  <span>
-                                      
-                                  </span>
-                                </span>
-                                <span>
-                                    
-                                </span>
-                                <span>
-                                  <b>
-                                    E
-                                  </b>
-                                   
-                                  <a
-                                    href="mailto:your.name@readify.net"
-                                  >
-                                    your.name@readify.net
-                                  </a>
-                                   
-                                  <span>
-                                      
-                                  </span>
-                                </span>
-                                <span>
-                                  <b>
-                                    W
-                                  </b>
-                                   
-                                  <a
-                                    href="https://readify.net"
-                                  >
-                                    readify.net
-                                  </a>
-                                </span>
-                              </p>
-                              <SocialMedia>
                                 <p
                                   style={
                                     Object {
-                                      "marginBottom": "0",
+                                      "marginBottom": "10px",
                                     }
                                   }
                                 >
-                                  <span
-                                    key="FaceBook"
-                                  >
+                                  <b>
+                                    Your Name
+                                  </b>
+                                  <br />
+                                  Readify
+                                   | 
+                                  Job Title
+                                </p>
+                                <p
+                                  style={
+                                    Object {
+                                      "marginBottom": "10px",
+                                    }
+                                  }
+                                >
+                                  Jedi Master | PSM I
+                                </p>
+                                <p
+                                  style={
+                                    Object {
+                                      "marginBottom": "20px",
+                                    }
+                                  }
+                                >
+                                  <span>
+                                    <b>
+                                      M
+                                    </b>
+                                     
                                     <a
-                                      href="https://readify.net/links/facebook"
-                                      style={
+                                      dangerouslySetInnerHTML={
                                         Object {
-                                          "display": "inline-block",
-                                          "height": "28px",
-                                          "width": "28px",
+                                          "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
                                         }
                                       }
-                                    >
-                                      <img
-                                        alt="Readify on FaceBook"
-                                        height="28"
-                                        src="https://readifysignatures.blob.core.windows.net/images/image002.png"
-                                        width="28"
-                                      />
-                                    </a>
+                                      href="tel:+61111222333"
+                                    />
+                                     
                                     <span>
                                         
                                     </span>
                                   </span>
-                                  <span
-                                    key="Twitter"
-                                  >
+                                  <span>
+                                      
+                                  </span>
+                                  <span>
+                                    <b>
+                                      E
+                                    </b>
+                                     
                                     <a
-                                      href="https://readify.net/links/twitter"
-                                      style={
-                                        Object {
-                                          "display": "inline-block",
-                                          "height": "28px",
-                                          "width": "28px",
-                                        }
-                                      }
+                                      href="mailto:your.name@readify.net"
                                     >
-                                      <img
-                                        alt="Readify on Twitter"
-                                        height="28"
-                                        src="https://readifysignatures.blob.core.windows.net/images/image003.png"
-                                        width="28"
-                                      />
+                                      your.name@readify.net
                                     </a>
+                                     
                                     <span>
                                         
                                     </span>
                                   </span>
-                                  <span
-                                    key="LinkedIn"
-                                  >
+                                  <span>
+                                    <b>
+                                      T
+                                    </b>
+                                     
+                                     
                                     <a
-                                      href="https://readify.net/links/linkedin"
-                                      style={
-                                        Object {
-                                          "display": "inline-block",
-                                          "height": "28px",
-                                          "width": "28px",
-                                        }
-                                      }
+                                      href="https://twitter.com/myTwitter"
+                                      rel="noopener noreferrer"
+                                      target="_blank"
                                     >
-                                      <img
-                                        alt="Readify on LinkedIn"
-                                        height="28"
-                                        src="https://readifysignatures.blob.core.windows.net/images/image004.png"
-                                        width="28"
-                                      />
+                                      @myTwitter
                                     </a>
-                                    <span>
-                                        
-                                    </span>
+                                       
                                   </span>
-                                  <span
-                                    key="Youtube"
-                                  >
+                                  <span>
+                                    <b>
+                                      W
+                                    </b>
+                                     
                                     <a
-                                      href="https://readify.net/links/youtube"
-                                      style={
-                                        Object {
-                                          "display": "inline-block",
-                                          "height": "28px",
-                                          "width": "28px",
-                                        }
-                                      }
+                                      href="https://readify.net"
                                     >
-                                      <img
-                                        alt="Readify on Youtube"
-                                        height="28"
-                                        src="https://readifysignatures.blob.core.windows.net/images/image005.png"
-                                        width="28"
-                                      />
+                                      readify.net
                                     </a>
                                   </span>
                                 </p>
-                              </SocialMedia>
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
-                    </Signature>
-                    <div
-                      className="level"
-                    >
+                                <SocialMedia>
+                                  <p
+                                    style={
+                                      Object {
+                                        "marginBottom": "0",
+                                      }
+                                    }
+                                  >
+                                    <span
+                                      key="FaceBook"
+                                    >
+                                      <a
+                                        href="https://readify.net/links/facebook"
+                                        style={
+                                          Object {
+                                            "display": "inline-block",
+                                            "height": "28px",
+                                            "width": "28px",
+                                          }
+                                        }
+                                      >
+                                        <img
+                                          alt="Readify on FaceBook"
+                                          height="28"
+                                          src="https://readifysignatures.blob.core.windows.net/images/image002.png"
+                                          width="28"
+                                        />
+                                      </a>
+                                      <span>
+                                          
+                                      </span>
+                                    </span>
+                                    <span
+                                      key="Twitter"
+                                    >
+                                      <a
+                                        href="https://readify.net/links/twitter"
+                                        style={
+                                          Object {
+                                            "display": "inline-block",
+                                            "height": "28px",
+                                            "width": "28px",
+                                          }
+                                        }
+                                      >
+                                        <img
+                                          alt="Readify on Twitter"
+                                          height="28"
+                                          src="https://readifysignatures.blob.core.windows.net/images/image003.png"
+                                          width="28"
+                                        />
+                                      </a>
+                                      <span>
+                                          
+                                      </span>
+                                    </span>
+                                    <span
+                                      key="LinkedIn"
+                                    >
+                                      <a
+                                        href="https://readify.net/links/linkedin"
+                                        style={
+                                          Object {
+                                            "display": "inline-block",
+                                            "height": "28px",
+                                            "width": "28px",
+                                          }
+                                        }
+                                      >
+                                        <img
+                                          alt="Readify on LinkedIn"
+                                          height="28"
+                                          src="https://readifysignatures.blob.core.windows.net/images/image004.png"
+                                          width="28"
+                                        />
+                                      </a>
+                                      <span>
+                                          
+                                      </span>
+                                    </span>
+                                    <span
+                                      key="Youtube"
+                                    >
+                                      <a
+                                        href="https://readify.net/links/youtube"
+                                        style={
+                                          Object {
+                                            "display": "inline-block",
+                                            "height": "28px",
+                                            "width": "28px",
+                                          }
+                                        }
+                                      >
+                                        <img
+                                          alt="Readify on Youtube"
+                                          height="28"
+                                          src="https://readifysignatures.blob.core.windows.net/images/image005.png"
+                                          width="28"
+                                        />
+                                      </a>
+                                    </span>
+                                  </p>
+                                </SocialMedia>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </Signature>
                       <div
-                        className="level-left"
+                        className="level"
                       >
-                        <h3
-                          className="level-item"
+                        <div
+                          className="level-left"
                         >
-                          Replies and Forwards Signature
-                        </h3>
-                      </div>
-                      <div
-                        className="level-right"
-                      >
-                        <withState(withState(withHandlers(mapProps(Button))))
-                          classAfter="button is-success"
-                          classBefore="button"
-                          onClickHandler={[Function]}
-                          textAfter="Copied!"
-                          textBefore="Copy text only"
+                          <h3
+                            className="level-item"
+                          >
+                            Replies and Forwards Signature
+                          </h3>
+                        </div>
+                        <div
+                          className="level-right"
                         >
-                          <withState(withHandlers(mapProps(Button)))
+                          <withState(withState(withHandlers(mapProps(Button))))
                             classAfter="button is-success"
                             classBefore="button"
-                            classState="button"
                             onClickHandler={[Function]}
-                            setClass={[Function]}
                             textAfter="Copied!"
                             textBefore="Copy text only"
                           >
-                            <withHandlers(mapProps(Button))
+                            <withState(withHandlers(mapProps(Button)))
                               classAfter="button is-success"
                               classBefore="button"
                               classState="button"
                               onClickHandler={[Function]}
                               setClass={[Function]}
-                              setText={[Function]}
                               textAfter="Copied!"
                               textBefore="Copy text only"
-                              textState="Copy text only"
                             >
-                              <mapProps(Button)
+                              <withHandlers(mapProps(Button))
                                 classAfter="button is-success"
                                 classBefore="button"
                                 classState="button"
-                                onClick={[Function]}
                                 onClickHandler={[Function]}
                                 setClass={[Function]}
                                 setText={[Function]}
@@ -905,55 +969,55 @@ exports[`Renders full dom 1`] = `
                                 textBefore="Copy text only"
                                 textState="Copy text only"
                               >
-                                <Button
+                                <mapProps(Button)
+                                  classAfter="button is-success"
+                                  classBefore="button"
                                   classState="button"
                                   onClick={[Function]}
+                                  onClickHandler={[Function]}
+                                  setClass={[Function]}
+                                  setText={[Function]}
+                                  textAfter="Copied!"
+                                  textBefore="Copy text only"
                                   textState="Copy text only"
                                 >
-                                  <button
-                                    className="button"
+                                  <Button
+                                    classState="button"
                                     onClick={[Function]}
-                                    type="button"
+                                    textState="Copy text only"
                                   >
-                                    Copy text only
-                                  </button>
-                                </Button>
-                              </mapProps(Button)>
-                            </withHandlers(mapProps(Button))>
-                          </withState(withHandlers(mapProps(Button)))>
-                        </withState(withState(withHandlers(mapProps(Button))))>
-                        <withState(withState(withHandlers(mapProps(Button))))
-                          classAfter="button is-success"
-                          classBefore="button is-primary"
-                          onClickHandler={[Function]}
-                          textAfter="Copied!"
-                          textBefore="Copy signature"
-                        >
-                          <withState(withHandlers(mapProps(Button)))
+                                    <button
+                                      className="button"
+                                      onClick={[Function]}
+                                      type="button"
+                                    >
+                                      Copy text only
+                                    </button>
+                                  </Button>
+                                </mapProps(Button)>
+                              </withHandlers(mapProps(Button))>
+                            </withState(withHandlers(mapProps(Button)))>
+                          </withState(withState(withHandlers(mapProps(Button))))>
+                          <withState(withState(withHandlers(mapProps(Button))))
                             classAfter="button is-success"
                             classBefore="button is-primary"
-                            classState="button is-primary"
                             onClickHandler={[Function]}
-                            setClass={[Function]}
                             textAfter="Copied!"
                             textBefore="Copy signature"
                           >
-                            <withHandlers(mapProps(Button))
+                            <withState(withHandlers(mapProps(Button)))
                               classAfter="button is-success"
                               classBefore="button is-primary"
                               classState="button is-primary"
                               onClickHandler={[Function]}
                               setClass={[Function]}
-                              setText={[Function]}
                               textAfter="Copied!"
                               textBefore="Copy signature"
-                              textState="Copy signature"
                             >
-                              <mapProps(Button)
+                              <withHandlers(mapProps(Button))
                                 classAfter="button is-success"
                                 classBefore="button is-primary"
                                 classState="button is-primary"
-                                onClick={[Function]}
                                 onClickHandler={[Function]}
                                 setClass={[Function]}
                                 setText={[Function]}
@@ -961,90 +1025,121 @@ exports[`Renders full dom 1`] = `
                                 textBefore="Copy signature"
                                 textState="Copy signature"
                               >
-                                <Button
+                                <mapProps(Button)
+                                  classAfter="button is-success"
+                                  classBefore="button is-primary"
                                   classState="button is-primary"
                                   onClick={[Function]}
+                                  onClickHandler={[Function]}
+                                  setClass={[Function]}
+                                  setText={[Function]}
+                                  textAfter="Copied!"
+                                  textBefore="Copy signature"
                                   textState="Copy signature"
                                 >
-                                  <button
-                                    className="button is-primary"
+                                  <Button
+                                    classState="button is-primary"
                                     onClick={[Function]}
-                                    type="button"
+                                    textState="Copy signature"
                                   >
-                                    Copy signature
-                                  </button>
-                                </Button>
-                              </mapProps(Button)>
-                            </withHandlers(mapProps(Button))>
-                          </withState(withHandlers(mapProps(Button)))>
-                        </withState(withState(withHandlers(mapProps(Button))))>
+                                    <button
+                                      className="button is-primary"
+                                      onClick={[Function]}
+                                      type="button"
+                                    >
+                                      Copy signature
+                                    </button>
+                                  </Button>
+                                </mapProps(Button)>
+                              </withHandlers(mapProps(Button))>
+                            </withState(withHandlers(mapProps(Button)))>
+                          </withState(withState(withHandlers(mapProps(Button))))>
+                        </div>
                       </div>
-                    </div>
-                    <RepliesAndForwards
-                      email="your.name@readify.net"
-                      isSupport={false}
-                      mobile="+61 111 222 333"
-                      name="Your Name"
-                      qualifications=""
-                      title="Job Title"
-                      twitterHtml={null}
-                    >
-                      <div>
-                        <p
-                          style={
-                            Object {
-                              "color": "#3D5567",
-                              "fontFamily": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
-                              "fontSize": "10.5pt",
-                            }
-                          }
-                        >
-                          --
-                          <br />
-                          <b>
-                            Your Name
-                             | 
-                            Readify
-                             
-                            Job Title
-                          </b>
-                          <br />
-                          <b>
-                            M
-                          </b>
-                            
-                          <a
-                            dangerouslySetInnerHTML={
+                      <RepliesAndForwards
+                        email="your.name@readify.net"
+                        isSupport={false}
+                        mobile="+61 111 222 333"
+                        name="Your Name"
+                        qualifications="Jedi Master | PSM I"
+                        title="Job Title"
+                        twitter="@myTwitter"
+                      >
+                        <div>
+                          <p
+                            style={
                               Object {
-                                "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+                                "color": "#3D5567",
+                                "fontFamily": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+                                "fontSize": "10.5pt",
                               }
                             }
-                            href="tel:+61111222333"
-                          />
-                           | 
-                          <b>
-                            E
-                          </b>
-                            
-                          <a
-                            href="mailto:your.name@readify.net"
                           >
-                            your.name@readify.net
-                          </a>
-                           | 
-                          <b>
-                            W
-                          </b>
-                           
-                          <a
-                            href="https://readify.net"
-                          >
-                            readify.net
-                          </a>
-                        </p>
-                      </div>
-                    </RepliesAndForwards>
-                  </div>
+                            --
+                            <br />
+                            <b>
+                              Your Name
+                               | 
+                              Readify
+                               
+                              Job Title
+                            </b>
+                            <br />
+                            <b>
+                              M
+                            </b>
+                              
+                            <a
+                              dangerouslySetInnerHTML={
+                                Object {
+                                  "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+                                }
+                              }
+                              href="tel:+61111222333"
+                            />
+                             | 
+                            <b>
+                              E
+                            </b>
+                              
+                            <a
+                              href="mailto:your.name@readify.net"
+                            >
+                              your.name@readify.net
+                            </a>
+                             | 
+                            <span>
+                              <span>
+                                <b>
+                                  T
+                                </b>
+                                 
+                                 
+                                <a
+                                  href="https://twitter.com/myTwitter"
+                                  rel="noopener noreferrer"
+                                  target="_blank"
+                                >
+                                  @myTwitter
+                                </a>
+                                   
+                              </span>
+                              | 
+                            </span>
+                            <b>
+                              W
+                            </b>
+                             
+                            <a
+                              href="https://readify.net"
+                            >
+                              readify.net
+                            </a>
+                          </p>
+                        </div>
+                      </RepliesAndForwards>
+                    </div>
+                  </ReadifySignatureContainer>
                 </SignatureContainer>
               </form>
             </Form>

@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { brandInfo } from '../constants';
+import { readify } from '../constants';
 import { parseMobile } from '../util';
+const { brandInfo } = readify;
 
 const RepliesAndForwards = props => {
-  const { name, title, mobile, email, twitterHtml, isSupport } = props;
+  const { name, title, mobile, email, isSupport, twitter } = props;
   const styleObj = {
     color: '#3D5567',
     fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
@@ -26,7 +27,22 @@ const RepliesAndForwards = props => {
         />
         &nbsp;|&nbsp;
         <b>E</b>&nbsp;&nbsp;<a href={`mailto:${email}`}>{email}</a>&nbsp;|&nbsp;
-        {twitterHtml ? <span>{twitterHtml}|&nbsp;</span> : null}
+        {twitter ? (
+          <span>
+            <span>
+              <b>T</b>&nbsp;{' '}
+              <a
+                href={`https://twitter.com/${twitter.replace('@', '')}`}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                {twitter}
+              </a>
+              &nbsp;&nbsp;&nbsp;
+            </span>
+            |&nbsp;
+          </span>
+        ) : null}
         <b>W</b> <a href={brandInfo.brandLink}>{brandInfo.brandLinkName}</a>
         {isSupport ? (
           <span>

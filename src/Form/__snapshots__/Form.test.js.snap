@@ -279,7 +279,6 @@ exports[`Renders 1`] = `
   <hr />
   <SignatureContainer
     email=""
-    isSupport={false}
     mobile=""
     name=""
     placeholders={
@@ -293,19 +292,23 @@ exports[`Renders 1`] = `
       }
     }
     qualifications=""
+    sigType={false}
     signatureTypes={
       Array [
         Object {
           "checked": true,
           "text": "Readify",
+          "type": "readify",
         },
         Object {
           "checked": false,
           "text": "Readify Support",
+          "type": "support",
         },
         Object {
           "checked": false,
           "text": "BTS Digital",
+          "type": "bts",
         },
       ]
     }

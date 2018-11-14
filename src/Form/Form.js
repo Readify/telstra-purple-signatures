@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { omit, mapValues } from 'lodash/object';
 
 import './Form.scss';
-import { placeholders } from '../constants';
+import { readify } from '../constants';
 import SignatureContainer from '../SignatureContainer';
+const { placeholders } = readify;
 
 class Form extends Component {
   static labels = {
@@ -20,15 +21,15 @@ class Form extends Component {
   constructor() {
     super();
     this.state = {
-      isSupport: false,
+      sigType: false,
       inputs: {
         signatureTypes: {
           text: [
-            { text: 'Readify', checked: true },
-            { text: 'Readify Support', checked: false },
+            { text: 'Readify', checked: true, type: 'readify' },
+            { text: 'Readify Support', checked: false, type: 'support' },
             process.env.NODE_ENV === 'production'
               ? null
-              : { text: 'BTS Digital', checked: false }
+              : { text: 'BTS Digital', checked: false, type: 'bts' }
           ].filter(Boolean),
           order: 1
         },
@@ -57,24 +58,24 @@ class Form extends Component {
       ...sigObj,
       ...(sigIndex === index ? { checked: true } : { checked: false })
     }));
-    const isSupport = newSignatureTypes[1].checked;
-    const isBTS = newSignatureTypes[2].checked;
+    const sigType = newSignatureTypes[index].type;
 
-    const baseInputs = isBTS
-      ? {
-          phone: {
-            text: '',
-            order: 4.5
-          },
-          ...this.state.inputs
-        }
-      : omit(this.state.inputs, ['phone']);
+    const baseInputs =
+      sigType === 'bts'
+        ? {
+            phone: {
+              text: '',
+              order: 4.5
+            },
+            ...this.state.inputs
+          }
+        : omit(this.state.inputs, ['phone']);
     this.setState({
       inputs: {
         ...baseInputs,
         signatureTypes: { ...signatureTypes, text: newSignatureTypes }
       },
-      isSupport: isSupport
+      sigType: sigType
     });
   };
 
@@ -143,7 +144,7 @@ class Form extends Component {
 
     const SignatureContainerProps = {
       placeholders,
-      isSupport: this.state.isSupport,
+      sigType: this.state.sigType,
       ...omit(mapValues(this.state.inputs, 'text'), 'signatureType')
     };
 

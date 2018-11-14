@@ -111,7 +111,19 @@ exports[`Renders 1`] = `
             </span>
           </span>
           <span>
-            @myTwitter
+            <b>
+              T
+            </b>
+             
+             
+            <a
+              href="https://twitter.com/myTwitter"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              @myTwitter
+            </a>
+               
           </span>
           <span>
             <b>

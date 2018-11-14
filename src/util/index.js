@@ -1,6 +1,7 @@
 import React from 'react';
-import { brandInfo } from '../constants';
+import { readify } from '../constants';
 import ReactDOMServer from 'react-dom/server';
+const { brandInfo } = readify;
 
 export const parseMobile = mobileNum => {
   if (mobileNum === undefined) return null;

@@ -1,19 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import RepliesAndForwards from './RepliesAndForwards';
+import BtsSignature from './BtsSignature';
 
 it('Renders', () => {
   const props = {
     email: 'your.name@readify.net',
-    sigType: false,
     mobile: '+61 111 222 333',
+    phone: '+61 123 456 789',
     name: 'your name',
     qualifications: 'Jedi Master | PSM I',
-    title: 'Job Title',
-    twitter: '@myTwitter'
+    title: 'Job Title'
   };
-
-  const tree = shallow(<RepliesAndForwards {...props} />);
+  const tree = shallow(<BtsSignature {...props} />);
   expect(tree).toMatchSnapshot();
 });
