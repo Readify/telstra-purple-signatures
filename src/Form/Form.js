@@ -26,8 +26,10 @@ class Form extends Component {
           text: [
             { text: 'Readify', checked: true },
             { text: 'Readify Support', checked: false },
-            { text: 'BTS Digital', checked: false }
-          ],
+            process.env.NODE_ENV === 'production'
+              ? null
+              : { text: 'BTS Digital', checked: false }
+          ].filter(Boolean),
           order: 1
         },
         name: { text: '', order: 2 },
