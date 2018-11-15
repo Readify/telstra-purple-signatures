@@ -536,9 +536,9 @@ exports[`Renders full dom 1`] = `
                         "isSupport": false,
                         "mobile": "+61 111 222 333",
                         "name": "Your Name",
-                        "qualifications": "Jedi Master | PSM I",
+                        "qualifications": "",
                         "title": "Job Title",
-                        "twitter": "@myTwitter",
+                        "twitter": "",
                       }
                     }
                   >
@@ -679,9 +679,9 @@ exports[`Renders full dom 1`] = `
                         isSupport={false}
                         mobile="+61 111 222 333"
                         name="Your Name"
-                        qualifications="Jedi Master | PSM I"
+                        qualifications=""
                         title="Job Title"
-                        twitter="@myTwitter"
+                        twitter=""
                       >
                         <div
                           className="content"
@@ -743,15 +743,6 @@ exports[`Renders full dom 1`] = `
                                 <p
                                   style={
                                     Object {
-                                      "marginBottom": "10px",
-                                    }
-                                  }
-                                >
-                                  Jedi Master | PSM I
-                                </p>
-                                <p
-                                  style={
-                                    Object {
                                       "marginBottom": "20px",
                                     }
                                   }
@@ -791,21 +782,6 @@ exports[`Renders full dom 1`] = `
                                     <span>
                                         
                                     </span>
-                                  </span>
-                                  <span>
-                                    <b>
-                                      T
-                                    </b>
-                                     
-                                     
-                                    <a
-                                      href="https://twitter.com/myTwitter"
-                                      rel="noopener noreferrer"
-                                      target="_blank"
-                                    >
-                                      @myTwitter
-                                    </a>
-                                       
                                   </span>
                                   <span>
                                     <b>
@@ -1061,9 +1037,9 @@ exports[`Renders full dom 1`] = `
                         isSupport={false}
                         mobile="+61 111 222 333"
                         name="Your Name"
-                        qualifications="Jedi Master | PSM I"
+                        qualifications=""
                         title="Job Title"
-                        twitter="@myTwitter"
+                        twitter=""
                       >
                         <div>
                           <p
@@ -1108,24 +1084,6 @@ exports[`Renders full dom 1`] = `
                               your.name@readify.net
                             </a>
                              | 
-                            <span>
-                              <span>
-                                <b>
-                                  T
-                                </b>
-                                 
-                                 
-                                <a
-                                  href="https://twitter.com/myTwitter"
-                                  rel="noopener noreferrer"
-                                  target="_blank"
-                                >
-                                  @myTwitter
-                                </a>
-                                   
-                              </span>
-                              | 
-                            </span>
                             <b>
                               W
                             </b>

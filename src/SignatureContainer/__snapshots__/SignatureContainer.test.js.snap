@@ -44,7 +44,7 @@ exports[`Renders 1`] = `
       "isSupport": false,
       "mobile": "+61 111 222 333",
       "name": "your name",
-      "qualifications": "Jedi Master | PSM I",
+      "qualifications": undefined,
       "title": "Job Title",
       "twitter": "@myTwitter",
     }
@@ -96,7 +96,7 @@ exports[`Renders with support fields 1`] = `
       "isSupport": true,
       "mobile": "+61 111 222 333",
       "name": "your name",
-      "qualifications": "Jedi Master | PSM I",
+      "qualifications": undefined,
       "title": "Job Title",
       "twitter": "@myTwitter",
     }

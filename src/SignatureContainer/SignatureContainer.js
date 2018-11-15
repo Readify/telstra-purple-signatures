@@ -228,30 +228,34 @@ class SignatureContainer extends Component {
     const placeholders =
       constants[sigType === 'bts' ? 'btsDigital' : 'readify'].placeholders;
 
-    const signatureProps = this.assignPlaceholders(
-      {
-        name,
-        title,
-        qualifications,
-        mobile,
-        email,
-        twitter,
-        isSupport: sigType === 'support'
-      },
-      placeholders
-    );
+    const signatureProps = {
+      ...this.assignPlaceholders(
+        {
+          name,
+          title,
+          mobile,
+          email,
+          isSupport: sigType === 'support'
+        },
+        placeholders
+      ),
+      qualifications,
+      twitter
+    };
 
-    const btsProps = this.assignPlaceholders(
-      {
-        name,
-        title,
-        qualifications,
-        mobile,
-        phone,
-        email
-      },
-      placeholders
-    );
+    const btsProps = {
+      qualifications,
+      ...this.assignPlaceholders(
+        {
+          name,
+          title,
+          mobile,
+          phone,
+          email
+        },
+        placeholders
+      )
+    };
 
     const {
       CopySignatureText,
