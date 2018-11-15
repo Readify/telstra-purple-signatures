@@ -245,12 +245,13 @@ class SignatureContainer extends Component {
 
     const btsProps = {
       qualifications,
+      phone,
+      twitter,
       ...this.assignPlaceholders(
         {
           name,
           title,
           mobile,
-          phone,
           email
         },
         placeholders
