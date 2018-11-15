@@ -14,10 +14,6 @@ This app can be used to create Readify's Email Signature.
 - [x] Add BTS Digtal Signature
 - [ ] Leverage Azure Actice Directory to autofill from
 
-## Setup
-- Clone repo
-- Open index.html in a modern browser
-
 ## Tech Stack
 ### ReactJS
 Note, in the interest of saving development time, this app uses the development version of react, served over CDN. 
@@ -26,8 +22,7 @@ Because of this, it uses a browser version of babel. If you care about performan
 you should probably build the app locally and then serve a minified version with production react
 
 ## Looks great, how can I use it for my company?
-All the components in App.js have their brand information extracted into `brandInfo` variables in the various components.
-Just replace the information in their with your own content and you are good to go! 
+`src/constants` Contains brand specific information. Edit fields in their to rebrand the website.
 
 ## Licence 
 MIT, See: [LICENSE](https://github.com/Readify/readify-signatures/blob/master/LICENSE)
