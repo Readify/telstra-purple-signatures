@@ -201,7 +201,7 @@ const BtsSignature = props => {
                     lineHeight: '14px'
                   }}
                 >
-                  Business Technology Services (Digital)
+                  Business Technology Services - Digital
                   <br />
                   Telstra Enterprise
                 </p>

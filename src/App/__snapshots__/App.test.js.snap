@@ -1149,7 +1149,7 @@ exports[`Renders bts 1`] = `
                                             }
                                           }
                                         >
-                                          Business Technology Services (Digital)
+                                          Business Technology Services - Digital
                                           <br />
                                           Telstra Enterprise
                                         </p>
@@ -1349,9 +1349,9 @@ exports[`Renders bts 1`] = `
                                         Job Title
                                       </span>
                                       <br />
-                                      Business Technology Services
+                                      Business Technology Services - Digital
                                        | 
-                                      Telstra Enterprise Services
+                                      Telstra Enterprise
                                     </p>
                                   </td>
                                 </tr>
