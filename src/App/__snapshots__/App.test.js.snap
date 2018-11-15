@@ -603,7 +603,7 @@ exports[`Renders bts 1`] = `
                             textBefore="Copy text only"
                           />,
                           "signatureProps": Object {
-                            "email": "your.name@team.telstra.net",
+                            "email": "your.name@team.telstra.com",
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
                             "phone": "",
@@ -653,7 +653,7 @@ exports[`Renders bts 1`] = `
                         }
                         signatureProps={
                           Object {
-                            "email": "your.name@team.telstra.net",
+                            "email": "your.name@team.telstra.com",
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
                             "phone": "",
@@ -796,7 +796,7 @@ exports[`Renders bts 1`] = `
                             </div>
                           </div>
                           <BtsSignature
-                            email="your.name@team.telstra.net"
+                            email="your.name@team.telstra.com"
                             mobile="+61 111 222 333"
                             name="Your Name"
                             phone=""
@@ -968,7 +968,7 @@ exports[`Renders bts 1`] = `
                                           }
                                         >
                                           <a
-                                            href="mailto:your.name@team.telstra.net"
+                                            href="mailto:your.name@team.telstra.com"
                                             style={
                                               Object {
                                                 "fontFamily": "Ariel, sans-serif",
@@ -976,7 +976,7 @@ exports[`Renders bts 1`] = `
                                               }
                                             }
                                           >
-                                            your.name@team.telstra.net
+                                            your.name@team.telstra.com
                                           </a>
                                         </p>
                                         <p
@@ -990,7 +990,7 @@ exports[`Renders bts 1`] = `
                                           }
                                         >
                                           <a
-                                            href="https://www.telstra.com.au/business-enterprise"
+                                            href="https://telstra.com/enterprise"
                                             style={
                                               Object {
                                                 "fontFamily": "Ariel, sans-serif",
@@ -998,7 +998,7 @@ exports[`Renders bts 1`] = `
                                               }
                                             }
                                           >
-                                            www.telstra.com.au/business-enterprise
+                                            telstra.com/enterprise
                                           </a>
                                         </p>
                                       </td>
@@ -1060,7 +1060,7 @@ exports[`Renders bts 1`] = `
                                         }
                                       >
                                         <a
-                                          href="https://www.readify.net"
+                                          href="https://readify.net"
                                           rel="noopener noreferrer"
                                           style={
                                             Object {
@@ -1112,7 +1112,7 @@ exports[`Renders bts 1`] = `
                                         }
                                       >
                                         <a
-                                          href="https://www.telstra.com.au"
+                                          href="https://telstra.com/enterprise"
                                           rel="noopener noreferrer"
                                           style={
                                             Object {
@@ -1290,7 +1290,7 @@ exports[`Renders bts 1`] = `
                             </div>
                           </div>
                           <BtsRepliesAndForwards
-                            email="your.name@team.telstra.net"
+                            email="your.name@team.telstra.com"
                             mobile="+61 111 222 333"
                             name="Your Name"
                             phone=""
@@ -1404,7 +1404,7 @@ exports[`Renders bts 1`] = `
                                       </b>
                                         
                                       <a
-                                        href="mailto:your.name@team.telstra.net"
+                                        href="mailto:your.name@team.telstra.com"
                                         style={
                                           Object {
                                             "fontFamily": "Ariel, sans-serif",
@@ -1412,7 +1412,7 @@ exports[`Renders bts 1`] = `
                                           }
                                         }
                                       >
-                                        your.name@team.telstra.net
+                                        your.name@team.telstra.com
                                       </a>
                                     </span>
                                     <span
@@ -1431,7 +1431,7 @@ exports[`Renders bts 1`] = `
                                       </b>
                                         
                                       <a
-                                        href="https://www.telstra.com.au/business-enterprise"
+                                        href="https://telstra.com/enterprise"
                                         style={
                                           Object {
                                             "fontFamily": "Ariel, sans-serif",
@@ -1439,7 +1439,7 @@ exports[`Renders bts 1`] = `
                                           }
                                         }
                                       >
-                                        www.telstra.com.au/business-enterprise
+                                        telstra.com/enterprise
                                       </a>
                                     </span>
                                   </td>

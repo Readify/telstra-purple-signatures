@@ -26,12 +26,12 @@ export const btsDigital = {
   brandInfo: {
     brandName: 'Business Technology Services',
     brandSecondaryText: 'Telstra Enterprise Services',
-    brandLink: 'https://www.telstra.com.au/business-enterprise',
-    brandLinkName: 'www.telstra.com.au/business-enterprise',
+    brandLink: 'https://telstra.com/enterprise',
+    brandLinkName: 'telstra.com/enterprise',
     brandImages: {
       readify: {
         width: 38,
-        link: 'https://www.readify.net',
+        link: 'https://readify.net',
         img:
           'https://readifysignatures.blob.core.windows.net/images/readify.png',
         alt: 'Readify'
@@ -44,7 +44,7 @@ export const btsDigital = {
       },
       telstra: {
         width: 24,
-        link: 'https://www.telstra.com.au',
+        link: 'https://telstra.com/enterprise',
         img:
           'https://readifysignatures.blob.core.windows.net/images/telstra.png',
         alt: 'Telstra'
@@ -55,7 +55,7 @@ export const btsDigital = {
   placeholders: {
     name: 'Your Name',
     title: 'Job Title',
-    email: 'your.name@team.telstra.net',
+    email: 'your.name@team.telstra.com',
     mobile: '+61 111 222 333',
     phone: '0812 345 678',
     qualifications: 'Sith Lord'
