@@ -1,295 +1,79 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { entries } from 'lodash/object';
+import { compose, mapProps, withProps } from 'recompose';
 
 import constants from '../constants';
-import Signature from '../Signature';
-import RepliesAndForwards from '../RepliesAndForwards';
-import BtsRepliesAndForwards from '../BtsRepliesAndForwards';
-import BtsSignature from '../BtsSignature';
-import {
-  copySignatureText,
-  copyRepliesAndForwardsText,
-  copySignature,
-  copyBtsSignatureText,
-  copyBtsRepliesAndForwardsText
-} from '../util';
-import Button from '../Button';
-
 import './SignatureContainer.scss';
+import {
+  BtsSignatureContainer,
+  ReadifySignatureContainer
+} from './presentational-components';
+import { createButtons } from './createSignatureButtons';
+import { stripObject } from '../util';
 
-const ReadifySignatureContainer = ({
-  signatureProps,
-  CopySignatureText,
-  CopySignatureHtml,
-  CopyRepliesAndForwardsText,
-  CopyRepliesAndForwardsHtml
-}) => (
-  <div className="content">
-    <div className="level">
-      <div className="level-left">
-        <h3 className="level-item">Standard Signature</h3>
-      </div>
-      <div className="level-right">
-        {CopySignatureText}
-        {CopySignatureHtml}
-      </div>
-    </div>
-    <Signature {...signatureProps} />
-    <div className="level">
-      <div className="level-left">
-        <h3 className="level-item">Replies and Forwards Signature</h3>
-      </div>
-      <div className="level-right">
-        {CopyRepliesAndForwardsText}
-        {CopyRepliesAndForwardsHtml}
-      </div>
-    </div>
-    <RepliesAndForwards {...signatureProps} />
-  </div>
-);
+const assignPlaceholders = (props, placeholders) => {
+  const isBlank = a => a === '' || a === null || a === undefined;
+  return entries(props).reduce((result, item) => {
+    const [key, value] = item;
+    return Object.assign(result, {
+      [key]: isBlank(value) ? placeholders[key] : value
+    });
+  }, {});
+};
 
-const BtsSignatureContainer = ({
-  btsProps,
-  CopyBtsSigText,
-  CopyBtsHtml,
-  CopyBtsRepliesAndForwardsText,
-  CopyBtsRepliesAndForwardsHtml
-}) => (
-  <div className="content">
-    <div className="level">
-      <div className="level-left">
-        <h3 className="level-item">Standard Signature</h3>
-      </div>
-      <div className="level-right">
-        {CopyBtsSigText}
-        {CopyBtsHtml}
-      </div>
-    </div>
-    <BtsSignature {...btsProps} />
-    <div className="level">
-      <div className="level-left">
-        <h3 className="level-item">Replies and Forwards Signature</h3>
-      </div>
-      <div className="level-right">
-        {CopyBtsRepliesAndForwardsText}
-        {CopyBtsRepliesAndForwardsHtml}
-      </div>
-    </div>
-    <BtsRepliesAndForwards {...btsProps} />
-  </div>
-);
+export const containerChooser = props => ({
+  Container:
+    props.sigType === 'bts' ? BtsSignatureContainer : ReadifySignatureContainer
+});
 
-class SignatureContainer extends Component {
-  static defaultButtonText = {
-    text: 'Copy text only',
-    html: 'Copy signature'
-  };
+export const createContainer = props => {
+  const {
+    name,
+    title,
+    qualifications,
+    twitter,
+    sigType,
+    mobile,
+    email,
+    phone,
+    Container
+  } = props;
+  const isBTS = sigType === 'bts';
 
-  static buttonClasses = {
-    text: 'button',
-    html: 'button is-primary'
-  };
+  const placeholders = constants[isBTS ? 'btsDigital' : 'readify'].placeholders;
 
-  buttonMaker = (clickHandler, isText) => {
-    const isSuccessClass = 'button is-success';
-    const copiedText = 'Copied!';
-    const {
-      text: classText,
-      html: classHtml
-    } = SignatureContainer.buttonClasses;
-    const {
-      text: textText,
-      html: textHtml
-    } = SignatureContainer.defaultButtonText;
-    return (
-      <Button
-        onClickHandler={clickHandler}
-        classBefore={isText ? classText : classHtml}
-        classAfter={isSuccessClass}
-        textBefore={isText ? textText : textHtml}
-        textAfter={copiedText}
-      />
-    );
-  };
+  const signatureProps = stripObject({
+    qualifications,
+    twitter,
+    phone: isBTS ? phone : null,
+    ...assignPlaceholders(
+      stripObject({
+        name,
+        title,
+        mobile,
+        email,
+        isSupport: isBTS ? null : sigType === 'support'
+      }),
+      placeholders
+    )
+  });
 
-  createButtons = (signatureProps, btsProps, placeholders) => {
-    const CopySignatureText = this.buttonMaker(
-      () =>
-        copySignatureText({
-          ...signatureProps,
-          placeholders: placeholders
-        }),
-      true
-    );
-    const CopySignatureHtml = this.buttonMaker(
-      () =>
-        copySignature(
-          {
-            ...signatureProps,
-            placeholders: placeholders
-          },
-          Signature
-        ),
-      false
-    );
-    const CopyRepliesAndForwardsText = this.buttonMaker(
-      () =>
-        copyRepliesAndForwardsText({
-          ...signatureProps,
-          placeholders: placeholders
-        }),
-      true
-    );
-    const CopyRepliesAndForwardsHtml = this.buttonMaker(
-      () =>
-        copySignature(
-          {
-            ...signatureProps,
-            placeholders: placeholders
-          },
-          RepliesAndForwards
-        ),
-      false
-    );
+  const buttons = createButtons(signatureProps, placeholders, isBTS);
 
-    const CopyBtsSigText = this.buttonMaker(
-      () =>
-        copyBtsSignatureText({
-          ...btsProps,
-          placeholders: placeholders
-        }),
-      true
-    );
-    const CopyBtsHtml = this.buttonMaker(
-      () =>
-        copySignature(
-          {
-            ...btsProps,
-            placeholders: placeholders
-          },
-          BtsSignature
-        ),
-      false
-    );
-
-    const CopyBtsRepliesAndForwardsText = this.buttonMaker(
-      () =>
-        copyBtsRepliesAndForwardsText({
-          ...btsProps,
-          placeholders: placeholders
-        }),
-      true
-    );
-    const CopyBtsRepliesAndForwardsHtml = this.buttonMaker(
-      () =>
-        copySignature(
-          {
-            ...btsProps,
-            placeholders: placeholders
-          },
-          BtsRepliesAndForwards
-        ),
-      false
-    );
-    return {
-      CopySignatureText,
-      CopySignatureHtml,
-      CopyRepliesAndForwardsText,
-      CopyRepliesAndForwardsHtml,
-      CopyBtsSigText,
-      CopyBtsHtml,
-      CopyBtsRepliesAndForwardsText,
-      CopyBtsRepliesAndForwardsHtml
-    };
-  };
-
-  assignPlaceholders = (props, placeholders) => {
-    const isBlank = a => a === '' || a === null || a === undefined;
-    return entries(props).reduce((result, item) => {
-      const [key, value] = item;
-      return Object.assign(result, {
-        [key]: isBlank(value) ? placeholders[key] : value
-      });
-    }, {});
-  };
-
-  render() {
-    const {
-      name,
-      title,
-      qualifications,
-      twitter,
-      sigType,
-      mobile,
-      email,
-      phone
-    } = this.props;
-
-    const placeholders =
-      constants[sigType === 'bts' ? 'btsDigital' : 'readify'].placeholders;
-
-    const signatureProps = {
-      ...this.assignPlaceholders(
-        {
-          name,
-          title,
-          mobile,
-          email,
-          isSupport: sigType === 'support'
-        },
-        placeholders
-      ),
-      qualifications,
-      twitter
-    };
-
-    const btsProps = {
-      qualifications,
-      phone,
-      twitter,
-      ...this.assignPlaceholders(
-        {
-          name,
-          title,
-          mobile,
-          email
-        },
-        placeholders
-      )
-    };
-
-    const {
-      CopySignatureText,
-      CopySignatureHtml,
-      CopyRepliesAndForwardsText,
-      CopyRepliesAndForwardsHtml,
-      CopyBtsSigText,
-      CopyBtsHtml,
-      CopyBtsRepliesAndForwardsText,
-      CopyBtsRepliesAndForwardsHtml
-    } = this.createButtons(signatureProps, btsProps, placeholders);
-
-    const readifySignatureContainerProps = {
+  return {
+    containerProps: {
       signatureProps,
-      CopySignatureText,
-      CopySignatureHtml,
-      CopyRepliesAndForwardsText,
-      CopyRepliesAndForwardsHtml
-    };
-    const BtsSignatureContainerProps = {
-      btsProps,
-      CopyBtsSigText,
-      CopyBtsHtml,
-      CopyBtsRepliesAndForwardsText,
-      CopyBtsRepliesAndForwardsHtml
-    };
+      ...buttons
+    },
+    Container
+  };
+};
 
-    return sigType === 'bts' ? (
-      <BtsSignatureContainer {...BtsSignatureContainerProps} />
-    ) : (
-      <ReadifySignatureContainer {...readifySignatureContainerProps} />
-    );
-  }
-}
+const SignatureContainer = ({ containerProps, Container }) => (
+  <Container {...containerProps} />
+);
 
-export default SignatureContainer;
+export default compose(
+  withProps(containerChooser),
+  mapProps(createContainer)
+)(SignatureContainer);

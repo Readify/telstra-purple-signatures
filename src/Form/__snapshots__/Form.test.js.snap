@@ -280,7 +280,7 @@ exports[`Renders 1`] = `
     </div>
   </div>
   <hr />
-  <SignatureContainer
+  <withProps(mapProps(SignatureContainer))
     email=""
     mobile=""
     name=""

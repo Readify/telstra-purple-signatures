@@ -1,6 +1,8 @@
 import React from 'react';
-import { readify, btsDigital } from '../constants';
+import { btsDigital, readify } from '../constants';
 import ReactDOMServer from 'react-dom/server';
+import { entries } from 'lodash/object';
+
 const { brandInfo } = readify;
 
 export const parseMobile = mobileNum => {
@@ -168,3 +170,11 @@ export const copySignature = (props, SignatureComponent) => {
 
   document.body.removeChild(container);
 };
+
+export const stripObject = obj =>
+  entries(obj)
+    .filter(keyVal => keyVal[1] !== null && keyVal[1] !== undefined)
+    .reduce(
+      (result, item) => Object.assign(result, { [item[0]]: item[1] }),
+      {}
+    );
