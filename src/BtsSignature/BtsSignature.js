@@ -8,9 +8,11 @@ const { brandInfo } = btsDigital;
 const BtsSignature = props => {
   const { name, title, qualifications, mobile, phone, email, twitter } = props;
   const {
+    // eslint-disable-next-line
     brandName,
     brandLink,
     brandLinkName,
+    // eslint-disable-next-line
     brandSecondaryText,
     brandImages
   } = brandInfo;
