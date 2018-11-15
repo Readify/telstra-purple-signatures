@@ -36,7 +36,7 @@ const copyText = text => {
 
 export const copyBtsSignatureText = props => {
   const { brandInfo } = btsDigital;
-  const { email, mobile, phone, name, qualifications, title } = props;
+  const { email, mobile, phone, name, qualifications, title, twitter } = props;
   const mobileText = parseMobile(mobile).replace(/&nbsp;/g, ' ');
   const phoneText = parseMobile(phone).replace(/&nbsp;/g, ' ');
 
@@ -52,6 +52,7 @@ export const copyBtsSignatureText = props => {
     mobileText ? `M ${mobileText}` : null,
     phoneText ? `P ${phoneText}` : null,
     email ? `E ${email}` : null,
+    twitter ? `T ${twitter}` : null,
     `W ${brandInfo.brandLinkName}`,
     ''
   ];
@@ -104,7 +105,7 @@ export const copySignatureText = props => {
 
 export const copyBtsRepliesAndForwardsText = props => {
   const { brandInfo } = btsDigital;
-  const { name, title, mobile, email, phone } = props;
+  const { name, title, mobile, email, phone, twitter } = props;
   const mobileText = parseMobile(mobile).replace(/&nbsp;/g, ' ');
   const phoneText = parseMobile(phone).replace(/&nbsp;/g, ' ');
 
@@ -112,9 +113,9 @@ export const copyBtsRepliesAndForwardsText = props => {
     '--',
     `${name} | ${title}`,
     `${brandInfo.brandName} | ${brandInfo.brandSecondaryText}`,
-    `M ${mobileText} | E ${email} | P ${phoneText} | W ${
-      brandInfo.brandLinkName
-    }`
+    `M ${mobileText} | E ${email}${phone ? ` | P ${phoneText}` : ''}${
+      twitter ? ` | T ${twitter}` : ''
+    } | W ${brandInfo.brandLinkName}`
   ];
 
   copyText(textArr.filter(val => val !== null).join('\n'));
