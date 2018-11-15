@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { omit, mapValues } from 'lodash/object';
+import { camelCase } from 'lodash/string';
 
 import './Form.scss';
 import { readify } from '../constants';
@@ -91,6 +92,7 @@ class Form extends Component {
                     name="signatureTypeOpt"
                     onChange={() => this.handleRadioChange(index)}
                     checked={inputObj.checked}
+                    id={camelCase(inputObj.text)}
                   />
                   {inputObj.text}
                 </label>
