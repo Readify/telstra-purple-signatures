@@ -365,7 +365,7 @@ exports[`Renders bts 1`] = `
                     <label
                       className="label field-label"
                     >
-                      Phone:
+                      Phone: (Optional)
                     </label>
                   </div>
                   <div
@@ -572,9 +572,10 @@ exports[`Renders bts 1`] = `
                         "email": "your.name@team.telstra.net",
                         "mobile": "+61 111 222 333",
                         "name": "Your Name",
-                        "phone": "0812 345 678",
+                        "phone": "",
                         "qualifications": "",
                         "title": "Job Title",
+                        "twitter": "",
                       }
                     }
                   >
@@ -714,9 +715,10 @@ exports[`Renders bts 1`] = `
                         email="your.name@team.telstra.net"
                         mobile="+61 111 222 333"
                         name="Your Name"
-                        phone="0812 345 678"
+                        phone=""
                         qualifications=""
                         title="Job Title"
+                        twitter=""
                       >
                         <div
                           className="content"
@@ -768,10 +770,6 @@ exports[`Renders bts 1`] = `
                                   >
                                     Job Title
                                   </span>
-                                  <br />
-                                  Business Technology Services
-                                  <br />
-                                  Telstra Enterprise Services
                                 </p>
                               </td>
                             </tr>
@@ -805,18 +803,6 @@ exports[`Renders bts 1`] = `
                                       }
                                     }
                                   >
-                                    <p
-                                      style={
-                                        Object {
-                                          "color": "#333333",
-                                          "fontSize": "12px",
-                                          "lineHeight": "15px",
-                                          "margin": "0",
-                                        }
-                                      }
-                                    >
-                                      P
-                                    </p>
                                     <p
                                       style={
                                         Object {
@@ -862,31 +848,6 @@ exports[`Renders bts 1`] = `
                                       }
                                     }
                                   >
-                                    <p
-                                      style={
-                                        Object {
-                                          "color": "#333333",
-                                          "fontSize": "12px",
-                                          "lineHeight": "15px",
-                                          "margin": "0",
-                                        }
-                                      }
-                                    >
-                                      <a
-                                        dangerouslySetInnerHTML={
-                                          Object {
-                                            "__html": "0812&nbsp;345&nbsp;678",
-                                          }
-                                        }
-                                        href="tel:0812345678"
-                                        style={
-                                          Object {
-                                            "fontFamily": "Ariel, sans-serif",
-                                            "fontWeight": "200",
-                                          }
-                                        }
-                                      />
-                                    </p>
                                     <p
                                       style={
                                         Object {
@@ -1248,9 +1209,10 @@ exports[`Renders bts 1`] = `
                         email="your.name@team.telstra.net"
                         mobile="+61 111 222 333"
                         name="Your Name"
-                        phone="0812 345 678"
+                        phone=""
                         qualifications=""
                         title="Job Title"
+                        twitter=""
                       >
                         <div
                           className="content"
@@ -1323,33 +1285,10 @@ exports[`Renders bts 1`] = `
                                     }
                                   }
                                 >
-                                  P  
-                                  <a
-                                    dangerouslySetInnerHTML={
-                                      Object {
-                                        "__html": "0812&nbsp;345&nbsp;678",
-                                      }
-                                    }
-                                    href="tel:0812345678"
-                                    style={
-                                      Object {
-                                        "fontFamily": "Ariel, sans-serif",
-                                        "fontWeight": "200",
-                                      }
-                                    }
-                                  />
-                                </span>
-                                <span
-                                  style={
-                                    Object {
-                                      "color": "#333333",
-                                      "fontSize": "12px",
-                                      "lineHeight": "15px",
-                                      "margin": "0",
-                                    }
-                                  }
-                                >
-                                    M  
+                                  <b>
+                                    M
+                                  </b>
+                                    
                                   <a
                                     dangerouslySetInnerHTML={
                                       Object {
@@ -1375,7 +1314,11 @@ exports[`Renders bts 1`] = `
                                     }
                                   }
                                 >
-                                    E  
+                                    
+                                  <b>
+                                    E
+                                  </b>
+                                    
                                   <a
                                     href="mailto:your.name@team.telstra.net"
                                     style={
@@ -1398,7 +1341,11 @@ exports[`Renders bts 1`] = `
                                     }
                                   }
                                 >
-                                    W  
+                                    
+                                  <b>
+                                    W
+                                  </b>
+                                    
                                   <a
                                     href="https://www.telstra.com.au/business-enterprise"
                                     style={
@@ -2182,9 +2129,6 @@ exports[`Renders readify 1`] = `
                                     <span>
                                         
                                     </span>
-                                  </span>
-                                  <span>
-                                      
                                   </span>
                                   <span>
                                     <b>
@@ -3271,9 +3215,6 @@ exports[`Renders readify support 1`] = `
                                       />
                                       <br />
                                     </span>
-                                  </span>
-                                  <span>
-                                      
                                   </span>
                                   <span>
                                     <b>
