@@ -13,7 +13,7 @@ class Form extends Component {
     name: 'Your Name:',
     title: 'Job Title:',
     email: 'Email:',
-    phone: 'Phone:',
+    phone: 'Phone: (Optional)',
     mobile: 'Mobile:',
     twitter: 'Twitter: (Optional)',
     qualifications: 'Qualifications: (Optional)'
