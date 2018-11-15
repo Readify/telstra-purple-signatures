@@ -80,7 +80,6 @@ const Signature = props => {
                   <span>&nbsp;&nbsp;</span>
                 )}
               </span>
-              <span>&nbsp;&nbsp;</span>
               <span>
                 <b>E</b>
                 &nbsp;
