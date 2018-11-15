@@ -56,6 +56,8 @@ export const copyBtsSignatureText = props => {
     email ? `E ${email}` : null,
     twitter ? `T ${twitter}` : null,
     `W ${brandInfo.brandLinkName}`,
+    'This email may contain confidential information.',
+    "If I've sent it to you by accident, please delete it immediately",
     ''
   ];
 
