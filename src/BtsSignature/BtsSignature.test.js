@@ -10,7 +10,8 @@ it('Renders', () => {
     phone: '+61 123 456 789',
     name: 'your name',
     qualifications: 'Jedi Master | PSM I',
-    title: 'Job Title'
+    title: 'Job Title',
+    twitter: '@test'
   };
   const tree = shallow(<BtsSignature {...props} />);
   expect(tree).toMatchSnapshot();

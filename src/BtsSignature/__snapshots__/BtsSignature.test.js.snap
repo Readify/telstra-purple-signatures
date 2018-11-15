@@ -51,10 +51,6 @@ exports[`Renders 1`] = `
           >
             Job Title
           </span>
-          <br />
-          Business Technology Services
-          <br />
-          Telstra Enterprise Services
           <span>
             <br />
             Jedi Master | PSM I
@@ -127,6 +123,18 @@ exports[`Renders 1`] = `
               }
             >
               E
+            </p>
+            <p
+              style={
+                Object {
+                  "color": "#333333",
+                  "fontSize": "12px",
+                  "lineHeight": "15px",
+                  "margin": "0",
+                }
+              }
+            >
+              T
             </p>
             <p
               style={
@@ -219,6 +227,30 @@ exports[`Renders 1`] = `
                 }
               >
                 your.name@readify.net
+              </a>
+            </p>
+            <p
+              style={
+                Object {
+                  "color": "#333333",
+                  "fontSize": "12px",
+                  "lineHeight": "15px",
+                  "margin": "0",
+                }
+              }
+            >
+              <a
+                href="https://twitter.com/test"
+                rel="noopener noreferrer"
+                style={
+                  Object {
+                    "fontFamily": "Ariel, sans-serif",
+                    "fontWeight": "200",
+                  }
+                }
+                target="_blank"
+              >
+                @test
               </a>
             </p>
             <p

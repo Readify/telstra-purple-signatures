@@ -72,7 +72,10 @@ exports[`Renders 1`] = `
             }
           }
         >
-          P  
+          <b>
+            P
+          </b>
+            
           <a
             dangerouslySetInnerHTML={
               Object {
@@ -98,7 +101,17 @@ exports[`Renders 1`] = `
             }
           }
         >
-            M  
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&nbsp;&nbsp;",
+              }
+            }
+          />
+          <b>
+            M
+          </b>
+            
           <a
             dangerouslySetInnerHTML={
               Object {
@@ -124,7 +137,11 @@ exports[`Renders 1`] = `
             }
           }
         >
-            E  
+            
+          <b>
+            E
+          </b>
+            
           <a
             href="mailto:your.name@readify.net"
             style={
@@ -147,7 +164,40 @@ exports[`Renders 1`] = `
             }
           }
         >
-            W  
+            
+          <b>
+            T
+          </b>
+            
+          <a
+            href="https://twitter.com/test"
+            rel="noopener noreferrer"
+            style={
+              Object {
+                "fontFamily": "Ariel, sans-serif",
+                "fontWeight": "200",
+              }
+            }
+            target="_blank"
+          >
+            @test
+          </a>
+        </span>
+        <span
+          style={
+            Object {
+              "color": "#333333",
+              "fontSize": "12px",
+              "lineHeight": "15px",
+              "margin": "0",
+            }
+          }
+        >
+            
+          <b>
+            W
+          </b>
+            
           <a
             href="https://www.telstra.com.au/business-enterprise"
             style={

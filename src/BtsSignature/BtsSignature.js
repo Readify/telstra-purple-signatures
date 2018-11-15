@@ -6,7 +6,7 @@ import { parseMobile } from '../util';
 const { brandInfo } = btsDigital;
 
 const BtsSignature = props => {
-  const { name, title, qualifications, mobile, phone, email } = props;
+  const { name, title, qualifications, mobile, phone, email, twitter } = props;
   const {
     brandName,
     brandLink,
@@ -78,10 +78,10 @@ const BtsSignature = props => {
               </span>
               <br />
               <span style={{ color: '#3A576B' }}>{title}</span>
-              <br />
-              {brandName}
-              <br />
-              {brandSecondaryText}
+              {/*<br />*/}
+              {/*{brandName}*/}
+              {/*<br />*/}
+              {/*{brandSecondaryText}*/}
               {qualifications ? (
                 <span>
                   <br />
@@ -95,19 +95,22 @@ const BtsSignature = props => {
           <td valign="top">
             <table {...tableProps}>
               <td style={boldTdStyle}>
-                <p style={pStyle}>P</p>
+                {phone ? <p style={pStyle}>P</p> : null}
                 <p style={pStyle}>M</p>
                 <p style={pStyle}>E</p>
+                {twitter ? <p style={pStyle}>T</p> : null}
                 <p style={pStyle}>W</p>
               </td>
               <td style={tdStyle}>
-                <p style={pStyle}>
-                  <a
-                    style={aStyle}
-                    href={`tel:${parseMobile(phone).replace(/&nbsp;/g, '')}`}
-                    dangerouslySetInnerHTML={{ __html: parseMobile(phone) }}
-                  />
-                </p>
+                {phone ? (
+                  <p style={pStyle}>
+                    <a
+                      style={aStyle}
+                      href={`tel:${parseMobile(phone).replace(/&nbsp;/g, '')}`}
+                      dangerouslySetInnerHTML={{ __html: parseMobile(phone) }}
+                    />
+                  </p>
+                ) : null}
                 <p style={pStyle}>
                   <a
                     style={aStyle}
@@ -120,6 +123,18 @@ const BtsSignature = props => {
                     {email}
                   </a>
                 </p>
+                {twitter ? (
+                  <p style={pStyle}>
+                    <a
+                      style={aStyle}
+                      href={`https://twitter.com/${twitter.replace('@', '')}`}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      {twitter}
+                    </a>
+                  </p>
+                ) : null}
                 <p style={pStyle}>
                   <a style={aStyle} href={brandLink}>
                     {brandLinkName}

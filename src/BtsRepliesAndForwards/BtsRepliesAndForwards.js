@@ -6,7 +6,7 @@ import { parseMobile } from '../util';
 const { brandInfo } = btsDigital;
 
 const BtsRepliesAndForwards = props => {
-  const { name, title, mobile, phone, email } = props;
+  const { name, title, mobile, phone, email, twitter } = props;
   const { brandName, brandLink, brandLinkName, brandSecondaryText } = brandInfo;
 
   const pStyle = {
@@ -55,16 +55,21 @@ const BtsRepliesAndForwards = props => {
         </tr>
         <tr>
           <td valign="top">
+            {phone ? (
+              <span style={pStyle}>
+                <b>P</b>&nbsp;&nbsp;
+                <a
+                  style={aStyle}
+                  href={`tel:${parseMobile(phone).replace(/&nbsp;/g, '')}`}
+                  dangerouslySetInnerHTML={{ __html: parseMobile(phone) }}
+                />
+              </span>
+            ) : null}
             <span style={pStyle}>
-              P&nbsp;&nbsp;
-              <a
-                style={aStyle}
-                href={`tel:${parseMobile(phone).replace(/&nbsp;/g, '')}`}
-                dangerouslySetInnerHTML={{ __html: parseMobile(phone) }}
-              />
-            </span>
-            <span style={pStyle}>
-              &nbsp;&nbsp;M&nbsp;&nbsp;
+              {phone ? (
+                <span dangerouslySetInnerHTML={{ __html: '&nbsp;&nbsp;' }} />
+              ) : null}
+              <b>M</b>&nbsp;&nbsp;
               <a
                 style={aStyle}
                 href={`tel:${parseMobile(mobile).replace(/&nbsp;/g, '')}`}
@@ -72,13 +77,26 @@ const BtsRepliesAndForwards = props => {
               />
             </span>
             <span style={pStyle}>
-              &nbsp;&nbsp;E&nbsp;&nbsp;
+              &nbsp;&nbsp;<b>E</b>&nbsp;&nbsp;
               <a style={aStyle} href={`mailto:${email}`}>
                 {email}
               </a>
             </span>
+            {twitter ? (
+              <span style={pStyle}>
+                &nbsp;&nbsp;<b>T</b>&nbsp;&nbsp;
+                <a
+                  style={aStyle}
+                  href={`https://twitter.com/${twitter.replace('@', '')}`}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {twitter}
+                </a>
+              </span>
+            ) : null}
             <span style={pStyle}>
-              &nbsp;&nbsp;W&nbsp;&nbsp;
+              &nbsp;&nbsp;<b>W</b>&nbsp;&nbsp;
               <a style={aStyle} href={brandLink}>
                 {brandLinkName}
               </a>
