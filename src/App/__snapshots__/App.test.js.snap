@@ -945,7 +945,7 @@ exports[`Renders bts 1`] = `
                                       }
                                     >
                                       <a
-                                        href="https://telstra.com"
+                                        href="https://www.telstra.com.au/business-enterprise"
                                         style={
                                           Object {
                                             "fontFamily": "Ariel, sans-serif",
@@ -953,7 +953,7 @@ exports[`Renders bts 1`] = `
                                           }
                                         }
                                       >
-                                        www.telstra.com
+                                        www.telstra.com.au/business-enterprise
                                       </a>
                                     </p>
                                   </td>
@@ -1400,7 +1400,7 @@ exports[`Renders bts 1`] = `
                                 >
                                     W  
                                   <a
-                                    href="https://telstra.com"
+                                    href="https://www.telstra.com.au/business-enterprise"
                                     style={
                                       Object {
                                         "fontFamily": "Ariel, sans-serif",
@@ -1408,7 +1408,7 @@ exports[`Renders bts 1`] = `
                                       }
                                     }
                                   >
-                                    www.telstra.com
+                                    www.telstra.com.au/business-enterprise
                                   </a>
                                 </span>
                               </td>
