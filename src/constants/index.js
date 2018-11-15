@@ -26,8 +26,8 @@ export const btsDigital = {
   brandInfo: {
     brandName: 'Business Technology Services',
     brandSecondaryText: 'Telstra Enterprise Services',
-    brandLink: 'https://telstra.com',
-    brandLinkName: 'www.telstra.com',
+    brandLink: 'https://www.telstra.com.au/business-enterprise',
+    brandLinkName: 'www.telstra.com.au/business-enterprise',
     brandImages: {
       readify: {
         width: 38,
