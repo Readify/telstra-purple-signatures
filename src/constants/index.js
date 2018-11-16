@@ -24,8 +24,8 @@ export const readify = {
 
 export const btsDigital = {
   brandInfo: {
-    brandName: 'Business Technology Services',
-    brandSecondaryText: 'Telstra Enterprise Services',
+    brandName: 'Business Technology Services - Digital',
+    brandSecondaryText: 'Telstra Enterprise',
     brandLink: 'https://telstra.com/enterprise',
     brandLinkName: 'telstra.com/enterprise',
     brandImages: {
