@@ -1,46 +1,14 @@
 import React, { Component } from 'react';
-import { omit, mapValues } from 'lodash/object';
+import { omit, mapValues, entries } from 'lodash/object';
 import { camelCase } from 'lodash/string';
-import { UserAgentApplication } from 'msal/lib-es6';
-import { entries } from 'lodash/object';
+import { withProps, compose } from 'recompose';
 
 import './Form.scss';
 import constants from '../constants';
 import SignatureContainer from '../SignatureContainer';
+import { getMicrosoftADInfo } from '../microsoftAuth';
 
-const MicrosoftGraph = require('@microsoft/microsoft-graph-client');
-const { applicationConfig } = constants;
-
-const authCallback = (errorDesc, token, error) => {
-  if (token) {
-  } else {
-    console.error(error + ':' + errorDesc);
-  }
-};
-
-const userAgentApplication = new UserAgentApplication(
-  applicationConfig.clientID,
-  null,
-  authCallback
-);
-
-const login = async () => {
-  const graphScopes = ['user.read'];
-  try {
-    let accessToken = null;
-    try {
-      accessToken = await userAgentApplication.acquireTokenSilent(graphScopes);
-    } catch (error) {
-      await userAgentApplication.loginPopup(graphScopes);
-      accessToken = await userAgentApplication.acquireTokenSilent(graphScopes);
-    }
-    return accessToken;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-class Form extends Component {
+export class Form extends Component {
   static labels = {
     signatureTypes: 'Signature Type',
     name: 'Your Name:',
@@ -76,44 +44,24 @@ class Form extends Component {
   }
 
   componentDidMount() {
-    login().then(token => {
-      if (token === null) return null;
-      const client = MicrosoftGraph.Client.init({
-        authProvider: done => {
-          done(null, token);
-        }
-      });
-      client
-        .api('/me')
-        .get()
-        .then(
-          res => {
-            const {
-              displayName: name,
-              jobTitle: title,
-              mail: email,
-              mobilePhone: mobile
-            } = res;
-            const inputs = entries({ name, title, email, mobile }).reduce(
-              (inputs, item) =>
-                Object.assign(inputs, {
-                  [item[0]]: {
-                    text: item[1],
-                    order: this.state.inputs[item[0]].order
-                  }
-                }),
-              {}
-            );
-            this.setState({
-              inputs: { ...this.state.inputs, ...inputs }
-            });
-          },
-          err => {
-            console.log(err);
-            return null;
-          }
+    const { getMicrosoftADInfo } = this.props;
+    if (getMicrosoftADInfo !== undefined) {
+      getMicrosoftADInfo().then(adInputs => {
+        const inputs = entries(adInputs).reduce(
+          (inputs, item) =>
+            Object.assign(inputs, {
+              [item[0]]: {
+                text: item[1],
+                order: this.state.inputs[item[0]].order
+              }
+            }),
+          {}
         );
-    });
+        this.setState({
+          inputs: { ...this.state.inputs, ...inputs }
+        });
+      });
+    }
   }
 
   handleChange = (name, value) => {
@@ -234,4 +182,8 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default compose(
+  withProps(() => ({
+    getMicrosoftADInfo
+  }))
+)(Form);

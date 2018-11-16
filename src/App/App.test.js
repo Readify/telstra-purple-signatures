@@ -3,6 +3,8 @@ import { shallow, mount } from 'enzyme';
 
 import App from './App';
 
+jest.mock('../microsoftAuth');
+
 const errFunc = console.error;
 let errMsg = '';
 
@@ -27,14 +29,14 @@ it('Renders readify support', () => {
   const tree = mount(<App />);
   tree.find('#readifySupport').simulate('change');
   expect(tree).toMatchSnapshot();
-  expect(errMsg).toMatchSnapshot();
+  expect(errMsg).toMatchSnapshot('errors');
 });
 
 it('Renders bts', () => {
   const tree = mount(<App />);
   tree.find('#btsDigital').simulate('change');
   expect(tree).toMatchSnapshot();
-  expect(errMsg).toMatchSnapshot();
+  expect(errMsg).toMatchSnapshot('errors');
 });
 
 it('Renders App', () => {
