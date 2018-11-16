@@ -1,3 +1,9 @@
+export const applicationConfig = {
+  clientID: '1dcba53e-34bb-40bd-be4c-32c8d62ee064\n',
+  graphScopes: ['user.read'],
+  graphEndpoint: 'https://graph.microsoft.com/v1.0/me'
+};
+
 export const readify = {
   brandInfo: {
     brandName: 'Readify',
@@ -63,4 +69,4 @@ export const btsDigital = {
   }
 };
 
-export default { btsDigital, readify };
+export default { btsDigital, readify, applicationConfig };
