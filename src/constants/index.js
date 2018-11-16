@@ -57,7 +57,8 @@ export const btsDigital = {
     title: 'Job Title',
     email: 'your.name@team.telstra.com',
     mobile: '+61 111 222 333',
-    phone: '0812 345 678',
+    phone: '+61 8 1234 5678',
+    twitter: '@myTwitter',
     qualifications: 'Sith Lord'
   }
 };

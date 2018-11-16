@@ -3,9 +3,8 @@ import { omit, mapValues } from 'lodash/object';
 import { camelCase } from 'lodash/string';
 
 import './Form.scss';
-import { readify } from '../constants';
+import constants from '../constants';
 import SignatureContainer from '../SignatureContainer';
-const { placeholders } = readify;
 
 class Form extends Component {
   static labels = {
@@ -78,7 +77,7 @@ class Form extends Component {
     });
   };
 
-  inputHtml = (inputName, inputVal) => {
+  inputHtml = (inputName, inputVal, placeholders) => {
     if (inputName === 'signatureTypes') {
       return (
         <div className="field is-narrow">
@@ -102,7 +101,6 @@ class Form extends Component {
         </div>
       );
     }
-
     return (
       <input
         className="input"
@@ -114,7 +112,7 @@ class Form extends Component {
     );
   };
 
-  renderHtmlForInputs = formInputs => {
+  renderHtmlForInputs = (formInputs, placeholders) => {
     return Object.entries(formInputs)
       .sort((a, b) => a[1].order - b[1].order)
       .map(obj => ({ key: obj[0], ...omit(obj[1], 'order') }))
@@ -129,7 +127,7 @@ class Form extends Component {
             </div>
             <div className="field-body">
               <div className="control" key={inputName}>
-                {this.inputHtml(inputName, inputObj.text)}
+                {this.inputHtml(inputName, inputObj.text, placeholders)}
               </div>
             </div>
           </div>
@@ -138,9 +136,12 @@ class Form extends Component {
   };
 
   render() {
+    const placeholders =
+      constants[this.state.sigType === 'bts' ? 'btsDigital' : 'readify']
+        .placeholders;
     const formInputs = this.state.inputs;
 
-    const inputs = this.renderHtmlForInputs(formInputs);
+    const inputs = this.renderHtmlForInputs(formInputs, placeholders);
 
     const SignatureContainerProps = {
       placeholders,

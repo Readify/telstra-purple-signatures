@@ -344,7 +344,7 @@ exports[`Renders bts 1`] = `
                       <input
                         className="input"
                         onChange={[Function]}
-                        placeholder="Jedi Master | PSM I"
+                        placeholder="Sith Lord"
                         style={
                           Object {
                             "width": "300px",
@@ -378,6 +378,7 @@ exports[`Renders bts 1`] = `
                       <input
                         className="input"
                         onChange={[Function]}
+                        placeholder="+61 8 1234 5678"
                         style={
                           Object {
                             "width": "300px",
@@ -445,7 +446,7 @@ exports[`Renders bts 1`] = `
                       <input
                         className="input"
                         onChange={[Function]}
-                        placeholder="your.name@readify.net"
+                        placeholder="your.name@team.telstra.com"
                         style={
                           Object {
                             "width": "300px",
@@ -498,10 +499,11 @@ exports[`Renders bts 1`] = `
                   phone=""
                   placeholders={
                     Object {
-                      "email": "your.name@readify.net",
+                      "email": "your.name@team.telstra.com",
                       "mobile": "+61 111 222 333",
                       "name": "Your Name",
-                      "qualifications": "Jedi Master | PSM I",
+                      "phone": "+61 8 1234 5678",
+                      "qualifications": "Sith Lord",
                       "title": "Job Title",
                       "twitter": "@myTwitter",
                     }
@@ -538,10 +540,11 @@ exports[`Renders bts 1`] = `
                     phone=""
                     placeholders={
                       Object {
-                        "email": "your.name@readify.net",
+                        "email": "your.name@team.telstra.com",
                         "mobile": "+61 111 222 333",
                         "name": "Your Name",
-                        "qualifications": "Jedi Master | PSM I",
+                        "phone": "+61 8 1234 5678",
+                        "qualifications": "Sith Lord",
                         "title": "Job Title",
                         "twitter": "@myTwitter",
                       }

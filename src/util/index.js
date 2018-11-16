@@ -5,11 +5,11 @@ import { entries } from 'lodash/object';
 
 const { brandInfo } = readify;
 
+const multiSplice = (toAddIndexes, val, array) =>
+  toAddIndexes.forEach(index => array.splice(index, 0, val));
+
 export const parseMobile = mobileNum => {
   if (mobileNum === undefined) return null;
-
-  const multiSplice = (toAddIndexes, val, array) =>
-    toAddIndexes.forEach(index => array.splice(index, 0, val));
 
   const mobileFormatted = mobileNum.replace(/[\s|+]/g, '');
   const numberArr = mobileFormatted.split('');
@@ -21,6 +21,22 @@ export const parseMobile = mobileNum => {
     multiSplice([3, 7, 11], '&nbsp;', numberArr);
   } else if (mobileFormatted.length === 12) {
     multiSplice([3, 7, 11], '&nbsp;', numberArr);
+  } else {
+    return mobileFormatted;
+  }
+  return numberArr.join('');
+};
+
+export const parseLandLine = mobileNum => {
+  if (mobileNum === undefined) return null;
+
+  const mobileFormatted = mobileNum.replace(/[\s|+]/g, '');
+  const numberArr = mobileFormatted.split('');
+  if (mobileFormatted.length === 8) {
+    numberArr.splice(4, 0, '&nbsp;');
+  } else if (mobileFormatted.length === 11) {
+    multiSplice([2, 4, 9], '&nbsp;', numberArr);
+    numberArr.splice(0, 0, '+');
   } else {
     return mobileFormatted;
   }

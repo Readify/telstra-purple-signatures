@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { btsDigital } from '../constants';
-import { parseMobile } from '../util';
+import { parseMobile, parseLandLine } from '../util';
 
 const { brandInfo } = btsDigital;
 
@@ -60,8 +60,8 @@ const BtsRepliesAndForwards = props => {
                 <b>P</b>&nbsp;&nbsp;
                 <a
                   style={aStyle}
-                  href={`tel:${parseMobile(phone).replace(/&nbsp;/g, '')}`}
-                  dangerouslySetInnerHTML={{ __html: parseMobile(phone) }}
+                  href={`tel:${parseLandLine(phone).replace(/&nbsp;/g, '')}`}
+                  dangerouslySetInnerHTML={{ __html: parseLandLine(phone) }}
                 />
               </span>
             ) : null}

@@ -1,21 +1,13 @@
 import React from 'react';
 
 import { btsDigital } from '../constants';
-import { parseMobile } from '../util';
+import { parseMobile, parseLandLine } from '../util';
 
 const { brandInfo } = btsDigital;
 
 const BtsSignature = props => {
   const { name, title, qualifications, mobile, phone, email, twitter } = props;
-  const {
-    // eslint-disable-next-line
-    brandName,
-    brandLink,
-    brandLinkName,
-    // eslint-disable-next-line
-    brandSecondaryText,
-    brandImages
-  } = brandInfo;
+  const { brandLink, brandLinkName, brandImages } = brandInfo;
 
   const pStyle = {
     margin: '0',
@@ -108,8 +100,11 @@ const BtsSignature = props => {
                   <p style={pStyle}>
                     <a
                       style={aStyle}
-                      href={`tel:${parseMobile(phone).replace(/&nbsp;/g, '')}`}
-                      dangerouslySetInnerHTML={{ __html: parseMobile(phone) }}
+                      href={`tel:${parseLandLine(phone).replace(
+                        /&nbsp;/g,
+                        ''
+                      )}`}
+                      dangerouslySetInnerHTML={{ __html: parseLandLine(phone) }}
                     />
                   </p>
                 ) : null}
