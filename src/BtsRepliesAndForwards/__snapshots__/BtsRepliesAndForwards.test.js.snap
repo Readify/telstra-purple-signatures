@@ -199,7 +199,7 @@ exports[`Renders 1`] = `
           </b>
             
           <a
-            href="https://www.telstra.com.au/business-enterprise"
+            href="https://telstra.com/enterprise"
             style={
               Object {
                 "fontFamily": "Ariel, sans-serif",
@@ -207,7 +207,7 @@ exports[`Renders 1`] = `
               }
             }
           >
-            www.telstra.com.au/business-enterprise
+            telstra.com/enterprise
           </a>
         </span>
       </td>

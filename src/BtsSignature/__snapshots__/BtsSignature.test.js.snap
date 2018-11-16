@@ -264,7 +264,7 @@ exports[`Renders 1`] = `
               }
             >
               <a
-                href="https://www.telstra.com.au/business-enterprise"
+                href="https://telstra.com/enterprise"
                 style={
                   Object {
                     "fontFamily": "Ariel, sans-serif",
@@ -272,7 +272,7 @@ exports[`Renders 1`] = `
                   }
                 }
               >
-                www.telstra.com.au/business-enterprise
+                telstra.com/enterprise
               </a>
             </p>
           </td>
@@ -334,7 +334,7 @@ exports[`Renders 1`] = `
             }
           >
             <a
-              href="https://www.readify.net"
+              href="https://readify.net"
               rel="noopener noreferrer"
               style={
                 Object {
@@ -386,7 +386,7 @@ exports[`Renders 1`] = `
             }
           >
             <a
-              href="https://www.telstra.com.au"
+              href="https://telstra.com/enterprise"
               rel="noopener noreferrer"
               style={
                 Object {
