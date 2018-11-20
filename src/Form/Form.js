@@ -26,7 +26,7 @@ class Form extends Component {
         signatureTypes: {
           text: [
             { text: 'Readify', checked: true, type: 'readify' },
-            { text: 'Readify Support', checked: false, type: 'support' },
+            { text: 'Managed Services', checked: false, type: 'support' },
             { text: 'BTS Digital', checked: false, type: 'bts' }
           ].filter(Boolean),
           order: 1

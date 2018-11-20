@@ -227,12 +227,12 @@ exports[`Renders bts 1`] = `
                             <input
                               checked={false}
                               className="radioInput"
-                              id="readifySupport"
+                              id="managedServices"
                               name="signatureTypeOpt"
                               onChange={[Function]}
                               type="radio"
                             />
-                            Readify Support
+                            Managed Services
                           </label>
                           <label
                             className="radio"
@@ -519,7 +519,7 @@ exports[`Renders bts 1`] = `
                       },
                       Object {
                         "checked": false,
-                        "text": "Readify Support",
+                        "text": "Managed Services",
                         "type": "support",
                       },
                       Object {
@@ -560,7 +560,7 @@ exports[`Renders bts 1`] = `
                         },
                         Object {
                           "checked": false,
-                          "text": "Readify Support",
+                          "text": "Managed Services",
                           "type": "support",
                         },
                         Object {
@@ -1686,12 +1686,12 @@ exports[`Renders readify 1`] = `
                             <input
                               checked={false}
                               className="radioInput"
-                              id="readifySupport"
+                              id="managedServices"
                               name="signatureTypeOpt"
                               onChange={[Function]}
                               type="radio"
                             />
-                            Readify Support
+                            Managed Services
                           </label>
                           <label
                             className="radio"
@@ -1942,7 +1942,7 @@ exports[`Renders readify 1`] = `
                       },
                       Object {
                         "checked": false,
-                        "text": "Readify Support",
+                        "text": "Managed Services",
                         "type": "support",
                       },
                       Object {
@@ -1981,7 +1981,7 @@ exports[`Renders readify 1`] = `
                         },
                         Object {
                           "checked": false,
-                          "text": "Readify Support",
+                          "text": "Managed Services",
                           "type": "support",
                         },
                         Object {
@@ -2854,12 +2854,12 @@ exports[`Renders readify support 1`] = `
                             <input
                               checked={true}
                               className="radioInput"
-                              id="readifySupport"
+                              id="managedServices"
                               name="signatureTypeOpt"
                               onChange={[Function]}
                               type="radio"
                             />
-                            Readify Support
+                            Managed Services
                           </label>
                           <label
                             className="radio"
@@ -3110,7 +3110,7 @@ exports[`Renders readify support 1`] = `
                       },
                       Object {
                         "checked": true,
-                        "text": "Readify Support",
+                        "text": "Managed Services",
                         "type": "support",
                       },
                       Object {
@@ -3149,7 +3149,7 @@ exports[`Renders readify support 1`] = `
                         },
                         Object {
                           "checked": true,
-                          "text": "Readify Support",
+                          "text": "Managed Services",
                           "type": "support",
                         },
                         Object {

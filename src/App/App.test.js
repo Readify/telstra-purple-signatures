@@ -25,7 +25,7 @@ it('Renders readify', () => {
 
 it('Renders readify support', () => {
   const tree = mount(<App />);
-  tree.find('#readifySupport').simulate('change');
+  tree.find('#managedServices').simulate('change');
   expect(tree).toMatchSnapshot();
   expect(errMsg).toMatchSnapshot();
 });
