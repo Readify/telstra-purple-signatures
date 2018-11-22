@@ -58,14 +58,14 @@ exports[`Renders 1`] = `
         >
           @myTwitter
         </a>
-           
+         
       </span>
       | 
     </span>
     <b>
       W
     </b>
-     
+      
     <a
       href="https://readify.net"
     >

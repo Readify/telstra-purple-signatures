@@ -99,7 +99,7 @@ const Signature = props => {
               </span>
               {twitter ? (
                 <span>
-                  <b>T</b>&nbsp;{' '}
+                  <b>T</b>&nbsp;
                   <a
                     href={`https://twitter.com/${twitter.replace('@', '')}`}
                     rel="noopener noreferrer"
