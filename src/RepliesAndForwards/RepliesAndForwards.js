@@ -38,12 +38,13 @@ const RepliesAndForwards = props => {
               >
                 {twitter}
               </a>
-              &nbsp;&nbsp;&nbsp;
+              &nbsp;
             </span>
             |&nbsp;
           </span>
         ) : null}
-        <b>W</b> <a href={brandInfo.brandLink}>{brandInfo.brandLinkName}</a>
+        <b>W</b>&nbsp;&nbsp;
+        <a href={brandInfo.brandLink}>{brandInfo.brandLinkName}</a>
         {isSupport ? (
           <span>
             <br />
