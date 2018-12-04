@@ -14,15 +14,16 @@ export const parseMobile = mobileNum => {
   const mobileFormatted = mobileNum.replace(/[\s|+]/g, '');
   const numberArr = mobileFormatted.split('');
 
+  // 0411 111 111 number
   if (mobileFormatted.length === 10) {
     multiSplice([4, 8], '&nbsp;', numberArr);
+    // +61 411 111 111 number
   } else if (mobileFormatted.length === 11) {
     numberArr.splice(0, 0, '+');
     multiSplice([3, 7, 11], '&nbsp;', numberArr);
-  } else if (mobileFormatted.length === 12) {
-    multiSplice([3, 7, 11], '&nbsp;', numberArr);
+    // some random number, trust the user
   } else {
-    return mobileFormatted;
+    return mobileNum;
   }
   return numberArr.join('');
 };
@@ -38,7 +39,7 @@ export const parseLandLine = mobileNum => {
     multiSplice([2, 4, 9], '&nbsp;', numberArr);
     numberArr.splice(0, 0, '+');
   } else {
-    return mobileFormatted;
+    return mobileNum;
   }
   return numberArr.join('');
 };
