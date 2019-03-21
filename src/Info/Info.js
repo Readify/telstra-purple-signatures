@@ -26,11 +26,15 @@ const Info = () => (
         >
           <li style={{ marginBottom: '0.5rem' }}>
             <span style={{ fontWeight: 'bold' }}>Windows: </span>
-            Signature > Signatures from the Message menu
+            File > Options > Mail > Signatures
           </li>
           <li>
             <span style={{ fontWeight: 'bold' }}>Mac: </span>
-            Preferences > Signatures from the Message menu
+            Outlook > Preferences > Signatures
+          </li>
+          <li>
+            <span style={{ fontWeight: 'bold' }}>Outlook web access (OWA): </span>
+            Cog (top-right) > Options > Mail > Layout > Email signature
           </li>
         </ul>
       </li>
