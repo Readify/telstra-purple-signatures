@@ -14,16 +14,10 @@ const App = () => (
       }}
     />
     <section className="section">
-      <div className="columns">
-        <div className="column" />
-        <div className="column is-three-quarters">
-          <div className="container">
-            <Info />
-            <Form />
-          </div>
+        <div className="container">
+          <Info />
+          <Form />
         </div>
-        <div className="column" />
-      </div>
     </section>
   </div>
 );
