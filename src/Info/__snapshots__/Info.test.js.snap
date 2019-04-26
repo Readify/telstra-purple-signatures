@@ -59,7 +59,7 @@ exports[`Renders 1`] = `
           >
             Windows: 
           </span>
-          Signature &gt; Signatures from the Message menu
+          File &gt; Options &gt; Mail &gt; Signatures
         </li>
         <li>
           <span
@@ -71,7 +71,19 @@ exports[`Renders 1`] = `
           >
             Mac: 
           </span>
-          Preferences &gt; Signatures from the Message menu
+          Outlook &gt; Preferences &gt; Signatures
+        </li>
+        <li>
+          <span
+            style={
+              Object {
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Outlook web access (OWA): 
+          </span>
+          Cog (top-right) &gt; Options &gt; Mail &gt; Layout &gt; Email signature
         </li>
       </ul>
     </li>

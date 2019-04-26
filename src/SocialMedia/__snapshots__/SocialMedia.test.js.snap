@@ -9,7 +9,7 @@ exports[`Renders 1`] = `
   }
 >
   <span
-    key="FaceBook"
+    key="Facebook"
   >
     <a
       href="https://readify.net/links/facebook"
@@ -22,7 +22,7 @@ exports[`Renders 1`] = `
       }
     >
       <img
-        alt="Readify on FaceBook"
+        alt="Readify on Facebook"
         height="28"
         src="https://readifysignatures.blob.core.windows.net/images/image002.png"
         width="28"
@@ -81,7 +81,7 @@ exports[`Renders 1`] = `
     </span>
   </span>
   <span
-    key="Youtube"
+    key="YouTube"
   >
     <a
       href="https://readify.net/links/youtube"
@@ -94,7 +94,7 @@ exports[`Renders 1`] = `
       }
     >
       <img
-        alt="Readify on Youtube"
+        alt="Readify on YouTube"
         height="28"
         src="https://readifysignatures.blob.core.windows.net/images/image005.png"
         width="28"
