@@ -118,7 +118,7 @@ export const copySignatureText = props => {
     twitter ? `T ${twitter}` : null,
     `W ${brandInfo.brandLinkName}`,
     '',
-    'Find us on: Twitter | LinkedIn | Facebook | Youtube'
+    'Find us on: Twitter | LinkedIn | Facebook | YouTube'
   ];
 
   copyText(textArr.filter(val => val !== null).join('\n'));
