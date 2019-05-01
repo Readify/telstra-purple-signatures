@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 class SocialMedia extends Component {
   static brandInfo = [
     {
-      name: 'FaceBook',
+      name: 'Facebook',
       link: 'https://readify.net/links/facebook',
       image: 'https://readifysignatures.blob.core.windows.net/images/image002.png',
-      alt: 'Readify on FaceBook',
+      alt: 'Readify on Facebook',
     },
     {
       name: 'Twitter',
@@ -21,10 +21,10 @@ class SocialMedia extends Component {
       alt: 'Readify on LinkedIn',
     },
     {
-      name: 'Youtube',
+      name: 'YouTube',
       link: 'https://readify.net/links/youtube',
       image: 'https://readifysignatures.blob.core.windows.net/images/image005.png',
-      alt: 'Readify on Youtube',
+      alt: 'Readify on YouTube',
     },
   ];
 
