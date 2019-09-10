@@ -17,7 +17,7 @@ exports[`Renders 1`] = `
       your name
        | 
       Telstra Purple
-       
+       | 
       Job Title
     </b>
     <br />
@@ -56,6 +56,7 @@ exports[`Renders 1`] = `
           rel="noopener noreferrer"
           target="_blank"
         >
+          @
           @myTwitter
         </a>
          

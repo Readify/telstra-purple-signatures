@@ -996,7 +996,7 @@ exports[`Renders Purple Signature 1`] = `
                               Your Name
                                | 
                               Telstra Purple
-                               
+                               | 
                               Job Title
                             </b>
                             <br />
@@ -1855,6 +1855,30 @@ exports[`Renders Purple support 1`] = `
                                   telstra.com
                                 </a>
                                 <br />
+                                <span>
+                                  <b>
+                                    Support Hotline
+                                  </b>
+                                    
+                                  <span
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "&nbsp;1800&nbsp;READIFY",
+                                      }
+                                    }
+                                  />
+                                  <br />
+                                  <b>
+                                    Support Email
+                                  </b>
+                                         
+                                  <a
+                                    href="mailto:support@readify.net"
+                                  >
+                                    support@readify.net
+                                  </a>
+                                  <br />
+                                </span>
                               </td>
                             </tr>
                             <tr>
@@ -1867,31 +1891,6 @@ exports[`Renders Purple support 1`] = `
                                   }
                                 }
                               >
-                                <span>
-                                  <b>
-                                    Support Hotline
-                                  </b>
-                                  <span
-                                    dangerouslySetInnerHTML={
-                                      Object {
-                                        "__html": "&nbsp;1800&nbsp;READIFY",
-                                      }
-                                    }
-                                  />
-                                </span>
-                                <span>
-                                  | 
-                                  <b>
-                                    Support Email
-                                  </b>
-                                   
-                                  <a
-                                    href="mailto:support@readify.net"
-                                  >
-                                    support@readify.net
-                                  </a>
-                                  <br />
-                                </span>
                                 This email may contain confidential information.
                                 <br />
                                 If I've sent it to you by accident, please delete it immediately
@@ -2054,7 +2053,7 @@ exports[`Renders Purple support 1`] = `
                               Your Name
                                | 
                               Telstra Purple
-                               
+                               | 
                               Job Title
                             </b>
                             <br />

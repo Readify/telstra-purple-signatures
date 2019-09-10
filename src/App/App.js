@@ -14,10 +14,10 @@ const App = () => (
       }}
     />
     <section className="section">
-        <div className="container">
-          <Info />
-          <Form />
-        </div>
+      <div className="container">
+        <Info />
+        <Form />
+      </div>
     </section>
   </div>
 );
