@@ -101,7 +101,8 @@ const Signature = props => {
                   }}
                 />
                 <br />
-                <b>Support&nbsp;Email</b>&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&thinsp;&thinsp;
+                <b>Support&nbsp;Email</b>
+                &nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&thinsp;&thinsp;
                 <a href={`mailto:${brandInfo.supportEmail}`}>
                   {brandInfo.supportEmail}
                 </a>
@@ -120,8 +121,6 @@ const Signature = props => {
               fontSize: '6.5pt'
             }}
           >
-
-
             This email may contain confidential information.
             <br />
             If I've sent it to you by accident, please delete it immediately

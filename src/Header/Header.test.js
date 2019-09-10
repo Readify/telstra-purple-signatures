@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import Header from './Header';
 
 it('Renders', () => {
-  const props ={
+  const props = {
     brandInfo: {
       brandLink: 'https://brand-link',
       appName: 'Test App'

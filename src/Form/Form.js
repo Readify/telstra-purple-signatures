@@ -26,7 +26,7 @@ class Form extends Component {
         signatureTypes: {
           text: [
             { text: 'Telstra Purple', checked: true, type: 'purple' },
-            { text: 'Managed Services', checked: false, type: 'support' },
+            { text: 'Managed Services', checked: false, type: 'support' }
           ].filter(Boolean),
           order: 1
         },

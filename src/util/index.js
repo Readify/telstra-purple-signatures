@@ -53,7 +53,6 @@ const copyText = text => {
   document.body.removeChild(container);
 };
 
-
 export const copySignatureText = props => {
   const {
     name,
