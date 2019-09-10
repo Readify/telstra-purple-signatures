@@ -1,8 +1,8 @@
 export const purple = {
   brandInfo: {
     brandName: 'Telstra Purple',
-    brandLink: 'www.telstra.com/purple',
-    brandLinkName: 'telstra.com',
+    brandLink: 'https://www.telstra.com/purple',
+    brandLinkName: 'telstra.com/purple',
     brandLogo: {
       link:
         'https://readifysignatures.blob.core.windows.net/images/purple-1.png',
