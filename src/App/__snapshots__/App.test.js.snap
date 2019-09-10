@@ -5,7 +5,7 @@ exports[`Renders App 1`] = `
   <Header
     brandInfo={
       Object {
-        "appName": "Readify Outlook Signature",
+        "appName": "Telstra Purple Outlook Signature",
         "brandLink": "https://readify-signatures.azurewebsites.net/",
       }
     }
@@ -23,13 +23,13 @@ exports[`Renders App 1`] = `
 </div>
 `;
 
-exports[`Renders bts 1`] = `
+exports[`Renders Purple Signature 1`] = `
 <App>
   <div>
     <Header
       brandInfo={
         Object {
-          "appName": "Readify Outlook Signature",
+          "appName": "Telstra Purple Outlook Signature",
           "brandLink": "https://readify-signatures.azurewebsites.net/",
         }
       }
@@ -40,7 +40,7 @@ exports[`Renders bts 1`] = `
         role="navigation"
       >
         <div
-          className="columns"
+          className="section"
           style={
             Object {
               "width": "100%",
@@ -48,10 +48,7 @@ exports[`Renders bts 1`] = `
           }
         >
           <div
-            className="column"
-          />
-          <div
-            className="column is-three-quarters"
+            className="container"
           >
             <div
               className="navbar-brand"
@@ -60,1464 +57,7 @@ exports[`Renders bts 1`] = `
                 className="navbar-item"
                 href="https://readify-signatures.azurewebsites.net/"
               >
-                Readify Outlook Signature
-              </a>
-            </div>
-          </div>
-          <div
-            className="column"
-          />
-        </div>
-      </nav>
-    </Header>
-    <section
-      className="section"
-    >
-      <div
-        className="container"
-      >
-        <Info>
-          <div
-            className="content"
-          >
-            <h3
-              className="title"
-            >
-              Create your signature
-            </h3>
-            <ol>
-              <li>
-                Enter your details.
-              </li>
-              <li>
-                Click the "Copy Signature" button
-              </li>
-              <li>
-                Open outlook
-              </li>
-              <li>
-                <a
-                  href="https://support.office.com/en-us/article/create-and-add-a-signature-to-messages-8ee5d4f4-68fd-464a-a1c1-0e1c80bb27f2"
-                  rel="noopener noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "textDecoration": "underline",
-                    }
-                  }
-                  target="_blank"
-                >
-                  Paste selection into signature editor
-                </a>
-                <ul
-                  style={
-                    Object {
-                      "listStyleType": "none",
-                      "margin": "0",
-                      "paddingLeft": "1rem",
-                      "paddingTop": "0.5rem",
-                    }
-                  }
-                >
-                  <li
-                    style={
-                      Object {
-                        "marginBottom": "0.5rem",
-                      }
-                    }
-                  >
-                    <span
-                      style={
-                        Object {
-                          "fontWeight": "bold",
-                        }
-                      }
-                    >
-                      Windows: 
-                    </span>
-                    File &gt; Options &gt; Mail &gt; Signatures
-                  </li>
-                  <li>
-                    <span
-                      style={
-                        Object {
-                          "fontWeight": "bold",
-                        }
-                      }
-                    >
-                      Mac: 
-                    </span>
-                    Outlook &gt; Preferences &gt; Signatures
-                  </li>
-                  <li>
-                    <span
-                      style={
-                        Object {
-                          "fontWeight": "bold",
-                        }
-                      }
-                    >
-                      Outlook web access (OWA): 
-                    </span>
-                    Cog (top-right) &gt; Options &gt; Mail &gt; Layout &gt; Email signature
-                  </li>
-                </ul>
-              </li>
-            </ol>
-            <br />
-          </div>
-        </Info>
-        <Form>
-          <form>
-            <div
-              className="field is-horizontal"
-              key="signatureTypes"
-            >
-              <div
-                className="field-label is-normal"
-              >
-                <label
-                  className="label field-label"
-                >
-                  Signature Type
-                </label>
-              </div>
-              <div
-                className="field-body"
-              >
-                <div
-                  className="control"
-                  key="signatureTypes"
-                >
-                  <div
-                    className="field is-narrow"
-                  >
-                    <div
-                      className="control"
-                    >
-                      <label
-                        className="radio"
-                        key="0"
-                      >
-                        <input
-                          checked={false}
-                          className="radioInput"
-                          id="readify"
-                          name="signatureTypeOpt"
-                          onChange={[Function]}
-                          type="radio"
-                        />
-                        Readify
-                      </label>
-                      <label
-                        className="radio"
-                        key="1"
-                      >
-                        <input
-                          checked={false}
-                          className="radioInput"
-                          id="managedServices"
-                          name="signatureTypeOpt"
-                          onChange={[Function]}
-                          type="radio"
-                        />
-                        Managed Services
-                      </label>
-                      <label
-                        className="radio"
-                        key="2"
-                      >
-                        <input
-                          checked={true}
-                          className="radioInput"
-                          id="btsDigital"
-                          name="signatureTypeOpt"
-                          onChange={[Function]}
-                          type="radio"
-                        />
-                        BTS Digital
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="field is-horizontal"
-              key="name"
-            >
-              <div
-                className="field-label is-normal"
-              >
-                <label
-                  className="label field-label"
-                >
-                  Your Name:
-                </label>
-              </div>
-              <div
-                className="field-body"
-              >
-                <div
-                  className="control"
-                  key="name"
-                >
-                  <input
-                    className="input"
-                    onChange={[Function]}
-                    placeholder="Your Name"
-                    style={
-                      Object {
-                        "width": "300px",
-                      }
-                    }
-                    value=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              className="field is-horizontal"
-              key="title"
-            >
-              <div
-                className="field-label is-normal"
-              >
-                <label
-                  className="label field-label"
-                >
-                  Job Title:
-                </label>
-              </div>
-              <div
-                className="field-body"
-              >
-                <div
-                  className="control"
-                  key="title"
-                >
-                  <input
-                    className="input"
-                    onChange={[Function]}
-                    placeholder="Job Title"
-                    style={
-                      Object {
-                        "width": "300px",
-                      }
-                    }
-                    value=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              className="field is-horizontal"
-              key="qualifications"
-            >
-              <div
-                className="field-label is-normal"
-              >
-                <label
-                  className="label field-label"
-                >
-                  Qualifications: (Optional)
-                </label>
-              </div>
-              <div
-                className="field-body"
-              >
-                <div
-                  className="control"
-                  key="qualifications"
-                >
-                  <input
-                    className="input"
-                    onChange={[Function]}
-                    placeholder="Sith Lord"
-                    style={
-                      Object {
-                        "width": "300px",
-                      }
-                    }
-                    value=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              className="field is-horizontal"
-              key="phone"
-            >
-              <div
-                className="field-label is-normal"
-              >
-                <label
-                  className="label field-label"
-                >
-                  Phone: (Optional)
-                </label>
-              </div>
-              <div
-                className="field-body"
-              >
-                <div
-                  className="control"
-                  key="phone"
-                >
-                  <input
-                    className="input"
-                    onChange={[Function]}
-                    placeholder="+61 8 1234 5678"
-                    style={
-                      Object {
-                        "width": "300px",
-                      }
-                    }
-                    value=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              className="field is-horizontal"
-              key="mobile"
-            >
-              <div
-                className="field-label is-normal"
-              >
-                <label
-                  className="label field-label"
-                >
-                  Mobile:
-                </label>
-              </div>
-              <div
-                className="field-body"
-              >
-                <div
-                  className="control"
-                  key="mobile"
-                >
-                  <input
-                    className="input"
-                    onChange={[Function]}
-                    placeholder="+61 111 222 333"
-                    style={
-                      Object {
-                        "width": "300px",
-                      }
-                    }
-                    value=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              className="field is-horizontal"
-              key="email"
-            >
-              <div
-                className="field-label is-normal"
-              >
-                <label
-                  className="label field-label"
-                >
-                  Email:
-                </label>
-              </div>
-              <div
-                className="field-body"
-              >
-                <div
-                  className="control"
-                  key="email"
-                >
-                  <input
-                    className="input"
-                    onChange={[Function]}
-                    placeholder="your.name@team.telstra.com"
-                    style={
-                      Object {
-                        "width": "300px",
-                      }
-                    }
-                    value=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              className="field is-horizontal"
-              key="twitter"
-            >
-              <div
-                className="field-label is-normal"
-              >
-                <label
-                  className="label field-label"
-                >
-                  Twitter: (Optional)
-                </label>
-              </div>
-              <div
-                className="field-body"
-              >
-                <div
-                  className="control"
-                  key="twitter"
-                >
-                  <input
-                    className="input"
-                    onChange={[Function]}
-                    placeholder="@myTwitter"
-                    style={
-                      Object {
-                        "width": "300px",
-                      }
-                    }
-                    value=""
-                  />
-                </div>
-              </div>
-            </div>
-            <hr />
-            <withProps(mapProps(SignatureContainer))
-              email=""
-              mobile=""
-              name=""
-              phone=""
-              placeholders={
-                Object {
-                  "email": "your.name@team.telstra.com",
-                  "mobile": "+61 111 222 333",
-                  "name": "Your Name",
-                  "phone": "+61 8 1234 5678",
-                  "qualifications": "Sith Lord",
-                  "title": "Job Title",
-                  "twitter": "@myTwitter",
-                }
-              }
-              qualifications=""
-              sigType="bts"
-              signatureTypes={
-                Array [
-                  Object {
-                    "checked": false,
-                    "text": "Readify",
-                    "type": "readify",
-                  },
-                  Object {
-                    "checked": false,
-                    "text": "Managed Services",
-                    "type": "support",
-                  },
-                  Object {
-                    "checked": true,
-                    "text": "BTS Digital",
-                    "type": "bts",
-                  },
-                ]
-              }
-              title=""
-              twitter=""
-            >
-              <mapProps(SignatureContainer)
-                Container={[Function]}
-                email=""
-                mobile=""
-                name=""
-                phone=""
-                placeholders={
-                  Object {
-                    "email": "your.name@team.telstra.com",
-                    "mobile": "+61 111 222 333",
-                    "name": "Your Name",
-                    "phone": "+61 8 1234 5678",
-                    "qualifications": "Sith Lord",
-                    "title": "Job Title",
-                    "twitter": "@myTwitter",
-                  }
-                }
-                qualifications=""
-                sigType="bts"
-                signatureTypes={
-                  Array [
-                    Object {
-                      "checked": false,
-                      "text": "Readify",
-                      "type": "readify",
-                    },
-                    Object {
-                      "checked": false,
-                      "text": "Managed Services",
-                      "type": "support",
-                    },
-                    Object {
-                      "checked": true,
-                      "text": "BTS Digital",
-                      "type": "bts",
-                    },
-                  ]
-                }
-                title=""
-                twitter=""
-              >
-                <SignatureContainer
-                  Container={[Function]}
-                  containerProps={
-                    Object {
-                      "CopyBtsHtml": <withState(withState(withHandlers(mapProps(Button))))
-                        classAfter="button is-success"
-                        classBefore="button is-primary"
-                        onClickHandler={[Function]}
-                        textAfter="Copied!"
-                        textBefore="Copy signature"
-                      />,
-                      "CopyBtsRepliesAndForwardsHtml": <withState(withState(withHandlers(mapProps(Button))))
-                        classAfter="button is-success"
-                        classBefore="button is-primary"
-                        onClickHandler={[Function]}
-                        textAfter="Copied!"
-                        textBefore="Copy signature"
-                      />,
-                      "CopyBtsRepliesAndForwardsText": <withState(withState(withHandlers(mapProps(Button))))
-                        classAfter="button is-success"
-                        classBefore="button"
-                        onClickHandler={[Function]}
-                        textAfter="Copied!"
-                        textBefore="Copy text only"
-                      />,
-                      "CopyBtsSigText": <withState(withState(withHandlers(mapProps(Button))))
-                        classAfter="button is-success"
-                        classBefore="button"
-                        onClickHandler={[Function]}
-                        textAfter="Copied!"
-                        textBefore="Copy text only"
-                      />,
-                      "signatureProps": Object {
-                        "email": "your.name@team.telstra.com",
-                        "mobile": "+61 111 222 333",
-                        "name": "Your Name",
-                        "phone": "",
-                        "qualifications": "",
-                        "title": "Job Title",
-                        "twitter": "",
-                      },
-                    }
-                  }
-                >
-                  <BtsSignatureContainer
-                    CopyBtsHtml={
-                      <withState(withState(withHandlers(mapProps(Button))))
-                        classAfter="button is-success"
-                        classBefore="button is-primary"
-                        onClickHandler={[Function]}
-                        textAfter="Copied!"
-                        textBefore="Copy signature"
-                      />
-                    }
-                    CopyBtsRepliesAndForwardsHtml={
-                      <withState(withState(withHandlers(mapProps(Button))))
-                        classAfter="button is-success"
-                        classBefore="button is-primary"
-                        onClickHandler={[Function]}
-                        textAfter="Copied!"
-                        textBefore="Copy signature"
-                      />
-                    }
-                    CopyBtsRepliesAndForwardsText={
-                      <withState(withState(withHandlers(mapProps(Button))))
-                        classAfter="button is-success"
-                        classBefore="button"
-                        onClickHandler={[Function]}
-                        textAfter="Copied!"
-                        textBefore="Copy text only"
-                      />
-                    }
-                    CopyBtsSigText={
-                      <withState(withState(withHandlers(mapProps(Button))))
-                        classAfter="button is-success"
-                        classBefore="button"
-                        onClickHandler={[Function]}
-                        textAfter="Copied!"
-                        textBefore="Copy text only"
-                      />
-                    }
-                    signatureProps={
-                      Object {
-                        "email": "your.name@team.telstra.com",
-                        "mobile": "+61 111 222 333",
-                        "name": "Your Name",
-                        "phone": "",
-                        "qualifications": "",
-                        "title": "Job Title",
-                        "twitter": "",
-                      }
-                    }
-                  >
-                    <div
-                      className="content"
-                    >
-                      <div
-                        className="level"
-                      >
-                        <div
-                          className="level-left"
-                        >
-                          <h3
-                            className="level-item"
-                          >
-                            Standard Signature
-                          </h3>
-                        </div>
-                        <div
-                          className="level-right"
-                        >
-                          <withState(withState(withHandlers(mapProps(Button))))
-                            classAfter="button is-success"
-                            classBefore="button"
-                            onClickHandler={[Function]}
-                            textAfter="Copied!"
-                            textBefore="Copy text only"
-                          >
-                            <withState(withHandlers(mapProps(Button)))
-                              classAfter="button is-success"
-                              classBefore="button"
-                              classState="button"
-                              onClickHandler={[Function]}
-                              setClass={[Function]}
-                              textAfter="Copied!"
-                              textBefore="Copy text only"
-                            >
-                              <withHandlers(mapProps(Button))
-                                classAfter="button is-success"
-                                classBefore="button"
-                                classState="button"
-                                onClickHandler={[Function]}
-                                setClass={[Function]}
-                                setText={[Function]}
-                                textAfter="Copied!"
-                                textBefore="Copy text only"
-                                textState="Copy text only"
-                              >
-                                <mapProps(Button)
-                                  classAfter="button is-success"
-                                  classBefore="button"
-                                  classState="button"
-                                  onClick={[Function]}
-                                  onClickHandler={[Function]}
-                                  setClass={[Function]}
-                                  setText={[Function]}
-                                  textAfter="Copied!"
-                                  textBefore="Copy text only"
-                                  textState="Copy text only"
-                                >
-                                  <Button
-                                    classState="button"
-                                    onClick={[Function]}
-                                    textState="Copy text only"
-                                  >
-                                    <button
-                                      className="button"
-                                      onClick={[Function]}
-                                      type="button"
-                                    >
-                                      Copy text only
-                                    </button>
-                                  </Button>
-                                </mapProps(Button)>
-                              </withHandlers(mapProps(Button))>
-                            </withState(withHandlers(mapProps(Button)))>
-                          </withState(withState(withHandlers(mapProps(Button))))>
-                          <withState(withState(withHandlers(mapProps(Button))))
-                            classAfter="button is-success"
-                            classBefore="button is-primary"
-                            onClickHandler={[Function]}
-                            textAfter="Copied!"
-                            textBefore="Copy signature"
-                          >
-                            <withState(withHandlers(mapProps(Button)))
-                              classAfter="button is-success"
-                              classBefore="button is-primary"
-                              classState="button is-primary"
-                              onClickHandler={[Function]}
-                              setClass={[Function]}
-                              textAfter="Copied!"
-                              textBefore="Copy signature"
-                            >
-                              <withHandlers(mapProps(Button))
-                                classAfter="button is-success"
-                                classBefore="button is-primary"
-                                classState="button is-primary"
-                                onClickHandler={[Function]}
-                                setClass={[Function]}
-                                setText={[Function]}
-                                textAfter="Copied!"
-                                textBefore="Copy signature"
-                                textState="Copy signature"
-                              >
-                                <mapProps(Button)
-                                  classAfter="button is-success"
-                                  classBefore="button is-primary"
-                                  classState="button is-primary"
-                                  onClick={[Function]}
-                                  onClickHandler={[Function]}
-                                  setClass={[Function]}
-                                  setText={[Function]}
-                                  textAfter="Copied!"
-                                  textBefore="Copy signature"
-                                  textState="Copy signature"
-                                >
-                                  <Button
-                                    classState="button is-primary"
-                                    onClick={[Function]}
-                                    textState="Copy signature"
-                                  >
-                                    <button
-                                      className="button is-primary"
-                                      onClick={[Function]}
-                                      type="button"
-                                    >
-                                      Copy signature
-                                    </button>
-                                  </Button>
-                                </mapProps(Button)>
-                              </withHandlers(mapProps(Button))>
-                            </withState(withHandlers(mapProps(Button)))>
-                          </withState(withState(withHandlers(mapProps(Button))))>
-                        </div>
-                      </div>
-                      <BtsSignature
-                        email="your.name@team.telstra.com"
-                        mobile="+61 111 222 333"
-                        name="Your Name"
-                        phone=""
-                        qualifications=""
-                        title="Job Title"
-                        twitter=""
-                      >
-                        <div
-                          className="content"
-                        >
-                          <table
-                            border="0"
-                            cellPadding="0"
-                            cellSpacing="0"
-                            style={
-                              Object {
-                                "color": "#3A576B",
-                                "fontFamily": "Ariel, sans-serif",
-                                "fontSize": "10.5px",
-                              }
-                            }
-                            width="100%"
-                          >
-                            <tr>
-                              <td
-                                valign="top"
-                              >
-                                <p
-                                  style={
-                                    Object {
-                                      "color": "#333333",
-                                      "fontSize": "12px",
-                                      "lineHeight": "15px",
-                                      "margin": "0",
-                                    }
-                                  }
-                                >
-                                  <span
-                                    style={
-                                      Object {
-                                        "color": "#3A576B",
-                                        "fontWeight": "bold",
-                                      }
-                                    }
-                                  >
-                                    Your Name
-                                  </span>
-                                  <br />
-                                  <span
-                                    style={
-                                      Object {
-                                        "color": "#3A576B",
-                                      }
-                                    }
-                                  >
-                                    Job Title
-                                  </span>
-                                </p>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                valign="top"
-                              >
-                                <table
-                                  border="0"
-                                  cellPadding="0"
-                                  cellSpacing="0"
-                                  style={
-                                    Object {
-                                      "borderCollapse": "collapse",
-                                      "borderSpacing": "0",
-                                      "color": "#333333",
-                                      "fontFamily": "Ariel, sans-serif",
-                                      "fontSize": "12px",
-                                      "fontWeight": "200",
-                                      "margin": "0",
-                                      "width": "initial",
-                                    }
-                                  }
-                                >
-                                  <td
-                                    style={
-                                      Object {
-                                        "fontWeight": "bold",
-                                        "padding": "0 8px 0 0",
-                                        "width": "16px",
-                                      }
-                                    }
-                                  >
-                                    <p
-                                      style={
-                                        Object {
-                                          "color": "#333333",
-                                          "fontSize": "12px",
-                                          "lineHeight": "15px",
-                                          "margin": "0",
-                                        }
-                                      }
-                                    >
-                                      M
-                                    </p>
-                                    <p
-                                      style={
-                                        Object {
-                                          "color": "#333333",
-                                          "fontSize": "12px",
-                                          "lineHeight": "15px",
-                                          "margin": "0",
-                                        }
-                                      }
-                                    >
-                                      E
-                                    </p>
-                                    <p
-                                      style={
-                                        Object {
-                                          "color": "#333333",
-                                          "fontSize": "12px",
-                                          "lineHeight": "15px",
-                                          "margin": "0",
-                                        }
-                                      }
-                                    >
-                                      W
-                                    </p>
-                                  </td>
-                                  <td
-                                    style={
-                                      Object {
-                                        "fontWeight": "bold",
-                                        "padding": "0",
-                                      }
-                                    }
-                                  >
-                                    <p
-                                      style={
-                                        Object {
-                                          "color": "#333333",
-                                          "fontSize": "12px",
-                                          "lineHeight": "15px",
-                                          "margin": "0",
-                                        }
-                                      }
-                                    >
-                                      <a
-                                        dangerouslySetInnerHTML={
-                                          Object {
-                                            "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
-                                          }
-                                        }
-                                        href="tel:+61111222333"
-                                        style={
-                                          Object {
-                                            "fontFamily": "Ariel, sans-serif",
-                                            "fontWeight": "200",
-                                          }
-                                        }
-                                      />
-                                    </p>
-                                    <p
-                                      style={
-                                        Object {
-                                          "color": "#333333",
-                                          "fontSize": "12px",
-                                          "lineHeight": "15px",
-                                          "margin": "0",
-                                        }
-                                      }
-                                    >
-                                      <a
-                                        href="mailto:your.name@team.telstra.com"
-                                        style={
-                                          Object {
-                                            "fontFamily": "Ariel, sans-serif",
-                                            "fontWeight": "200",
-                                          }
-                                        }
-                                      >
-                                        your.name@team.telstra.com
-                                      </a>
-                                    </p>
-                                    <p
-                                      style={
-                                        Object {
-                                          "color": "#333333",
-                                          "fontSize": "12px",
-                                          "lineHeight": "15px",
-                                          "margin": "0",
-                                        }
-                                      }
-                                    >
-                                      <a
-                                        href="https://telstra.com/enterprise"
-                                        style={
-                                          Object {
-                                            "fontFamily": "Ariel, sans-serif",
-                                            "fontWeight": "200",
-                                          }
-                                        }
-                                      >
-                                        telstra.com/enterprise
-                                      </a>
-                                    </p>
-                                  </td>
-                                </table>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                valign="top"
-                              >
-                                <p
-                                  style={
-                                    Object {
-                                      "color": "#333333",
-                                      "fontSize": "10px",
-                                      "lineHeight": "11px",
-                                      "margin": "0",
-                                    }
-                                  }
-                                >
-                                  This email may contain confidential information.
-                                  <br />
-                                  If I've sent it to you by accident, please delete it immediately
-                                </p>
-                              </td>
-                            </tr>
-                            <br />
-                            <tr>
-                              <td
-                                style={
-                                  Object {
-                                    "padding": "0",
-                                  }
-                                }
-                              >
-                                <table
-                                  border="0"
-                                  cellPadding="0"
-                                  cellSpacing="0"
-                                  style={
-                                    Object {
-                                      "borderCollapse": "collapse",
-                                      "borderSpacing": "0",
-                                      "color": "#333333",
-                                      "fontFamily": "Ariel, sans-serif",
-                                      "fontSize": "12px",
-                                      "fontWeight": "200",
-                                      "margin": "0",
-                                      "width": "initial",
-                                    }
-                                  }
-                                >
-                                  <td
-                                    key="Readify"
-                                    style={
-                                      Object {
-                                        "padding": "0 12px 0 0",
-                                      }
-                                    }
-                                  >
-                                    <a
-                                      href="https://readify.net"
-                                      rel="noopener noreferrer"
-                                      style={
-                                        Object {
-                                          "display": "inline-block",
-                                          "width": 38,
-                                        }
-                                      }
-                                      target="_blank"
-                                    >
-                                      <img
-                                        alt="Readify"
-                                        src="https://readifysignatures.blob.core.windows.net/images/readify.png"
-                                        width="38px"
-                                      />
-                                    </a>
-                                  </td>
-                                  <td
-                                    key="Kloud"
-                                    style={
-                                      Object {
-                                        "padding": "0 12px 0 0",
-                                      }
-                                    }
-                                  >
-                                    <a
-                                      href="https://www.kloud.com.au"
-                                      rel="noopener noreferrer"
-                                      style={
-                                        Object {
-                                          "display": "inline-block",
-                                          "width": 32,
-                                        }
-                                      }
-                                      target="_blank"
-                                    >
-                                      <img
-                                        alt="Kloud"
-                                        src="https://readifysignatures.blob.core.windows.net/images/kloud.png"
-                                        width="32px"
-                                      />
-                                    </a>
-                                  </td>
-                                  <td
-                                    key="Telstra"
-                                    style={
-                                      Object {
-                                        "padding": "0 18px 0 0",
-                                      }
-                                    }
-                                  >
-                                    <a
-                                      href="https://telstra.com/enterprise"
-                                      rel="noopener noreferrer"
-                                      style={
-                                        Object {
-                                          "display": "inline-block",
-                                          "width": 24,
-                                        }
-                                      }
-                                      target="_blank"
-                                    >
-                                      <img
-                                        alt="Telstra"
-                                        src="https://readifysignatures.blob.core.windows.net/images/telstra.png"
-                                        width="24px"
-                                      />
-                                    </a>
-                                  </td>
-                                  <td
-                                    style={
-                                      Object {
-                                        "borderLeft": "1px solid #3D5567",
-                                        "padding": "0 0 0 12px",
-                                      }
-                                    }
-                                  >
-                                    <p
-                                      style={
-                                        Object {
-                                          "color": "#3A576B",
-                                          "fontFamily": "Ariel, sans-serif",
-                                          "fontSize": "11px",
-                                          "fontWeight": "bold",
-                                          "lineHeight": "14px",
-                                          "margin": "0",
-                                        }
-                                      }
-                                    >
-                                      Business Technology Services - Digital
-                                      <br />
-                                      Telstra Enterprise
-                                    </p>
-                                  </td>
-                                </table>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                      </BtsSignature>
-                      <div
-                        className="level"
-                      >
-                        <div
-                          className="level-left"
-                        >
-                          <h3
-                            className="level-item"
-                          >
-                            Replies and Forwards Signature
-                          </h3>
-                        </div>
-                        <div
-                          className="level-right"
-                        >
-                          <withState(withState(withHandlers(mapProps(Button))))
-                            classAfter="button is-success"
-                            classBefore="button"
-                            onClickHandler={[Function]}
-                            textAfter="Copied!"
-                            textBefore="Copy text only"
-                          >
-                            <withState(withHandlers(mapProps(Button)))
-                              classAfter="button is-success"
-                              classBefore="button"
-                              classState="button"
-                              onClickHandler={[Function]}
-                              setClass={[Function]}
-                              textAfter="Copied!"
-                              textBefore="Copy text only"
-                            >
-                              <withHandlers(mapProps(Button))
-                                classAfter="button is-success"
-                                classBefore="button"
-                                classState="button"
-                                onClickHandler={[Function]}
-                                setClass={[Function]}
-                                setText={[Function]}
-                                textAfter="Copied!"
-                                textBefore="Copy text only"
-                                textState="Copy text only"
-                              >
-                                <mapProps(Button)
-                                  classAfter="button is-success"
-                                  classBefore="button"
-                                  classState="button"
-                                  onClick={[Function]}
-                                  onClickHandler={[Function]}
-                                  setClass={[Function]}
-                                  setText={[Function]}
-                                  textAfter="Copied!"
-                                  textBefore="Copy text only"
-                                  textState="Copy text only"
-                                >
-                                  <Button
-                                    classState="button"
-                                    onClick={[Function]}
-                                    textState="Copy text only"
-                                  >
-                                    <button
-                                      className="button"
-                                      onClick={[Function]}
-                                      type="button"
-                                    >
-                                      Copy text only
-                                    </button>
-                                  </Button>
-                                </mapProps(Button)>
-                              </withHandlers(mapProps(Button))>
-                            </withState(withHandlers(mapProps(Button)))>
-                          </withState(withState(withHandlers(mapProps(Button))))>
-                          <withState(withState(withHandlers(mapProps(Button))))
-                            classAfter="button is-success"
-                            classBefore="button is-primary"
-                            onClickHandler={[Function]}
-                            textAfter="Copied!"
-                            textBefore="Copy signature"
-                          >
-                            <withState(withHandlers(mapProps(Button)))
-                              classAfter="button is-success"
-                              classBefore="button is-primary"
-                              classState="button is-primary"
-                              onClickHandler={[Function]}
-                              setClass={[Function]}
-                              textAfter="Copied!"
-                              textBefore="Copy signature"
-                            >
-                              <withHandlers(mapProps(Button))
-                                classAfter="button is-success"
-                                classBefore="button is-primary"
-                                classState="button is-primary"
-                                onClickHandler={[Function]}
-                                setClass={[Function]}
-                                setText={[Function]}
-                                textAfter="Copied!"
-                                textBefore="Copy signature"
-                                textState="Copy signature"
-                              >
-                                <mapProps(Button)
-                                  classAfter="button is-success"
-                                  classBefore="button is-primary"
-                                  classState="button is-primary"
-                                  onClick={[Function]}
-                                  onClickHandler={[Function]}
-                                  setClass={[Function]}
-                                  setText={[Function]}
-                                  textAfter="Copied!"
-                                  textBefore="Copy signature"
-                                  textState="Copy signature"
-                                >
-                                  <Button
-                                    classState="button is-primary"
-                                    onClick={[Function]}
-                                    textState="Copy signature"
-                                  >
-                                    <button
-                                      className="button is-primary"
-                                      onClick={[Function]}
-                                      type="button"
-                                    >
-                                      Copy signature
-                                    </button>
-                                  </Button>
-                                </mapProps(Button)>
-                              </withHandlers(mapProps(Button))>
-                            </withState(withHandlers(mapProps(Button)))>
-                          </withState(withState(withHandlers(mapProps(Button))))>
-                        </div>
-                      </div>
-                      <BtsRepliesAndForwards
-                        email="your.name@team.telstra.com"
-                        mobile="+61 111 222 333"
-                        name="Your Name"
-                        phone=""
-                        qualifications=""
-                        title="Job Title"
-                        twitter=""
-                      >
-                        <div
-                          className="content"
-                        >
-                          <table
-                            border="0"
-                            cellPadding="0"
-                            cellSpacing="0"
-                            style={
-                              Object {
-                                "color": "#3A576B",
-                                "fontFamily": "Ariel, sans-serif",
-                                "fontSize": "10.5px",
-                              }
-                            }
-                            width="100%"
-                          >
-                            <tr>
-                              <td
-                                valign="top"
-                              >
-                                <p
-                                  style={
-                                    Object {
-                                      "color": "#333333",
-                                      "fontSize": "12px",
-                                      "lineHeight": "15px",
-                                      "margin": "0",
-                                    }
-                                  }
-                                >
-                                  <span
-                                    style={
-                                      Object {
-                                        "color": "#3A576B",
-                                        "fontWeight": "bold",
-                                      }
-                                    }
-                                  >
-                                    Your Name
-                                  </span>
-                                  <br />
-                                  <span
-                                    style={
-                                      Object {
-                                        "color": "#3A576B",
-                                      }
-                                    }
-                                  >
-                                    Job Title
-                                  </span>
-                                  <br />
-                                  Business Technology Services - Digital
-                                   | 
-                                  Telstra Enterprise
-                                </p>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                valign="top"
-                              >
-                                <span
-                                  style={
-                                    Object {
-                                      "color": "#333333",
-                                      "fontSize": "12px",
-                                      "lineHeight": "15px",
-                                      "margin": "0",
-                                    }
-                                  }
-                                >
-                                  <b>
-                                    M
-                                  </b>
-                                    
-                                  <a
-                                    dangerouslySetInnerHTML={
-                                      Object {
-                                        "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
-                                      }
-                                    }
-                                    href="tel:+61111222333"
-                                    style={
-                                      Object {
-                                        "fontFamily": "Ariel, sans-serif",
-                                        "fontWeight": "200",
-                                      }
-                                    }
-                                  />
-                                </span>
-                                <span
-                                  style={
-                                    Object {
-                                      "color": "#333333",
-                                      "fontSize": "12px",
-                                      "lineHeight": "15px",
-                                      "margin": "0",
-                                    }
-                                  }
-                                >
-                                    
-                                  <b>
-                                    E
-                                  </b>
-                                    
-                                  <a
-                                    href="mailto:your.name@team.telstra.com"
-                                    style={
-                                      Object {
-                                        "fontFamily": "Ariel, sans-serif",
-                                        "fontWeight": "200",
-                                      }
-                                    }
-                                  >
-                                    your.name@team.telstra.com
-                                  </a>
-                                </span>
-                                <span
-                                  style={
-                                    Object {
-                                      "color": "#333333",
-                                      "fontSize": "12px",
-                                      "lineHeight": "15px",
-                                      "margin": "0",
-                                    }
-                                  }
-                                >
-                                    
-                                  <b>
-                                    W
-                                  </b>
-                                    
-                                  <a
-                                    href="https://telstra.com/enterprise"
-                                    style={
-                                      Object {
-                                        "fontFamily": "Ariel, sans-serif",
-                                        "fontWeight": "200",
-                                      }
-                                    }
-                                  >
-                                    telstra.com/enterprise
-                                  </a>
-                                </span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                valign="top"
-                              >
-                                <p
-                                  style={
-                                    Object {
-                                      "color": "#333333",
-                                      "fontSize": "10px",
-                                      "lineHeight": "11px",
-                                      "margin": "0",
-                                    }
-                                  }
-                                >
-                                  This email may contain confidential information.
-                                  <br />
-                                  If I've sent it to you by accident, please delete it immediately
-                                </p>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                      </BtsRepliesAndForwards>
-                    </div>
-                  </BtsSignatureContainer>
-                </SignatureContainer>
-              </mapProps(SignatureContainer)>
-            </withProps(mapProps(SignatureContainer))>
-          </form>
-        </Form>
-      </div>
-    </section>
-  </div>
-</App>
-`;
-
-exports[`Renders bts 2`] = `
-Array [
-  "Warning: validateDOMNesting(...): %s cannot appear as a child of <%s>.%s%s%s",
-  "<tr>",
-  "table",
-]
-`;
-
-exports[`Renders readify 1`] = `
-<App>
-  <div>
-    <Header
-      brandInfo={
-        Object {
-          "appName": "Readify Outlook Signature",
-          "brandLink": "https://readify-signatures.azurewebsites.net/",
-        }
-      }
-    >
-      <nav
-        aria-label="main navigation"
-        className="navbar"
-        role="navigation"
-      >
-        <div
-          className="columns"
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
-        >
-          <div
-            className="column"
-          />
-          <div
-            className="column is-three-quarters"
-          >
-            <div
-              className="navbar-brand"
-            >
-              <a
-                className="navbar-item"
-                href="https://readify-signatures.azurewebsites.net/"
-              >
-                Readify Outlook Signature
+                Telstra Purple Outlook Signature
               </a>
             </div>
           </div>
@@ -1659,12 +199,12 @@ exports[`Renders readify 1`] = `
                         <input
                           checked={true}
                           className="radioInput"
-                          id="readify"
+                          id="telstraPurple"
                           name="signatureTypeOpt"
                           onChange={[Function]}
                           type="radio"
                         />
-                        Readify
+                        Telstra Purple
                       </label>
                       <label
                         className="radio"
@@ -1679,20 +219,6 @@ exports[`Renders readify 1`] = `
                           type="radio"
                         />
                         Managed Services
-                      </label>
-                      <label
-                        className="radio"
-                        key="2"
-                      >
-                        <input
-                          checked={false}
-                          className="radioInput"
-                          id="btsDigital"
-                          name="signatureTypeOpt"
-                          onChange={[Function]}
-                          type="radio"
-                        />
-                        BTS Digital
                       </label>
                     </div>
                   </div>
@@ -1858,7 +384,7 @@ exports[`Renders readify 1`] = `
                   <input
                     className="input"
                     onChange={[Function]}
-                    placeholder="your.name@readify.net"
+                    placeholder="your.name@purple.telstra.com"
                     style={
                       Object {
                         "width": "300px",
@@ -1910,7 +436,7 @@ exports[`Renders readify 1`] = `
               name=""
               placeholders={
                 Object {
-                  "email": "your.name@readify.net",
+                  "email": "your.name@purple.telstra.com",
                   "mobile": "+61 111 222 333",
                   "name": "Your Name",
                   "qualifications": "Jedi Master | PSM I",
@@ -1924,18 +450,13 @@ exports[`Renders readify 1`] = `
                 Array [
                   Object {
                     "checked": true,
-                    "text": "Readify",
-                    "type": "readify",
+                    "text": "Telstra Purple",
+                    "type": "purple",
                   },
                   Object {
                     "checked": false,
                     "text": "Managed Services",
                     "type": "support",
-                  },
-                  Object {
-                    "checked": false,
-                    "text": "BTS Digital",
-                    "type": "bts",
                   },
                 ]
               }
@@ -1949,7 +470,7 @@ exports[`Renders readify 1`] = `
                 name=""
                 placeholders={
                   Object {
-                    "email": "your.name@readify.net",
+                    "email": "your.name@purple.telstra.com",
                     "mobile": "+61 111 222 333",
                     "name": "Your Name",
                     "qualifications": "Jedi Master | PSM I",
@@ -1963,18 +484,13 @@ exports[`Renders readify 1`] = `
                   Array [
                     Object {
                       "checked": true,
-                      "text": "Readify",
-                      "type": "readify",
+                      "text": "Telstra Purple",
+                      "type": "purple",
                     },
                     Object {
                       "checked": false,
                       "text": "Managed Services",
                       "type": "support",
-                    },
-                    Object {
-                      "checked": false,
-                      "text": "BTS Digital",
-                      "type": "bts",
                     },
                   ]
                 }
@@ -2014,7 +530,7 @@ exports[`Renders readify 1`] = `
                         textBefore="Copy text only"
                       />,
                       "signatureProps": Object {
-                        "email": "your.name@readify.net",
+                        "email": "your.name@purple.telstra.com",
                         "isSupport": false,
                         "mobile": "+61 111 222 333",
                         "name": "Your Name",
@@ -2025,7 +541,7 @@ exports[`Renders readify 1`] = `
                     }
                   }
                 >
-                  <ReadifySignatureContainer
+                  <PurpleSignatureContainer
                     CopyRepliesAndForwardsHtml={
                       <withState(withState(withHandlers(mapProps(Button))))
                         classAfter="button is-success"
@@ -2064,7 +580,7 @@ exports[`Renders readify 1`] = `
                     }
                     signatureProps={
                       Object {
-                        "email": "your.name@readify.net",
+                        "email": "your.name@purple.telstra.com",
                         "isSupport": false,
                         "mobile": "+61 111 222 333",
                         "name": "Your Name",
@@ -2207,7 +723,7 @@ exports[`Renders readify 1`] = `
                         </div>
                       </div>
                       <Signature
-                        email="your.name@readify.net"
+                        email="your.name@purple.telstra.com"
                         isSupport={false}
                         mobile="+61 111 222 333"
                         name="Your Name"
@@ -2224,18 +740,39 @@ exports[`Renders readify 1`] = `
                             cellSpacing="0"
                             style={
                               Object {
-                                "color": "#3D5567",
-                                "fontFamily": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
-                                "fontSize": "10.5pt",
+                                "color": "black",
+                                "fontFamily": "Arial, sans-serif",
+                                "fontSize": "9pt",
                               }
                             }
-                            width="100%"
+                            width="500px"
                           >
                             <tr>
                               <td
+                                valign="top"
+                              >
+                                <p>
+                                  <b>
+                                    Your Name
+                                  </b>
+                                  <br />
+                                  Telstra Purple
+                                  <br />
+                                  <span
+                                    style={
+                                      Object {
+                                        "color": "#A5A5A5",
+                                      }
+                                    }
+                                  >
+                                    Job Title
+                                  </span>
+                                  <br />
+                                </p>
+                              </td>
+                              <td
                                 style={
                                   Object {
-                                    "borderRight": "1px solid #3D5567",
                                     "paddingRight": "20px",
                                     "width": "96px",
                                   }
@@ -2243,190 +780,63 @@ exports[`Renders readify 1`] = `
                                 valign="top"
                               >
                                 <img
-                                  alt="Readify a Telstra Company"
-                                  height="53"
-                                  src="https://readifysignatures.blob.core.windows.net/images/image001.png"
-                                  width="73"
+                                  alt="Telstra Purple"
+                                  height="52"
+                                  src="https://readifysignatures.blob.core.windows.net/images/purple-1.png"
+                                  width="35"
                                 />
                               </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <b>
+                                  M
+                                </b>
+                                    
+                                <a
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+                                    }
+                                  }
+                                  href="tel:+61111222333"
+                                />
+                                <br />
+                                <b>
+                                  E
+                                </b>
+                                     
+                                <a
+                                  href="mailto:your.name@purple.telstra.com"
+                                >
+                                  your.name@purple.telstra.com
+                                </a>
+                                <br />
+                                <b>
+                                  W
+                                </b>
+                                     
+                                <a
+                                  href="www.telstra.com/purple"
+                                >
+                                  telstra.com
+                                </a>
+                                <br />
+                              </td>
+                            </tr>
+                            <tr>
                               <td
                                 style={
                                   Object {
-                                    "paddingLeft": "20px",
+                                    "color": "black",
+                                    "fontFamily": "Arial, sans-serif",
+                                    "fontSize": "6.5pt",
                                   }
                                 }
-                                valign="top"
                               >
-                                <p
-                                  style={
-                                    Object {
-                                      "marginBottom": "10px",
-                                    }
-                                  }
-                                >
-                                  <b>
-                                    Your Name
-                                  </b>
-                                  <br />
-                                  Readify
-                                   | 
-                                  Job Title
-                                </p>
-                                <p
-                                  style={
-                                    Object {
-                                      "marginBottom": "20px",
-                                    }
-                                  }
-                                >
-                                  <span>
-                                    <b>
-                                      M
-                                    </b>
-                                     
-                                    <a
-                                      dangerouslySetInnerHTML={
-                                        Object {
-                                          "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
-                                        }
-                                      }
-                                      href="tel:+61111222333"
-                                    />
-                                     
-                                    <span>
-                                        
-                                    </span>
-                                  </span>
-                                  <span>
-                                    <b>
-                                      E
-                                    </b>
-                                     
-                                    <a
-                                      href="mailto:your.name@readify.net"
-                                    >
-                                      your.name@readify.net
-                                    </a>
-                                     
-                                    <span>
-                                        
-                                    </span>
-                                  </span>
-                                  <span>
-                                    <b>
-                                      W
-                                    </b>
-                                     
-                                    <a
-                                      href="https://readify.net"
-                                    >
-                                      readify.net
-                                    </a>
-                                  </span>
-                                </p>
-                                <SocialMedia>
-                                  <p
-                                    style={
-                                      Object {
-                                        "marginBottom": "0",
-                                      }
-                                    }
-                                  >
-                                    <span
-                                      key="Facebook"
-                                    >
-                                      <a
-                                        href="https://readify.net/links/facebook"
-                                        style={
-                                          Object {
-                                            "display": "inline-block",
-                                            "height": "28px",
-                                            "width": "28px",
-                                          }
-                                        }
-                                      >
-                                        <img
-                                          alt="Readify on Facebook"
-                                          height="28"
-                                          src="https://readifysignatures.blob.core.windows.net/images/image002.png"
-                                          width="28"
-                                        />
-                                      </a>
-                                      <span>
-                                          
-                                      </span>
-                                    </span>
-                                    <span
-                                      key="Twitter"
-                                    >
-                                      <a
-                                        href="https://readify.net/links/twitter"
-                                        style={
-                                          Object {
-                                            "display": "inline-block",
-                                            "height": "28px",
-                                            "width": "28px",
-                                          }
-                                        }
-                                      >
-                                        <img
-                                          alt="Readify on Twitter"
-                                          height="28"
-                                          src="https://readifysignatures.blob.core.windows.net/images/image003.png"
-                                          width="28"
-                                        />
-                                      </a>
-                                      <span>
-                                          
-                                      </span>
-                                    </span>
-                                    <span
-                                      key="LinkedIn"
-                                    >
-                                      <a
-                                        href="https://readify.net/links/linkedin"
-                                        style={
-                                          Object {
-                                            "display": "inline-block",
-                                            "height": "28px",
-                                            "width": "28px",
-                                          }
-                                        }
-                                      >
-                                        <img
-                                          alt="Readify on LinkedIn"
-                                          height="28"
-                                          src="https://readifysignatures.blob.core.windows.net/images/image004.png"
-                                          width="28"
-                                        />
-                                      </a>
-                                      <span>
-                                          
-                                      </span>
-                                    </span>
-                                    <span
-                                      key="YouTube"
-                                    >
-                                      <a
-                                        href="https://readify.net/links/youtube"
-                                        style={
-                                          Object {
-                                            "display": "inline-block",
-                                            "height": "28px",
-                                            "width": "28px",
-                                          }
-                                        }
-                                      >
-                                        <img
-                                          alt="Readify on YouTube"
-                                          height="28"
-                                          src="https://readifysignatures.blob.core.windows.net/images/image005.png"
-                                          width="28"
-                                        />
-                                      </a>
-                                    </span>
-                                  </p>
-                                </SocialMedia>
+                                This email may contain confidential information.
+                                <br />
+                                If I've sent it to you by accident, please delete it immediately
                               </td>
                             </tr>
                           </table>
@@ -2562,7 +972,7 @@ exports[`Renders readify 1`] = `
                         </div>
                       </div>
                       <RepliesAndForwards
-                        email="your.name@readify.net"
+                        email="your.name@purple.telstra.com"
                         isSupport={false}
                         mobile="+61 111 222 333"
                         name="Your Name"
@@ -2574,8 +984,8 @@ exports[`Renders readify 1`] = `
                           <p
                             style={
                               Object {
-                                "color": "#3D5567",
-                                "fontFamily": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+                                "color": "black",
+                                "fontFamily": "Arial, sans-serif",
                                 "fontSize": "10.5pt",
                               }
                             }
@@ -2585,7 +995,7 @@ exports[`Renders readify 1`] = `
                             <b>
                               Your Name
                                | 
-                              Readify
+                              Telstra Purple
                                
                               Job Title
                             </b>
@@ -2608,9 +1018,9 @@ exports[`Renders readify 1`] = `
                             </b>
                               
                             <a
-                              href="mailto:your.name@readify.net"
+                              href="mailto:your.name@purple.telstra.com"
                             >
-                              your.name@readify.net
+                              your.name@purple.telstra.com
                             </a>
                              | 
                             <b>
@@ -2618,15 +1028,15 @@ exports[`Renders readify 1`] = `
                             </b>
                               
                             <a
-                              href="https://readify.net"
+                              href="www.telstra.com/purple"
                             >
-                              readify.net
+                              telstra.com
                             </a>
                           </p>
                         </div>
                       </RepliesAndForwards>
                     </div>
-                  </ReadifySignatureContainer>
+                  </PurpleSignatureContainer>
                 </SignatureContainer>
               </mapProps(SignatureContainer)>
             </withProps(mapProps(SignatureContainer))>
@@ -2638,7 +1048,7 @@ exports[`Renders readify 1`] = `
 </App>
 `;
 
-exports[`Renders readify 2`] = `
+exports[`Renders Purple Signature 2`] = `
 Array [
   "Warning: validateDOMNesting(...): %s cannot appear as a child of <%s>.%s%s%s",
   "<tr>",
@@ -2646,13 +1056,13 @@ Array [
 ]
 `;
 
-exports[`Renders readify support 1`] = `
+exports[`Renders Purple support 1`] = `
 <App>
   <div>
     <Header
       brandInfo={
         Object {
-          "appName": "Readify Outlook Signature",
+          "appName": "Telstra Purple Outlook Signature",
           "brandLink": "https://readify-signatures.azurewebsites.net/",
         }
       }
@@ -2663,7 +1073,7 @@ exports[`Renders readify support 1`] = `
         role="navigation"
       >
         <div
-          className="columns"
+          className="section"
           style={
             Object {
               "width": "100%",
@@ -2671,10 +1081,7 @@ exports[`Renders readify support 1`] = `
           }
         >
           <div
-            className="column"
-          />
-          <div
-            className="column is-three-quarters"
+            className="container"
           >
             <div
               className="navbar-brand"
@@ -2683,7 +1090,7 @@ exports[`Renders readify support 1`] = `
                 className="navbar-item"
                 href="https://readify-signatures.azurewebsites.net/"
               >
-                Readify Outlook Signature
+                Telstra Purple Outlook Signature
               </a>
             </div>
           </div>
@@ -2825,12 +1232,12 @@ exports[`Renders readify support 1`] = `
                         <input
                           checked={false}
                           className="radioInput"
-                          id="readify"
+                          id="telstraPurple"
                           name="signatureTypeOpt"
                           onChange={[Function]}
                           type="radio"
                         />
-                        Readify
+                        Telstra Purple
                       </label>
                       <label
                         className="radio"
@@ -2845,20 +1252,6 @@ exports[`Renders readify support 1`] = `
                           type="radio"
                         />
                         Managed Services
-                      </label>
-                      <label
-                        className="radio"
-                        key="2"
-                      >
-                        <input
-                          checked={false}
-                          className="radioInput"
-                          id="btsDigital"
-                          name="signatureTypeOpt"
-                          onChange={[Function]}
-                          type="radio"
-                        />
-                        BTS Digital
                       </label>
                     </div>
                   </div>
@@ -3024,7 +1417,7 @@ exports[`Renders readify support 1`] = `
                   <input
                     className="input"
                     onChange={[Function]}
-                    placeholder="your.name@readify.net"
+                    placeholder="your.name@purple.telstra.com"
                     style={
                       Object {
                         "width": "300px",
@@ -3076,7 +1469,7 @@ exports[`Renders readify support 1`] = `
               name=""
               placeholders={
                 Object {
-                  "email": "your.name@readify.net",
+                  "email": "your.name@purple.telstra.com",
                   "mobile": "+61 111 222 333",
                   "name": "Your Name",
                   "qualifications": "Jedi Master | PSM I",
@@ -3090,18 +1483,13 @@ exports[`Renders readify support 1`] = `
                 Array [
                   Object {
                     "checked": false,
-                    "text": "Readify",
-                    "type": "readify",
+                    "text": "Telstra Purple",
+                    "type": "purple",
                   },
                   Object {
                     "checked": true,
                     "text": "Managed Services",
                     "type": "support",
-                  },
-                  Object {
-                    "checked": false,
-                    "text": "BTS Digital",
-                    "type": "bts",
                   },
                 ]
               }
@@ -3115,7 +1503,7 @@ exports[`Renders readify support 1`] = `
                 name=""
                 placeholders={
                   Object {
-                    "email": "your.name@readify.net",
+                    "email": "your.name@purple.telstra.com",
                     "mobile": "+61 111 222 333",
                     "name": "Your Name",
                     "qualifications": "Jedi Master | PSM I",
@@ -3129,18 +1517,13 @@ exports[`Renders readify support 1`] = `
                   Array [
                     Object {
                       "checked": false,
-                      "text": "Readify",
-                      "type": "readify",
+                      "text": "Telstra Purple",
+                      "type": "purple",
                     },
                     Object {
                       "checked": true,
                       "text": "Managed Services",
                       "type": "support",
-                    },
-                    Object {
-                      "checked": false,
-                      "text": "BTS Digital",
-                      "type": "bts",
                     },
                   ]
                 }
@@ -3180,7 +1563,7 @@ exports[`Renders readify support 1`] = `
                         textBefore="Copy text only"
                       />,
                       "signatureProps": Object {
-                        "email": "your.name@readify.net",
+                        "email": "your.name@purple.telstra.com",
                         "isSupport": true,
                         "mobile": "+61 111 222 333",
                         "name": "Your Name",
@@ -3191,7 +1574,7 @@ exports[`Renders readify support 1`] = `
                     }
                   }
                 >
-                  <ReadifySignatureContainer
+                  <PurpleSignatureContainer
                     CopyRepliesAndForwardsHtml={
                       <withState(withState(withHandlers(mapProps(Button))))
                         classAfter="button is-success"
@@ -3230,7 +1613,7 @@ exports[`Renders readify support 1`] = `
                     }
                     signatureProps={
                       Object {
-                        "email": "your.name@readify.net",
+                        "email": "your.name@purple.telstra.com",
                         "isSupport": true,
                         "mobile": "+61 111 222 333",
                         "name": "Your Name",
@@ -3373,7 +1756,7 @@ exports[`Renders readify support 1`] = `
                         </div>
                       </div>
                       <Signature
-                        email="your.name@readify.net"
+                        email="your.name@purple.telstra.com"
                         isSupport={true}
                         mobile="+61 111 222 333"
                         name="Your Name"
@@ -3390,18 +1773,39 @@ exports[`Renders readify support 1`] = `
                             cellSpacing="0"
                             style={
                               Object {
-                                "color": "#3D5567",
-                                "fontFamily": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
-                                "fontSize": "10.5pt",
+                                "color": "black",
+                                "fontFamily": "Arial, sans-serif",
+                                "fontSize": "9pt",
                               }
                             }
-                            width="100%"
+                            width="500px"
                           >
                             <tr>
                               <td
+                                valign="top"
+                              >
+                                <p>
+                                  <b>
+                                    Your Name
+                                  </b>
+                                  <br />
+                                  Telstra Purple
+                                  <br />
+                                  <span
+                                    style={
+                                      Object {
+                                        "color": "#A5A5A5",
+                                      }
+                                    }
+                                  >
+                                    Job Title
+                                  </span>
+                                  <br />
+                                </p>
+                              </td>
+                              <td
                                 style={
                                   Object {
-                                    "borderRight": "1px solid #3D5567",
                                     "paddingRight": "20px",
                                     "width": "96px",
                                   }
@@ -3409,211 +1813,88 @@ exports[`Renders readify support 1`] = `
                                 valign="top"
                               >
                                 <img
-                                  alt="Readify a Telstra Company"
-                                  height="53"
-                                  src="https://readifysignatures.blob.core.windows.net/images/image001.png"
-                                  width="73"
+                                  alt="Telstra Purple"
+                                  height="52"
+                                  src="https://readifysignatures.blob.core.windows.net/images/purple-1.png"
+                                  width="35"
                                 />
                               </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <b>
+                                  M
+                                </b>
+                                    
+                                <a
+                                  dangerouslySetInnerHTML={
+                                    Object {
+                                      "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+                                    }
+                                  }
+                                  href="tel:+61111222333"
+                                />
+                                <br />
+                                <b>
+                                  E
+                                </b>
+                                     
+                                <a
+                                  href="mailto:your.name@purple.telstra.com"
+                                >
+                                  your.name@purple.telstra.com
+                                </a>
+                                <br />
+                                <b>
+                                  W
+                                </b>
+                                     
+                                <a
+                                  href="www.telstra.com/purple"
+                                >
+                                  telstra.com
+                                </a>
+                                <br />
+                              </td>
+                            </tr>
+                            <tr>
                               <td
                                 style={
                                   Object {
-                                    "paddingLeft": "20px",
+                                    "color": "black",
+                                    "fontFamily": "Arial, sans-serif",
+                                    "fontSize": "6.5pt",
                                   }
                                 }
-                                valign="top"
                               >
-                                <p
-                                  style={
-                                    Object {
-                                      "marginBottom": "10px",
-                                    }
-                                  }
-                                >
+                                <span>
                                   <b>
-                                    Your Name
+                                    Support Hotline
                                   </b>
-                                  <br />
-                                  Readify
-                                   | 
-                                  Job Title
-                                </p>
-                                <p
-                                  style={
-                                    Object {
-                                      "marginBottom": "20px",
-                                    }
-                                  }
-                                >
-                                  <span>
-                                    <b>
-                                      M
-                                    </b>
-                                     
-                                    <a
-                                      dangerouslySetInnerHTML={
-                                        Object {
-                                          "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
-                                        }
-                                      }
-                                      href="tel:+61111222333"
-                                    />
-                                     
-                                    <span>
-                                      | 
-                                      <b>
-                                        Support Hotline
-                                      </b>
-                                      <span
-                                        dangerouslySetInnerHTML={
-                                          Object {
-                                            "__html": "&nbsp;1800&nbsp;READIFY",
-                                          }
-                                        }
-                                      />
-                                      <br />
-                                    </span>
-                                  </span>
-                                  <span>
-                                    <b>
-                                      E
-                                    </b>
-                                     
-                                    <a
-                                      href="mailto:your.name@readify.net"
-                                    >
-                                      your.name@readify.net
-                                    </a>
-                                     
-                                    <span>
-                                      | 
-                                      <b>
-                                        Support Email
-                                      </b>
-                                       
-                                      <a
-                                        href="mailto:support@readify.net"
-                                      >
-                                        support@readify.net
-                                      </a>
-                                      <br />
-                                    </span>
-                                  </span>
-                                  <span>
-                                    <b>
-                                      W
-                                    </b>
-                                     
-                                    <a
-                                      href="https://readify.net"
-                                    >
-                                      readify.net
-                                    </a>
-                                  </span>
-                                </p>
-                                <SocialMedia>
-                                  <p
-                                    style={
+                                  <span
+                                    dangerouslySetInnerHTML={
                                       Object {
-                                        "marginBottom": "0",
+                                        "__html": "&nbsp;1800&nbsp;READIFY",
                                       }
                                     }
+                                  />
+                                </span>
+                                <span>
+                                  | 
+                                  <b>
+                                    Support Email
+                                  </b>
+                                   
+                                  <a
+                                    href="mailto:support@readify.net"
                                   >
-                                    <span
-                                      key="Facebook"
-                                    >
-                                      <a
-                                        href="https://readify.net/links/facebook"
-                                        style={
-                                          Object {
-                                            "display": "inline-block",
-                                            "height": "28px",
-                                            "width": "28px",
-                                          }
-                                        }
-                                      >
-                                        <img
-                                          alt="Readify on Facebook"
-                                          height="28"
-                                          src="https://readifysignatures.blob.core.windows.net/images/image002.png"
-                                          width="28"
-                                        />
-                                      </a>
-                                      <span>
-                                          
-                                      </span>
-                                    </span>
-                                    <span
-                                      key="Twitter"
-                                    >
-                                      <a
-                                        href="https://readify.net/links/twitter"
-                                        style={
-                                          Object {
-                                            "display": "inline-block",
-                                            "height": "28px",
-                                            "width": "28px",
-                                          }
-                                        }
-                                      >
-                                        <img
-                                          alt="Readify on Twitter"
-                                          height="28"
-                                          src="https://readifysignatures.blob.core.windows.net/images/image003.png"
-                                          width="28"
-                                        />
-                                      </a>
-                                      <span>
-                                          
-                                      </span>
-                                    </span>
-                                    <span
-                                      key="LinkedIn"
-                                    >
-                                      <a
-                                        href="https://readify.net/links/linkedin"
-                                        style={
-                                          Object {
-                                            "display": "inline-block",
-                                            "height": "28px",
-                                            "width": "28px",
-                                          }
-                                        }
-                                      >
-                                        <img
-                                          alt="Readify on LinkedIn"
-                                          height="28"
-                                          src="https://readifysignatures.blob.core.windows.net/images/image004.png"
-                                          width="28"
-                                        />
-                                      </a>
-                                      <span>
-                                          
-                                      </span>
-                                    </span>
-                                    <span
-                                      key="YouTube"
-                                    >
-                                      <a
-                                        href="https://readify.net/links/youtube"
-                                        style={
-                                          Object {
-                                            "display": "inline-block",
-                                            "height": "28px",
-                                            "width": "28px",
-                                          }
-                                        }
-                                      >
-                                        <img
-                                          alt="Readify on YouTube"
-                                          height="28"
-                                          src="https://readifysignatures.blob.core.windows.net/images/image005.png"
-                                          width="28"
-                                        />
-                                      </a>
-                                    </span>
-                                  </p>
-                                </SocialMedia>
+                                    support@readify.net
+                                  </a>
+                                  <br />
+                                </span>
+                                This email may contain confidential information.
+                                <br />
+                                If I've sent it to you by accident, please delete it immediately
                               </td>
                             </tr>
                           </table>
@@ -3749,7 +2030,7 @@ exports[`Renders readify support 1`] = `
                         </div>
                       </div>
                       <RepliesAndForwards
-                        email="your.name@readify.net"
+                        email="your.name@purple.telstra.com"
                         isSupport={true}
                         mobile="+61 111 222 333"
                         name="Your Name"
@@ -3761,8 +2042,8 @@ exports[`Renders readify support 1`] = `
                           <p
                             style={
                               Object {
-                                "color": "#3D5567",
-                                "fontFamily": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+                                "color": "black",
+                                "fontFamily": "Arial, sans-serif",
                                 "fontSize": "10.5pt",
                               }
                             }
@@ -3772,7 +2053,7 @@ exports[`Renders readify support 1`] = `
                             <b>
                               Your Name
                                | 
-                              Readify
+                              Telstra Purple
                                
                               Job Title
                             </b>
@@ -3795,9 +2076,9 @@ exports[`Renders readify support 1`] = `
                             </b>
                               
                             <a
-                              href="mailto:your.name@readify.net"
+                              href="mailto:your.name@purple.telstra.com"
                             >
-                              your.name@readify.net
+                              your.name@purple.telstra.com
                             </a>
                              | 
                             <b>
@@ -3805,9 +2086,9 @@ exports[`Renders readify support 1`] = `
                             </b>
                               
                             <a
-                              href="https://readify.net"
+                              href="www.telstra.com/purple"
                             >
-                              readify.net
+                              telstra.com
                             </a>
                             <span>
                               <br />
@@ -3833,7 +2114,7 @@ exports[`Renders readify support 1`] = `
                         </div>
                       </RepliesAndForwards>
                     </div>
-                  </ReadifySignatureContainer>
+                  </PurpleSignatureContainer>
                 </SignatureContainer>
               </mapProps(SignatureContainer)>
             </withProps(mapProps(SignatureContainer))>
@@ -3845,4 +2126,4 @@ exports[`Renders readify support 1`] = `
 </App>
 `;
 
-exports[`Renders readify support 2`] = `""`;
+exports[`Renders Purple support 2`] = `""`;

@@ -35,12 +35,12 @@ exports[`Renders 1`] = `
               <input
                 checked={true}
                 className="radioInput"
-                id="readify"
+                id="telstraPurple"
                 name="signatureTypeOpt"
                 onChange={[Function]}
                 type="radio"
               />
-              Readify
+              Telstra Purple
             </label>
             <label
               className="radio"
@@ -55,20 +55,6 @@ exports[`Renders 1`] = `
                 type="radio"
               />
               Managed Services
-            </label>
-            <label
-              className="radio"
-              key="2"
-            >
-              <input
-                checked={false}
-                className="radioInput"
-                id="btsDigital"
-                name="signatureTypeOpt"
-                onChange={[Function]}
-                type="radio"
-              />
-              BTS Digital
             </label>
           </div>
         </div>
@@ -234,7 +220,7 @@ exports[`Renders 1`] = `
         <input
           className="input"
           onChange={[Function]}
-          placeholder="your.name@readify.net"
+          placeholder="your.name@purple.telstra.com"
           style={
             Object {
               "width": "300px",
@@ -286,7 +272,7 @@ exports[`Renders 1`] = `
     name=""
     placeholders={
       Object {
-        "email": "your.name@readify.net",
+        "email": "your.name@purple.telstra.com",
         "mobile": "+61 111 222 333",
         "name": "Your Name",
         "qualifications": "Jedi Master | PSM I",
@@ -300,18 +286,13 @@ exports[`Renders 1`] = `
       Array [
         Object {
           "checked": true,
-          "text": "Readify",
-          "type": "readify",
+          "text": "Telstra Purple",
+          "type": "purple",
         },
         Object {
           "checked": false,
           "text": "Managed Services",
           "type": "support",
-        },
-        Object {
-          "checked": false,
-          "text": "BTS Digital",
-          "type": "bts",
         },
       ]
     }

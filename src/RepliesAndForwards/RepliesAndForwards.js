@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { readify } from '../constants';
+import { purple } from '../constants';
 import { parseMobile } from '../util';
-const { brandInfo } = readify;
+const { brandInfo } = purple;
 
 const RepliesAndForwards = props => {
   const { name, title, mobile, email, isSupport, twitter } = props;
   const styleObj = {
-    color: '#3D5567',
-    fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
+    color: 'black',
+    fontFamily: 'Arial, sans-serif',
     fontSize: '10.5pt'
   };
   return (
@@ -17,7 +17,7 @@ const RepliesAndForwards = props => {
         --
         <br />
         <b>
-          {name}&nbsp;|&nbsp;{brandInfo.brandName} {title}
+          {name}&nbsp;|&nbsp;{brandInfo.brandName} | {title}
         </b>
         <br />
         <b>M</b>&nbsp;&nbsp;
@@ -36,7 +36,7 @@ const RepliesAndForwards = props => {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                {twitter}
+                @{twitter}
               </a>
               &nbsp;
             </span>

@@ -10,18 +10,43 @@ exports[`Renders 1`] = `
     cellSpacing="0"
     style={
       Object {
-        "color": "#3D5567",
-        "fontFamily": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
-        "fontSize": "10.5pt",
+        "color": "black",
+        "fontFamily": "Arial, sans-serif",
+        "fontSize": "9pt",
       }
     }
-    width="100%"
+    width="500px"
   >
     <tr>
       <td
+        valign="top"
+      >
+        <p>
+          <b>
+            your name
+          </b>
+          <br />
+          Telstra Purple
+          <br />
+          <span
+            style={
+              Object {
+                "color": "#A5A5A5",
+              }
+            }
+          >
+            Job Title
+          </span>
+          <br />
+          <span>
+            Jedi Master | PSM I
+            <br />
+          </span>
+        </p>
+      </td>
+      <td
         style={
           Object {
-            "borderRight": "1px solid #3D5567",
             "paddingRight": "20px",
             "width": "96px",
           }
@@ -29,111 +54,78 @@ exports[`Renders 1`] = `
         valign="top"
       >
         <img
-          alt="Readify a Telstra Company"
-          height="53"
-          src="https://readifysignatures.blob.core.windows.net/images/image001.png"
-          width="73"
+          alt="Telstra Purple"
+          height="52"
+          src="https://readifysignatures.blob.core.windows.net/images/purple-1.png"
+          width="35"
         />
       </td>
+    </tr>
+    <tr>
+      <td>
+        <b>
+          M
+        </b>
+            
+        <a
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+            }
+          }
+          href="tel:+61111222333"
+        />
+        <br />
+        <b>
+          E
+        </b>
+             
+        <a
+          href="mailto:your.name@telstra.purple.net"
+        >
+          your.name@telstra.purple.net
+        </a>
+        <br />
+        <span>
+          <b>
+            T
+          </b>
+               
+          <a
+            href="https://twitter.com/myTwitter"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            @
+            @myTwitter
+          </a>
+          <br />
+        </span>
+        <b>
+          W
+        </b>
+             
+        <a
+          href="www.telstra.com/purple"
+        >
+          telstra.com
+        </a>
+        <br />
+      </td>
+    </tr>
+    <tr>
       <td
         style={
           Object {
-            "paddingLeft": "20px",
+            "color": "black",
+            "fontFamily": "Arial, sans-serif",
+            "fontSize": "6.5pt",
           }
         }
-        valign="top"
       >
-        <p
-          style={
-            Object {
-              "marginBottom": "10px",
-            }
-          }
-        >
-          <b>
-            your name
-          </b>
-          <br />
-          Readify
-           | 
-          Job Title
-        </p>
-        <p
-          style={
-            Object {
-              "marginBottom": "10px",
-            }
-          }
-        >
-          Jedi Master | PSM I
-        </p>
-        <p
-          style={
-            Object {
-              "marginBottom": "20px",
-            }
-          }
-        >
-          <span>
-            <b>
-              M
-            </b>
-             
-            <a
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
-                }
-              }
-              href="tel:+61111222333"
-            />
-             
-            <span>
-                
-            </span>
-          </span>
-          <span>
-            <b>
-              E
-            </b>
-             
-            <a
-              href="mailto:your.name@readify.net"
-            >
-              your.name@readify.net
-            </a>
-             
-            <span>
-                
-            </span>
-          </span>
-          <span>
-            <b>
-              T
-            </b>
-             
-            <a
-              href="https://twitter.com/myTwitter"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              @myTwitter
-            </a>
-               
-          </span>
-          <span>
-            <b>
-              W
-            </b>
-             
-            <a
-              href="https://readify.net"
-            >
-              readify.net
-            </a>
-          </span>
-        </p>
-        <SocialMedia />
+        This email may contain confidential information.
+        <br />
+        If I've sent it to you by accident, please delete it immediately
       </td>
     </tr>
   </table>

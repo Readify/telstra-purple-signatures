@@ -5,8 +5,8 @@ exports[`Renders 1`] = `
   <p
     style={
       Object {
-        "color": "#3D5567",
-        "fontFamily": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+        "color": "black",
+        "fontFamily": "Arial, sans-serif",
         "fontSize": "10.5pt",
       }
     }
@@ -16,7 +16,7 @@ exports[`Renders 1`] = `
     <b>
       your name
        | 
-      Readify
+      Telstra Purple
        
       Job Title
     </b>
@@ -67,9 +67,9 @@ exports[`Renders 1`] = `
     </b>
       
     <a
-      href="https://readify.net"
+      href="www.telstra.com/purple"
     >
-      readify.net
+      telstra.com
     </a>
   </p>
 </div>

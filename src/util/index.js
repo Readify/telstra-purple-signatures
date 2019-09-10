@@ -1,9 +1,9 @@
 import React from 'react';
-import { btsDigital, readify } from '../constants';
+import { purple } from '../constants';
 import ReactDOMServer from 'react-dom/server';
 import { entries } from 'lodash/object';
 
-const { brandInfo } = readify;
+const { brandInfo } = purple;
 
 const multiSplice = (toAddIndexes, val, array) =>
   toAddIndexes.forEach(index => array.splice(index, 0, val));
@@ -53,33 +53,6 @@ const copyText = text => {
   document.body.removeChild(container);
 };
 
-export const copyBtsSignatureText = props => {
-  const { brandInfo } = btsDigital;
-  const { email, mobile, phone, name, qualifications, title, twitter } = props;
-  const mobileText = parseMobile(mobile).replace(/&nbsp;/g, ' ');
-  const phoneText = parseMobile(phone).replace(/&nbsp;/g, ' ');
-
-  const textArr = [
-    '--',
-    '',
-    name ? name : null,
-    title ? title : null,
-    brandInfo.brandName,
-    brandInfo.brandSecondaryText,
-    qualifications ? `${qualifications}` : null,
-    '',
-    mobileText ? `M ${mobileText}` : null,
-    phoneText ? `P ${phoneText}` : null,
-    email ? `E ${email}` : null,
-    twitter ? `T ${twitter}` : null,
-    `W ${brandInfo.brandLinkName}`,
-    'This email may contain confidential information.',
-    "If I've sent it to you by accident, please delete it immediately",
-    ''
-  ];
-
-  copyText(textArr.filter(val => val !== null).join('\n'));
-};
 
 export const copySignatureText = props => {
   const {
@@ -97,7 +70,8 @@ export const copySignatureText = props => {
     '--',
     '',
     name ? name : null,
-    title ? `${brandInfo.brandName} | ${title}` : null,
+    brandInfo.brandName,
+    title,
     qualifications ? `${qualifications}` : null,
     '',
     mobileText
@@ -118,25 +92,7 @@ export const copySignatureText = props => {
     twitter ? `T ${twitter}` : null,
     `W ${brandInfo.brandLinkName}`,
     '',
-    'Find us on: Twitter | LinkedIn | Facebook | YouTube'
-  ];
-
-  copyText(textArr.filter(val => val !== null).join('\n'));
-};
-
-export const copyBtsRepliesAndForwardsText = props => {
-  const { brandInfo } = btsDigital;
-  const { name, title, mobile, email, phone, twitter } = props;
-  const mobileText = parseMobile(mobile).replace(/&nbsp;/g, ' ');
-  const phoneText = parseMobile(phone).replace(/&nbsp;/g, ' ');
-
-  const textArr = [
-    '--',
-    `${name} | ${title}`,
-    `${brandInfo.brandName} | ${brandInfo.brandSecondaryText}`,
-    `M ${mobileText} | E ${email}${phone ? ` | P ${phoneText}` : ''}${
-      twitter ? ` | T ${twitter}` : ''
-    } | W ${brandInfo.brandLinkName}`
+    "This email may contain confidential information. If I've sent it to you by accident, please delete it immediately"
   ];
 
   copyText(textArr.filter(val => val !== null).join('\n'));
