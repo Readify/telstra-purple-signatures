@@ -1,9 +1,7 @@
 import React from 'react';
-
-import SocialMedia from '../SocialMedia';
-import { readify } from '../constants';
+import { purple } from '../constants';
 import { parseMobile } from '../util';
-const { brandInfo } = readify;
+const { brandInfo } = purple;
 
 const Signature = props => {
   const {
@@ -25,97 +23,107 @@ const Signature = props => {
         border="0"
         cellSpacing="0"
         cellPadding="0"
-        width="100%"
+        width="500px"
         style={{
-          color: '#3D5567',
-          fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
-          fontSize: '10.5pt'
+          color: 'black',
+          fontFamily: 'Arial, sans-serif',
+          fontSize: '9pt'
         }}
       >
         <tr>
+          <td valign="top">
+            <p>
+              <b>{name}</b>
+              <br />
+              {brandName}
+              <br />
+              <span style={{ color: '#A5A5A5' }}>{title}</span>
+              <br />
+              {qualifications ? (
+                <span>
+                  {qualifications}
+                  <br />
+                </span>
+              ) : null}
+            </p>
+          </td>
           <td
             valign="top"
             style={{
-              borderRight: '1px solid #3D5567',
               paddingRight: '20px',
               width: '96px'
             }}
           >
             <img
-              width="73"
-              height="53"
+              width="35"
+              height="52"
               src={brandLogo.link}
               alt={brandLogo.alt}
             />
           </td>
-          <td valign="top" style={{ paddingLeft: '20px' }}>
-            <p style={{ marginBottom: '10px' }}>
-              <b>{name}</b>
-              <br />
-              {brandName}&nbsp;|&nbsp;{title}
-            </p>
-            {qualifications ? (
-              <p style={{ marginBottom: '10px' }}>{qualifications}</p>
-            ) : null}
-            <p style={{ marginBottom: '20px' }}>
+        </tr>
+        <tr>
+          <td>
+            <b>M</b> &nbsp;&nbsp;&nbsp;
+            <a
+              href={`tel:${parseMobile(mobile).replace(/&nbsp;/g, '')}`}
+              dangerouslySetInnerHTML={{ __html: parseMobile(mobile) }}
+            />
+            <br />
+            <b>E</b>
+            &nbsp; &nbsp; &nbsp;
+            <a href={`mailto:${email}`}>{email}</a>
+            <br />
+            {twitter ? (
               <span>
-                <b>M</b>
-                &nbsp;
+                <b>T</b>
+                &nbsp; &nbsp; &nbsp;
                 <a
-                  href={`tel:${parseMobile(mobile).replace(/&nbsp;/g, '')}`}
-                  dangerouslySetInnerHTML={{ __html: parseMobile(mobile) }}
+                  href={`https://twitter.com/${twitter.replace('@', '')}`}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  @{twitter}
+                </a>
+                <br />
+              </span>
+            ) : null}
+            <b>W</b>
+            &thinsp; &thinsp; &thinsp;
+            <a href={brandLink}>{brandLinkName}</a>
+            <br />
+            {isSupport ? (
+              <span>
+                <b>Support&nbsp;Hotline</b>&nbsp;&nbsp;
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: brandInfo.supportMobile
+                  }}
                 />
-                &nbsp;
-                {isSupport ? (
-                  <span>
-                    |&nbsp;<b>Support&nbsp;Hotline</b>
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: brandInfo.supportMobile
-                      }}
-                    />
-                    <br />
-                  </span>
-                ) : (
-                  <span>&nbsp;&nbsp;</span>
-                )}
+                <br />
+                <b>Support&nbsp;Email</b>
+                &nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&thinsp;&thinsp;
+                <a href={`mailto:${brandInfo.supportEmail}`}>
+                  {brandInfo.supportEmail}
+                </a>
+                <br />
               </span>
-              <span>
-                <b>E</b>
-                &nbsp;
-                <a href={`mailto:${email}`}>{email}</a>
-                &nbsp;
-                {isSupport ? (
-                  <span>
-                    |&nbsp;<b>Support&nbsp;Email</b>&nbsp;
-                    <a href={`mailto:${brandInfo.supportEmail}`}>
-                      {brandInfo.supportEmail}
-                    </a>
-                    <br />
-                  </span>
-                ) : (
-                  <span>&nbsp;&nbsp;</span>
-                )}
-              </span>
-              {twitter ? (
-                <span>
-                  <b>T</b>&nbsp;
-                  <a
-                    href={`https://twitter.com/${twitter.replace('@', '')}`}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    {twitter}
-                  </a>
-                  &nbsp;&nbsp;&nbsp;
-                </span>
-              ) : null}
-              <span>
-                <b>W</b>&nbsp;
-                <a href={brandLink}>{brandLinkName}</a>
-              </span>
-            </p>
-            <SocialMedia />
+            ) : (
+              ''
+            )}
+          </td>
+        </tr>
+        <tr>
+          <td
+            style={{
+              color: 'black',
+              fontFamily: 'Arial, sans-serif',
+              fontSize: '6.5pt'
+            }}
+          >
+            This email may contain confidential information.
+            <br />
+            If I've sent it to you by accident, please delete it immediately
           </td>
         </tr>
       </table>

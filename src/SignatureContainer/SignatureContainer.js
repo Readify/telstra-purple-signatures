@@ -4,10 +4,7 @@ import { compose, mapProps, withProps } from 'recompose';
 
 import constants from '../constants';
 import './SignatureContainer.scss';
-import {
-  BtsSignatureContainer,
-  ReadifySignatureContainer
-} from './presentational-components';
+import { PurpleSignatureContainer } from './presentational-components';
 import { createButtons } from './createSignatureButtons';
 import { stripObject } from '../util';
 
@@ -22,8 +19,7 @@ const assignPlaceholders = (props, placeholders) => {
 };
 
 export const containerChooser = props => ({
-  Container:
-    props.sigType === 'bts' ? BtsSignatureContainer : ReadifySignatureContainer
+  Container: PurpleSignatureContainer
 });
 
 export const createContainer = props => {
@@ -35,30 +31,28 @@ export const createContainer = props => {
     sigType,
     mobile,
     email,
-    phone,
     Container
   } = props;
-  const isBTS = sigType === 'bts';
 
-  const placeholders = constants[isBTS ? 'btsDigital' : 'readify'].placeholders;
+  const placeholders = constants.purple.placeholders;
 
   const signatureProps = stripObject({
     qualifications,
     twitter,
-    phone: isBTS ? phone : null,
+    phone: null,
     ...assignPlaceholders(
       stripObject({
         name,
         title,
         mobile,
         email,
-        isSupport: isBTS ? null : sigType === 'support'
+        isSupport: sigType === 'support'
       }),
       placeholders
     )
   });
 
-  const buttons = createButtons(signatureProps, placeholders, isBTS);
+  const buttons = createButtons(signatureProps, placeholders, false);
 
   return {
     containerProps: {

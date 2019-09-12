@@ -7,7 +7,7 @@ exports[`Renders 1`] = `
   role="navigation"
 >
   <div
-    className="columns"
+    className="section"
     style={
       Object {
         "width": "100%",
@@ -15,10 +15,7 @@ exports[`Renders 1`] = `
     }
   >
     <div
-      className="column"
-    />
-    <div
-      className="column is-three-quarters"
+      className="container"
     >
       <div
         className="navbar-brand"

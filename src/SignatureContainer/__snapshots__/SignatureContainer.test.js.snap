@@ -3,7 +3,7 @@
 exports[`SignatureContainer Renders 1`] = `
 <mapProps(SignatureContainer)
   Container={[Function]}
-  email="your.name@readify.net"
+  email="your.name@telstra.purple.net"
   mobile="+61 111 222 333"
   name="your name"
   sigType="readify"
@@ -12,23 +12,10 @@ exports[`SignatureContainer Renders 1`] = `
 />
 `;
 
-exports[`SignatureContainer Renders with bts fields 1`] = `
-<mapProps(SignatureContainer)
-  Container={[Function]}
-  email="your.name@readify.net"
-  mobile="+61 111 222 333"
-  name="your name"
-  phone="+61 123 456 789"
-  sigType="bts"
-  title="Job Title"
-  twitter="@myTwitter"
-/>
-`;
-
 exports[`SignatureContainer Renders with support fields 1`] = `
 <mapProps(SignatureContainer)
   Container={[Function]}
-  email="your.name@readify.net"
+  email="your.name@telstra.purple.net"
   mobile="+61 111 222 333"
   name="your name"
   sigType="support"
@@ -41,28 +28,28 @@ exports[`createContainer returns the right props 1`] = `
 Object {
   "Container": undefined,
   "containerProps": Object {
-    "CopyBtsHtml": <withState(withState(withHandlers(mapProps(Button))))
+    "CopyRepliesAndForwardsHtml": <withState(withState(withHandlers(mapProps(Button))))
       classAfter="button is-success"
       classBefore="button is-primary"
       onClickHandler={[Function]}
       textAfter="Copied!"
       textBefore="Copy signature"
     />,
-    "CopyBtsRepliesAndForwardsHtml": <withState(withState(withHandlers(mapProps(Button))))
-      classAfter="button is-success"
-      classBefore="button is-primary"
-      onClickHandler={[Function]}
-      textAfter="Copied!"
-      textBefore="Copy signature"
-    />,
-    "CopyBtsRepliesAndForwardsText": <withState(withState(withHandlers(mapProps(Button))))
+    "CopyRepliesAndForwardsText": <withState(withState(withHandlers(mapProps(Button))))
       classAfter="button is-success"
       classBefore="button"
       onClickHandler={[Function]}
       textAfter="Copied!"
       textBefore="Copy text only"
     />,
-    "CopyBtsSigText": <withState(withState(withHandlers(mapProps(Button))))
+    "CopySignatureHtml": <withState(withState(withHandlers(mapProps(Button))))
+      classAfter="button is-success"
+      classBefore="button is-primary"
+      onClickHandler={[Function]}
+      textAfter="Copied!"
+      textBefore="Copy signature"
+    />,
+    "CopySignatureText": <withState(withState(withHandlers(mapProps(Button))))
       classAfter="button is-success"
       classBefore="button"
       onClickHandler={[Function]}
@@ -70,10 +57,10 @@ Object {
       textBefore="Copy text only"
     />,
     "signatureProps": Object {
-      "email": "your.name@readify.net",
+      "email": "your.name@telstra.purple.net",
+      "isSupport": false,
       "mobile": "+61 111 222 333",
       "name": "your name",
-      "phone": "+61 123 456 789",
       "title": "Job Title",
       "twitter": "@myTwitter",
     },
@@ -114,7 +101,7 @@ Object {
       textBefore="Copy text only"
     />,
     "signatureProps": Object {
-      "email": "your.name@readify.net",
+      "email": "your.name@telstra.purple.net",
       "isSupport": false,
       "mobile": "+61 111 222 333",
       "name": "your name",

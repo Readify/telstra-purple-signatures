@@ -25,9 +25,8 @@ class Form extends Component {
       inputs: {
         signatureTypes: {
           text: [
-            { text: 'Readify', checked: true, type: 'readify' },
-            { text: 'Managed Services', checked: false, type: 'support' },
-            { text: 'BTS Digital', checked: false, type: 'bts' }
+            { text: 'Telstra Purple', checked: true, type: 'purple' },
+            { text: 'Managed Services', checked: false, type: 'support' }
           ].filter(Boolean),
           order: 1
         },
@@ -136,9 +135,7 @@ class Form extends Component {
   };
 
   render() {
-    const placeholders =
-      constants[this.state.sigType === 'bts' ? 'btsDigital' : 'readify']
-        .placeholders;
+    const placeholders = constants.purple.placeholders;
     const formInputs = this.state.inputs;
 
     const inputs = this.renderHtmlForInputs(formInputs, placeholders);

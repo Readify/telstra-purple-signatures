@@ -1,9 +1,10 @@
 .navbar {
-  background-color: #141b33;
+  background-color: black;
   color: white;
 
   .navbar-brand {
-    background: url(https://labs.readify.net/Content/readify-device.png) no-repeat 15px 50%;
+    background: url(https://readifysignatures.blob.core.windows.net/images/purple-3.png) no-repeat 15px 50%;
+    background-size: 30px;
     padding-left: 50px;
 
     a {

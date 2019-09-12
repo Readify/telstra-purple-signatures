@@ -33,7 +33,9 @@ const Info = () => (
             Outlook > Preferences > Signatures
           </li>
           <li>
-            <span style={{ fontWeight: 'bold' }}>Outlook web access (OWA): </span>
+            <span style={{ fontWeight: 'bold' }}>
+              Outlook web access (OWA):{' '}
+            </span>
             Cog (top-right) > Options > Mail > Layout > Email signature
           </li>
         </ul>

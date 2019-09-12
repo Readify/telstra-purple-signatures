@@ -9,15 +9,15 @@ const App = () => (
   <div>
     <Header
       brandInfo={{
-        appName: 'Readify Outlook Signature',
+        appName: 'Telstra Purple Outlook Signature',
         brandLink: 'https://readify-signatures.azurewebsites.net/'
       }}
     />
     <section className="section">
-        <div className="container">
-          <Info />
-          <Form />
-        </div>
+      <div className="container">
+        <Info />
+        <Form />
+      </div>
     </section>
   </div>
 );

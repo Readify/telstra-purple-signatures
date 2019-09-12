@@ -17,22 +17,15 @@ afterEach(() => {
   console.error = errFunc;
 });
 
-it('Renders readify', () => {
+it('Renders Purple Signature', () => {
   const tree = mount(<App />);
   expect(tree).toMatchSnapshot();
   expect(errMsg).toMatchSnapshot();
 });
 
-it('Renders readify support', () => {
+it('Renders Purple support', () => {
   const tree = mount(<App />);
   tree.find('#managedServices').simulate('change');
-  expect(tree).toMatchSnapshot();
-  expect(errMsg).toMatchSnapshot();
-});
-
-it('Renders bts', () => {
-  const tree = mount(<App />);
-  tree.find('#btsDigital').simulate('change');
   expect(tree).toMatchSnapshot();
   expect(errMsg).toMatchSnapshot();
 });

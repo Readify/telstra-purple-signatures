@@ -5,7 +5,7 @@ import Signature from './Signature';
 
 it('Renders', () => {
   const props = {
-    email: 'your.name@readify.net',
+    email: 'your.name@telstra.purple.net',
     sigType: false,
     mobile: '+61 111 222 333',
     name: 'your name',

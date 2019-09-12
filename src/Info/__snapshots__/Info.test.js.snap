@@ -81,7 +81,8 @@ exports[`Renders 1`] = `
               }
             }
           >
-            Outlook web access (OWA): 
+            Outlook web access (OWA):
+             
           </span>
           Cog (top-right) &gt; Options &gt; Mail &gt; Layout &gt; Email signature
         </li>
