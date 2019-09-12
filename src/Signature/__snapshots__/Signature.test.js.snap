@@ -106,9 +106,9 @@ exports[`Renders 1`] = `
         </b>
              
         <a
-          href="www.telstra.com/purple"
+          href="https://www.telstra.com/purple"
         >
-          telstra.com
+          telstra.com/purple
         </a>
         <br />
       </td>

@@ -154,7 +154,8 @@ exports[`Renders Purple Signature 1`] = `
                         }
                       }
                     >
-                      Outlook web access (OWA): 
+                      Outlook web access (OWA):
+                       
                     </span>
                     Cog (top-right) &gt; Options &gt; Mail &gt; Layout &gt; Email signature
                   </li>
@@ -817,9 +818,9 @@ exports[`Renders Purple Signature 1`] = `
                                 </b>
                                      
                                 <a
-                                  href="www.telstra.com/purple"
+                                  href="https://www.telstra.com/purple"
                                 >
-                                  telstra.com
+                                  telstra.com/purple
                                 </a>
                                 <br />
                               </td>
@@ -1028,9 +1029,9 @@ exports[`Renders Purple Signature 1`] = `
                             </b>
                               
                             <a
-                              href="www.telstra.com/purple"
+                              href="https://www.telstra.com/purple"
                             >
-                              telstra.com
+                              telstra.com/purple
                             </a>
                           </p>
                         </div>
@@ -1187,7 +1188,8 @@ exports[`Renders Purple support 1`] = `
                         }
                       }
                     >
-                      Outlook web access (OWA): 
+                      Outlook web access (OWA):
+                       
                     </span>
                     Cog (top-right) &gt; Options &gt; Mail &gt; Layout &gt; Email signature
                   </li>
@@ -1850,9 +1852,9 @@ exports[`Renders Purple support 1`] = `
                                 </b>
                                      
                                 <a
-                                  href="www.telstra.com/purple"
+                                  href="https://www.telstra.com/purple"
                                 >
-                                  telstra.com
+                                  telstra.com/purple
                                 </a>
                                 <br />
                                 <span>
@@ -2085,9 +2087,9 @@ exports[`Renders Purple support 1`] = `
                             </b>
                               
                             <a
-                              href="www.telstra.com/purple"
+                              href="https://www.telstra.com/purple"
                             >
-                              telstra.com
+                              telstra.com/purple
                             </a>
                             <span>
                               <br />
