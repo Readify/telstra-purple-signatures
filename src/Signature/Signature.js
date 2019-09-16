@@ -59,6 +59,7 @@ const Signature = props => {
             <img
               width="35"
               height="52"
+              style={{ width: '35px', height: '52px', maxWidth: 'none' }}
               src={brandLogo.link}
               alt={brandLogo.alt}
             />
@@ -176,7 +177,7 @@ const Signature = props => {
           >
             This email may contain confidential information.
             <br />
-            If I've sent it to you by accident, please delete it immediately
+            If I've sent it to you by accident, please delete it immediately.
           </td>
         </tr>
       </table>

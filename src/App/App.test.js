@@ -23,13 +23,6 @@ it('Renders Purple Signature', () => {
   expect(errMsg).toMatchSnapshot();
 });
 
-it('Renders Purple support', () => {
-  const tree = mount(<App />);
-  tree.find('#telstraPurpleManagedServices').simulate('change');
-  expect(tree).toMatchSnapshot();
-  expect(errMsg).toMatchSnapshot();
-});
-
 it('Renders App', () => {
   const tree = shallow(<App />);
   expect(tree).toMatchSnapshot();
