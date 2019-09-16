@@ -13,9 +13,9 @@ exports[`Renders 1`] = `
         "color": "black",
         "fontFamily": "Arial, sans-serif",
         "fontSize": "9pt",
+        "width": "500px",
       }
     }
-    width="500px"
   >
     <tr>
       <td
@@ -63,54 +63,133 @@ exports[`Renders 1`] = `
     </tr>
     <tr>
       <td>
-        <b>
-          M
-        </b>
-            
-        <a
-          dangerouslySetInnerHTML={
+        <table
+          border="0"
+          cellPadding="0"
+          cellSpacing="0"
+          style={
             Object {
-              "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+              "color": "black",
+              "fontFamily": "Arial, sans-serif",
+              "fontSize": "9pt",
+              "margin": 0,
+              "padding": 0,
+              "width": "500px",
             }
           }
-          href="tel:+61111222333"
-        />
-        <br />
-        <b>
-          E
-        </b>
-             
-        <a
-          href="mailto:your.name@telstra.purple.net"
         >
-          your.name@telstra.purple.net
-        </a>
-        <br />
-        <span>
-          <b>
-            T
-          </b>
-               
-          <a
-            href="https://twitter.com/myTwitter"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            @
-            @myTwitter
-          </a>
-          <br />
-        </span>
-        <b>
-          W
-        </b>
-             
-        <a
-          href="https://www.telstra.com/purple"
-        >
-          telstra.com/purple
-        </a>
-        <br />
+          <tr>
+            <td
+              style={
+                Object {
+                  "padding": 0,
+                  "width": "30px",
+                }
+              }
+            >
+              <b>
+                M
+              </b>
+            </td>
+            <td
+              style={
+                Object {
+                  "padding": 0,
+                }
+              }
+            >
+              <a
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
+                  }
+                }
+                href="tel:+61111222333"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td
+              style={
+                Object {
+                  "padding": 0,
+                }
+              }
+            >
+              <b>
+                E
+              </b>
+            </td>
+            <td
+              style={
+                Object {
+                  "padding": 0,
+                }
+              }
+            >
+              <a
+                href="mailto:your.name@telstra.purple.net"
+              >
+                your.name@telstra.purple.net
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              style={
+                Object {
+                  "padding": 0,
+                }
+              }
+            >
+              <b>
+                T
+              </b>
+            </td>
+            <td
+              style={
+                Object {
+                  "padding": 0,
+                }
+              }
+            >
+              <a
+                href="https://twitter.com/myTwitter"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                @
+                myTwitter
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              style={
+                Object {
+                  "padding": 0,
+                }
+              }
+            >
+              <b>
+                W
+              </b>
+            </td>
+            <td
+              style={
+                Object {
+                  "padding": 0,
+                }
+              }
+            >
+              <a
+                href="https://purple.telstra.com/"
+              >
+                purple.telstra.com
+              </a>
+            </td>
+          </tr>
+        </table>
       </td>
     </tr>
     <tr>

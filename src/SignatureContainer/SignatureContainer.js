@@ -31,6 +31,8 @@ export const createContainer = props => {
     sigType,
     mobile,
     email,
+    supportHotline,
+    supportEmail,
     Container
   } = props;
 
@@ -46,7 +48,9 @@ export const createContainer = props => {
         title,
         mobile,
         email,
-        isSupport: sigType === 'support'
+        isSupport: sigType === 'support',
+        supportHotline,
+        supportEmail
       }),
       placeholders
     )

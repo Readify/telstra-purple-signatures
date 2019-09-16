@@ -9,8 +9,8 @@ const App = () => (
   <div>
     <Header
       brandInfo={{
-        appName: 'Telstra Purple Outlook Signature',
-        brandLink: 'https://readify-signatures.azurewebsites.net/'
+        appName: 'Outlook Signature',
+        brandLink: 'https://signatures.purple.tech/'
       }}
     />
     <section className="section">

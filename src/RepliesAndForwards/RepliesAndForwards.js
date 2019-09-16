@@ -1,15 +1,24 @@
 import React from 'react';
 
 import { purple } from '../constants';
-import { parseMobile } from '../util';
+import { parseMobile, parseLandLine } from '../util';
 const { brandInfo } = purple;
 
 const RepliesAndForwards = props => {
-  const { name, title, mobile, email, isSupport, twitter } = props;
+  const {
+    name,
+    title,
+    mobile,
+    email,
+    isSupport,
+    twitter,
+    supportHotline,
+    supportEmail
+  } = props;
   const styleObj = {
     color: 'black',
     fontFamily: 'Arial, sans-serif',
-    fontSize: '10.5pt'
+    fontSize: '9pt'
   };
   return (
     <div>
@@ -17,46 +26,60 @@ const RepliesAndForwards = props => {
         --
         <br />
         <b>
-          {name}&nbsp;|&nbsp;{brandInfo.brandName} | {title}
+          {name}&nbsp;|&nbsp;{brandInfo.brandName}&nbsp;|&nbsp;{title}
         </b>
         <br />
-        <b>M</b>&nbsp;&nbsp;
+        <b>M</b>&nbsp;
         <a
           href={`tel:${parseMobile(mobile).replace(/&nbsp;/g, '')}`}
           dangerouslySetInnerHTML={{ __html: parseMobile(mobile) }}
-        />
-        &nbsp;|&nbsp;
-        <b>E</b>&nbsp;&nbsp;<a href={`mailto:${email}`}>{email}</a>&nbsp;|&nbsp;
+        />{' '}
+        | <b>E</b>&nbsp;<a href={`mailto:${email}`}>{email}</a> |{' '}
         {twitter ? (
           <span>
             <span>
-              <b>T</b>&nbsp;{' '}
+              <b>T</b>&nbsp;
               <a
                 href={`https://twitter.com/${twitter.replace('@', '')}`}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                @{twitter}
+                @{twitter.replace('@', '')}
               </a>
-              &nbsp;
-            </span>
-            |&nbsp;
+            </span>{' '}
+            |{' '}
           </span>
         ) : null}
-        <b>W</b>&nbsp;&nbsp;
+        <b>W</b>&nbsp;
         <a href={brandInfo.brandLink}>{brandInfo.brandLinkName}</a>
         {isSupport ? (
           <span>
             <br />
             <b>Support&nbsp;Hotline</b>&nbsp;
-            <span
-              dangerouslySetInnerHTML={{ __html: brandInfo.supportMobile }}
-            />
-            &nbsp;|&nbsp;
-            <b>Support&nbsp;Email</b>&nbsp;{brandInfo.supportEmail}
+            <a
+              href={`tel:${parseLandLine(supportHotline).replace(
+                /&nbsp;/g,
+                ''
+              )}`}
+              dangerouslySetInnerHTML={{
+                __html: parseLandLine(supportHotline)
+              }}
+            />{' '}
+            | <b>Support&nbsp;Email</b>&nbsp;
+            <a href={`mailto:${supportEmail}`}>{supportEmail}</a>
           </span>
         ) : null}
       </p>
+      <div
+        style={{
+          fontSize: '6.5pt',
+          lineHeight: '1.5'
+        }}
+      >
+        This email may contain confidential information.
+        <br />
+        If I've sent it to you by accident, please delete it immediately
+      </div>
     </div>
   );
 };
