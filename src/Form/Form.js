@@ -15,7 +15,9 @@ class Form extends Component {
     phone: 'Phone: (Optional)',
     mobile: 'Mobile:',
     twitter: 'Twitter: (Optional)',
-    qualifications: 'Qualifications: (Optional)'
+    qualifications: 'Qualifications: (Optional)',
+    supportHotline: 'Support hotline',
+    supportEmail: 'Support email'
   };
 
   constructor() {
@@ -26,7 +28,11 @@ class Form extends Component {
         signatureTypes: {
           text: [
             { text: 'Telstra Purple', checked: true, type: 'purple' },
-            { text: 'Managed Services', checked: false, type: 'support' }
+            {
+              text: 'Telstra Purple Managed Services',
+              checked: false,
+              type: 'support'
+            }
           ].filter(Boolean),
           order: 1
         },
@@ -58,15 +64,13 @@ class Form extends Component {
     const sigType = newSignatureTypes[index].type;
 
     const baseInputs =
-      sigType === 'bts'
+      sigType === 'support'
         ? {
-            phone: {
-              text: '',
-              order: 4.5
-            },
+            supportHotline: { text: '', order: 8 },
+            supportEmail: { text: '', order: 8 },
             ...this.state.inputs
           }
-        : omit(this.state.inputs, ['phone']);
+        : omit(this.state.inputs, ['supportHotline', 'supportEmail']);
     this.setState({
       inputs: {
         ...baseInputs,

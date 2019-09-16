@@ -25,7 +25,7 @@ it('Renders Purple Signature', () => {
 
 it('Renders Purple support', () => {
   const tree = mount(<App />);
-  tree.find('#managedServices').simulate('change');
+  tree.find('#telstraPurpleManagedServices').simulate('change');
   expect(tree).toMatchSnapshot();
   expect(errMsg).toMatchSnapshot();
 });

@@ -61,7 +61,9 @@ export const copySignatureText = props => {
     mobile,
     email,
     twitter,
-    isSupport
+    isSupport,
+    supportHotline,
+    supportEmail
   } = props;
   const mobileText = parseMobile(mobile).replace(/&nbsp;/g, ' ');
 
@@ -75,43 +77,43 @@ export const copySignatureText = props => {
     '',
     mobileText
       ? `M ${mobileText}${
-          isSupport
-            ? ` | Support hotline${brandInfo.supportMobile.replace(
-                /&nbsp;/g,
-                ' '
-              )}`
-            : ''
+          isSupport ? ` | Support hotline ${supportHotline}` : ''
         }`
       : null,
     email
-      ? `E ${email}${
-          isSupport ? ` | Support email ${brandInfo.supportEmail}` : ''
-        }`
+      ? `E ${email}${isSupport ? ` | Support email ${supportEmail}` : ''}`
       : null,
     twitter ? `T ${twitter}` : null,
     `W ${brandInfo.brandLinkName}`,
     '',
-    "This email may contain confidential information. If I've sent it to you by accident, please delete it immediately"
+    'This email may contain confidential information.',
+    "If I've sent it to you by accident, please delete it immediately"
   ];
 
   copyText(textArr.filter(val => val !== null).join('\n'));
 };
 
 export const copyRepliesAndForwardsText = props => {
-  const { name, title, mobile, email, twitter, isSupport } = props;
+  const {
+    name,
+    title,
+    mobile,
+    email,
+    twitter,
+    isSupport,
+    supportHotline,
+    supportEmail
+  } = props;
   const mobileText = parseMobile(mobile).replace(/&nbsp;/g, ' ');
 
   const textArr = [
     '--',
-    `${name}, ${brandInfo.brandName} | ${title}`,
+    `${name} | ${brandInfo.brandName} | ${title}`,
     `M ${mobileText} | E ${email}${twitter ? ` | T ${twitter}` : ''} | W ${
       brandInfo.brandLinkName
     }`,
     isSupport
-      ? `Support hotline${brandInfo.supportMobile.replace(
-          /&nbsp;/g,
-          ' '
-        )} | Support email ${brandInfo.supportEmail}`
+      ? `Support hotline ${supportHotline} | Support email ${supportEmail}`
       : null
   ];
 

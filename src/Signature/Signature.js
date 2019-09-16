@@ -1,6 +1,6 @@
 import React from 'react';
 import { purple } from '../constants';
-import { parseMobile } from '../util';
+import { parseMobile, parseLandLine } from '../util';
 const { brandInfo } = purple;
 
 const Signature = props => {
@@ -11,7 +11,9 @@ const Signature = props => {
     mobile,
     email,
     twitter,
-    isSupport
+    isSupport,
+    supportHotline,
+    supportEmail
   } = props;
   const { brandLogo, brandName, brandLink, brandLinkName } = brandInfo;
 
@@ -23,11 +25,11 @@ const Signature = props => {
         border="0"
         cellSpacing="0"
         cellPadding="0"
-        width="500px"
         style={{
           color: 'black',
           fontFamily: 'Arial, sans-serif',
-          fontSize: '9pt'
+          fontSize: '9pt',
+          width: '500px'
         }}
       >
         <tr>
@@ -64,53 +66,104 @@ const Signature = props => {
         </tr>
         <tr>
           <td>
-            <b>M</b> &nbsp;&nbsp;&nbsp;
-            <a
-              href={`tel:${parseMobile(mobile).replace(/&nbsp;/g, '')}`}
-              dangerouslySetInnerHTML={{ __html: parseMobile(mobile) }}
-            />
-            <br />
-            <b>E</b>
-            &nbsp; &nbsp; &nbsp;
-            <a href={`mailto:${email}`}>{email}</a>
-            <br />
-            {twitter ? (
-              <span>
-                <b>T</b>
-                &nbsp; &nbsp; &nbsp;
-                <a
-                  href={`https://twitter.com/${twitter.replace('@', '')}`}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  @{twitter}
-                </a>
-                <br />
-              </span>
-            ) : null}
-            <b>W</b>
-            &thinsp; &thinsp; &thinsp;
-            <a href={brandLink}>{brandLinkName}</a>
-            <br />
+            <table
+              border="0"
+              cellSpacing="0"
+              cellPadding="0"
+              style={{
+                color: 'black',
+                fontFamily: 'Arial, sans-serif',
+                fontSize: '9pt',
+                width: '500px',
+                margin: 0,
+                padding: 0
+              }}
+            >
+              <tr>
+                <td style={{ padding: 0, width: '30px' }}>
+                  <b>M</b>
+                </td>
+                <td style={{ padding: 0 }}>
+                  <a
+                    href={`tel:${parseMobile(mobile).replace(/&nbsp;/g, '')}`}
+                    dangerouslySetInnerHTML={{ __html: parseMobile(mobile) }}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td style={{ padding: 0 }}>
+                  <b>E</b>
+                </td>
+                <td style={{ padding: 0 }}>
+                  <a href={`mailto:${email}`}>{email}</a>
+                </td>
+              </tr>
+              {twitter ? (
+                <tr>
+                  <td style={{ padding: 0 }}>
+                    <b>T</b>
+                  </td>
+                  <td style={{ padding: 0 }}>
+                    <a
+                      href={`https://twitter.com/${twitter.replace('@', '')}`}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      @{twitter.replace('@', '')}
+                    </a>
+                  </td>
+                </tr>
+              ) : null}
+              <tr>
+                <td style={{ padding: 0 }}>
+                  <b>W</b>
+                </td>
+                <td style={{ padding: 0 }}>
+                  <a href={brandLink}>{brandLinkName}</a>
+                </td>
+              </tr>
+            </table>
+
             {isSupport ? (
-              <span>
-                <b>Support&nbsp;Hotline</b>&nbsp;&nbsp;
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: brandInfo.supportMobile
-                  }}
-                />
-                <br />
-                <b>Support&nbsp;Email</b>
-                &nbsp;&nbsp;&nbsp;&nbsp;&thinsp;&thinsp;&thinsp;
-                <a href={`mailto:${brandInfo.supportEmail}`}>
-                  {brandInfo.supportEmail}
-                </a>
-                <br />
-              </span>
-            ) : (
-              ''
-            )}
+              <table
+                border="0"
+                cellSpacing="0"
+                cellPadding="0"
+                style={{
+                  color: 'black',
+                  fontFamily: 'Arial, sans-serif',
+                  fontSize: '9pt',
+                  width: '500px',
+                  margin: 0,
+                  padding: 0
+                }}
+              >
+                <tr>
+                  <td style={{ padding: 0, width: '100px' }}>
+                    <b>Support&nbsp;Hotline</b>
+                  </td>
+                  <td style={{ padding: 0 }}>
+                    <a
+                      href={`tel:${parseLandLine(supportHotline).replace(
+                        /&nbsp;/g,
+                        ''
+                      )}`}
+                      dangerouslySetInnerHTML={{
+                        __html: parseLandLine(supportHotline)
+                      }}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ padding: 0 }}>
+                    <b>Support&nbsp;Email</b>
+                  </td>
+                  <td style={{ padding: 0 }}>
+                    <a href={`mailto:${supportEmail}`}>{supportEmail}</a>
+                  </td>
+                </tr>
+              </table>
+            ) : null}
           </td>
         </tr>
         <tr>
