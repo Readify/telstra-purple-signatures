@@ -57,6 +57,13 @@ exports[`Renders 1`] = `
           alt="Telstra Purple"
           height="52"
           src="https://readifysignatures.blob.core.windows.net/images/purple-1.png"
+          style={
+            Object {
+              "height": "52px",
+              "maxWidth": "none",
+              "width": "35px",
+            }
+          }
           width="35"
         />
       </td>
@@ -204,7 +211,7 @@ exports[`Renders 1`] = `
       >
         This email may contain confidential information.
         <br />
-        If I've sent it to you by accident, please delete it immediately
+        If I've sent it to you by accident, please delete it immediately.
       </td>
     </tr>
   </table>
