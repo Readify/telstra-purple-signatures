@@ -33,8 +33,16 @@ const RepliesAndForwards = props => {
         <a
           href={`tel:${parseMobile(mobile).replace(/&nbsp;/g, '')}`}
           dangerouslySetInnerHTML={{ __html: parseMobile(mobile) }}
+          style={{ color: brandInfo.brandLinkColour }}
         />{' '}
-        | <b>E</b>&nbsp;<a href={`mailto:${email}`}>{email}</a> |{' '}
+        | <b>E</b>&nbsp;
+        <a
+          href={`mailto:${email}`}
+          style={{ color: brandInfo.brandLinkColour }}
+        >
+          {email}
+        </a>{' '}
+        |{' '}
         {twitter ? (
           <span>
             <span>
@@ -43,6 +51,7 @@ const RepliesAndForwards = props => {
                 href={`https://twitter.com/${twitter.replace('@', '')}`}
                 rel="noopener noreferrer"
                 target="_blank"
+                style={{ color: brandInfo.brandLinkColour }}
               >
                 @{twitter.replace('@', '')}
               </a>
@@ -51,7 +60,12 @@ const RepliesAndForwards = props => {
           </span>
         ) : null}
         <b>W</b>&nbsp;
-        <a href={brandInfo.brandLink}>{brandInfo.brandLinkName}</a>
+        <a
+          href={brandInfo.brandLink}
+          style={{ color: brandInfo.brandLinkColour }}
+        >
+          {brandInfo.brandLinkName}
+        </a>
         {isSupport ? (
           <span>
             <br />
@@ -64,9 +78,15 @@ const RepliesAndForwards = props => {
               dangerouslySetInnerHTML={{
                 __html: parseLandLine(supportHotline)
               }}
+              style={{ color: brandInfo.brandLinkColour }}
             />{' '}
             | <b>Support&nbsp;Email</b>&nbsp;
-            <a href={`mailto:${supportEmail}`}>{supportEmail}</a>
+            <a
+              href={`mailto:${supportEmail}`}
+              style={{ color: brandInfo.brandLinkColour }}
+            >
+              {supportEmail}
+            </a>
           </span>
         ) : null}
       </p>

@@ -3,9 +3,10 @@ export const purple = {
     brandName: 'Telstra Purple',
     brandLink: 'https://purple.telstra.com/',
     brandLinkName: 'purple.telstra.com',
+    brandLinkColour: '#0E39FB',
     brandLogo: {
       link:
-        'https://readifysignatures.blob.core.windows.net/images/purple-1.png',
+        'https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png',
       alt: 'Telstra Purple'
     }
   },
