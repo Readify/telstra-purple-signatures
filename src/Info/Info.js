@@ -36,7 +36,7 @@ const Info = () => (
             <span style={{ fontWeight: 'bold' }}>
               Outlook web access (OWA):{' '}
             </span>
-            Cog (top-right) > Options > Mail > Layout > Email signature
+            Cog (top-right) > &quot;View all Outlook settings&quot; link (bottom) > Mail > Compose and reply > Email signature
           </li>
         </ul>
       </li>
