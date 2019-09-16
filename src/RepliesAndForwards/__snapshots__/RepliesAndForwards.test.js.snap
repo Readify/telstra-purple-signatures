@@ -34,8 +34,7 @@ exports[`Renders 1`] = `
       href="tel:+61111222333"
     />
      
-    |
-     
+    | 
     <b>
       E
     </b>
@@ -45,8 +44,7 @@ exports[`Renders 1`] = `
     >
       your.name@readify.net
     </a>
-     
-    |
+     |
      
     <span>
       <span>

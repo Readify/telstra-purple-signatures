@@ -20,6 +20,14 @@ exports[`Renders 1`] = `
       <div
         className="navbar-brand"
       >
+        <img
+          src="/logo.png"
+          style={
+            Object {
+              "height": 60,
+            }
+          }
+        />
         <a
           className="navbar-item"
           href="https://brand-link"
