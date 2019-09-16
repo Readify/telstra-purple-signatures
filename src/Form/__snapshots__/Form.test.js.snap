@@ -42,6 +42,20 @@ exports[`Renders 1`] = `
               />
               Telstra Purple
             </label>
+            <label
+              className="radio"
+              key="1"
+            >
+              <input
+                checked={false}
+                className="radioInput"
+                id="telstraPurpleManagedServices"
+                name="signatureTypeOpt"
+                onChange={[Function]}
+                type="radio"
+              />
+              Telstra Purple Managed Services
+            </label>
           </div>
         </div>
       </div>
@@ -276,6 +290,11 @@ exports[`Renders 1`] = `
           "checked": true,
           "text": "Telstra Purple",
           "type": "purple",
+        },
+        Object {
+          "checked": false,
+          "text": "Telstra Purple Managed Services",
+          "type": "support",
         },
       ]
     }
