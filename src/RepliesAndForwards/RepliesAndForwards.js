@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { purple } from '../constants';
-import { parseMobile } from '../util';
+import { parseMobile, parseLandLine } from '../util';
 const { brandInfo } = purple;
 
 const RepliesAndForwards = props => {
@@ -55,8 +55,18 @@ const RepliesAndForwards = props => {
         {isSupport ? (
           <span>
             <br />
-            <b>Support&nbsp;Hotline</b>&nbsp;{supportHotline} |{' '}
-            <b>Support&nbsp;Email</b>&nbsp;{supportEmail}
+            <b>Support&nbsp;Hotline</b>&nbsp;
+            <a
+              href={`tel:${parseLandLine(supportHotline).replace(
+                /&nbsp;/g,
+                ''
+              )}`}
+              dangerouslySetInnerHTML={{
+                __html: parseLandLine(supportHotline)
+              }}
+            />{' '}
+            | <b>Support&nbsp;Email</b>&nbsp;
+            <a href={`mailto:${supportEmail}`}>{supportEmail}</a>
           </span>
         ) : null}
       </p>
