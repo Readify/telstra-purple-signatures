@@ -59,6 +59,7 @@ const Signature = props => {
             <img
               width="35"
               height="52"
+              style={{ width: '35px', height: '52px', maxWidth: 'none' }}
               src={brandLogo.link}
               alt={brandLogo.alt}
             />
