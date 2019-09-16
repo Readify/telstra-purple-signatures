@@ -21,6 +21,16 @@ exports[`Renders 1`] = `
       <td
         valign="top"
       >
+        <div
+          style={
+            Object {
+              "height": "15px",
+              "lineHeight": "15px",
+            }
+          }
+        >
+           
+        </div>
         <p>
           <b>
             your name
@@ -55,16 +65,16 @@ exports[`Renders 1`] = `
       >
         <img
           alt="Telstra Purple"
-          height="52"
-          src="https://readifysignatures.blob.core.windows.net/images/purple-1.png"
+          height="83"
+          src="https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png"
           style={
             Object {
-              "height": "52px",
+              "height": "83px",
               "maxWidth": "none",
-              "width": "35px",
+              "width": "83px",
             }
           }
-          width="35"
+          width="83"
         />
       </td>
     </tr>
@@ -112,6 +122,11 @@ exports[`Renders 1`] = `
                   }
                 }
                 href="tel:+61111222333"
+                style={
+                  Object {
+                    "color": "#0E39FB",
+                  }
+                }
               />
             </td>
           </tr>
@@ -136,6 +151,11 @@ exports[`Renders 1`] = `
             >
               <a
                 href="mailto:your.name@telstra.purple.net"
+                style={
+                  Object {
+                    "color": "#0E39FB",
+                  }
+                }
               >
                 your.name@telstra.purple.net
               </a>
@@ -163,6 +183,11 @@ exports[`Renders 1`] = `
               <a
                 href="https://twitter.com/myTwitter"
                 rel="noopener noreferrer"
+                style={
+                  Object {
+                    "color": "#0E39FB",
+                  }
+                }
                 target="_blank"
               >
                 @
@@ -191,6 +216,11 @@ exports[`Renders 1`] = `
             >
               <a
                 href="https://purple.telstra.com/"
+                style={
+                  Object {
+                    "color": "#0E39FB",
+                  }
+                }
               >
                 purple.telstra.com
               </a>

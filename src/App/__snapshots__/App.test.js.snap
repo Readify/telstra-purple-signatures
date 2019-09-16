@@ -740,6 +740,16 @@ exports[`Renders Purple Signature 1`] = `
                               <td
                                 valign="top"
                               >
+                                <div
+                                  style={
+                                    Object {
+                                      "height": "15px",
+                                      "lineHeight": "15px",
+                                    }
+                                  }
+                                >
+                                   
+                                </div>
                                 <p>
                                   <b>
                                     Your Name
@@ -770,16 +780,16 @@ exports[`Renders Purple Signature 1`] = `
                               >
                                 <img
                                   alt="Telstra Purple"
-                                  height="52"
-                                  src="https://readifysignatures.blob.core.windows.net/images/purple-1.png"
+                                  height="83"
+                                  src="https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png"
                                   style={
                                     Object {
-                                      "height": "52px",
+                                      "height": "83px",
                                       "maxWidth": "none",
-                                      "width": "35px",
+                                      "width": "83px",
                                     }
                                   }
-                                  width="35"
+                                  width="83"
                                 />
                               </td>
                             </tr>
@@ -827,6 +837,11 @@ exports[`Renders Purple Signature 1`] = `
                                           }
                                         }
                                         href="tel:+61111222333"
+                                        style={
+                                          Object {
+                                            "color": "#0E39FB",
+                                          }
+                                        }
                                       />
                                     </td>
                                   </tr>
@@ -851,6 +866,11 @@ exports[`Renders Purple Signature 1`] = `
                                     >
                                       <a
                                         href="mailto:your.name@purple.telstra.com"
+                                        style={
+                                          Object {
+                                            "color": "#0E39FB",
+                                          }
+                                        }
                                       >
                                         your.name@purple.telstra.com
                                       </a>
@@ -877,6 +897,11 @@ exports[`Renders Purple Signature 1`] = `
                                     >
                                       <a
                                         href="https://purple.telstra.com/"
+                                        style={
+                                          Object {
+                                            "color": "#0E39FB",
+                                          }
+                                        }
                                       >
                                         purple.telstra.com
                                       </a>
@@ -1072,6 +1097,11 @@ exports[`Renders Purple Signature 1`] = `
                                 }
                               }
                               href="tel:+61111222333"
+                              style={
+                                Object {
+                                  "color": "#0E39FB",
+                                }
+                              }
                             />
                              
                             | 
@@ -1081,10 +1111,16 @@ exports[`Renders Purple Signature 1`] = `
                              
                             <a
                               href="mailto:your.name@purple.telstra.com"
+                              style={
+                                Object {
+                                  "color": "#0E39FB",
+                                }
+                              }
                             >
                               your.name@purple.telstra.com
                             </a>
-                             |
+                             
+                            |
                              
                             <b>
                               W
@@ -1092,6 +1128,11 @@ exports[`Renders Purple Signature 1`] = `
                              
                             <a
                               href="https://purple.telstra.com/"
+                              style={
+                                Object {
+                                  "color": "#0E39FB",
+                                }
+                              }
                             >
                               purple.telstra.com
                             </a>

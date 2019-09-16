@@ -32,6 +32,11 @@ exports[`Renders 1`] = `
         }
       }
       href="tel:+61111222333"
+      style={
+        Object {
+          "color": "#0E39FB",
+        }
+      }
     />
      
     | 
@@ -41,10 +46,16 @@ exports[`Renders 1`] = `
      
     <a
       href="mailto:your.name@readify.net"
+      style={
+        Object {
+          "color": "#0E39FB",
+        }
+      }
     >
       your.name@readify.net
     </a>
-     |
+     
+    |
      
     <span>
       <span>
@@ -55,6 +66,11 @@ exports[`Renders 1`] = `
         <a
           href="https://twitter.com/myTwitter"
           rel="noopener noreferrer"
+          style={
+            Object {
+              "color": "#0E39FB",
+            }
+          }
           target="_blank"
         >
           @
@@ -71,6 +87,11 @@ exports[`Renders 1`] = `
      
     <a
       href="https://purple.telstra.com/"
+      style={
+        Object {
+          "color": "#0E39FB",
+        }
+      }
     >
       purple.telstra.com
     </a>

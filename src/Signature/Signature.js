@@ -34,6 +34,8 @@ const Signature = props => {
       >
         <tr>
           <td valign="top">
+            {/*Offset text so it lines up with top of logo on light mode UIs and works in Outlook*/}
+            <div style={{ height: '15px', lineHeight: '15px' }}>&nbsp;</div>
             <p>
               <b>{name}</b>
               <br />
@@ -57,9 +59,9 @@ const Signature = props => {
             }}
           >
             <img
-              width="35"
-              height="52"
-              style={{ width: '35px', height: '52px', maxWidth: 'none' }}
+              width="83"
+              height="83"
+              style={{ width: '83px', height: '83px', maxWidth: 'none' }}
               src={brandLogo.link}
               alt={brandLogo.alt}
             />
@@ -86,6 +88,7 @@ const Signature = props => {
                 </td>
                 <td style={{ padding: 0 }}>
                   <a
+                    style={{ color: brandInfo.brandLinkColour }}
                     href={`tel:${parseMobile(mobile).replace(/&nbsp;/g, '')}`}
                     dangerouslySetInnerHTML={{ __html: parseMobile(mobile) }}
                   />
@@ -96,7 +99,12 @@ const Signature = props => {
                   <b>E</b>
                 </td>
                 <td style={{ padding: 0 }}>
-                  <a href={`mailto:${email}`}>{email}</a>
+                  <a
+                    href={`mailto:${email}`}
+                    style={{ color: brandInfo.brandLinkColour }}
+                  >
+                    {email}
+                  </a>
                 </td>
               </tr>
               {twitter ? (
@@ -109,6 +117,7 @@ const Signature = props => {
                       href={`https://twitter.com/${twitter.replace('@', '')}`}
                       rel="noopener noreferrer"
                       target="_blank"
+                      style={{ color: brandInfo.brandLinkColour }}
                     >
                       @{twitter.replace('@', '')}
                     </a>
@@ -120,7 +129,12 @@ const Signature = props => {
                   <b>W</b>
                 </td>
                 <td style={{ padding: 0 }}>
-                  <a href={brandLink}>{brandLinkName}</a>
+                  <a
+                    href={brandLink}
+                    style={{ color: brandInfo.brandLinkColour }}
+                  >
+                    {brandLinkName}
+                  </a>
                 </td>
               </tr>
             </table>
@@ -152,6 +166,7 @@ const Signature = props => {
                       dangerouslySetInnerHTML={{
                         __html: parseLandLine(supportHotline)
                       }}
+                      style={{ color: brandInfo.brandLinkColour }}
                     />
                   </td>
                 </tr>
@@ -160,7 +175,12 @@ const Signature = props => {
                     <b>Support&nbsp;Email</b>
                   </td>
                   <td style={{ padding: 0 }}>
-                    <a href={`mailto:${supportEmail}`}>{supportEmail}</a>
+                    <a
+                      href={`mailto:${supportEmail}`}
+                      style={{ color: brandInfo.brandLinkColour }}
+                    >
+                      {supportEmail}
+                    </a>
                   </td>
                 </tr>
               </table>
