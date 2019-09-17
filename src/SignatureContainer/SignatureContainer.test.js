@@ -7,7 +7,7 @@ describe('SignatureContainer', () => {
   it('Renders', () => {
     const props = {
       email: 'your.name@telstra.purple.net',
-      sigType: 'readify',
+      sigType: 'purple',
       mobile: '+61 111 222 333',
       name: 'your name',
       title: 'Job Title',

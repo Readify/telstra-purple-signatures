@@ -18,8 +18,8 @@ export const purple = {
     mobile: '+61 111 222 333',
     twitter: 'myTwitterHandle',
     qualifications: 'Jedi Master | PSM I',
-    supportHotline: '1800 732 343',
-    supportEmail: 'support@readify.net'
+    supportHotline: '1800 xyz xyz',
+    supportEmail: 'support@some.domain'
   }
 };
 

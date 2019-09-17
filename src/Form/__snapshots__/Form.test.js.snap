@@ -276,8 +276,8 @@ exports[`Renders 1`] = `
         "mobile": "+61 111 222 333",
         "name": "Your Name",
         "qualifications": "Jedi Master | PSM I",
-        "supportEmail": "support@readify.net",
-        "supportHotline": "1800 732 343",
+        "supportEmail": "support@some.domain",
+        "supportHotline": "1800 xyz xyz",
         "title": "Job Title",
         "twitter": "myTwitterHandle",
       }

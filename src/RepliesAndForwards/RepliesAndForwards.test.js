@@ -5,7 +5,7 @@ import RepliesAndForwards from './RepliesAndForwards';
 
 it('Renders', () => {
   const props = {
-    email: 'your.name@readify.net',
+    email: 'your.name@purple.telstra.com',
     sigType: false,
     mobile: '+61 111 222 333',
     name: 'your name',
