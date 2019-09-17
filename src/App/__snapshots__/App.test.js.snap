@@ -449,8 +449,8 @@ exports[`Renders Purple Signature 1`] = `
                   "mobile": "+61 111 222 333",
                   "name": "Your Name",
                   "qualifications": "Jedi Master | PSM I",
-                  "supportEmail": "support@readify.net",
-                  "supportHotline": "1800 732 343",
+                  "supportEmail": "support@some.domain",
+                  "supportHotline": "1800 xyz xyz",
                   "title": "Job Title",
                   "twitter": "myTwitterHandle",
                 }
@@ -485,8 +485,8 @@ exports[`Renders Purple Signature 1`] = `
                     "mobile": "+61 111 222 333",
                     "name": "Your Name",
                     "qualifications": "Jedi Master | PSM I",
-                    "supportEmail": "support@readify.net",
-                    "supportHotline": "1800 732 343",
+                    "supportEmail": "support@some.domain",
+                    "supportHotline": "1800 xyz xyz",
                     "title": "Job Title",
                     "twitter": "myTwitterHandle",
                   }
@@ -1634,7 +1634,7 @@ exports[`Renders Purple support 1`] = `
                   <input
                     className="input"
                     onChange={[Function]}
-                    placeholder="1800 732 343"
+                    placeholder="1800 xyz xyz"
                     style={
                       Object {
                         "width": "300px",
@@ -1668,7 +1668,7 @@ exports[`Renders Purple support 1`] = `
                   <input
                     className="input"
                     onChange={[Function]}
-                    placeholder="support@readify.net"
+                    placeholder="support@some.domain"
                     style={
                       Object {
                         "width": "300px",
@@ -1690,8 +1690,8 @@ exports[`Renders Purple support 1`] = `
                   "mobile": "+61 111 222 333",
                   "name": "Your Name",
                   "qualifications": "Jedi Master | PSM I",
-                  "supportEmail": "support@readify.net",
-                  "supportHotline": "1800 732 343",
+                  "supportEmail": "support@some.domain",
+                  "supportHotline": "1800 xyz xyz",
                   "title": "Job Title",
                   "twitter": "myTwitterHandle",
                 }
@@ -1728,8 +1728,8 @@ exports[`Renders Purple support 1`] = `
                     "mobile": "+61 111 222 333",
                     "name": "Your Name",
                     "qualifications": "Jedi Master | PSM I",
-                    "supportEmail": "support@readify.net",
-                    "supportHotline": "1800 732 343",
+                    "supportEmail": "support@some.domain",
+                    "supportHotline": "1800 xyz xyz",
                     "title": "Job Title",
                     "twitter": "myTwitterHandle",
                   }
@@ -1793,8 +1793,8 @@ exports[`Renders Purple support 1`] = `
                         "mobile": "+61 111 222 333",
                         "name": "Your Name",
                         "qualifications": "",
-                        "supportEmail": "support@readify.net",
-                        "supportHotline": "1800 732 343",
+                        "supportEmail": "support@some.domain",
+                        "supportHotline": "1800 xyz xyz",
                         "title": "Job Title",
                         "twitter": "",
                       },
@@ -1845,8 +1845,8 @@ exports[`Renders Purple support 1`] = `
                         "mobile": "+61 111 222 333",
                         "name": "Your Name",
                         "qualifications": "",
-                        "supportEmail": "support@readify.net",
-                        "supportHotline": "1800 732 343",
+                        "supportEmail": "support@some.domain",
+                        "supportHotline": "1800 xyz xyz",
                         "title": "Job Title",
                         "twitter": "",
                       }
@@ -1990,8 +1990,8 @@ exports[`Renders Purple support 1`] = `
                         mobile="+61 111 222 333"
                         name="Your Name"
                         qualifications=""
-                        supportEmail="support@readify.net"
-                        supportHotline="1800 732 343"
+                        supportEmail="support@some.domain"
+                        supportHotline="1800 xyz xyz"
                         title="Job Title"
                         twitter=""
                       >
@@ -2221,10 +2221,10 @@ exports[`Renders Purple support 1`] = `
                                       <a
                                         dangerouslySetInnerHTML={
                                           Object {
-                                            "__html": "1800 732 343",
+                                            "__html": "1800 xyz xyz",
                                           }
                                         }
-                                        href="tel:1800 732 343"
+                                        href="tel:1800 xyz xyz"
                                         style={
                                           Object {
                                             "color": "#0E39FB",
@@ -2253,14 +2253,14 @@ exports[`Renders Purple support 1`] = `
                                       }
                                     >
                                       <a
-                                        href="mailto:support@readify.net"
+                                        href="mailto:support@some.domain"
                                         style={
                                           Object {
                                             "color": "#0E39FB",
                                           }
                                         }
                                       >
-                                        support@readify.net
+                                        support@some.domain
                                       </a>
                                     </td>
                                   </tr>
@@ -2420,8 +2420,8 @@ exports[`Renders Purple support 1`] = `
                         mobile="+61 111 222 333"
                         name="Your Name"
                         qualifications=""
-                        supportEmail="support@readify.net"
-                        supportHotline="1800 732 343"
+                        supportEmail="support@some.domain"
+                        supportHotline="1800 xyz xyz"
                         title="Job Title"
                         twitter=""
                       >
@@ -2504,10 +2504,10 @@ exports[`Renders Purple support 1`] = `
                               <a
                                 dangerouslySetInnerHTML={
                                   Object {
-                                    "__html": "1800 732 343",
+                                    "__html": "1800 xyz xyz",
                                   }
                                 }
-                                href="tel:1800 732 343"
+                                href="tel:1800 xyz xyz"
                                 style={
                                   Object {
                                     "color": "#0E39FB",
@@ -2521,14 +2521,14 @@ exports[`Renders Purple support 1`] = `
                               </b>
                                
                               <a
-                                href="mailto:support@readify.net"
+                                href="mailto:support@some.domain"
                                 style={
                                   Object {
                                     "color": "#0E39FB",
                                   }
                                 }
                               >
-                                support@readify.net
+                                support@some.domain
                               </a>
                             </span>
                           </p>
