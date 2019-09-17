@@ -6,7 +6,7 @@ exports[`SignatureContainer Renders 1`] = `
   email="your.name@telstra.purple.net"
   mobile="+61 111 222 333"
   name="your name"
-  sigType="readify"
+  sigType="purple"
   title="Job Title"
   twitter="@myTwitter"
 />

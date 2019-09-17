@@ -45,14 +45,14 @@ exports[`Renders 1`] = `
     </b>
      
     <a
-      href="mailto:your.name@readify.net"
+      href="mailto:your.name@purple.telstra.com"
       style={
         Object {
           "color": "#0E39FB",
         }
       }
     >
-      your.name@readify.net
+      your.name@purple.telstra.com
     </a>
      
     |
