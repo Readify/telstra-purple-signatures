@@ -2,6 +2,10 @@ import React from 'react';
 import { purple } from '../constants';
 import ReactDOMServer from 'react-dom/server';
 import { entries } from 'lodash/object';
+import {
+  formatPhoneNumberIntl,
+  isValidPhoneNumber
+} from 'react-phone-number-input';
 
 const { brandInfo } = purple;
 
@@ -11,21 +15,18 @@ const multiSplice = (toAddIndexes, val, array) =>
 export const parseMobile = mobileNum => {
   if (mobileNum === undefined) return null;
 
-  const mobileFormatted = mobileNum.replace(/[\s|+]/g, '');
-  const numberArr = mobileFormatted.split('');
-
-  // 0411 111 111 number
-  if (mobileFormatted.length === 10) {
-    multiSplice([4, 8], '&nbsp;', numberArr);
-    // +61 411 111 111 number
-  } else if (mobileFormatted.length === 11) {
-    numberArr.splice(0, 0, '+');
-    multiSplice([3, 7, 11], '&nbsp;', numberArr);
-    // some random number, trust the user
-  } else {
+  // some random number, trust the user
+  if (
+    !isValidPhoneNumber(mobileNum) &&
+    !isValidPhoneNumber(purple.default.countryCode + mobileNum)
+  )
     return mobileNum;
+  // default to preset country code when the international prefix '+' is absence
+  if (mobileNum.search(/\+/) < 0) {
+    mobileNum = purple.default.countryCode + mobileNum;
   }
-  return numberArr.join('');
+
+  return formatPhoneNumberIntl(mobileNum);
 };
 
 export const parseLandLine = mobileNum => {

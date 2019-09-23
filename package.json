@@ -7,6 +7,7 @@
     "lodash": "^4.17.15",
     "react": "^16.9.0",
     "react-dom": "^16.6.1",
+    "react-phone-number-input": "^2.3.22",
     "recompose": "^0.30.0"
   },
   "devDependencies": {

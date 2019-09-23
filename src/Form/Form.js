@@ -3,6 +3,8 @@ import { omit, mapValues } from 'lodash/object';
 import { camelCase } from 'lodash/string';
 
 import './Form.scss';
+import 'react-phone-number-input/style.css';
+
 import constants from '../constants';
 import SignatureContainer from '../SignatureContainer';
 
