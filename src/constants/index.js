@@ -20,6 +20,10 @@ export const purple = {
     qualifications: 'Jedi Master | PSM I',
     supportHotline: '1800 xyz xyz',
     supportEmail: 'support@some.domain'
+  },
+
+  default: {
+    countryCode: '+61'
   }
 };
 

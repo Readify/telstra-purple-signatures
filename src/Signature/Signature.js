@@ -89,8 +89,10 @@ const Signature = props => {
                 <td style={{ padding: 0 }}>
                   <a
                     style={{ color: brandInfo.brandLinkColour }}
-                    href={`tel:${parseMobile(mobile).replace(/&nbsp;/g, '')}`}
-                    dangerouslySetInnerHTML={{ __html: parseMobile(mobile) }}
+                    href={`tel:${parseMobile(mobile).replace(/\s/g, '')}`}
+                    dangerouslySetInnerHTML={{
+                      __html: parseMobile(mobile).replace(/\s/g, '&nbsp;')
+                    }}
                   />
                 </td>
               </tr>

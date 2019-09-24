@@ -31,8 +31,10 @@ const RepliesAndForwards = props => {
         <br />
         <b>M</b>&nbsp;
         <a
-          href={`tel:${parseMobile(mobile).replace(/&nbsp;/g, '')}`}
-          dangerouslySetInnerHTML={{ __html: parseMobile(mobile) }}
+          href={`tel:${parseMobile(mobile).replace(/\s/g, '')}`}
+          dangerouslySetInnerHTML={{
+            __html: parseMobile(mobile).replace(/\s/g, '&nbsp;')
+          }}
           style={{ color: brandInfo.brandLinkColour }}
         />{' '}
         | <b>E</b>&nbsp;

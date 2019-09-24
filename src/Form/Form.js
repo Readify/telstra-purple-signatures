@@ -3,6 +3,7 @@ import { omit, mapValues } from 'lodash/object';
 import { camelCase } from 'lodash/string';
 
 import './Form.scss';
+
 import constants from '../constants';
 import SignatureContainer from '../SignatureContainer';
 
