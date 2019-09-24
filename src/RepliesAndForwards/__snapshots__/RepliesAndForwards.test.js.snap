@@ -28,10 +28,10 @@ exports[`Renders 1`] = `
     <a
       dangerouslySetInnerHTML={
         Object {
-          "__html": "+61 111 222 333",
+          "__html": "+61&nbsp;111&nbsp;222&nbsp;333",
         }
       }
-      href="tel:+61 111 222 333"
+      href="tel:+61111222333"
       style={
         Object {
           "color": "#0E39FB",
