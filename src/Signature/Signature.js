@@ -77,7 +77,6 @@ const Signature = props => {
                 color: 'black',
                 fontFamily: 'Arial, sans-serif',
                 fontSize: '9pt',
-                width: '500px',
                 margin: 0,
                 padding: 0
               }}
