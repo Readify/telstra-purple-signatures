@@ -5,7 +5,7 @@
 
 This app can be used to create Telstra Purple's Email Signature.
 
-![Telstra Purple Signature Generator Screenshot](./screenshot.png)
+![Telstra Purple Signature Generator Screenshot](https://readifyvc.s3-ap-southeast-2.amazonaws.com/screenshot.png)
 
 
 ## App Roadmap
