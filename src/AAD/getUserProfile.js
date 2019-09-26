@@ -15,7 +15,7 @@ function getUserProfile(accessToken) {
     return fetch(graphEndpoint, options)
       .catch(error => {
         console.error(
-          'Failed to get your profile, you have ti fill the form manually'
+          'Failed to get your profile, you have to fill the form manually'
         );
       })
       .then(res => res.json())
