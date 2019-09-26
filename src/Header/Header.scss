@@ -3,10 +3,18 @@
   color: white;
 
   .navbar-brand {
-    a {
+    display: flex;
+    justify-content: space-between;
+    
+    .brand-name, .username {
+      margin-right: auto;
       color: white;
       font-size: 26px;
       font-weight: 200;
+    }
+
+    .login, .username {
+      margin-left: auto;
     }
   }
 }
