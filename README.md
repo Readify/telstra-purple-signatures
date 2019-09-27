@@ -11,8 +11,8 @@ This app can be used to create Telstra Purple's Email Signature.
 ## App Roadmap
 - [x] Host site
 - [x] Convert to create-react-app so that we get prod-react, and decent tooling
-- [x] Add BTS Digtal Signature
-- [x] Leverage Azure Actice Directory to autofill from
+- [x] Add Telstra Purple Signature
+- [x] Leverage Azure Active Directory to autofill the form
 - [ ] Write some tests
 
 ## Looks great, how can I use it for my company?
