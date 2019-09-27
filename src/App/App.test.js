@@ -1,5 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
+import { basicReduxStore } from '../reduxStore';
+import { Provider } from 'react-redux';
 
 import App from './App';
 
@@ -18,19 +20,31 @@ afterEach(() => {
 });
 
 it('Renders Purple Signature', () => {
-  const tree = mount(<App />);
+  const tree = mount(
+    <Provider store={basicReduxStore}>
+      <App />
+    </Provider>
+  );
   expect(tree).toMatchSnapshot();
   expect(errMsg).toMatchSnapshot();
 });
 
 it('Renders Purple support', () => {
-  const tree = mount(<App />);
+  const tree = mount(
+    <Provider store={basicReduxStore}>
+      <App />
+    </Provider>
+  );
   tree.find('#telstraPurpleManagedServices').simulate('change');
   expect(tree).toMatchSnapshot();
   expect(errMsg).toMatchSnapshot();
 });
 
 it('Renders App', () => {
-  const tree = shallow(<App />);
+  const tree = shallow(
+    <Provider store={basicReduxStore}>
+      <App />
+    </Provider>
+  );
   expect(tree).toMatchSnapshot();
 });

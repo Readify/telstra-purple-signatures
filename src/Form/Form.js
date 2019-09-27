@@ -9,7 +9,7 @@ import './Form.scss';
 import constants from '../constants';
 import SignatureContainer from '../SignatureContainer';
 
-class Form extends Component {
+export class Form extends Component {
   static labels = {
     signatureTypes: 'Signature Type',
     name: 'Your Name:',
