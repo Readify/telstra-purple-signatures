@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { omit, mapValues } from 'lodash/object';
 import { camelCase } from 'lodash/string';
-
+import fetchProfile from '../AAD/getUserProfile';
 import './Form.scss';
 
 import constants from '../constants';
@@ -21,8 +23,9 @@ class Form extends Component {
     supportEmail: 'Support email'
   };
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
     this.state = {
       sigType: false,
       inputs: {
@@ -45,6 +48,26 @@ class Form extends Component {
         twitter: { text: '', order: 7 }
       }
     };
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.accessToken && !this.props.profile) {
+      this.props.fetchProfile(this.props.accessToken.accessToken);
+    }
+
+    if (this.props.profile && this.props.profile !== prevProps.profile) {
+      this.setState({
+        ...this.state,
+        inputs: {
+          ...this.state.inputs,
+          name: { text: this.props.profile.displayName, order: 2 },
+          title: { text: this.props.profile.jobTitle, order: 3 },
+          qualifications: { text: '', order: 4 },
+          mobile: { text: this.props.profile.mobilePhone, order: 5 },
+          email: { text: this.props.profile.mail, order: 6 }
+        }
+      });
+    }
   }
 
   handleChange = (name, value) => {
@@ -142,7 +165,6 @@ class Form extends Component {
   render() {
     const placeholders = constants.purple.placeholders;
     const formInputs = this.state.inputs;
-
     const inputs = this.renderHtmlForInputs(formInputs, placeholders);
 
     const SignatureContainerProps = {
@@ -161,4 +183,20 @@ class Form extends Component {
   }
 }
 
-export default Form;
+const mapStateToProps = state => ({
+  profile: state.profile,
+  accessToken: state.accessToken
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      fetchProfile: fetchProfile
+    },
+    dispatch
+  );
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Form);

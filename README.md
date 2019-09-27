@@ -5,14 +5,15 @@
 
 This app can be used to create Telstra Purple's Email Signature.
 
-![Telstra Purple Signature Generator Screenshot](https://readifysignatures.blob.core.windows.net/images/signature-app-screenshot.png?)
+![Telstra Purple Signature Generator Screenshot](https://readifyvc.s3-ap-southeast-2.amazonaws.com/screenshot.png)
 
 
 ## App Roadmap
 - [x] Host site
 - [x] Convert to create-react-app so that we get prod-react, and decent tooling
 - [x] Add BTS Digtal Signature
-- [ ] Leverage Azure Actice Directory to autofill from
+- [x] Leverage Azure Actice Directory to autofill from
+- [ ] Write some tests
 
 ## Looks great, how can I use it for my company?
 `src/constants` Contains brand specific information. Edit fields in their to rebrand the website.
