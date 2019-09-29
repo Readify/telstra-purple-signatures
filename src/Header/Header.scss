@@ -4,7 +4,13 @@
 
   .navbar-brand {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
+
+    @media screen and (max-width: 900px) {
+      flex-flow: column;
+      align-items: flex-start;
+    }
     
     .brand-name, .username {
       margin-right: auto;
@@ -15,6 +21,9 @@
 
     .login, .username {
       margin-left: auto;
+      @media screen and (max-width: 900px) {
+        margin-top: 30px;
+      }
     }
   }
 }
