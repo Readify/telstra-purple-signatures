@@ -79,7 +79,9 @@ exports[`Renders 1`] = `
       </td>
     </tr>
     <tr>
-      <td>
+      <td
+        colSpan="2"
+      >
         <table
           border="0"
           cellPadding="0"

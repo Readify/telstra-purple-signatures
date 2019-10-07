@@ -11,7 +11,7 @@ const Signature = props => {
     mobile,
     email,
     twitter,
-    isSupport,
+    sigType,
     supportHotline,
     supportEmail,
     brandLogo,
@@ -71,7 +71,7 @@ const Signature = props => {
           </td>
         </tr>
         <tr>
-          <td>
+          <td colSpan="2">
             <table
               border="0"
               cellSpacing="0"
@@ -143,7 +143,7 @@ const Signature = props => {
               </tr>
             </table>
 
-            {isSupport ? (
+            {sigType === 'support' ? (
               <table
                 border="0"
                 cellSpacing="0"
@@ -186,6 +186,55 @@ const Signature = props => {
                     </a>
                   </td>
                 </tr>
+              </table>
+            ) : null}
+            {sigType === 'EMEA' ? (
+              <table>
+                <p style={{ fontSize: '8.5pt' }}>
+                  <br />
+                  Company85 is becoming{' '}
+                  <a href={brandLink} style={{ textDecoration: 'underline' }}>
+                    Telstra Purple
+                  </a>
+                  <br />
+                  <b>Services Company of the Year.</b> UK IT Awards{' '}
+                  <a
+                    style={{ textDecoration: 'underline' }}
+                    href="https://www.company85.com/news/company85-shortlisted-in-two-categories-at-bcs-uk-it-awards-2018/"
+                  >
+                    <span style={{ color: 'black' }}>
+                      <b>finalist 2019</b>, 2018
+                    </span>
+                  </a>
+                  , 2017; winner 2016, 2014.
+                  <br /> <b>Security Team of the Year.</b> Security Excellence
+                  Awards{' '}
+                  <a
+                    style={{ textDecoration: 'underline' }}
+                    href="https://www.company85.com/news/company85-wins-security-team-of-the-year-for-the-third-year-in-a-row/"
+                  >
+                    <span style={{ color: 'black' }}>winner 2018</span>
+                  </a>
+                  , 2017, 2016. <br />
+                  <b>IT Employer of the Year.</b> UK IT Awards{' '}
+                  <a
+                    style={{ textDecoration: 'underline' }}
+                    href="https://www.company85.com/news/company85-shortlisted-in-two-categories-at-bcs-uk-it-awards-2018/"
+                  >
+                    <span style={{ color: 'black' }}>
+                      <b>finalist 2019</b>, 2018
+                    </span>
+                  </a>
+                  ,
+                  <br />
+                  2017, 2016; winner 2014.
+                  <br />
+                  <br />
+                  Telstra Purple, 2nd Floor, Blue Fin Building, 110 Southwark
+                  St, London, SE1 0TA.
+                  <br />
+                  +44 (0)845 468 0085
+                </p>
               </table>
             ) : null}
           </td>

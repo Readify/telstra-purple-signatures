@@ -53,7 +53,7 @@ export const createContainer = props => {
         title,
         mobile,
         email,
-        isSupport: sigType === 'support',
+        sigType,
         supportHotline,
         supportEmail
       }),

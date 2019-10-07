@@ -10,7 +10,7 @@ const RepliesAndForwards = props => {
     title,
     mobile,
     email,
-    isSupport,
+    sigType,
     twitter,
     supportHotline,
     supportEmail,
@@ -68,7 +68,7 @@ const RepliesAndForwards = props => {
         <a href={brandLink} style={{ color: brandInfo.brandLinkColour }}>
           {brandLinkName}
         </a>
-        {isSupport ? (
+        {sigType === 'support' ? (
           <span>
             <br />
             <b>Support&nbsp;Hotline</b>&nbsp;

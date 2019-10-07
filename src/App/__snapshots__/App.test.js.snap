@@ -736,10 +736,10 @@ exports[`Renders Purple Signature 1`] = `
                             },
                             "brandName": "Telstra Purple",
                             "email": "your.name@purple.telstra.com",
-                            "isSupport": false,
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
                             "qualifications": "",
+                            "sigType": false,
                             "title": "Job Title",
                             "twitter": "",
                           },
@@ -793,10 +793,10 @@ exports[`Renders Purple Signature 1`] = `
                             },
                             "brandName": "Telstra Purple",
                             "email": "your.name@purple.telstra.com",
-                            "isSupport": false,
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
                             "qualifications": "",
+                            "sigType": false,
                             "title": "Job Title",
                             "twitter": "",
                           }
@@ -945,10 +945,10 @@ exports[`Renders Purple Signature 1`] = `
                             }
                             brandName="Telstra Purple"
                             email="your.name@purple.telstra.com"
-                            isSupport={false}
                             mobile="+61 111 222 333"
                             name="Your Name"
                             qualifications=""
+                            sigType={false}
                             title="Job Title"
                             twitter=""
                           >
@@ -1026,7 +1026,9 @@ exports[`Renders Purple Signature 1`] = `
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td>
+                                  <td
+                                    colSpan="2"
+                                  >
                                     <table
                                       border="0"
                                       cellPadding="0"
@@ -1299,10 +1301,10 @@ exports[`Renders Purple Signature 1`] = `
                             }
                             brandName="Telstra Purple"
                             email="your.name@purple.telstra.com"
-                            isSupport={false}
                             mobile="+61 111 222 333"
                             name="Your Name"
                             qualifications=""
+                            sigType={false}
                             title="Job Title"
                             twitter=""
                           >
@@ -2190,10 +2192,10 @@ exports[`Renders Purple support 1`] = `
                             },
                             "brandName": "Telstra Purple",
                             "email": "your.name@purple.telstra.com",
-                            "isSupport": true,
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
                             "qualifications": "",
+                            "sigType": "support",
                             "supportEmail": "support@some.domain",
                             "supportHotline": "1800 xyz xyz",
                             "title": "Job Title",
@@ -2249,10 +2251,10 @@ exports[`Renders Purple support 1`] = `
                             },
                             "brandName": "Telstra Purple",
                             "email": "your.name@purple.telstra.com",
-                            "isSupport": true,
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
                             "qualifications": "",
+                            "sigType": "support",
                             "supportEmail": "support@some.domain",
                             "supportHotline": "1800 xyz xyz",
                             "title": "Job Title",
@@ -2403,10 +2405,10 @@ exports[`Renders Purple support 1`] = `
                             }
                             brandName="Telstra Purple"
                             email="your.name@purple.telstra.com"
-                            isSupport={true}
                             mobile="+61 111 222 333"
                             name="Your Name"
                             qualifications=""
+                            sigType="support"
                             supportEmail="support@some.domain"
                             supportHotline="1800 xyz xyz"
                             title="Job Title"
@@ -2486,7 +2488,9 @@ exports[`Renders Purple support 1`] = `
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td>
+                                  <td
+                                    colSpan="2"
+                                  >
                                     <table
                                       border="0"
                                       cellPadding="0"
@@ -2840,10 +2844,10 @@ exports[`Renders Purple support 1`] = `
                             }
                             brandName="Telstra Purple"
                             email="your.name@purple.telstra.com"
-                            isSupport={true}
                             mobile="+61 111 222 333"
                             name="Your Name"
                             qualifications=""
+                            sigType="support"
                             supportEmail="support@some.domain"
                             supportHotline="1800 xyz xyz"
                             title="Job Title"
