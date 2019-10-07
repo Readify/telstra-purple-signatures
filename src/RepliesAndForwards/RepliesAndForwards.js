@@ -10,10 +10,13 @@ const RepliesAndForwards = props => {
     title,
     mobile,
     email,
-    isSupport,
+    sigType,
     twitter,
     supportHotline,
-    supportEmail
+    supportEmail,
+    brandName,
+    brandLink,
+    brandLinkName
   } = props;
   const styleObj = {
     color: 'black',
@@ -26,7 +29,7 @@ const RepliesAndForwards = props => {
         --
         <br />
         <b>
-          {name}&nbsp;|&nbsp;{brandInfo.brandName}&nbsp;|&nbsp;{title}
+          {name}&nbsp;|&nbsp;{brandName}&nbsp;|&nbsp;{title}
         </b>
         <br />
         <b>M</b>&nbsp;
@@ -62,13 +65,10 @@ const RepliesAndForwards = props => {
           </span>
         ) : null}
         <b>W</b>&nbsp;
-        <a
-          href={brandInfo.brandLink}
-          style={{ color: brandInfo.brandLinkColour }}
-        >
-          {brandInfo.brandLinkName}
+        <a href={brandLink} style={{ color: brandInfo.brandLinkColour }}>
+          {brandLinkName}
         </a>
-        {isSupport ? (
+        {sigType === 'support' ? (
           <span>
             <br />
             <b>Support&nbsp;Hotline</b>&nbsp;

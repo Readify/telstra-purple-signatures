@@ -33,10 +33,15 @@ export const createContainer = props => {
     email,
     supportHotline,
     supportEmail,
-    Container
+    Container,
+    brandLogo,
+    brandName,
+    brandLink,
+    brandLinkName
   } = props;
 
   const placeholders = constants.purple.placeholders;
+  const brandInfo = constants.purple.brandInfo;
 
   const signatureProps = stripObject({
     qualifications,
@@ -48,11 +53,15 @@ export const createContainer = props => {
         title,
         mobile,
         email,
-        isSupport: sigType === 'support',
+        sigType,
         supportHotline,
         supportEmail
       }),
       placeholders
+    ),
+    ...assignPlaceholders(
+      { brandLogo, brandName, brandLink, brandLinkName },
+      brandInfo
     )
   });
 

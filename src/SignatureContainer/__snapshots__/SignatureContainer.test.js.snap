@@ -57,8 +57,14 @@ Object {
       textBefore="Copy text only"
     />,
     "signatureProps": Object {
+      "brandLink": "https://purple.telstra.com/",
+      "brandLinkName": "purple.telstra.com",
+      "brandLogo": Object {
+        "alt": "Telstra Purple",
+        "link": "https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png",
+      },
+      "brandName": "Telstra Purple",
       "email": "your.name@telstra.purple.net",
-      "isSupport": false,
       "mobile": "+61 111 222 333",
       "name": "your name",
       "title": "Job Title",
@@ -101,10 +107,17 @@ Object {
       textBefore="Copy text only"
     />,
     "signatureProps": Object {
+      "brandLink": "https://purple.telstra.com/",
+      "brandLinkName": "purple.telstra.com",
+      "brandLogo": Object {
+        "alt": "Telstra Purple",
+        "link": "https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png",
+      },
+      "brandName": "Telstra Purple",
       "email": "your.name@telstra.purple.net",
-      "isSupport": false,
       "mobile": "+61 111 222 333",
       "name": "your name",
+      "sigType": "purple",
       "title": "Job Title",
       "twitter": "@myTwitter",
     },

@@ -150,8 +150,5 @@ export const copySignature = (props, SignatureComponent) => {
 
 export const stripObject = obj =>
   entries(obj)
-    .filter(keyVal => keyVal[1] !== null && keyVal[1] !== undefined)
-    .reduce(
-      (result, item) => Object.assign(result, { [item[0]]: item[1] }),
-      {}
-    );
+    .filter(([key, val]) => val !== null && val !== undefined)
+    .reduce((result, [key, val]) => Object.assign(result, { [key]: val }), {});

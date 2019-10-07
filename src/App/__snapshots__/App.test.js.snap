@@ -390,6 +390,20 @@ exports[`Renders Purple Signature 1`] = `
                             />
                             Telstra Purple Managed Services
                           </label>
+                          <label
+                            className="radio"
+                            key="2"
+                          >
+                            <input
+                              checked={false}
+                              className="radioInput"
+                              id="telstraPurpleEmea"
+                              name="signatureTypeOpt"
+                              onChange={[Function]}
+                              type="radio"
+                            />
+                            Telstra Purple EMEA
+                          </label>
                         </div>
                       </div>
                     </div>
@@ -630,6 +644,11 @@ exports[`Renders Purple Signature 1`] = `
                         "text": "Telstra Purple Managed Services",
                         "type": "support",
                       },
+                      Object {
+                        "checked": false,
+                        "text": "Telstra Purple EMEA",
+                        "type": "EMEA",
+                      },
                     ]
                   }
                   title=""
@@ -665,6 +684,11 @@ exports[`Renders Purple Signature 1`] = `
                           "checked": false,
                           "text": "Telstra Purple Managed Services",
                           "type": "support",
+                        },
+                        Object {
+                          "checked": false,
+                          "text": "Telstra Purple EMEA",
+                          "type": "EMEA",
                         },
                       ]
                     }
@@ -704,11 +728,18 @@ exports[`Renders Purple Signature 1`] = `
                             textBefore="Copy text only"
                           />,
                           "signatureProps": Object {
+                            "brandLink": "https://purple.telstra.com/",
+                            "brandLinkName": "purple.telstra.com",
+                            "brandLogo": Object {
+                              "alt": "Telstra Purple",
+                              "link": "https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png",
+                            },
+                            "brandName": "Telstra Purple",
                             "email": "your.name@purple.telstra.com",
-                            "isSupport": false,
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
                             "qualifications": "",
+                            "sigType": false,
                             "title": "Job Title",
                             "twitter": "",
                           },
@@ -754,11 +785,18 @@ exports[`Renders Purple Signature 1`] = `
                         }
                         signatureProps={
                           Object {
+                            "brandLink": "https://purple.telstra.com/",
+                            "brandLinkName": "purple.telstra.com",
+                            "brandLogo": Object {
+                              "alt": "Telstra Purple",
+                              "link": "https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png",
+                            },
+                            "brandName": "Telstra Purple",
                             "email": "your.name@purple.telstra.com",
-                            "isSupport": false,
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
                             "qualifications": "",
+                            "sigType": false,
                             "title": "Job Title",
                             "twitter": "",
                           }
@@ -897,11 +935,20 @@ exports[`Renders Purple Signature 1`] = `
                             </div>
                           </div>
                           <Signature
+                            brandLink="https://purple.telstra.com/"
+                            brandLinkName="purple.telstra.com"
+                            brandLogo={
+                              Object {
+                                "alt": "Telstra Purple",
+                                "link": "https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png",
+                              }
+                            }
+                            brandName="Telstra Purple"
                             email="your.name@purple.telstra.com"
-                            isSupport={false}
                             mobile="+61 111 222 333"
                             name="Your Name"
                             qualifications=""
+                            sigType={false}
                             title="Job Title"
                             twitter=""
                           >
@@ -979,7 +1026,9 @@ exports[`Renders Purple Signature 1`] = `
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td>
+                                  <td
+                                    colSpan="2"
+                                  >
                                     <table
                                       border="0"
                                       cellPadding="0"
@@ -1242,11 +1291,20 @@ exports[`Renders Purple Signature 1`] = `
                             </div>
                           </div>
                           <RepliesAndForwards
+                            brandLink="https://purple.telstra.com/"
+                            brandLinkName="purple.telstra.com"
+                            brandLogo={
+                              Object {
+                                "alt": "Telstra Purple",
+                                "link": "https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png",
+                              }
+                            }
+                            brandName="Telstra Purple"
                             email="your.name@purple.telstra.com"
-                            isSupport={false}
                             mobile="+61 111 222 333"
                             name="Your Name"
                             qualifications=""
+                            sigType={false}
                             title="Job Title"
                             twitter=""
                           >
@@ -1716,6 +1774,20 @@ exports[`Renders Purple support 1`] = `
                             />
                             Telstra Purple Managed Services
                           </label>
+                          <label
+                            className="radio"
+                            key="2"
+                          >
+                            <input
+                              checked={false}
+                              className="radioInput"
+                              id="telstraPurpleEmea"
+                              name="signatureTypeOpt"
+                              onChange={[Function]}
+                              type="radio"
+                            />
+                            Telstra Purple EMEA
+                          </label>
                         </div>
                       </div>
                     </div>
@@ -2024,6 +2096,11 @@ exports[`Renders Purple support 1`] = `
                         "text": "Telstra Purple Managed Services",
                         "type": "support",
                       },
+                      Object {
+                        "checked": false,
+                        "text": "Telstra Purple EMEA",
+                        "type": "EMEA",
+                      },
                     ]
                   }
                   supportEmail=""
@@ -2061,6 +2138,11 @@ exports[`Renders Purple support 1`] = `
                           "checked": true,
                           "text": "Telstra Purple Managed Services",
                           "type": "support",
+                        },
+                        Object {
+                          "checked": false,
+                          "text": "Telstra Purple EMEA",
+                          "type": "EMEA",
                         },
                       ]
                     }
@@ -2102,11 +2184,18 @@ exports[`Renders Purple support 1`] = `
                             textBefore="Copy text only"
                           />,
                           "signatureProps": Object {
+                            "brandLink": "https://purple.telstra.com/",
+                            "brandLinkName": "purple.telstra.com",
+                            "brandLogo": Object {
+                              "alt": "Telstra Purple",
+                              "link": "https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png",
+                            },
+                            "brandName": "Telstra Purple",
                             "email": "your.name@purple.telstra.com",
-                            "isSupport": true,
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
                             "qualifications": "",
+                            "sigType": "support",
                             "supportEmail": "support@some.domain",
                             "supportHotline": "1800 xyz xyz",
                             "title": "Job Title",
@@ -2154,11 +2243,18 @@ exports[`Renders Purple support 1`] = `
                         }
                         signatureProps={
                           Object {
+                            "brandLink": "https://purple.telstra.com/",
+                            "brandLinkName": "purple.telstra.com",
+                            "brandLogo": Object {
+                              "alt": "Telstra Purple",
+                              "link": "https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png",
+                            },
+                            "brandName": "Telstra Purple",
                             "email": "your.name@purple.telstra.com",
-                            "isSupport": true,
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
                             "qualifications": "",
+                            "sigType": "support",
                             "supportEmail": "support@some.domain",
                             "supportHotline": "1800 xyz xyz",
                             "title": "Job Title",
@@ -2299,11 +2395,20 @@ exports[`Renders Purple support 1`] = `
                             </div>
                           </div>
                           <Signature
+                            brandLink="https://purple.telstra.com/"
+                            brandLinkName="purple.telstra.com"
+                            brandLogo={
+                              Object {
+                                "alt": "Telstra Purple",
+                                "link": "https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png",
+                              }
+                            }
+                            brandName="Telstra Purple"
                             email="your.name@purple.telstra.com"
-                            isSupport={true}
                             mobile="+61 111 222 333"
                             name="Your Name"
                             qualifications=""
+                            sigType="support"
                             supportEmail="support@some.domain"
                             supportHotline="1800 xyz xyz"
                             title="Job Title"
@@ -2383,7 +2488,9 @@ exports[`Renders Purple support 1`] = `
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td>
+                                  <td
+                                    colSpan="2"
+                                  >
                                     <table
                                       border="0"
                                       cellPadding="0"
@@ -2727,11 +2834,20 @@ exports[`Renders Purple support 1`] = `
                             </div>
                           </div>
                           <RepliesAndForwards
+                            brandLink="https://purple.telstra.com/"
+                            brandLinkName="purple.telstra.com"
+                            brandLogo={
+                              Object {
+                                "alt": "Telstra Purple",
+                                "link": "https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png",
+                              }
+                            }
+                            brandName="Telstra Purple"
                             email="your.name@purple.telstra.com"
-                            isSupport={true}
                             mobile="+61 111 222 333"
                             name="Your Name"
                             qualifications=""
+                            sigType="support"
                             supportEmail="support@some.domain"
                             supportHotline="1800 xyz xyz"
                             title="Job Title"
