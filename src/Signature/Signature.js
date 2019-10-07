@@ -225,9 +225,7 @@ const Signature = props => {
                       <b>finalist 2019</b>, 2018
                     </span>
                   </a>
-                  ,
-                  <br />
-                  2017, 2016; winner 2014.
+                  , 2017, 2016; winner 2014.
                   <br />
                   <br />
                   Telstra Purple, 2nd Floor, Blue Fin Building, 110 Southwark
