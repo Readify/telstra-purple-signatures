@@ -36,6 +36,11 @@ export class Form extends Component {
               text: 'Telstra Purple Managed Services',
               checked: false,
               type: 'support'
+            },
+            {
+              text: 'Telstra Purple EMEA',
+              checked: false,
+              type: 'EMEA'
             }
           ].filter(Boolean),
           order: 1
