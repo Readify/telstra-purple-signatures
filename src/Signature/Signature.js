@@ -13,9 +13,12 @@ const Signature = props => {
     twitter,
     isSupport,
     supportHotline,
-    supportEmail
+    supportEmail,
+    brandLogo,
+    brandName,
+    brandLink,
+    brandLinkName
   } = props;
-  const { brandLogo, brandName, brandLink, brandLinkName } = brandInfo;
 
   // Note: css classes do not work for email so you need to use inline styles!
   // Adding a tbody causes the email sig to break in certain clients :'(
