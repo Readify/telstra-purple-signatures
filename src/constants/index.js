@@ -22,6 +22,11 @@ export const purple = {
     supportEmail: 'support@some.domain'
   },
 
+  EMEAInfo: {
+    brandLink: 'http://telstrapurple.co.uk',
+    brandLinkName: 'telstrapurple.co.uk'
+  },
+
   default: {
     countryCode: '+61'
   }

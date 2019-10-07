@@ -11,7 +11,15 @@ it('Renders', () => {
     name: 'your name',
     qualifications: 'Jedi Master | PSM I',
     title: 'Job Title',
-    twitter: '@myTwitter'
+    twitter: '@myTwitter',
+    brandName: 'Telstra Purple',
+    brandLink: 'https://purple.telstra.com/',
+    brandLinkName: 'purple.telstra.com',
+    brandLogo: {
+      link:
+        'https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png',
+      alt: 'Telstra Purple'
+    }
   };
 
   const tree = shallow(<RepliesAndForwards {...props} />);

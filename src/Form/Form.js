@@ -172,10 +172,14 @@ export class Form extends Component {
     const formInputs = this.state.inputs;
     const inputs = this.renderHtmlForInputs(formInputs, placeholders);
 
+    const EMEAInfo =
+      this.state.sigType === 'EMEA' ? constants.purple.EMEAInfo : undefined;
+
     const SignatureContainerProps = {
       placeholders,
       sigType: this.state.sigType,
-      ...omit(mapValues(this.state.inputs, 'text'), 'signatureType')
+      ...omit(mapValues(this.state.inputs, 'text'), 'signatureType'),
+      ...EMEAInfo
     };
 
     return (
