@@ -101,6 +101,9 @@ exports[`Renders Purple Signature 1`] = `
                       "_onAuthenticationStateHandlers": Set {
                         [Function],
                       },
+                      "_onErrorHandlers": Set {
+                        [Function],
+                      },
                       "_parameters": Object {
                         "scopes": Array [
                           "openid",
@@ -171,8 +174,10 @@ exports[`Renders Purple Signature 1`] = `
                       "getAccessToken": [Function],
                       "getAccountInfo": [Function],
                       "getAuthenticationParameters": [Function],
+                      "getError": [Function],
                       "getIdToken": [Function],
                       "handleAcquireTokenSuccess": [Function],
+                      "handleLoginFailed": [Function],
                       "handleLoginSuccess": [Function],
                       "inCookie": true,
                       "initializeProvider": [Function],
@@ -190,15 +195,18 @@ exports[`Renders Purple Signature 1`] = `
                       "redirectCallbacksSet": true,
                       "registerAcountInfoHandler": [Function],
                       "registerAuthenticationStateHandler": [Function],
+                      "registerErrorHandler": [Function],
                       "registerReduxStore": [Function],
                       "setAccountInfo": [Function],
                       "setAuthenticationParameters": [Function],
                       "setAuthenticationState": [Function],
+                      "setError": [Function],
                       "setLoginType": [Function],
                       "telemetryManager": null,
                       "tokenReceivedCallback": null,
                       "unregisterAccountInfoHandler": [Function],
                       "unregisterAuthenticationStateHandler": [Function],
+                      "unregisterErrorHandler": [Function],
                     }
                   }
                   reduxStore={
@@ -1485,6 +1493,10 @@ exports[`Renders Purple support 1`] = `
                         [Function],
                         [Function],
                       },
+                      "_onErrorHandlers": Set {
+                        [Function],
+                        [Function],
+                      },
                       "_parameters": Object {
                         "scopes": Array [
                           "openid",
@@ -1555,8 +1567,10 @@ exports[`Renders Purple support 1`] = `
                       "getAccessToken": [Function],
                       "getAccountInfo": [Function],
                       "getAuthenticationParameters": [Function],
+                      "getError": [Function],
                       "getIdToken": [Function],
                       "handleAcquireTokenSuccess": [Function],
+                      "handleLoginFailed": [Function],
                       "handleLoginSuccess": [Function],
                       "inCookie": true,
                       "initializeProvider": [Function],
@@ -1574,15 +1588,18 @@ exports[`Renders Purple support 1`] = `
                       "redirectCallbacksSet": true,
                       "registerAcountInfoHandler": [Function],
                       "registerAuthenticationStateHandler": [Function],
+                      "registerErrorHandler": [Function],
                       "registerReduxStore": [Function],
                       "setAccountInfo": [Function],
                       "setAuthenticationParameters": [Function],
                       "setAuthenticationState": [Function],
+                      "setError": [Function],
                       "setLoginType": [Function],
                       "telemetryManager": null,
                       "tokenReceivedCallback": null,
                       "unregisterAccountInfoHandler": [Function],
                       "unregisterAuthenticationStateHandler": [Function],
+                      "unregisterErrorHandler": [Function],
                     }
                   }
                   reduxStore={
