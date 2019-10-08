@@ -53,6 +53,7 @@ exports[`Renders 1`] = `
               "_loginType": 1,
               "_onAccountInfoHandlers": Set {},
               "_onAuthenticationStateHandlers": Set {},
+              "_onErrorHandlers": Set {},
               "_parameters": Object {
                 "scopes": Array [
                   "openid",
@@ -116,8 +117,10 @@ exports[`Renders 1`] = `
               "getAccessToken": [Function],
               "getAccountInfo": [Function],
               "getAuthenticationParameters": [Function],
+              "getError": [Function],
               "getIdToken": [Function],
               "handleAcquireTokenSuccess": [Function],
+              "handleLoginFailed": [Function],
               "handleLoginSuccess": [Function],
               "inCookie": true,
               "initializeProvider": [Function],
@@ -135,15 +138,18 @@ exports[`Renders 1`] = `
               "redirectCallbacksSet": true,
               "registerAcountInfoHandler": [Function],
               "registerAuthenticationStateHandler": [Function],
+              "registerErrorHandler": [Function],
               "registerReduxStore": [Function],
               "setAccountInfo": [Function],
               "setAuthenticationParameters": [Function],
               "setAuthenticationState": [Function],
+              "setError": [Function],
               "setLoginType": [Function],
               "telemetryManager": null,
               "tokenReceivedCallback": null,
               "unregisterAccountInfoHandler": [Function],
               "unregisterAuthenticationStateHandler": [Function],
+              "unregisterErrorHandler": [Function],
             }
           }
           reduxStore={
