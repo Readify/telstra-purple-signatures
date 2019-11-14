@@ -427,7 +427,7 @@ exports[`Renders Purple Signature 1`] = `
                     <label
                       className="label field-label"
                     >
-                      Your Name:
+                      Your Name*
                     </label>
                   </div>
                   <div
@@ -461,7 +461,7 @@ exports[`Renders Purple Signature 1`] = `
                     <label
                       className="label field-label"
                     >
-                      Job Title:
+                      Job Title or Team
                     </label>
                   </div>
                   <div
@@ -495,7 +495,7 @@ exports[`Renders Purple Signature 1`] = `
                     <label
                       className="label field-label"
                     >
-                      Qualifications: (Optional)
+                      Qualifications
                     </label>
                   </div>
                   <div
@@ -529,7 +529,7 @@ exports[`Renders Purple Signature 1`] = `
                     <label
                       className="label field-label"
                     >
-                      Mobile:
+                      Mobile*
                     </label>
                   </div>
                   <div
@@ -563,7 +563,7 @@ exports[`Renders Purple Signature 1`] = `
                     <label
                       className="label field-label"
                     >
-                      Email:
+                      Email*
                     </label>
                   </div>
                   <div
@@ -597,7 +597,7 @@ exports[`Renders Purple Signature 1`] = `
                     <label
                       className="label field-label"
                     >
-                      Twitter: (Optional)
+                      Twitter
                     </label>
                   </div>
                   <div
@@ -634,7 +634,7 @@ exports[`Renders Purple Signature 1`] = `
                       "qualifications": "Jedi Master | PSM I",
                       "supportEmail": "support@some.domain",
                       "supportHotline": "1800 xyz xyz",
-                      "title": "Job Title",
+                      "title": "",
                       "twitter": "myTwitterHandle",
                     }
                   }
@@ -1820,7 +1820,7 @@ exports[`Renders Purple support 1`] = `
                     <label
                       className="label field-label"
                     >
-                      Your Name:
+                      Your Name*
                     </label>
                   </div>
                   <div
@@ -1854,7 +1854,7 @@ exports[`Renders Purple support 1`] = `
                     <label
                       className="label field-label"
                     >
-                      Job Title:
+                      Job Title or Team
                     </label>
                   </div>
                   <div
@@ -1888,7 +1888,7 @@ exports[`Renders Purple support 1`] = `
                     <label
                       className="label field-label"
                     >
-                      Qualifications: (Optional)
+                      Qualifications
                     </label>
                   </div>
                   <div
@@ -1922,7 +1922,7 @@ exports[`Renders Purple support 1`] = `
                     <label
                       className="label field-label"
                     >
-                      Mobile:
+                      Mobile*
                     </label>
                   </div>
                   <div
@@ -1956,7 +1956,7 @@ exports[`Renders Purple support 1`] = `
                     <label
                       className="label field-label"
                     >
-                      Email:
+                      Email*
                     </label>
                   </div>
                   <div
@@ -1990,7 +1990,7 @@ exports[`Renders Purple support 1`] = `
                     <label
                       className="label field-label"
                     >
-                      Twitter: (Optional)
+                      Twitter
                     </label>
                   </div>
                   <div
@@ -2024,7 +2024,7 @@ exports[`Renders Purple support 1`] = `
                     <label
                       className="label field-label"
                     >
-                      Support hotline
+                      Support Hotline*
                     </label>
                   </div>
                   <div
@@ -2058,7 +2058,7 @@ exports[`Renders Purple support 1`] = `
                     <label
                       className="label field-label"
                     >
-                      Support email
+                      Support Email*
                     </label>
                   </div>
                   <div
@@ -2274,7 +2274,7 @@ exports[`Renders Purple support 1`] = `
                             "sigType": "support",
                             "supportEmail": "support@some.domain",
                             "supportHotline": "1800 xyz xyz",
-                            "title": "Job Title",
+                            "title": "",
                             "twitter": "",
                           }
                         }
@@ -2428,7 +2428,7 @@ exports[`Renders Purple support 1`] = `
                             sigType="support"
                             supportEmail="support@some.domain"
                             supportHotline="1800 xyz xyz"
-                            title="Job Title"
+                            title=""
                             twitter=""
                           >
                             <div
@@ -2467,17 +2467,6 @@ exports[`Renders Purple support 1`] = `
                                       </b>
                                       <br />
                                       Telstra Purple
-                                      <br />
-                                      <span
-                                        style={
-                                          Object {
-                                            "color": "#A5A5A5",
-                                          }
-                                        }
-                                      >
-                                        Job Title
-                                      </span>
-                                      <br />
                                     </p>
                                   </td>
                                   <td
@@ -2867,7 +2856,7 @@ exports[`Renders Purple support 1`] = `
                             sigType="support"
                             supportEmail="support@some.domain"
                             supportHotline="1800 xyz xyz"
-                            title="Job Title"
+                            title=""
                             twitter=""
                           >
                             <div>
@@ -2886,8 +2875,6 @@ exports[`Renders Purple support 1`] = `
                                   Your Name
                                    | 
                                   Telstra Purple
-                                   | 
-                                  Job Title
                                 </b>
                                 <br />
                                 <b>

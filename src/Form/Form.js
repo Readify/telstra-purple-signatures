@@ -12,15 +12,15 @@ import SignatureContainer from '../SignatureContainer';
 export class Form extends Component {
   static labels = {
     signatureTypes: 'Signature Type',
-    name: 'Your Name:',
-    title: 'Job Title:',
-    email: 'Email:',
-    phone: 'Phone: (Optional)',
-    mobile: 'Mobile:',
-    twitter: 'Twitter: (Optional)',
-    qualifications: 'Qualifications: (Optional)',
-    supportHotline: 'Support hotline',
-    supportEmail: 'Support email'
+    name: 'Your Name*',
+    title: 'Job Title or Team',
+    email: 'Email*',
+    phone: 'Phone',
+    mobile: 'Mobile*',
+    twitter: 'Twitter',
+    qualifications: 'Qualifications',
+    supportHotline: 'Support Hotline*',
+    supportEmail: 'Support Email*'
   };
 
   constructor(props) {
@@ -205,7 +205,4 @@ const mapDispatchToProps = dispatch =>
     dispatch
   );
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Form);
+export default connect(mapStateToProps, mapDispatchToProps)(Form);

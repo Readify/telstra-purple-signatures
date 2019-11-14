@@ -107,9 +107,10 @@ export const copyRepliesAndForwardsText = props => {
   } = props;
   const mobileText = parseMobile(mobile).replace(/&nbsp;/g, ' ');
 
+  const titleOptional = title ? ` | ${title}` : '';
   const textArr = [
     '--',
-    `${name} | ${brandInfo.brandName} | ${title}`,
+    `${name} | ${brandInfo.brandName}${titleOptional}`,
     `M ${mobileText} | E ${email}${twitter ? ` | T ${twitter}` : ''} | W ${
       brandInfo.brandLinkName
     }`,
