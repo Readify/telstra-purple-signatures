@@ -23,13 +23,15 @@ const RepliesAndForwards = props => {
     fontFamily: 'Arial, sans-serif',
     fontSize: '9pt'
   };
+  const titleOptional = title ? <>&nbsp;|&nbsp;{title}</> : null;
   return (
     <div>
       <p style={styleObj}>
         --
         <br />
         <b>
-          {name}&nbsp;|&nbsp;{brandName}&nbsp;|&nbsp;{title}
+          {name}&nbsp;|&nbsp;{brandName}
+          {titleOptional}
         </b>
         <br />
         <b>M</b>&nbsp;
@@ -94,6 +96,8 @@ const RepliesAndForwards = props => {
       </p>
       <div
         style={{
+          color: '#4a4a4a',
+          fontFamily: 'Arial, sans-serif',
           fontSize: '6.5pt',
           lineHeight: '1.5'
         }}

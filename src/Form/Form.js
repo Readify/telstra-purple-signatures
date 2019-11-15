@@ -11,16 +11,16 @@ import SignatureContainer from '../SignatureContainer';
 
 export class Form extends Component {
   static labels = {
-    signatureTypes: 'Signature Type',
-    name: 'Your Name:',
-    title: 'Job Title:',
-    email: 'Email:',
-    phone: 'Phone: (Optional)',
-    mobile: 'Mobile:',
-    twitter: 'Twitter: (Optional)',
-    qualifications: 'Qualifications: (Optional)',
-    supportHotline: 'Support hotline',
-    supportEmail: 'Support email'
+    signatureTypes: { label: 'Signature Type', type: 'radio' },
+    name: { label: 'Your Name', required: true },
+    title: { label: 'Job Title or Team' },
+    email: { label: 'Email', type: 'email', required: true },
+    phone: { label: 'Phone', type: 'tel' },
+    mobile: { label: 'Mobile', type: 'tel', required: true },
+    twitter: { label: 'Twitter' },
+    qualifications: { label: 'Qualifications' },
+    supportHotline: { label: 'Support Hotline', type: 'tel', required: true },
+    supportEmail: { label: 'Support Email', type: 'email', required: true }
   };
 
   constructor(props) {
@@ -109,7 +109,7 @@ export class Form extends Component {
     });
   };
 
-  inputHtml = (inputName, inputVal, placeholders) => {
+  inputHtml = (inputName, inputVal, placeholders, type = 'text') => {
     if (inputName === 'signatureTypes') {
       return (
         <div className="field is-narrow">
@@ -135,7 +135,9 @@ export class Form extends Component {
     }
     return (
       <input
+        id={`input-${inputName}`}
         className="input"
+        type={type}
         placeholder={placeholders[inputName]}
         style={{ width: '300px' }}
         value={inputVal || ''}
@@ -150,16 +152,24 @@ export class Form extends Component {
       .map(obj => ({ key: obj[0], ...omit(obj[1], 'order') }))
       .map(inputObj => {
         const inputName = inputObj.key;
+        const { label, type = 'text', required = false } = Form.labels[
+          inputName
+        ];
         return (
           <div className="field is-horizontal" key={inputName}>
             <div className="field-label is-normal">
-              <label className="label field-label">
-                {Form.labels[inputName]}
+              <label className="label field-label" for={`input-${inputName}`}>
+                {label}
+                {required ? (
+                  <span title="Required" style={{ color: 'red' }}>
+                    *
+                  </span>
+                ) : null}
               </label>
             </div>
             <div className="field-body">
               <div className="control" key={inputName}>
-                {this.inputHtml(inputName, inputObj.text, placeholders)}
+                {this.inputHtml(inputName, inputObj.text, placeholders, type)}
               </div>
             </div>
           </div>
@@ -205,7 +215,4 @@ const mapDispatchToProps = dispatch =>
     dispatch
   );
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Form);
+export default connect(mapStateToProps, mapDispatchToProps)(Form);

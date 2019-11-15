@@ -20,6 +20,23 @@ const Signature = props => {
     brandLinkName
   } = props;
 
+  const titleElement = title ? (
+    <>
+      <br />
+      <span style={{ color: '#A5A5A5' }}>{title}</span>
+    </>
+  ) : null;
+
+  const qualificationsElemenent = qualifications ? (
+    <>
+      <br />
+      <span>
+        {qualifications}
+        <br />
+      </span>
+    </>
+  ) : null;
+
   // Note: css classes do not work for email so you need to use inline styles!
   // Adding a tbody causes the email sig to break in certain clients :'(
   return (
@@ -43,15 +60,8 @@ const Signature = props => {
               <b>{name}</b>
               <br />
               {brandName}
-              <br />
-              <span style={{ color: '#A5A5A5' }}>{title}</span>
-              <br />
-              {qualifications ? (
-                <span>
-                  {qualifications}
-                  <br />
-                </span>
-              ) : null}
+              {titleElement}
+              {qualificationsElemenent}
             </p>
           </td>
           <td
@@ -240,9 +250,10 @@ const Signature = props => {
         <tr>
           <td
             style={{
-              color: 'black',
+              color: '#4a4a4a',
               fontFamily: 'Arial, sans-serif',
-              fontSize: '6.5pt'
+              fontSize: '6.5pt',
+              lineHeight: '1.5'
             }}
           >
             This email may contain confidential information.

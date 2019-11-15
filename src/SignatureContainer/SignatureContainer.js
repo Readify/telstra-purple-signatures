@@ -44,13 +44,13 @@ export const createContainer = props => {
   const brandInfo = constants.purple.brandInfo;
 
   const signatureProps = stripObject({
+    title,
     qualifications,
     twitter,
     phone: null,
     ...assignPlaceholders(
       stripObject({
         name,
-        title,
         mobile,
         email,
         sigType,

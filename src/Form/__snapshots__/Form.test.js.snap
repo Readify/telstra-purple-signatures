@@ -11,6 +11,7 @@ exports[`Renders 1`] = `
     >
       <label
         className="label field-label"
+        for="input-signatureTypes"
       >
         Signature Type
       </label>
@@ -84,8 +85,19 @@ exports[`Renders 1`] = `
     >
       <label
         className="label field-label"
+        for="input-name"
       >
-        Your Name:
+        Your Name
+        <span
+          style={
+            Object {
+              "color": "red",
+            }
+          }
+          title="Required"
+        >
+          *
+        </span>
       </label>
     </div>
     <div
@@ -97,6 +109,7 @@ exports[`Renders 1`] = `
       >
         <input
           className="input"
+          id="input-name"
           onChange={[Function]}
           placeholder="Your Name"
           style={
@@ -104,6 +117,7 @@ exports[`Renders 1`] = `
               "width": "300px",
             }
           }
+          type="text"
           value=""
         />
       </div>
@@ -118,8 +132,9 @@ exports[`Renders 1`] = `
     >
       <label
         className="label field-label"
+        for="input-title"
       >
-        Job Title:
+        Job Title or Team
       </label>
     </div>
     <div
@@ -131,6 +146,7 @@ exports[`Renders 1`] = `
       >
         <input
           className="input"
+          id="input-title"
           onChange={[Function]}
           placeholder="Job Title"
           style={
@@ -138,6 +154,7 @@ exports[`Renders 1`] = `
               "width": "300px",
             }
           }
+          type="text"
           value=""
         />
       </div>
@@ -152,8 +169,9 @@ exports[`Renders 1`] = `
     >
       <label
         className="label field-label"
+        for="input-qualifications"
       >
-        Qualifications: (Optional)
+        Qualifications
       </label>
     </div>
     <div
@@ -165,6 +183,7 @@ exports[`Renders 1`] = `
       >
         <input
           className="input"
+          id="input-qualifications"
           onChange={[Function]}
           placeholder="Jedi Master | PSM I"
           style={
@@ -172,6 +191,7 @@ exports[`Renders 1`] = `
               "width": "300px",
             }
           }
+          type="text"
           value=""
         />
       </div>
@@ -186,8 +206,19 @@ exports[`Renders 1`] = `
     >
       <label
         className="label field-label"
+        for="input-mobile"
       >
-        Mobile:
+        Mobile
+        <span
+          style={
+            Object {
+              "color": "red",
+            }
+          }
+          title="Required"
+        >
+          *
+        </span>
       </label>
     </div>
     <div
@@ -199,6 +230,7 @@ exports[`Renders 1`] = `
       >
         <input
           className="input"
+          id="input-mobile"
           onChange={[Function]}
           placeholder="+61 111 222 333"
           style={
@@ -206,6 +238,7 @@ exports[`Renders 1`] = `
               "width": "300px",
             }
           }
+          type="tel"
           value=""
         />
       </div>
@@ -220,8 +253,19 @@ exports[`Renders 1`] = `
     >
       <label
         className="label field-label"
+        for="input-email"
       >
-        Email:
+        Email
+        <span
+          style={
+            Object {
+              "color": "red",
+            }
+          }
+          title="Required"
+        >
+          *
+        </span>
       </label>
     </div>
     <div
@@ -233,6 +277,7 @@ exports[`Renders 1`] = `
       >
         <input
           className="input"
+          id="input-email"
           onChange={[Function]}
           placeholder="your.name@purple.telstra.com"
           style={
@@ -240,6 +285,7 @@ exports[`Renders 1`] = `
               "width": "300px",
             }
           }
+          type="email"
           value=""
         />
       </div>
@@ -254,8 +300,9 @@ exports[`Renders 1`] = `
     >
       <label
         className="label field-label"
+        for="input-twitter"
       >
-        Twitter: (Optional)
+        Twitter
       </label>
     </div>
     <div
@@ -267,6 +314,7 @@ exports[`Renders 1`] = `
       >
         <input
           className="input"
+          id="input-twitter"
           onChange={[Function]}
           placeholder="myTwitterHandle"
           style={
@@ -274,6 +322,7 @@ exports[`Renders 1`] = `
               "width": "300px",
             }
           }
+          type="text"
           value=""
         />
       </div>
