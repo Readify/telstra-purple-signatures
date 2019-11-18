@@ -89,7 +89,7 @@ exports[`Renders Purple Signature 1`] = `
                 >
                   Outlook Signature
                 </a>
-                <Component
+                <AzureAD
                   provider={
                     MsalAuthProvider {
                       "UserAgentApplication": [Circular],
@@ -117,7 +117,6 @@ exports[`Renders Purple Signature 1`] = `
                         "subscribe": [Function],
                         Symbol(observable): [Function],
                       },
-                      "acquireTokenInProgress": false,
                       "authResponseCallback": [Function],
                       "authenticationRedirectCallback": [Function],
                       "authenticationState": "Unauthenticated",
@@ -133,10 +132,10 @@ exports[`Renders Purple Signature 1`] = `
                           "Protocol": "https:",
                         },
                       },
-                      "cacheStorage": Storage {
+                      "cacheStorage": AuthCache {
                         "cacheLocation": "sessionStorage",
-                        "localStorageSupported": true,
-                        "sessionStorageSupported": true,
+                        "clientId": "14680f0a-1355-4dda-be3f-04e04ffdcb92",
+                        "rollbackEnabled": true,
                       },
                       "clientId": "14680f0a-1355-4dda-be3f-04e04ffdcb92",
                       "config": Object {
@@ -188,7 +187,6 @@ exports[`Renders Purple Signature 1`] = `
                         "piiLoggingEnabled": false,
                       },
                       "login": [Function],
-                      "loginInProgress": false,
                       "loginToRefreshToken": [Function],
                       "logout": [Function],
                       "processLogin": [Function],
@@ -230,7 +228,7 @@ exports[`Renders Purple Signature 1`] = `
                       Login
                     </button>
                   </div>
-                </Component>
+                </AzureAD>
               </div>
             </div>
             <div
@@ -1518,7 +1516,7 @@ exports[`Renders Purple support 1`] = `
                 >
                   Outlook Signature
                 </a>
-                <Component
+                <AzureAD
                   provider={
                     MsalAuthProvider {
                       "UserAgentApplication": [Circular],
@@ -1549,7 +1547,6 @@ exports[`Renders Purple support 1`] = `
                         "subscribe": [Function],
                         Symbol(observable): [Function],
                       },
-                      "acquireTokenInProgress": false,
                       "authResponseCallback": [Function],
                       "authenticationRedirectCallback": [Function],
                       "authenticationState": "Unauthenticated",
@@ -1565,10 +1562,10 @@ exports[`Renders Purple support 1`] = `
                           "Protocol": "https:",
                         },
                       },
-                      "cacheStorage": Storage {
+                      "cacheStorage": AuthCache {
                         "cacheLocation": "sessionStorage",
-                        "localStorageSupported": true,
-                        "sessionStorageSupported": true,
+                        "clientId": "14680f0a-1355-4dda-be3f-04e04ffdcb92",
+                        "rollbackEnabled": true,
                       },
                       "clientId": "14680f0a-1355-4dda-be3f-04e04ffdcb92",
                       "config": Object {
@@ -1620,7 +1617,6 @@ exports[`Renders Purple support 1`] = `
                         "piiLoggingEnabled": false,
                       },
                       "login": [Function],
-                      "loginInProgress": false,
                       "loginToRefreshToken": [Function],
                       "logout": [Function],
                       "processLogin": [Function],
@@ -1662,7 +1658,7 @@ exports[`Renders Purple support 1`] = `
                       Login
                     </button>
                   </div>
-                </Component>
+                </AzureAD>
               </div>
             </div>
             <div

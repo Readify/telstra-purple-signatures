@@ -7,9 +7,11 @@ import 'bulma/bulma.sass';
 import { Provider } from 'react-redux';
 import { basicReduxStore } from './reduxStore';
 
+const isEmbedded = new URLSearchParams(window.location.search).get('embedded');
+
 ReactDOM.render(
   <Provider store={basicReduxStore}>
-    <App />
+    <App isEmbedded={isEmbedded} />
   </Provider>,
   document.getElementById('root')
 );

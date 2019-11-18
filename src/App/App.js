@@ -16,7 +16,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className={this.props.isEmbedded ? "embedded" : undefined}>
         <Header
           brandInfo={{
             appName: 'Outlook Signature',
