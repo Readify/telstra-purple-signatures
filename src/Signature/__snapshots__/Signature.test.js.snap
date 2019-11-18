@@ -234,9 +234,10 @@ exports[`Renders 1`] = `
       <td
         style={
           Object {
-            "color": "black",
+            "color": "#4a4a4a",
             "fontFamily": "Arial, sans-serif",
             "fontSize": "6.5pt",
+            "lineHeight": "1.5",
           }
         }
       >
