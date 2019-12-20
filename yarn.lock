@@ -7172,10 +7172,10 @@ ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
-msal@1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/msal/-/msal-1.1.3.tgz#d8c501d513f5e52eaf000f20a245526fc1ecaa2a"
-  integrity sha512-cdShb+N1H3OyR1y46ij6OO7QzeqC6BxrbrNcouS4JBrr1+DnZ55TumxQKEzWmTXHvsbsuz5PCyXZl812Un8L9g==
+msal@1.2.0-beta.4:
+  version "1.2.0-beta.4"
+  resolved "https://registry.yarnpkg.com/msal/-/msal-1.2.0-beta.4.tgz#cfc4e613687927f45a508e6cd274d3d9072d77be"
+  integrity sha512-1ANamflKfqQQ7GwgbJKuk7PSoTHCNFge78oexWQLdFkZ2L0mX2k4NEorPZVdR8PqPo1HnbnMyfbJ3pXVoG/F9g==
   dependencies:
     tslib "^1.9.3"
 
@@ -9065,12 +9065,12 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-aad-msal@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-aad-msal/-/react-aad-msal-1.0.1.tgz#9af7077fdf78db78bdddb2654367107e31f5a38b"
-  integrity sha512-DG4FhQDjXIHny/TPwoXPCzp8Ufk5IF/F2OhnzSuHcJoFh5NceilnjvT7iCi3wCIAMajgVDZRemMto0DSgJisCA==
+react-aad-msal@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/react-aad-msal/-/react-aad-msal-1.1.3.tgz#8b18d777869275f51d9d74d59af54de61f5e0a9e"
+  integrity sha512-VdFC+eVNlx2OPFLCuHHie0ZS+F+G0nEJ1vcP3FCkeBnWV1zYVds79QRm+vm4MFJPjRyjzybbHYLdwucKV8MxBg==
   dependencies:
-    msal "1.1.3"
+    msal "1.2.0-beta.4"
     redux "4.0.4"
 
 react-app-polyfill@^1.0.2:
