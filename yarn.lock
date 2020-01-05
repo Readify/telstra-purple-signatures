@@ -5404,12 +5404,12 @@ ini@^1.3.5, ini@~1.3.0:
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
   integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
 
-input-format@^0.2.2:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/input-format/-/input-format-0.2.4.tgz#cb535ac879445908b432c5c341f98a493a1743bf"
-  integrity sha512-1Jo08hAodqk94579lRLCxg6g5nMYbe06ySwP7Dydl26DkmqYfVJL6bV5JuqwQ35Z4f81ad6bh5cbgWNxL5euyg==
+input-format@^0.2.8:
+  version "0.2.8"
+  resolved "https://registry.yarnpkg.com/input-format/-/input-format-0.2.8.tgz#5e63d0f789a2081c1673c17c21bd0f9fd11d0ba4"
+  integrity sha512-PUBQ7LQMq4xdF4nEXxZTKGRAA6QTCz2icH2bU1WBDn9GcP8mKygpOqqivf41vSfFd3UagzqcMFMSswqngQGvuA==
   dependencies:
-    prop-types "^15.5.6"
+    prop-types "^15.7.2"
 
 inquirer@6.5.0:
   version "6.5.0"
@@ -6562,10 +6562,10 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-libphonenumber-js@^1.7.24:
-  version "1.7.25"
-  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.7.25.tgz#c50ce4d808cfa5d545ba80bcd93bc026b376b678"
-  integrity sha512-WlmFl3xSR0oGH0+ZGtEbcNgo6h7JUyYaRmGWlddrkEFmPjAULRur2KZzmNWQSBfD0LhUdnKYhwIi2MnB7gswWw==
+libphonenumber-js@^1.7.28:
+  version "1.7.29"
+  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.7.29.tgz#0d9550d8a04b535d7b8b881e33f06a899771adc4"
+  integrity sha512-k0qJpAQ6DZA3b6meri1CZr2Lg1lvC539wqLljFdCWLPK8jAXLFqE433NzGzTdxKfm/EmGE8Zhm5pK8R9N7m1pg==
   dependencies:
     minimist "^1.2.0"
     xml2js "^0.4.17"
@@ -8891,7 +8891,7 @@ prop-types-exact@^1.2.0:
     object.assign "^4.1.0"
     reflect.ownkeys "^0.2.0"
 
-prop-types@^15.5.10, prop-types@^15.5.6, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -9163,17 +9163,17 @@ react-modal@^3.8.1:
     react-lifecycles-compat "^3.0.0"
     warning "^4.0.3"
 
-react-phone-number-input@^2.3.22:
-  version "2.3.22"
-  resolved "https://registry.yarnpkg.com/react-phone-number-input/-/react-phone-number-input-2.3.22.tgz#1e1f960645a9d445fd52739ae36617e6e3c40e78"
-  integrity sha512-g/nVsGWMbCUCS+xRtWDQUnHkUiNSE0tknVniS6ddVGXnTo/nE4guL74PvMDBUvHlXffeknimSwbbPWKrp/jZPA==
+react-phone-number-input@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/react-phone-number-input/-/react-phone-number-input-2.5.1.tgz#820e52fb7663e7ed5f096a9d88c9b444a9ffbf1e"
+  integrity sha512-97X9nUs/bP4uE8rAqOgSDT9iIyfS2tZ6PaCaCvXHfebIx4lLnTxaUpzME8WjHqzs7Ao3p+gj1OO6Cp5KDH/6bA==
   dependencies:
     classnames "^2.2.5"
-    input-format "^0.2.2"
-    libphonenumber-js "^1.7.24"
+    input-format "^0.2.8"
+    libphonenumber-js "^1.7.28"
     prop-types "^15.7.2"
     react-lifecycles-compat "^3.0.4"
-    react-responsive-ui "^0.14.123"
+    react-responsive-ui "^0.14.177"
 
 react-redux@^7.1.1:
   version "7.1.1"
@@ -9187,10 +9187,10 @@ react-redux@^7.1.1:
     prop-types "^15.7.2"
     react-is "^16.9.0"
 
-react-responsive-ui@^0.14.123:
-  version "0.14.177"
-  resolved "https://registry.yarnpkg.com/react-responsive-ui/-/react-responsive-ui-0.14.177.tgz#f5e88fc4ef96bdb1be7419623c9fb407bca73f1b"
-  integrity sha512-E4PTd2bfDmVMVIZ/nR4ecNqmjl/EUyHpeGkE4BiHaXAn3DhQITmrUEDw/B405X9NAocO15TIxVXJgQbD9LbeZw==
+react-responsive-ui@^0.14.177:
+  version "0.14.182"
+  resolved "https://registry.yarnpkg.com/react-responsive-ui/-/react-responsive-ui-0.14.182.tgz#cf701c8643a1494df536c0ce323ae963dd5ab304"
+  integrity sha512-qXmVYFVTF0DrzcOc+HYAvb4bjeKnWNkiE2PsdwhxCHvFsdet/2jSSuKUMew7FyGYNknSSz3NAyZ55i03pKqH1g==
   dependencies:
     classnames "^2.2.5"
     create-react-context "^0.2.2"
