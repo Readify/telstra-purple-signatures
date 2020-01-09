@@ -9163,10 +9163,10 @@ react-modal@^3.8.1:
     react-lifecycles-compat "^3.0.0"
     warning "^4.0.3"
 
-react-phone-number-input@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/react-phone-number-input/-/react-phone-number-input-2.5.1.tgz#820e52fb7663e7ed5f096a9d88c9b444a9ffbf1e"
-  integrity sha512-97X9nUs/bP4uE8rAqOgSDT9iIyfS2tZ6PaCaCvXHfebIx4lLnTxaUpzME8WjHqzs7Ao3p+gj1OO6Cp5KDH/6bA==
+react-phone-number-input@^2.5.2:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/react-phone-number-input/-/react-phone-number-input-2.5.2.tgz#ed3d64124d71c8b4d162037fca124f35905525a1"
+  integrity sha512-xloyKl+9UmVOB2Hc0it0d72RCxw5fU/02RIUyiRL84l1AoVVRpK6aTOz80h3+3WZTgtZSJAKLHMasEqML+Os/g==
   dependencies:
     classnames "^2.2.5"
     input-format "^0.2.8"
