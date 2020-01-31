@@ -16,7 +16,7 @@ This app can be used to create Telstra Purple's Email Signature.
 - [ ] Write some tests
 
 ## Looks great, how can I use it for my company?
-`src/constants` Contains brand specific information. Edit fields in their to rebrand the website.
+`src/constants` Contains brand specific information. Edit fields in there to rebrand the website.
 
 ## Licence 
 MIT, See: [LICENSE](https://github.com/Readify/readify-signatures/blob/master/LICENSE)
