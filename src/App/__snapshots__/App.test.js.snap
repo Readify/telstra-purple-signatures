@@ -1200,7 +1200,7 @@ exports[`Renders Purple Signature 1`] = `
                                   >
                                     This email may contain confidential information.
                                     <br />
-                                    If I've sent it to you by accident, please delete it immediately.
+                                    If you are not the intended recipient, please delete it immediately.
                                   </td>
                                 </tr>
                               </table>
@@ -1434,7 +1434,7 @@ exports[`Renders Purple Signature 1`] = `
                               >
                                 This email may contain confidential information.
                                 <br />
-                                If I've sent it to you by accident, please delete it immediately.
+                                If you are not the intended recipient, please delete it immediately.
                               </div>
                             </div>
                           </RepliesAndForwards>
@@ -2815,7 +2815,7 @@ exports[`Renders Purple support 1`] = `
                                   >
                                     This email may contain confidential information.
                                     <br />
-                                    If I've sent it to you by accident, please delete it immediately.
+                                    If you are not the intended recipient, please delete it immediately.
                                   </td>
                                 </tr>
                               </table>
@@ -3087,7 +3087,7 @@ exports[`Renders Purple support 1`] = `
                               >
                                 This email may contain confidential information.
                                 <br />
-                                If I've sent it to you by accident, please delete it immediately.
+                                If you are not the intended recipient, please delete it immediately.
                               </div>
                             </div>
                           </RepliesAndForwards>

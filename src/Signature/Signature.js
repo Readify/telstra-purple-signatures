@@ -258,7 +258,7 @@ const Signature = props => {
           >
             This email may contain confidential information.
             <br />
-            If I've sent it to you by accident, please delete it immediately.
+            If you are not the intended recipient, please delete it immediately.
           </td>
         </tr>
       </table>
