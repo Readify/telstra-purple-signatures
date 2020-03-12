@@ -1,27 +1,42 @@
 # Telstra Purple Signature Generator
+
 [![Azure DevOps builds](https://img.shields.io/azure-devops/build/readify/a1cfb701-86db-4671-943f-eb68ec17eb18/425.svg?style=flat)](https://readify.visualstudio.com/Labs/_build?definitionId=425)
 [![Azure DevOps releases](https://img.shields.io/azure-devops/release/readify/a1cfb701-86db-4671-943f-eb68ec17eb18/41/53.svg?style=flat)](https://readify.visualstudio.com/Labs/_release?view=mine&definitionId=41)
-
 
 This app can be used to create Telstra Purple's Email Signature.
 
 ![Telstra Purple Signature Generator Screenshot](https://readifyvc.s3-ap-southeast-2.amazonaws.com/screenshot.png)
 
-
 ## App Roadmap
+
 - [x] Host site
 - [x] Convert to create-react-app so that we get prod-react, and decent tooling
 - [x] Add Telstra Purple Signature
 - [x] Leverage Azure Active Directory to autofill the form
-- [ ] Write some tests
+- [x] Write some tests
 
 ## Looks great, how can I use it for my company?
+
 `src/constants` Contains brand specific information. Edit fields in there to rebrand the website.
 
-## Licence 
+## Content security policy
+
+This application defines a [content security policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) through an HTTP header in the [`public\web.config`](./public/web.config) file, because we're hosting that application in Azure through IIS.
+
+At the time of writing, it allows:
+
+- loading scripts and stylesheets from the hosting domain
+- loading images from both the hosting domain and `readifysignatures.blob.core.windows.net`, which is where we host the logo used in the actual signature
+- connecting to `login.microsoftonline.com` to log in to the app against Azure Active Directory
+
+It's important to edit this policy if loading a new external resource.
+
+## Licence
+
 MIT, See: [LICENSE](https://github.com/Readify/readify-signatures/blob/master/LICENSE)
 
 ## Create React App Stuff
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Available Scripts
