@@ -57,6 +57,7 @@ const copyText = text => {
 export const copySignatureText = props => {
   const {
     name,
+    pronoun,
     title,
     qualifications,
     mobile,
@@ -72,6 +73,7 @@ export const copySignatureText = props => {
     '--',
     '',
     name ? name : null,
+    pronoun ? pronoun : null,
     brandInfo.brandName,
     title,
     qualifications ? `${qualifications}` : null,
@@ -97,6 +99,7 @@ export const copySignatureText = props => {
 export const copyRepliesAndForwardsText = props => {
   const {
     name,
+    pronoun,
     title,
     mobile,
     email,
