@@ -13,6 +13,7 @@ export class Form extends Component {
   static labels = {
     signatureTypes: { label: 'Signature Type', type: 'radio' },
     name: { label: 'Your Name', required: true },
+    pronoun: { label: 'Your Pronouns', required: true },
     title: { label: 'Job Title or Team' },
     email: { label: 'Email', type: 'email', required: true },
     phone: { label: 'Phone', type: 'tel' },
@@ -46,11 +47,12 @@ export class Form extends Component {
           order: 1
         },
         name: { text: '', order: 2 },
-        title: { text: '', order: 3 },
-        qualifications: { text: '', order: 4 },
-        mobile: { text: '', order: 5 },
-        email: { text: '', order: 6 },
-        twitter: { text: '', order: 7 }
+        pronoun: { text: '', order: 3},
+        title: { text: '', order: 4 },
+        qualifications: { text: '', order: 5 },
+        mobile: { text: '', order: 6 },
+        email: { text: '', order: 7 },
+        twitter: { text: '', order: 8 }
       }
     };
   }
@@ -66,10 +68,11 @@ export class Form extends Component {
         inputs: {
           ...this.state.inputs,
           name: { text: this.props.profile.displayName, order: 2 },
-          title: { text: this.props.profile.jobTitle, order: 3 },
-          qualifications: { text: '', order: 4 },
-          mobile: { text: this.props.profile.mobilePhone, order: 5 },
-          email: { text: this.props.profile.mail, order: 6 }
+          pronoun: { text: this.props.profile.pronoun, order: 3 },
+          title: { text: this.props.profile.jobTitle, order: 4 },
+          qualifications: { text: '', order: 5 },
+          mobile: { text: this.props.profile.mobilePhone, order: 6 },
+          email: { text: this.props.profile.mail, order: 7 }
         }
       });
     }
