@@ -125,6 +125,53 @@ exports[`Renders 1`] = `
   </div>
   <div
     className="field is-horizontal"
+    key="pronoun"
+  >
+    <div
+      className="field-label is-normal"
+    >
+      <label
+        className="label field-label"
+        for="input-pronoun"
+      >
+        Preferred Pronoun
+        <span
+          style={
+            Object {
+              "color": "red",
+            }
+          }
+          title="Required"
+        >
+          *
+        </span>
+      </label>
+    </div>
+    <div
+      className="field-body"
+    >
+      <div
+        className="control"
+        key="pronoun"
+      >
+        <input
+          className="input"
+          id="input-pronoun"
+          onChange={[Function]}
+          placeholder="he/him | she/her | they/them"
+          style={
+            Object {
+              "width": "300px",
+            }
+          }
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="field is-horizontal"
     key="title"
   >
     <div
