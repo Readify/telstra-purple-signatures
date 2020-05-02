@@ -7,6 +7,7 @@ const { brandInfo } = purple;
 const RepliesAndForwards = props => {
   const {
     name,
+    pronoun,
     title,
     mobile,
     email,
@@ -30,7 +31,7 @@ const RepliesAndForwards = props => {
         --
         <br />
         <b>
-          {name}&nbsp;|&nbsp;{brandName}
+          {name}&nbsp;({pronoun})&nbsp;|&nbsp;{brandName}
           {titleOptional}
         </b>
         <br />
