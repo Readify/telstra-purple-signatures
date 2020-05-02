@@ -120,6 +120,7 @@ Object {
       "email": "your.name@telstra.purple.net",
       "mobile": "+61 111 222 333",
       "name": "your name",
+      "pronoun": "he/him | she/her | they/them",
       "sigType": "purple",
       "title": "Job Title",
       "twitter": "@myTwitter",
