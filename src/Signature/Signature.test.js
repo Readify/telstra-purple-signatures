@@ -11,6 +11,7 @@ it('Renders', () => {
     name: 'your name',
     qualifications: 'Jedi Master | PSM I',
     title: 'Job Title',
+    pronoun: 'he/him | she/her | they/them',
     twitter: '@myTwitter',
     brandName: 'Telstra Purple',
     brandLink: 'https://purple.telstra.com/',
