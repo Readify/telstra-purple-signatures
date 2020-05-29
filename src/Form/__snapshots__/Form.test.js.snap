@@ -134,7 +134,7 @@ exports[`Renders 1`] = `
         className="label field-label"
         for="input-pronoun"
       >
-        Preferred Pronoun
+        Your Pronouns
         <span
           style={
             Object {
@@ -385,6 +385,7 @@ exports[`Renders 1`] = `
         "email": "your.name@purple.telstra.com",
         "mobile": "+61 111 222 333",
         "name": "Your Name",
+        "pronoun": "he/him | she/her | they/them",
         "qualifications": "Jedi Master | PSM I",
         "supportEmail": "support@some.domain",
         "supportHotline": "1800 xyz xyz",
@@ -392,6 +393,7 @@ exports[`Renders 1`] = `
         "twitter": "myTwitterHandle",
       }
     }
+    pronoun=""
     qualifications=""
     sigType={false}
     signatureTypes={
