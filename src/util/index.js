@@ -72,8 +72,7 @@ export const copySignatureText = props => {
   const textArr = [
     '--',
     '',
-    name ? name : null,
-    pronoun ? pronoun : null,
+    `${name ? name : null} (${pronoun ? pronoun : null})`,
     brandInfo.brandName,
     title,
     qualifications ? `${qualifications}` : null,
@@ -113,7 +112,7 @@ export const copyRepliesAndForwardsText = props => {
   const titleOptional = title ? ` | ${title}` : '';
   const textArr = [
     '--',
-    `${name} | ${brandInfo.brandName}${titleOptional}`,
+    `${name} (${pronoun}) | ${brandInfo.brandName}${titleOptional}`,
     `M ${mobileText} | E ${email}${twitter ? ` | T ${twitter}` : ''} | W ${
       brandInfo.brandLinkName
     }`,
