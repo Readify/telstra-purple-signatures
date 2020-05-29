@@ -14,8 +14,10 @@ exports[`Renders 1`] = `
     --
     <br />
     <b>
-      your name (he/him | she/her | they/them)
-       | 
+      your name
+       (
+      he/him | she/her | they/them
+      ) | 
       Telstra Purple
        | 
       Job Title
