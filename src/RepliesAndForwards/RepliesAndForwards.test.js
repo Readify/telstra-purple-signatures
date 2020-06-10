@@ -9,6 +9,7 @@ it('Renders', () => {
     sigType: false,
     mobile: '+61 111 222 333',
     name: 'your name',
+    pronoun: 'he/him | she/her | they/them',
     qualifications: 'Jedi Master | PSM I',
     title: 'Job Title',
     twitter: '@myTwitter',

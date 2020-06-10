@@ -25,6 +25,7 @@ export const containerChooser = props => ({
 export const createContainer = props => {
   const {
     name,
+    pronoun,
     title,
     qualifications,
     twitter,
@@ -46,6 +47,7 @@ export const createContainer = props => {
   const signatureProps = stripObject({
     title,
     qualifications,
+    pronoun,
     twitter,
     phone: null,
     ...assignPlaceholders(

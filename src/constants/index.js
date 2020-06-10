@@ -13,6 +13,7 @@ export const purple = {
 
   placeholders: {
     name: 'Your Name',
+    pronoun: 'he/him | she/her | they/them',
     title: 'Job Title',
     email: 'your.name@purple.telstra.com',
     mobile: '+61 111 222 333',

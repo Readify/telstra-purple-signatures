@@ -6,6 +6,7 @@ const { brandInfo } = purple;
 const Signature = props => {
   const {
     name,
+    pronoun,
     title,
     qualifications,
     mobile,
@@ -26,6 +27,8 @@ const Signature = props => {
       <span style={{ color: '#A5A5A5' }}>{title}</span>
     </>
   ) : null;
+
+  const pronounOptional = pronoun ? ` (${pronoun})` : null;
 
   const qualificationsElemenent = qualifications ? (
     <>
@@ -57,7 +60,7 @@ const Signature = props => {
             {/*Offset text so it lines up with top of logo on light mode UIs and works in Outlook*/}
             <div style={{ height: '15px', lineHeight: '15px' }}>&nbsp;</div>
             <p>
-              <b>{name}</b>
+              <b>{name}{pronounOptional}</b>
               <br />
               {brandName}
               {titleElement}

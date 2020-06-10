@@ -465,6 +465,43 @@ exports[`Renders Purple Signature 1`] = `
                 </div>
                 <div
                   className="field is-horizontal"
+                  key="pronoun"
+                >
+                  <div
+                    className="field-label is-normal"
+                  >
+                    <label
+                      className="label field-label"
+                      for="input-pronoun"
+                    >
+                      Your Pronouns
+                    </label>
+                  </div>
+                  <div
+                    className="field-body"
+                  >
+                    <div
+                      className="control"
+                      key="pronoun"
+                    >
+                      <input
+                        className="input"
+                        id="input-pronoun"
+                        onChange={[Function]}
+                        placeholder="he/him | she/her | they/them"
+                        style={
+                          Object {
+                            "width": "300px",
+                          }
+                        }
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="field is-horizontal"
                   key="title"
                 >
                   <div
@@ -678,6 +715,7 @@ exports[`Renders Purple Signature 1`] = `
                       "email": "your.name@purple.telstra.com",
                       "mobile": "+61 111 222 333",
                       "name": "Your Name",
+                      "pronoun": "he/him | she/her | they/them",
                       "qualifications": "Jedi Master | PSM I",
                       "supportEmail": "support@some.domain",
                       "supportHotline": "1800 xyz xyz",
@@ -685,6 +723,7 @@ exports[`Renders Purple Signature 1`] = `
                       "twitter": "myTwitterHandle",
                     }
                   }
+                  pronoun=""
                   qualifications=""
                   sigType={false}
                   signatureTypes={
@@ -719,6 +758,7 @@ exports[`Renders Purple Signature 1`] = `
                         "email": "your.name@purple.telstra.com",
                         "mobile": "+61 111 222 333",
                         "name": "Your Name",
+                        "pronoun": "he/him | she/her | they/them",
                         "qualifications": "Jedi Master | PSM I",
                         "supportEmail": "support@some.domain",
                         "supportHotline": "1800 xyz xyz",
@@ -726,6 +766,7 @@ exports[`Renders Purple Signature 1`] = `
                         "twitter": "myTwitterHandle",
                       }
                     }
+                    pronoun=""
                     qualifications=""
                     sigType={false}
                     signatureTypes={
@@ -793,6 +834,7 @@ exports[`Renders Purple Signature 1`] = `
                             "email": "your.name@purple.telstra.com",
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
+                            "pronoun": "",
                             "qualifications": "",
                             "sigType": false,
                             "title": "",
@@ -850,6 +892,7 @@ exports[`Renders Purple Signature 1`] = `
                             "email": "your.name@purple.telstra.com",
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
+                            "pronoun": "",
                             "qualifications": "",
                             "sigType": false,
                             "title": "",
@@ -1002,6 +1045,7 @@ exports[`Renders Purple Signature 1`] = `
                             email="your.name@purple.telstra.com"
                             mobile="+61 111 222 333"
                             name="Your Name"
+                            pronoun=""
                             qualifications=""
                             sigType={false}
                             title=""
@@ -1348,6 +1392,7 @@ exports[`Renders Purple Signature 1`] = `
                             email="your.name@purple.telstra.com"
                             mobile="+61 111 222 333"
                             name="Your Name"
+                            pronoun=""
                             qualifications=""
                             sigType={false}
                             title=""
@@ -1367,7 +1412,8 @@ exports[`Renders Purple Signature 1`] = `
                                 <br />
                                 <b>
                                   Your Name
-                                   | 
+                                   
+                                  | 
                                   Telstra Purple
                                 </b>
                                 <br />
@@ -1895,6 +1941,43 @@ exports[`Renders Purple support 1`] = `
                 </div>
                 <div
                   className="field is-horizontal"
+                  key="pronoun"
+                >
+                  <div
+                    className="field-label is-normal"
+                  >
+                    <label
+                      className="label field-label"
+                      for="input-pronoun"
+                    >
+                      Your Pronouns
+                    </label>
+                  </div>
+                  <div
+                    className="field-body"
+                  >
+                    <div
+                      className="control"
+                      key="pronoun"
+                    >
+                      <input
+                        className="input"
+                        id="input-pronoun"
+                        onChange={[Function]}
+                        placeholder="he/him | she/her | they/them"
+                        style={
+                          Object {
+                            "width": "300px",
+                          }
+                        }
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="field is-horizontal"
                   key="title"
                 >
                   <div
@@ -2063,43 +2146,6 @@ exports[`Renders Purple support 1`] = `
                 </div>
                 <div
                   className="field is-horizontal"
-                  key="twitter"
-                >
-                  <div
-                    className="field-label is-normal"
-                  >
-                    <label
-                      className="label field-label"
-                      for="input-twitter"
-                    >
-                      Twitter
-                    </label>
-                  </div>
-                  <div
-                    className="field-body"
-                  >
-                    <div
-                      className="control"
-                      key="twitter"
-                    >
-                      <input
-                        className="input"
-                        id="input-twitter"
-                        onChange={[Function]}
-                        placeholder="myTwitterHandle"
-                        style={
-                          Object {
-                            "width": "300px",
-                          }
-                        }
-                        type="text"
-                        value=""
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="field is-horizontal"
                   key="supportHotline"
                 >
                   <div
@@ -2192,6 +2238,43 @@ exports[`Renders Purple support 1`] = `
                     </div>
                   </div>
                 </div>
+                <div
+                  className="field is-horizontal"
+                  key="twitter"
+                >
+                  <div
+                    className="field-label is-normal"
+                  >
+                    <label
+                      className="label field-label"
+                      for="input-twitter"
+                    >
+                      Twitter
+                    </label>
+                  </div>
+                  <div
+                    className="field-body"
+                  >
+                    <div
+                      className="control"
+                      key="twitter"
+                    >
+                      <input
+                        className="input"
+                        id="input-twitter"
+                        onChange={[Function]}
+                        placeholder="myTwitterHandle"
+                        style={
+                          Object {
+                            "width": "300px",
+                          }
+                        }
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </div>
                 <hr />
                 <withProps(mapProps(SignatureContainer))
                   email=""
@@ -2202,6 +2285,7 @@ exports[`Renders Purple support 1`] = `
                       "email": "your.name@purple.telstra.com",
                       "mobile": "+61 111 222 333",
                       "name": "Your Name",
+                      "pronoun": "he/him | she/her | they/them",
                       "qualifications": "Jedi Master | PSM I",
                       "supportEmail": "support@some.domain",
                       "supportHotline": "1800 xyz xyz",
@@ -2209,6 +2293,7 @@ exports[`Renders Purple support 1`] = `
                       "twitter": "myTwitterHandle",
                     }
                   }
+                  pronoun=""
                   qualifications=""
                   sigType="support"
                   signatureTypes={
@@ -2245,6 +2330,7 @@ exports[`Renders Purple support 1`] = `
                         "email": "your.name@purple.telstra.com",
                         "mobile": "+61 111 222 333",
                         "name": "Your Name",
+                        "pronoun": "he/him | she/her | they/them",
                         "qualifications": "Jedi Master | PSM I",
                         "supportEmail": "support@some.domain",
                         "supportHotline": "1800 xyz xyz",
@@ -2252,6 +2338,7 @@ exports[`Renders Purple support 1`] = `
                         "twitter": "myTwitterHandle",
                       }
                     }
+                    pronoun=""
                     qualifications=""
                     sigType="support"
                     signatureTypes={
@@ -2321,6 +2408,7 @@ exports[`Renders Purple support 1`] = `
                             "email": "your.name@purple.telstra.com",
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
+                            "pronoun": "",
                             "qualifications": "",
                             "sigType": "support",
                             "supportEmail": "support@some.domain",
@@ -2380,6 +2468,7 @@ exports[`Renders Purple support 1`] = `
                             "email": "your.name@purple.telstra.com",
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
+                            "pronoun": "",
                             "qualifications": "",
                             "sigType": "support",
                             "supportEmail": "support@some.domain",
@@ -2534,6 +2623,7 @@ exports[`Renders Purple support 1`] = `
                             email="your.name@purple.telstra.com"
                             mobile="+61 111 222 333"
                             name="Your Name"
+                            pronoun=""
                             qualifications=""
                             sigType="support"
                             supportEmail="support@some.domain"
@@ -2963,6 +3053,7 @@ exports[`Renders Purple support 1`] = `
                             email="your.name@purple.telstra.com"
                             mobile="+61 111 222 333"
                             name="Your Name"
+                            pronoun=""
                             qualifications=""
                             sigType="support"
                             supportEmail="support@some.domain"
@@ -2984,7 +3075,8 @@ exports[`Renders Purple support 1`] = `
                                 <br />
                                 <b>
                                   Your Name
-                                   | 
+                                   
+                                  | 
                                   Telstra Purple
                                 </b>
                                 <br />

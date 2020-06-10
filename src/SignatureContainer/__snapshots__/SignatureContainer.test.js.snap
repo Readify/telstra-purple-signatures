@@ -6,6 +6,7 @@ exports[`SignatureContainer Renders 1`] = `
   email="your.name@telstra.purple.net"
   mobile="+61 111 222 333"
   name="your name"
+  pronoun="he/him | she/her | they/them"
   sigType="purple"
   title="Job Title"
   twitter="@myTwitter"
@@ -18,6 +19,7 @@ exports[`SignatureContainer Renders with support fields 1`] = `
   email="your.name@telstra.purple.net"
   mobile="+61 111 222 333"
   name="your name"
+  pronoun="he/him | she/her | they/them"
   sigType="support"
   title="Job Title"
   twitter="@myTwitter"
@@ -67,6 +69,7 @@ Object {
       "email": "your.name@telstra.purple.net",
       "mobile": "+61 111 222 333",
       "name": "your name",
+      "pronoun": "he/him | she/her | they/them",
       "title": "Job Title",
       "twitter": "@myTwitter",
     },
@@ -117,6 +120,7 @@ Object {
       "email": "your.name@telstra.purple.net",
       "mobile": "+61 111 222 333",
       "name": "your name",
+      "pronoun": "he/him | she/her | they/them",
       "sigType": "purple",
       "title": "Job Title",
       "twitter": "@myTwitter",

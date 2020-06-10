@@ -10,6 +10,7 @@ describe('SignatureContainer', () => {
       sigType: 'purple',
       mobile: '+61 111 222 333',
       name: 'your name',
+      pronoun: 'he/him | she/her | they/them',
       title: 'Job Title',
       twitter: '@myTwitter'
     };
@@ -24,6 +25,7 @@ describe('SignatureContainer', () => {
       sigType: 'support',
       mobile: '+61 111 222 333',
       name: 'your name',
+      pronoun: 'he/him | she/her | they/them',
       title: 'Job Title',
       twitter: '@myTwitter'
     };
@@ -40,6 +42,7 @@ describe('createContainer', () => {
       mobile: '+61 111 222 333',
       phone: '+61 123 456 789',
       name: 'your name',
+      pronoun: 'he/him | she/her | they/them',
       title: 'Job Title',
       twitter: '@myTwitter'
     };
