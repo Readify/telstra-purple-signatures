@@ -34,9 +34,7 @@ exports[`Renders 1`] = `
         <p>
           <b>
             your name
-             (
-            he/him | she/her | they/them
-            )
+             (he/him | she/her | they/them)
           </b>
           <br />
           Telstra Purple

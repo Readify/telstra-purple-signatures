@@ -13,7 +13,7 @@ export class Form extends Component {
   static labels = {
     signatureTypes: { label: 'Signature Type', type: 'radio' },
     name: { label: 'Your Name', required: true },
-    pronoun: { label: 'Your Pronouns', required: true },
+    pronoun: { label: 'Your Pronouns' },
     title: { label: 'Job Title or Team' },
     email: { label: 'Email', type: 'email', required: true },
     phone: { label: 'Phone', type: 'tel' },
@@ -68,7 +68,7 @@ export class Form extends Component {
         inputs: {
           ...this.state.inputs,
           name: { text: this.props.profile.displayName, order: 2 },
-          pronoun: { text: this.props.profile.pronoun, order: 3 },
+          pronoun: { text: '', order: 3 },
           title: { text: this.props.profile.jobTitle, order: 4 },
           qualifications: { text: '', order: 5 },
           mobile: { text: this.props.profile.mobilePhone, order: 6 },

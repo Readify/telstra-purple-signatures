@@ -475,16 +475,6 @@ exports[`Renders Purple Signature 1`] = `
                       for="input-pronoun"
                     >
                       Your Pronouns
-                      <span
-                        style={
-                          Object {
-                            "color": "red",
-                          }
-                        }
-                        title="Required"
-                      >
-                        *
-                      </span>
                     </label>
                   </div>
                   <div
@@ -844,7 +834,7 @@ exports[`Renders Purple Signature 1`] = `
                             "email": "your.name@purple.telstra.com",
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
-                            "pronoun": "he/him | she/her | they/them",
+                            "pronoun": "",
                             "qualifications": "",
                             "sigType": false,
                             "title": "",
@@ -902,7 +892,7 @@ exports[`Renders Purple Signature 1`] = `
                             "email": "your.name@purple.telstra.com",
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
-                            "pronoun": "he/him | she/her | they/them",
+                            "pronoun": "",
                             "qualifications": "",
                             "sigType": false,
                             "title": "",
@@ -1055,7 +1045,7 @@ exports[`Renders Purple Signature 1`] = `
                             email="your.name@purple.telstra.com"
                             mobile="+61 111 222 333"
                             name="Your Name"
-                            pronoun="he/him | she/her | they/them"
+                            pronoun=""
                             qualifications=""
                             sigType={false}
                             title=""
@@ -1094,9 +1084,6 @@ exports[`Renders Purple Signature 1`] = `
                                     <p>
                                       <b>
                                         Your Name
-                                         (
-                                        he/him | she/her | they/them
-                                        )
                                       </b>
                                       <br />
                                       Telstra Purple
@@ -1405,7 +1392,7 @@ exports[`Renders Purple Signature 1`] = `
                             email="your.name@purple.telstra.com"
                             mobile="+61 111 222 333"
                             name="Your Name"
-                            pronoun="he/him | she/her | they/them"
+                            pronoun=""
                             qualifications=""
                             sigType={false}
                             title=""
@@ -1425,9 +1412,8 @@ exports[`Renders Purple Signature 1`] = `
                                 <br />
                                 <b>
                                   Your Name
-                                   (
-                                  he/him | she/her | they/them
-                                  ) | 
+                                   
+                                  | 
                                   Telstra Purple
                                 </b>
                                 <br />
@@ -1965,16 +1951,6 @@ exports[`Renders Purple support 1`] = `
                       for="input-pronoun"
                     >
                       Your Pronouns
-                      <span
-                        style={
-                          Object {
-                            "color": "red",
-                          }
-                        }
-                        title="Required"
-                      >
-                        *
-                      </span>
                     </label>
                   </div>
                   <div
@@ -2432,7 +2408,7 @@ exports[`Renders Purple support 1`] = `
                             "email": "your.name@purple.telstra.com",
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
-                            "pronoun": "he/him | she/her | they/them",
+                            "pronoun": "",
                             "qualifications": "",
                             "sigType": "support",
                             "supportEmail": "support@some.domain",
@@ -2492,7 +2468,7 @@ exports[`Renders Purple support 1`] = `
                             "email": "your.name@purple.telstra.com",
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
-                            "pronoun": "he/him | she/her | they/them",
+                            "pronoun": "",
                             "qualifications": "",
                             "sigType": "support",
                             "supportEmail": "support@some.domain",
@@ -2647,7 +2623,7 @@ exports[`Renders Purple support 1`] = `
                             email="your.name@purple.telstra.com"
                             mobile="+61 111 222 333"
                             name="Your Name"
-                            pronoun="he/him | she/her | they/them"
+                            pronoun=""
                             qualifications=""
                             sigType="support"
                             supportEmail="support@some.domain"
@@ -2688,9 +2664,6 @@ exports[`Renders Purple support 1`] = `
                                     <p>
                                       <b>
                                         Your Name
-                                         (
-                                        he/him | she/her | they/them
-                                        )
                                       </b>
                                       <br />
                                       Telstra Purple
@@ -3080,7 +3053,7 @@ exports[`Renders Purple support 1`] = `
                             email="your.name@purple.telstra.com"
                             mobile="+61 111 222 333"
                             name="Your Name"
-                            pronoun="he/him | she/her | they/them"
+                            pronoun=""
                             qualifications=""
                             sigType="support"
                             supportEmail="support@some.domain"
@@ -3102,9 +3075,8 @@ exports[`Renders Purple support 1`] = `
                                 <br />
                                 <b>
                                   Your Name
-                                   (
-                                  he/him | she/her | they/them
-                                  ) | 
+                                   
+                                  | 
                                   Telstra Purple
                                 </b>
                                 <br />

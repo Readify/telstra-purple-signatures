@@ -25,13 +25,14 @@ const RepliesAndForwards = props => {
     fontSize: '9pt'
   };
   const titleOptional = title ? <>&nbsp;|&nbsp;{title}</> : null;
+  const pronounOptional = pronoun ? <>({pronoun})&nbsp;</> : null;
   return (
     <div>
       <p style={styleObj}>
         --
         <br />
         <b>
-          {name}&nbsp;({pronoun})&nbsp;|&nbsp;{brandName}
+          {name}&nbsp;{pronounOptional}|&nbsp;{brandName}
           {titleOptional}
         </b>
         <br />

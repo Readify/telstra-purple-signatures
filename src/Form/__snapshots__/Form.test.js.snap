@@ -135,16 +135,6 @@ exports[`Renders 1`] = `
         for="input-pronoun"
       >
         Your Pronouns
-        <span
-          style={
-            Object {
-              "color": "red",
-            }
-          }
-          title="Required"
-        >
-          *
-        </span>
       </label>
     </div>
     <div

@@ -47,12 +47,12 @@ export const createContainer = props => {
   const signatureProps = stripObject({
     title,
     qualifications,
+    pronoun,
     twitter,
     phone: null,
     ...assignPlaceholders(
       stripObject({
         name,
-        pronoun,
         mobile,
         email,
         sigType,
