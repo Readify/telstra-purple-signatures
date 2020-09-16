@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.14.1
+version: v1.19.0
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -8,3 +8,13 @@ patch:
         patched: '2020-05-11T05:06:41.975Z'
     - react-phone-number-input > react-responsive-ui > lodash:
         patched: '2020-05-11T05:06:41.975Z'
+    - react-phone-number-input > react-responsive-ui > lodash:
+        patched: '2020-09-16T06:04:18.091Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-16T06:04:18.091Z'
+    - snyk > snyk-cpp-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-16T06:04:18.091Z'
+    - snyk > snyk-gradle-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-16T06:04:18.091Z'
+    - snyk > snyk-docker-plugin > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2020-09-16T06:04:18.091Z'
