@@ -233,6 +233,11 @@ exports[`Renders 1`] = `
     </tr>
     <tr>
       <td
+        colSpan={2}
+      />
+    </tr>
+    <tr>
+      <td
         style={
           Object {
             "color": "#4a4a4a",

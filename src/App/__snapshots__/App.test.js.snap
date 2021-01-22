@@ -705,8 +705,39 @@ exports[`Renders Purple Signature 1`] = `
                     </div>
                   </div>
                 </div>
+                <div
+                  className="field is-horizontal"
+                  key="addGot5"
+                >
+                  <div
+                    className="field-label is-normal"
+                  >
+                    <label
+                      className="label field-label"
+                      for="input-addGot5"
+                    >
+                      Add #Got5
+                    </label>
+                  </div>
+                  <div
+                    className="field-body"
+                  >
+                    <div
+                      className="control"
+                      key="addGot5"
+                    >
+                      <input
+                        className="mt-3"
+                        id="input-addGot5"
+                        onChange={[Function]}
+                        type="checkbox"
+                      />
+                    </div>
+                  </div>
+                </div>
                 <hr />
                 <withProps(mapProps(SignatureContainer))
+                  addGot5={false}
                   email=""
                   mobile=""
                   name=""
@@ -750,6 +781,7 @@ exports[`Renders Purple Signature 1`] = `
                 >
                   <mapProps(SignatureContainer)
                     Container={[Function]}
+                    addGot5={false}
                     email=""
                     mobile=""
                     name=""
@@ -824,6 +856,7 @@ exports[`Renders Purple Signature 1`] = `
                             textBefore="Copy text only"
                           />,
                           "signatureProps": Object {
+                            "addGot5": false,
                             "brandLink": "https://purple.telstra.com/",
                             "brandLinkName": "purple.telstra.com",
                             "brandLogo": Object {
@@ -832,6 +865,10 @@ exports[`Renders Purple Signature 1`] = `
                             },
                             "brandName": "Telstra Purple",
                             "email": "your.name@purple.telstra.com",
+                            "got5Logo": Object {
+                              "alt": "Got 5",
+                              "link": "https://readifysignatures.blob.core.windows.net/images/got5-logo.png",
+                            },
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
                             "pronoun": "",
@@ -882,6 +919,7 @@ exports[`Renders Purple Signature 1`] = `
                         }
                         signatureProps={
                           Object {
+                            "addGot5": false,
                             "brandLink": "https://purple.telstra.com/",
                             "brandLinkName": "purple.telstra.com",
                             "brandLogo": Object {
@@ -890,6 +928,10 @@ exports[`Renders Purple Signature 1`] = `
                             },
                             "brandName": "Telstra Purple",
                             "email": "your.name@purple.telstra.com",
+                            "got5Logo": Object {
+                              "alt": "Got 5",
+                              "link": "https://readifysignatures.blob.core.windows.net/images/got5-logo.png",
+                            },
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
                             "pronoun": "",
@@ -1033,6 +1075,7 @@ exports[`Renders Purple Signature 1`] = `
                             </div>
                           </div>
                           <Signature
+                            addGot5={false}
                             brandLink="https://purple.telstra.com/"
                             brandLinkName="purple.telstra.com"
                             brandLogo={
@@ -1043,6 +1086,12 @@ exports[`Renders Purple Signature 1`] = `
                             }
                             brandName="Telstra Purple"
                             email="your.name@purple.telstra.com"
+                            got5Logo={
+                              Object {
+                                "alt": "Got 5",
+                                "link": "https://readifysignatures.blob.core.windows.net/images/got5-logo.png",
+                              }
+                            }
                             mobile="+61 111 222 333"
                             name="Your Name"
                             pronoun=""
@@ -1233,6 +1282,11 @@ exports[`Renders Purple Signature 1`] = `
                                 </tr>
                                 <tr>
                                   <td
+                                    colSpan={2}
+                                  />
+                                </tr>
+                                <tr>
+                                  <td
                                     style={
                                       Object {
                                         "color": "#4a4a4a",
@@ -1380,6 +1434,7 @@ exports[`Renders Purple Signature 1`] = `
                             </div>
                           </div>
                           <RepliesAndForwards
+                            addGot5={false}
                             brandLink="https://purple.telstra.com/"
                             brandLinkName="purple.telstra.com"
                             brandLogo={
@@ -1390,6 +1445,12 @@ exports[`Renders Purple Signature 1`] = `
                             }
                             brandName="Telstra Purple"
                             email="your.name@purple.telstra.com"
+                            got5Logo={
+                              Object {
+                                "alt": "Got 5",
+                                "link": "https://readifysignatures.blob.core.windows.net/images/got5-logo.png",
+                              }
+                            }
                             mobile="+61 111 222 333"
                             name="Your Name"
                             pronoun=""
@@ -2275,8 +2336,39 @@ exports[`Renders Purple support 1`] = `
                     </div>
                   </div>
                 </div>
+                <div
+                  className="field is-horizontal"
+                  key="addGot5"
+                >
+                  <div
+                    className="field-label is-normal"
+                  >
+                    <label
+                      className="label field-label"
+                      for="input-addGot5"
+                    >
+                      Add #Got5
+                    </label>
+                  </div>
+                  <div
+                    className="field-body"
+                  >
+                    <div
+                      className="control"
+                      key="addGot5"
+                    >
+                      <input
+                        className="mt-3"
+                        id="input-addGot5"
+                        onChange={[Function]}
+                        type="checkbox"
+                      />
+                    </div>
+                  </div>
+                </div>
                 <hr />
                 <withProps(mapProps(SignatureContainer))
+                  addGot5={false}
                   email=""
                   mobile=""
                   name=""
@@ -2322,6 +2414,7 @@ exports[`Renders Purple support 1`] = `
                 >
                   <mapProps(SignatureContainer)
                     Container={[Function]}
+                    addGot5={false}
                     email=""
                     mobile=""
                     name=""
@@ -2398,6 +2491,7 @@ exports[`Renders Purple support 1`] = `
                             textBefore="Copy text only"
                           />,
                           "signatureProps": Object {
+                            "addGot5": false,
                             "brandLink": "https://purple.telstra.com/",
                             "brandLinkName": "purple.telstra.com",
                             "brandLogo": Object {
@@ -2406,6 +2500,10 @@ exports[`Renders Purple support 1`] = `
                             },
                             "brandName": "Telstra Purple",
                             "email": "your.name@purple.telstra.com",
+                            "got5Logo": Object {
+                              "alt": "Got 5",
+                              "link": "https://readifysignatures.blob.core.windows.net/images/got5-logo.png",
+                            },
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
                             "pronoun": "",
@@ -2458,6 +2556,7 @@ exports[`Renders Purple support 1`] = `
                         }
                         signatureProps={
                           Object {
+                            "addGot5": false,
                             "brandLink": "https://purple.telstra.com/",
                             "brandLinkName": "purple.telstra.com",
                             "brandLogo": Object {
@@ -2466,6 +2565,10 @@ exports[`Renders Purple support 1`] = `
                             },
                             "brandName": "Telstra Purple",
                             "email": "your.name@purple.telstra.com",
+                            "got5Logo": Object {
+                              "alt": "Got 5",
+                              "link": "https://readifysignatures.blob.core.windows.net/images/got5-logo.png",
+                            },
                             "mobile": "+61 111 222 333",
                             "name": "Your Name",
                             "pronoun": "",
@@ -2611,6 +2714,7 @@ exports[`Renders Purple support 1`] = `
                             </div>
                           </div>
                           <Signature
+                            addGot5={false}
                             brandLink="https://purple.telstra.com/"
                             brandLinkName="purple.telstra.com"
                             brandLogo={
@@ -2621,6 +2725,12 @@ exports[`Renders Purple support 1`] = `
                             }
                             brandName="Telstra Purple"
                             email="your.name@purple.telstra.com"
+                            got5Logo={
+                              Object {
+                                "alt": "Got 5",
+                                "link": "https://readifysignatures.blob.core.windows.net/images/got5-logo.png",
+                              }
+                            }
                             mobile="+61 111 222 333"
                             name="Your Name"
                             pronoun=""
@@ -2894,6 +3004,11 @@ exports[`Renders Purple support 1`] = `
                                 </tr>
                                 <tr>
                                   <td
+                                    colSpan={2}
+                                  />
+                                </tr>
+                                <tr>
+                                  <td
                                     style={
                                       Object {
                                         "color": "#4a4a4a",
@@ -3041,6 +3156,7 @@ exports[`Renders Purple support 1`] = `
                             </div>
                           </div>
                           <RepliesAndForwards
+                            addGot5={false}
                             brandLink="https://purple.telstra.com/"
                             brandLinkName="purple.telstra.com"
                             brandLogo={
@@ -3051,6 +3167,12 @@ exports[`Renders Purple support 1`] = `
                             }
                             brandName="Telstra Purple"
                             email="your.name@purple.telstra.com"
+                            got5Logo={
+                              Object {
+                                "alt": "Got 5",
+                                "link": "https://readifysignatures.blob.core.windows.net/images/got5-logo.png",
+                              }
+                            }
                             mobile="+61 111 222 333"
                             name="Your Name"
                             pronoun=""
