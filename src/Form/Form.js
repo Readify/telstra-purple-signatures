@@ -20,6 +20,7 @@ export class Form extends Component {
     mobile: { label: 'Mobile', type: 'tel', required: true },
     twitter: { label: 'Twitter' },
     qualifications: { label: 'Qualifications' },
+    addGot5: { label: 'Add #Got5', type: 'checkbox' },
     supportHotline: { label: 'Support Hotline', type: 'tel', required: true },
     supportEmail: { label: 'Support Email', type: 'email', required: true }
   };
@@ -47,12 +48,13 @@ export class Form extends Component {
           order: 1
         },
         name: { text: '', order: 2 },
-        pronoun: { text: '', order: 3},
+        pronoun: { text: '', order: 3 },
         title: { text: '', order: 4 },
         qualifications: { text: '', order: 5 },
         mobile: { text: '', order: 6 },
         email: { text: '', order: 7 },
-        twitter: { text: '', order: 8 }
+        twitter: { text: '', order: 8 },
+        addGot5: { text: false, order: 9 }
       }
     };
   }
@@ -134,6 +136,16 @@ export class Form extends Component {
             })}
           </div>
         </div>
+      );
+    }
+    if (type === 'checkbox') {
+      return (
+        <input
+          id={`input-${inputName}`}
+          type={type}
+          className="mt-3"
+          onChange={e => this.handleChange(inputName, e.target.checked)}
+        />
       );
     }
     return (

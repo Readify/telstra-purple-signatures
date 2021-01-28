@@ -15,6 +15,8 @@ const Signature = props => {
     sigType,
     supportHotline,
     supportEmail,
+    addGot5,
+    got5Logo,
     brandLogo,
     brandName,
     brandLink,
@@ -60,7 +62,10 @@ const Signature = props => {
             {/*Offset text so it lines up with top of logo on light mode UIs and works in Outlook*/}
             <div style={{ height: '15px', lineHeight: '15px' }}>&nbsp;</div>
             <p>
-              <b>{name}{pronounOptional}</b>
+              <b>
+                {name}
+                {pronounOptional}
+              </b>
               <br />
               {brandName}
               {titleElement}
@@ -246,6 +251,47 @@ const Signature = props => {
                   <br />
                   +44 (0)845 468 0085
                 </p>
+              </table>
+            ) : null}
+          </td>
+        </tr>
+        <tr>
+          <td colSpan={2}>
+            {addGot5 ? (
+              <table
+                border="0"
+                cellSpacing="0"
+                cellPadding="0"
+                style={{
+                  color: '#0D76A6',
+                  fontFamily: 'Arial, sans-serif',
+                  fontWeight: 'bold',
+                  fontSize: '8pt',
+                  margin: 0,
+                  padding: 0
+                }}
+              >
+                <tr>
+                  <td>
+                    <img
+                      width="45"
+                      height="50"
+                      style={{
+                        width: '45px',
+                        height: '50px',
+                        maxWidth: 'none'
+                      }}
+                      src={got5Logo.link}
+                      alt={got5Logo.alt}
+                    />
+                  </td>
+                  <td>
+                    I support #Got5!
+                    <br />
+                    Feel free to ask ‘you got 5’ instead of setting up a meeting
+                    or sending me an email!
+                  </td>
+                </tr>
               </table>
             ) : null}
           </td>

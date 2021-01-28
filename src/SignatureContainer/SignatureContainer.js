@@ -34,6 +34,7 @@ export const createContainer = props => {
     email,
     supportHotline,
     supportEmail,
+    addGot5,
     Container,
     brandLogo,
     brandName,
@@ -43,6 +44,7 @@ export const createContainer = props => {
 
   const placeholders = constants.purple.placeholders;
   const brandInfo = constants.purple.brandInfo;
+  const got5Logo = constants.purple.got5Logo;
 
   const signatureProps = stripObject({
     title,
@@ -61,6 +63,8 @@ export const createContainer = props => {
       }),
       placeholders
     ),
+    addGot5,
+    got5Logo,
     ...assignPlaceholders(
       { brandLogo, brandName, brandLink, brandLinkName },
       brandInfo

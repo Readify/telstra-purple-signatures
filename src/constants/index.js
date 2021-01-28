@@ -28,6 +28,12 @@ export const purple = {
     brandLinkName: 'telstrapurple.co.uk'
   },
 
+  got5Logo: {
+    link:
+      'https://readifysignatures.blob.core.windows.net/images/got5-logo.png',
+    alt: 'Got 5'
+  },
+
   default: {
     countryCode: '+61'
   }

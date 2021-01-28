@@ -365,8 +365,39 @@ exports[`Renders 1`] = `
       </div>
     </div>
   </div>
+  <div
+    className="field is-horizontal"
+    key="addGot5"
+  >
+    <div
+      className="field-label is-normal"
+    >
+      <label
+        className="label field-label"
+        for="input-addGot5"
+      >
+        Add #Got5
+      </label>
+    </div>
+    <div
+      className="field-body"
+    >
+      <div
+        className="control"
+        key="addGot5"
+      >
+        <input
+          className="mt-3"
+          id="input-addGot5"
+          onChange={[Function]}
+          type="checkbox"
+        />
+      </div>
+    </div>
+  </div>
   <hr />
   <withProps(mapProps(SignatureContainer))
+    addGot5={false}
     email=""
     mobile=""
     name=""

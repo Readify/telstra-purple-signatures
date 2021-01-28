@@ -67,6 +67,10 @@ Object {
       },
       "brandName": "Telstra Purple",
       "email": "your.name@telstra.purple.net",
+      "got5Logo": Object {
+        "alt": "Got 5",
+        "link": "https://readifysignatures.blob.core.windows.net/images/got5-logo.png",
+      },
       "mobile": "+61 111 222 333",
       "name": "your name",
       "pronoun": "he/him | she/her | they/them",
@@ -118,6 +122,10 @@ Object {
       },
       "brandName": "Telstra Purple",
       "email": "your.name@telstra.purple.net",
+      "got5Logo": Object {
+        "alt": "Got 5",
+        "link": "https://readifysignatures.blob.core.windows.net/images/got5-logo.png",
+      },
       "mobile": "+61 111 222 333",
       "name": "your name",
       "pronoun": "he/him | she/her | they/them",
