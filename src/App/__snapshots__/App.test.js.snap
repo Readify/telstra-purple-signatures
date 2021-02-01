@@ -735,6 +735,36 @@ exports[`Renders Purple Signature 1`] = `
                     </div>
                   </div>
                 </div>
+                <div
+                  className="field is-horizontal"
+                  key="useAnimatedLogo"
+                >
+                  <div
+                    className="field-label is-normal"
+                  >
+                    <label
+                      className="label field-label"
+                      for="input-useAnimatedLogo"
+                    >
+                      Use animated logo
+                    </label>
+                  </div>
+                  <div
+                    className="field-body"
+                  >
+                    <div
+                      className="control"
+                      key="useAnimatedLogo"
+                    >
+                      <input
+                        className="mt-3"
+                        id="input-useAnimatedLogo"
+                        onChange={[Function]}
+                        type="checkbox"
+                      />
+                    </div>
+                  </div>
+                </div>
                 <hr />
                 <withProps(mapProps(SignatureContainer))
                   addGot5={false}
@@ -778,6 +808,7 @@ exports[`Renders Purple Signature 1`] = `
                   }
                   title=""
                   twitter=""
+                  useAnimatedLogo={false}
                 >
                   <mapProps(SignatureContainer)
                     Container={[Function]}
@@ -822,6 +853,7 @@ exports[`Renders Purple Signature 1`] = `
                     }
                     title=""
                     twitter=""
+                    useAnimatedLogo={false}
                   >
                     <SignatureContainer
                       Container={[Function]}
@@ -857,6 +889,10 @@ exports[`Renders Purple Signature 1`] = `
                           />,
                           "signatureProps": Object {
                             "addGot5": false,
+                            "brandAnimatedLogo": Object {
+                              "alt": "Purpose and People animation",
+                              "link": "https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif",
+                            },
                             "brandLink": "https://purple.telstra.com/",
                             "brandLinkName": "purple.telstra.com",
                             "brandLogo": Object {
@@ -876,6 +912,7 @@ exports[`Renders Purple Signature 1`] = `
                             "sigType": false,
                             "title": "",
                             "twitter": "",
+                            "useAnimatedLogo": false,
                           },
                         }
                       }
@@ -920,6 +957,10 @@ exports[`Renders Purple Signature 1`] = `
                         signatureProps={
                           Object {
                             "addGot5": false,
+                            "brandAnimatedLogo": Object {
+                              "alt": "Purpose and People animation",
+                              "link": "https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif",
+                            },
                             "brandLink": "https://purple.telstra.com/",
                             "brandLinkName": "purple.telstra.com",
                             "brandLogo": Object {
@@ -939,6 +980,7 @@ exports[`Renders Purple Signature 1`] = `
                             "sigType": false,
                             "title": "",
                             "twitter": "",
+                            "useAnimatedLogo": false,
                           }
                         }
                       >
@@ -1076,6 +1118,12 @@ exports[`Renders Purple Signature 1`] = `
                           </div>
                           <Signature
                             addGot5={false}
+                            brandAnimatedLogo={
+                              Object {
+                                "alt": "Purpose and People animation",
+                                "link": "https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif",
+                              }
+                            }
                             brandLink="https://purple.telstra.com/"
                             brandLinkName="purple.telstra.com"
                             brandLogo={
@@ -1099,6 +1147,7 @@ exports[`Renders Purple Signature 1`] = `
                             sigType={false}
                             title=""
                             twitter=""
+                            useAnimatedLogo={false}
                           >
                             <div
                               className="content"
@@ -1282,11 +1331,6 @@ exports[`Renders Purple Signature 1`] = `
                                 </tr>
                                 <tr>
                                   <td
-                                    colSpan={2}
-                                  />
-                                </tr>
-                                <tr>
-                                  <td
                                     style={
                                       Object {
                                         "color": "#4a4a4a",
@@ -1435,6 +1479,12 @@ exports[`Renders Purple Signature 1`] = `
                           </div>
                           <RepliesAndForwards
                             addGot5={false}
+                            brandAnimatedLogo={
+                              Object {
+                                "alt": "Purpose and People animation",
+                                "link": "https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif",
+                              }
+                            }
                             brandLink="https://purple.telstra.com/"
                             brandLinkName="purple.telstra.com"
                             brandLogo={
@@ -1458,6 +1508,7 @@ exports[`Renders Purple Signature 1`] = `
                             sigType={false}
                             title=""
                             twitter=""
+                            useAnimatedLogo={false}
                           >
                             <div>
                               <p
@@ -2366,6 +2417,36 @@ exports[`Renders Purple support 1`] = `
                     </div>
                   </div>
                 </div>
+                <div
+                  className="field is-horizontal"
+                  key="useAnimatedLogo"
+                >
+                  <div
+                    className="field-label is-normal"
+                  >
+                    <label
+                      className="label field-label"
+                      for="input-useAnimatedLogo"
+                    >
+                      Use animated logo
+                    </label>
+                  </div>
+                  <div
+                    className="field-body"
+                  >
+                    <div
+                      className="control"
+                      key="useAnimatedLogo"
+                    >
+                      <input
+                        className="mt-3"
+                        id="input-useAnimatedLogo"
+                        onChange={[Function]}
+                        type="checkbox"
+                      />
+                    </div>
+                  </div>
+                </div>
                 <hr />
                 <withProps(mapProps(SignatureContainer))
                   addGot5={false}
@@ -2411,6 +2492,7 @@ exports[`Renders Purple support 1`] = `
                   supportHotline=""
                   title=""
                   twitter=""
+                  useAnimatedLogo={false}
                 >
                   <mapProps(SignatureContainer)
                     Container={[Function]}
@@ -2457,6 +2539,7 @@ exports[`Renders Purple support 1`] = `
                     supportHotline=""
                     title=""
                     twitter=""
+                    useAnimatedLogo={false}
                   >
                     <SignatureContainer
                       Container={[Function]}
@@ -2492,6 +2575,10 @@ exports[`Renders Purple support 1`] = `
                           />,
                           "signatureProps": Object {
                             "addGot5": false,
+                            "brandAnimatedLogo": Object {
+                              "alt": "Purpose and People animation",
+                              "link": "https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif",
+                            },
                             "brandLink": "https://purple.telstra.com/",
                             "brandLinkName": "purple.telstra.com",
                             "brandLogo": Object {
@@ -2513,6 +2600,7 @@ exports[`Renders Purple support 1`] = `
                             "supportHotline": "1800 xyz xyz",
                             "title": "",
                             "twitter": "",
+                            "useAnimatedLogo": false,
                           },
                         }
                       }
@@ -2557,6 +2645,10 @@ exports[`Renders Purple support 1`] = `
                         signatureProps={
                           Object {
                             "addGot5": false,
+                            "brandAnimatedLogo": Object {
+                              "alt": "Purpose and People animation",
+                              "link": "https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif",
+                            },
                             "brandLink": "https://purple.telstra.com/",
                             "brandLinkName": "purple.telstra.com",
                             "brandLogo": Object {
@@ -2578,6 +2670,7 @@ exports[`Renders Purple support 1`] = `
                             "supportHotline": "1800 xyz xyz",
                             "title": "",
                             "twitter": "",
+                            "useAnimatedLogo": false,
                           }
                         }
                       >
@@ -2715,6 +2808,12 @@ exports[`Renders Purple support 1`] = `
                           </div>
                           <Signature
                             addGot5={false}
+                            brandAnimatedLogo={
+                              Object {
+                                "alt": "Purpose and People animation",
+                                "link": "https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif",
+                              }
+                            }
                             brandLink="https://purple.telstra.com/"
                             brandLinkName="purple.telstra.com"
                             brandLogo={
@@ -2740,6 +2839,7 @@ exports[`Renders Purple support 1`] = `
                             supportHotline="1800 xyz xyz"
                             title=""
                             twitter=""
+                            useAnimatedLogo={false}
                           >
                             <div
                               className="content"
@@ -3004,11 +3104,6 @@ exports[`Renders Purple support 1`] = `
                                 </tr>
                                 <tr>
                                   <td
-                                    colSpan={2}
-                                  />
-                                </tr>
-                                <tr>
-                                  <td
                                     style={
                                       Object {
                                         "color": "#4a4a4a",
@@ -3157,6 +3252,12 @@ exports[`Renders Purple support 1`] = `
                           </div>
                           <RepliesAndForwards
                             addGot5={false}
+                            brandAnimatedLogo={
+                              Object {
+                                "alt": "Purpose and People animation",
+                                "link": "https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif",
+                              }
+                            }
                             brandLink="https://purple.telstra.com/"
                             brandLinkName="purple.telstra.com"
                             brandLogo={
@@ -3182,6 +3283,7 @@ exports[`Renders Purple support 1`] = `
                             supportHotline="1800 xyz xyz"
                             title=""
                             twitter=""
+                            useAnimatedLogo={false}
                           >
                             <div>
                               <p

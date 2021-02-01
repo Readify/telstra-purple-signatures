@@ -395,6 +395,36 @@ exports[`Renders 1`] = `
       </div>
     </div>
   </div>
+  <div
+    className="field is-horizontal"
+    key="useAnimatedLogo"
+  >
+    <div
+      className="field-label is-normal"
+    >
+      <label
+        className="label field-label"
+        for="input-useAnimatedLogo"
+      >
+        Use animated logo
+      </label>
+    </div>
+    <div
+      className="field-body"
+    >
+      <div
+        className="control"
+        key="useAnimatedLogo"
+      >
+        <input
+          className="mt-3"
+          id="input-useAnimatedLogo"
+          onChange={[Function]}
+          type="checkbox"
+        />
+      </div>
+    </div>
+  </div>
   <hr />
   <withProps(mapProps(SignatureContainer))
     addGot5={false}
@@ -438,6 +468,7 @@ exports[`Renders 1`] = `
     }
     title=""
     twitter=""
+    useAnimatedLogo={false}
   />
 </form>
 `;

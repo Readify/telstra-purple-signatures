@@ -8,6 +8,11 @@ export const purple = {
       link:
         'https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png',
       alt: 'Telstra Purple'
+    },
+    brandAnimatedLogo: {
+      link:
+        'https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif',
+      alt: 'Purpose and People animation'
     }
   },
 
