@@ -1,6 +1,7 @@
 import React from 'react';
 import { purple } from '../constants';
 import { parseMobile, parseLandLine } from '../util';
+
 const { brandInfo } = purple;
 
 const Signature = props => {
@@ -17,10 +18,12 @@ const Signature = props => {
     supportEmail,
     addGot5,
     got5Logo,
+    useAnimatedLogo,
     brandLogo,
     brandName,
     brandLink,
-    brandLinkName
+    brandLinkName,
+    brandAnimatedLogo
   } = props;
 
   const titleElement = title ? (
@@ -79,13 +82,15 @@ const Signature = props => {
               width: '96px'
             }}
           >
-            <img
-              width="83"
-              height="83"
-              style={{ width: '83px', height: '83px', maxWidth: 'none' }}
-              src={brandLogo.link}
-              alt={brandLogo.alt}
-            />
+            {!useAnimatedLogo ? (
+              <img
+                width="83"
+                height="83"
+                style={{ width: '83px', height: '83px', maxWidth: 'none' }}
+                src={brandLogo.link}
+                alt={brandLogo.alt}
+              />
+            ) : null}
           </td>
         </tr>
         <tr>
@@ -255,9 +260,9 @@ const Signature = props => {
             ) : null}
           </td>
         </tr>
-        <tr>
-          <td colSpan={2}>
-            {addGot5 ? (
+        {addGot5 ? (
+          <tr>
+            <td colSpan={2}>
               <table
                 border="0"
                 cellSpacing="0"
@@ -293,9 +298,9 @@ const Signature = props => {
                   </td>
                 </tr>
               </table>
-            ) : null}
-          </td>
-        </tr>
+            </td>
+          </tr>
+        ) : null}
         <tr>
           <td
             style={{
@@ -310,6 +315,13 @@ const Signature = props => {
             If I've sent it to you by accident, please delete it immediately.
           </td>
         </tr>
+        {useAnimatedLogo ? (
+          <tr>
+            <td colSpan={2}>
+              <img src={brandAnimatedLogo.link} alt={brandAnimatedLogo.alt} />
+            </td>
+          </tr>
+        ) : null}
       </table>
     </div>
   );

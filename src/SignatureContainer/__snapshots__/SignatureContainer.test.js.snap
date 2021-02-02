@@ -59,6 +59,10 @@ Object {
       textBefore="Copy text only"
     />,
     "signatureProps": Object {
+      "brandAnimatedLogo": Object {
+        "alt": "Purpose and People animation",
+        "link": "https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif",
+      },
       "brandLink": "https://purple.telstra.com/",
       "brandLinkName": "purple.telstra.com",
       "brandLogo": Object {
@@ -114,6 +118,10 @@ Object {
       textBefore="Copy text only"
     />,
     "signatureProps": Object {
+      "brandAnimatedLogo": Object {
+        "alt": "Purpose and People animation",
+        "link": "https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif",
+      },
       "brandLink": "https://purple.telstra.com/",
       "brandLinkName": "purple.telstra.com",
       "brandLogo": Object {

@@ -35,11 +35,13 @@ export const createContainer = props => {
     supportHotline,
     supportEmail,
     addGot5,
+    useAnimatedLogo,
     Container,
     brandLogo,
     brandName,
     brandLink,
-    brandLinkName
+    brandLinkName,
+    brandAnimatedLogo
   } = props;
 
   const placeholders = constants.purple.placeholders;
@@ -65,8 +67,9 @@ export const createContainer = props => {
     ),
     addGot5,
     got5Logo,
+    useAnimatedLogo,
     ...assignPlaceholders(
-      { brandLogo, brandName, brandLink, brandLinkName },
+      { brandLogo, brandName, brandLink, brandLinkName, brandAnimatedLogo },
       brandInfo
     )
   });

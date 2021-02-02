@@ -21,6 +21,10 @@ export class Form extends Component {
     twitter: { label: 'Twitter' },
     qualifications: { label: 'Qualifications' },
     addGot5: { label: 'Add #Got5', type: 'checkbox' },
+    useAnimatedLogo: {
+      label: 'Use animated logo',
+      type: 'checkbox'
+    },
     supportHotline: { label: 'Support Hotline', type: 'tel', required: true },
     supportEmail: { label: 'Support Email', type: 'email', required: true }
   };
@@ -54,7 +58,8 @@ export class Form extends Component {
         mobile: { text: '', order: 6 },
         email: { text: '', order: 7 },
         twitter: { text: '', order: 8 },
-        addGot5: { text: false, order: 9 }
+        addGot5: { text: false, order: 9 },
+        useAnimatedLogo: { text: false, order: 10 }
       }
     };
   }
