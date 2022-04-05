@@ -14,8 +14,8 @@ jobs:
 - job: Phase_1
   displayName: CI
   cancelTimeoutInMinutes: 1
-pool:
-  name: Default
+  pool:
+    vmImage: 'ubuntu-latest'
   steps:
   - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
     displayName: 'Install Yarn'
