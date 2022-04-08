@@ -17,20 +17,17 @@ jobs:
   pool:
     vmImage: 'ubuntu-latest'
   steps:
-  - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
-    displayName: 'Install Yarn'
-  - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@3
-    displayName: 'yarn install'
+  - task: Npm@1
     inputs:
-      arguments: install
-  - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@3
-    displayName: 'yarn test'
+      command: 'install'
+  - task: Npm@1
     inputs:
-      arguments: test
-  - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@3
-    displayName: 'yarn build'
+      command: 'custom'
+      customCommand: 'test'
+  - task: Npm@1
     inputs:
-      arguments: build
+      command: 'custom'
+      customCommand: 'build'
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Artifact: drop'
     inputs:
