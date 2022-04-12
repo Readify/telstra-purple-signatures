@@ -17,10 +17,9 @@ it('Renders', () => {
     brandLink: 'https://purple.telstra.com/',
     brandLinkName: 'purple.telstra.com',
     brandLogo: {
-      link:
-        'https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png',
-      alt: 'Telstra Purple'
-    }
+      link: 'https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png',
+      alt: 'Telstra Purple',
+    },
   };
 
   const tree = shallow(<RepliesAndForwards {...props} />);

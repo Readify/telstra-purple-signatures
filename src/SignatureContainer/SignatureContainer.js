@@ -9,20 +9,17 @@ import { stripObject } from '../util';
 
 import { useSelector } from 'react-redux';
 
-
 const assignPlaceholders = (props, placeholders) => {
-  const isBlank = a => a === '' || a === null || a === undefined;
+  const isBlank = (a) => a === '' || a === null || a === undefined;
   return entries(props).reduce((result, item) => {
     const [key, value] = item;
     return Object.assign(result, {
-      [key]: isBlank(value) ? placeholders[key] : value
+      [key]: isBlank(value) ? placeholders[key] : value,
     });
   }, {});
 };
 
-export const createContainerProps = props => {
-
-};
+export const createContainerProps = (props) => {};
 
 const SignatureContainer = (props) => {
   var profile = useSelector((state) => state.signature.profile);
@@ -44,7 +41,7 @@ const SignatureContainer = (props) => {
     brandName,
     brandLink,
     brandLinkName,
-    brandAnimatedLogo
+    brandAnimatedLogo,
   } = profile;
 
   const placeholders = constants.placeholders;
@@ -64,7 +61,7 @@ const SignatureContainer = (props) => {
         email,
         sigType,
         supportHotline,
-        supportEmail
+        supportEmail,
       },
       placeholders
     ),
@@ -74,19 +71,17 @@ const SignatureContainer = (props) => {
     ...assignPlaceholders(
       { brandLogo, brandName, brandLink, brandLinkName, brandAnimatedLogo },
       brandInfo
-    )
+    ),
   });
 
   const buttons = createButtons(signatureProps, placeholders, false);
 
-  var containerProps =  {
-      signatureProps,
-      ...buttons
+  var containerProps = {
+    signatureProps,
+    ...buttons,
   };
 
-   return (
-    <BrandSignatureContainer {...containerProps} />
-  );
-}
+  return <BrandSignatureContainer {...containerProps} />;
+};
 
 export default SignatureContainer;

@@ -26,30 +26,30 @@ export const Form = () => {
     addGot5: { label: 'Add #Got5', type: 'checkbox' },
     useAnimatedLogo: {
       label: 'Use animated logo',
-      type: 'checkbox'
+      type: 'checkbox',
     },
     supportHotline: { label: 'Support Hotline', type: 'tel', required: true },
-    supportEmail: { label: 'Support Email', type: 'email', required: true }
+    supportEmail: { label: 'Support Email', type: 'email', required: true },
   };
 
   let formInputs = {
-      name: { text: '', order: 2 },
-      pronoun: { text: '', order: 3 },
-      title: { text: '', order: 4 },
-      qualifications: { text: '', order: 5 },
-      mobile: { text: '', order: 6 },
-      email: { text: '', order: 7 },
-      twitter: { text: '', order: 8 },
-      addGot5: { text: false, order: 9 },
-      useAnimatedLogo: { text: false, order: 10 }
+    name: { text: '', order: 2 },
+    pronoun: { text: '', order: 3 },
+    title: { text: '', order: 4 },
+    qualifications: { text: '', order: 5 },
+    mobile: { text: '', order: 6 },
+    email: { text: '', order: 7 },
+    twitter: { text: '', order: 8 },
+    addGot5: { text: false, order: 9 },
+    useAnimatedLogo: { text: false, order: 10 },
   };
 
   var profile = useSelector((state) => {
-    return state.signature.profile}
-    );
+    return state.signature.profile;
+  });
 
   const handleChange = (name, value) => {
-    dispatch(updateProfile({name,value}));
+    dispatch(updateProfile({ name, value }));
   };
 
   const inputHtml = (inputName, inputVal, placeholder, type = 'text') => {
@@ -60,7 +60,7 @@ export const Form = () => {
           type={type}
           className="mt-3"
           checked={inputVal}
-          onChange={e => handleChange(inputName, e.target.checked)}
+          onChange={(e) => handleChange(inputName, e.target.checked)}
         />
       );
     }
@@ -72,7 +72,7 @@ export const Form = () => {
         placeholder={placeholder}
         style={{ width: '300px' }}
         value={inputVal || ''}
-        onChange={e => handleChange(inputName, e.target.value)}
+        onChange={(e) => handleChange(inputName, e.target.value)}
       />
     );
   };
@@ -80,12 +80,10 @@ export const Form = () => {
   const renderHtmlForInputs = (formInputs, placeholders, values) => {
     return Object.entries(formInputs)
       .sort((a, b) => a[1].order - b[1].order)
-      .map(obj => ({ key: obj[0], ...omit(obj[1], 'order') }))
-      .map(inputObj => {
+      .map((obj) => ({ key: obj[0], ...omit(obj[1], 'order') }))
+      .map((inputObj) => {
         const inputName = inputObj.key;
-        const { label, type = 'text', required = false } = labels[
-          inputName
-        ];
+        const { label, type = 'text', required = false } = labels[inputName];
         return (
           <div className="field is-horizontal" key={inputName}>
             <div className="field-label is-normal">
@@ -100,14 +98,19 @@ export const Form = () => {
             </div>
             <div className="field-body">
               <div className="control" key={inputName}>
-                {inputHtml(inputName, values[inputName], placeholders[inputName], type)}
+                {inputHtml(
+                  inputName,
+                  values[inputName],
+                  placeholders[inputName],
+                  type
+                )}
               </div>
             </div>
           </div>
         );
       });
   };
-  
+
   const inputs = renderHtmlForInputs(formInputs, placeholders, profile);
 
   return (
@@ -117,7 +120,6 @@ export const Form = () => {
       <SignatureContainer {...profile} />
     </form>
   );
-
-}
+};
 
 export default Form;

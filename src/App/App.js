@@ -10,17 +10,17 @@ class App extends Component {
     super(props);
 
     this.state = {
-      accountInfo: null
+      accountInfo: null,
     };
   }
 
   render() {
     return (
-      <div className={this.props.isEmbedded ? "embedded" : undefined}>
+      <div className={this.props.isEmbedded ? 'embedded' : undefined}>
         <Header
           brandInfo={{
             appName: 'Outlook Signature',
-            brandLink: 'https://signatures.purple.tech/'
+            brandLink: 'https://signatures.purple.tech/',
           }}
         />
         <section className="section">

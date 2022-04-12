@@ -4,22 +4,22 @@ import ReactDOMServer from 'react-dom/server';
 import { entries } from 'lodash/object';
 import {
   formatPhoneNumberIntl,
-  isValidPhoneNumber
+  isValidPhoneNumber,
 } from 'react-phone-number-input';
 
 const brandInfo = constants.brandInfo;
 
 const multiSplice = (toAddIndexes, val, array) =>
-  toAddIndexes.forEach(index => array.splice(index, 0, val));
+  toAddIndexes.forEach((index) => array.splice(index, 0, val));
 
-export const camelize = str => {
-  return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function(match, index) {
-    if (+match === 0) return "";
+export const camelize = (str) => {
+  return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function (match, index) {
+    if (+match === 0) return '';
     return index === 0 ? match.toLowerCase() : match.toUpperCase();
   });
-}
+};
 
-export const parseMobile = mobileNum => {
+export const parseMobile = (mobileNum) => {
   if (mobileNum === undefined) return null;
 
   // some random number, trust the user
@@ -36,7 +36,7 @@ export const parseMobile = mobileNum => {
   return formatPhoneNumberIntl(mobileNum);
 };
 
-export const parseLandLine = mobileNum => {
+export const parseLandLine = (mobileNum) => {
   if (mobileNum === undefined) return null;
 
   const mobileFormatted = mobileNum.replace(/[\s|+]/g, '');
@@ -52,7 +52,7 @@ export const parseLandLine = mobileNum => {
   return numberArr.join('');
 };
 
-const copyText = text => {
+const copyText = (text) => {
   const container = document.createElement('textarea');
   container.value = text;
   document.body.appendChild(container);
@@ -61,7 +61,7 @@ const copyText = text => {
   document.body.removeChild(container);
 };
 
-export const copySignatureText = props => {
+export const copySignatureText = (props) => {
   const {
     name,
     pronoun,
@@ -72,7 +72,7 @@ export const copySignatureText = props => {
     twitter,
     isSupport,
     supportHotline,
-    supportEmail
+    supportEmail,
   } = props;
   const pronounOptional = pronoun ? ` (${pronoun})` : '';
   const mobileText = parseMobile(mobile).replace(/&nbsp;/g, ' ');
@@ -97,13 +97,13 @@ export const copySignatureText = props => {
     `W ${brandInfo.brandLinkName}`,
     '',
     'This email may contain confidential information.',
-    "If I've sent it to you by accident, please delete it immediately."
+    "If I've sent it to you by accident, please delete it immediately.",
   ];
 
-  copyText(textArr.filter(val => val !== null).join('\n'));
+  copyText(textArr.filter((val) => val !== null).join('\n'));
 };
 
-export const copyRepliesAndForwardsText = props => {
+export const copyRepliesAndForwardsText = (props) => {
   const {
     name,
     pronoun,
@@ -113,7 +113,7 @@ export const copyRepliesAndForwardsText = props => {
     twitter,
     isSupport,
     supportHotline,
-    supportEmail
+    supportEmail,
   } = props;
   const mobileText = parseMobile(mobile).replace(/&nbsp;/g, ' ');
 
@@ -127,10 +127,10 @@ export const copyRepliesAndForwardsText = props => {
     }`,
     isSupport
       ? `Support hotline ${supportHotline} | Support email ${supportEmail}`
-      : null
+      : null,
   ];
 
-  copyText(textArr.filter(val => val !== null).join('\n'));
+  copyText(textArr.filter((val) => val !== null).join('\n'));
 };
 
 export const copySignature = (props, SignatureComponent) => {
@@ -160,7 +160,7 @@ export const copySignature = (props, SignatureComponent) => {
   document.body.removeChild(container);
 };
 
-export const stripObject = obj =>
+export const stripObject = (obj) =>
   entries(obj)
     .filter(([key, val]) => val !== null && val !== undefined)
     .reduce((result, [key, val]) => Object.assign(result, { [key]: val }), {});

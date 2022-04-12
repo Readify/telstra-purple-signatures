@@ -11,15 +11,17 @@
       flex-flow: column;
       align-items: flex-start;
     }
-    
-    .brand-name, .username {
+
+    .brand-name,
+    .username {
       margin-right: auto;
       color: white;
       font-size: 26px;
       font-weight: 200;
     }
 
-    .login, .username {
+    .login,
+    .username {
       margin-left: auto;
       @media screen and (max-width: 900px) {
         margin-top: 30px;

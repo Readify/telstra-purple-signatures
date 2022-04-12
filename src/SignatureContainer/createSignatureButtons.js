@@ -3,7 +3,7 @@ import React from 'react';
 import {
   copyRepliesAndForwardsText,
   copySignature,
-  copySignatureText
+  copySignatureText,
 } from '../util';
 import Signature from '../Signature';
 import RepliesAndForwards from '../RepliesAndForwards';
@@ -31,40 +31,40 @@ export const createButtons = (signatureProps, placeholders) => {
     CopySignatureText: () =>
       copySignatureText({
         ...signatureProps,
-        placeholders: placeholders
+        placeholders: placeholders,
       }),
     CopySignatureHtml: () =>
       copySignature(
         {
           ...signatureProps,
-          placeholders: placeholders
+          placeholders: placeholders,
         },
         Signature
       ),
     CopyRepliesAndForwardsText: () =>
       copyRepliesAndForwardsText({
         ...signatureProps,
-        placeholders: placeholders
+        placeholders: placeholders,
       }),
     CopyRepliesAndForwardsHtml: () =>
       copySignature(
         {
           ...signatureProps,
-          placeholders: placeholders
+          placeholders: placeholders,
         },
         RepliesAndForwards
-      )
+      ),
   };
 
   return [
     { name: 'CopySignatureText', isText: true },
     { name: 'CopySignatureHtml', isText: false },
     { name: 'CopyRepliesAndForwardsText', isText: true },
-    { name: 'CopyRepliesAndForwardsHtml', isText: false }
+    { name: 'CopyRepliesAndForwardsHtml', isText: false },
   ]
-    .map(buttonArr => [
+    .map((buttonArr) => [
       buttonArr.name,
-      buttonMaker(clickHandlers[buttonArr.name], buttonArr.isText)
+      buttonMaker(clickHandlers[buttonArr.name], buttonArr.isText),
     ])
     .reduce(
       (result, item) => Object.assign(result, { [item[0]]: item[1] }),

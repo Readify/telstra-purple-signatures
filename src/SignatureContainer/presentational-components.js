@@ -8,7 +8,7 @@ export const BrandSignatureContainer = ({
   CopySignatureText,
   CopySignatureHtml,
   CopyRepliesAndForwardsText,
-  CopyRepliesAndForwardsHtml
+  CopyRepliesAndForwardsHtml,
 }) => (
   <div className="content">
     <div className="level">

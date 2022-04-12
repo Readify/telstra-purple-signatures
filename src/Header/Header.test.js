@@ -7,8 +7,8 @@ it('Renders', () => {
   const props = {
     brandInfo: {
       brandLink: 'https://brand-link',
-      appName: 'Test App'
-    }
+      appName: 'Test App',
+    },
   };
   const tree = shallow(<Header {...props} />);
   expect(tree).toMatchSnapshot();

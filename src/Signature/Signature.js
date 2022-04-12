@@ -4,7 +4,7 @@ import { parseMobile, parseLandLine } from '../util';
 
 const brandInfo = constants.brandInfo;
 
-const Signature = props => {
+const Signature = (props) => {
   const {
     name,
     pronoun,
@@ -23,7 +23,7 @@ const Signature = props => {
     brandName,
     brandLink,
     brandLinkName,
-    brandAnimatedLogo
+    brandAnimatedLogo,
   } = props;
 
   const titleElement = title ? (
@@ -57,7 +57,7 @@ const Signature = props => {
           color: 'black',
           fontFamily: 'Arial, sans-serif',
           fontSize: '9pt',
-          width: '500px'
+          width: '500px',
         }}
       >
         <tr>
@@ -79,7 +79,7 @@ const Signature = props => {
             valign="top"
             style={{
               paddingRight: '20px',
-              width: '96px'
+              width: '96px',
             }}
           >
             {!useAnimatedLogo ? (
@@ -104,7 +104,7 @@ const Signature = props => {
                 fontFamily: 'Arial, sans-serif',
                 fontSize: '9pt',
                 margin: 0,
-                padding: 0
+                padding: 0,
               }}
             >
               <tr>
@@ -116,7 +116,7 @@ const Signature = props => {
                     style={{ color: brandInfo.brandLinkColour }}
                     href={`tel:${parseMobile(mobile).replace(/\s/g, '')}`}
                     dangerouslySetInnerHTML={{
-                      __html: parseMobile(mobile).replace(/\s/g, '&nbsp;')
+                      __html: parseMobile(mobile).replace(/\s/g, '&nbsp;'),
                     }}
                   />
                 </td>
@@ -176,7 +176,7 @@ const Signature = props => {
                   fontFamily: 'Arial, sans-serif',
                   fontSize: '9pt',
                   margin: 0,
-                  padding: 0
+                  padding: 0,
                 }}
               >
                 <tr>
@@ -190,7 +190,7 @@ const Signature = props => {
                         ''
                       )}`}
                       dangerouslySetInnerHTML={{
-                        __html: parseLandLine(supportHotline)
+                        __html: parseLandLine(supportHotline),
                       }}
                       style={{ color: brandInfo.brandLinkColour }}
                     />
@@ -273,7 +273,7 @@ const Signature = props => {
                   fontWeight: 'bold',
                   fontSize: '8pt',
                   margin: 0,
-                  padding: 0
+                  padding: 0,
                 }}
               >
                 <tr>
@@ -284,7 +284,7 @@ const Signature = props => {
                       style={{
                         width: '45px',
                         height: '50px',
-                        maxWidth: 'none'
+                        maxWidth: 'none',
                       }}
                       src={got5Logo.link}
                       alt={got5Logo.alt}
@@ -307,7 +307,7 @@ const Signature = props => {
               color: '#4a4a4a',
               fontFamily: 'Arial, sans-serif',
               fontSize: '6.5pt',
-              lineHeight: '1.5'
+              lineHeight: '1.5',
             }}
           >
             This email may contain confidential information.

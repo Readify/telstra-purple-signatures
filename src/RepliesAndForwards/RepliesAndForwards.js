@@ -4,7 +4,7 @@ import constants from '../constants';
 import { parseMobile, parseLandLine } from '../util';
 const brandInfo = constants.brandInfo;
 
-const RepliesAndForwards = props => {
+const RepliesAndForwards = (props) => {
   const {
     name,
     pronoun,
@@ -17,12 +17,12 @@ const RepliesAndForwards = props => {
     supportEmail,
     brandName,
     brandLink,
-    brandLinkName
+    brandLinkName,
   } = props;
   const styleObj = {
     color: 'black',
     fontFamily: 'Arial, sans-serif',
-    fontSize: '9pt'
+    fontSize: '9pt',
   };
   const titleOptional = title ? <>&nbsp;|&nbsp;{title}</> : null;
   const pronounOptional = pronoun ? <>({pronoun})&nbsp;</> : null;
@@ -40,7 +40,7 @@ const RepliesAndForwards = props => {
         <a
           href={`tel:${parseMobile(mobile).replace(/\s/g, '')}`}
           dangerouslySetInnerHTML={{
-            __html: parseMobile(mobile).replace(/\s/g, '&nbsp;')
+            __html: parseMobile(mobile).replace(/\s/g, '&nbsp;'),
           }}
           style={{ color: brandInfo.brandLinkColour }}
         />{' '}
@@ -82,7 +82,7 @@ const RepliesAndForwards = props => {
                 ''
               )}`}
               dangerouslySetInnerHTML={{
-                __html: parseLandLine(supportHotline)
+                __html: parseLandLine(supportHotline),
               }}
               style={{ color: brandInfo.brandLinkColour }}
             />{' '}
@@ -101,7 +101,7 @@ const RepliesAndForwards = props => {
           color: '#4a4a4a',
           fontFamily: 'Arial, sans-serif',
           fontSize: '6.5pt',
-          lineHeight: '1.5'
+          lineHeight: '1.5',
         }}
       >
         This email may contain confidential information.

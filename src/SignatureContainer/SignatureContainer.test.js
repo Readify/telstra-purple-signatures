@@ -12,7 +12,7 @@ describe('SignatureContainer', () => {
       name: 'your name',
       pronoun: 'he/him | she/her | they/them',
       title: 'Job Title',
-      twitter: '@myTwitter'
+      twitter: '@myTwitter',
     };
 
     const tree = shallow(<SignatureContainer {...props} />);
@@ -27,7 +27,7 @@ describe('SignatureContainer', () => {
       name: 'your name',
       pronoun: 'he/him | she/her | they/them',
       title: 'Job Title',
-      twitter: '@myTwitter'
+      twitter: '@myTwitter',
     };
 
     const tree = shallow(<SignatureContainer {...props} />);
@@ -44,7 +44,7 @@ describe('createContainer', () => {
       name: 'your name',
       pronoun: 'he/him | she/her | they/them',
       title: 'Job Title',
-      twitter: '@myTwitter'
+      twitter: '@myTwitter',
     };
 
     expect(createContainer(props)).toMatchSnapshot();

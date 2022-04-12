@@ -5,15 +5,13 @@ const constants = {
     brandLinkName: 'purple.telstra.com',
     brandLinkColour: '#0E39FB',
     brandLogo: {
-      link:
-        'https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png',
-      alt: 'Telstra Purple'
+      link: 'https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png',
+      alt: 'Telstra Purple',
     },
     brandAnimatedLogo: {
-      link:
-        'https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif',
-      alt: 'Purpose and People animation'
-    }
+      link: 'https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif',
+      alt: 'Purpose and People animation',
+    },
   },
 
   placeholders: {
@@ -27,23 +25,22 @@ const constants = {
     supportHotline: '1800 xyz xyz',
     supportEmail: 'support@some.domain',
     addGot5: false,
-    useAnimatedLogo: false
+    useAnimatedLogo: false,
   },
 
   EMEAInfo: {
     brandLink: 'http://telstrapurple.co.uk',
-    brandLinkName: 'telstrapurple.co.uk'
+    brandLinkName: 'telstrapurple.co.uk',
   },
 
   got5Logo: {
-    link:
-      'https://readifysignatures.blob.core.windows.net/images/got5-logo.png',
-    alt: 'Got 5'
+    link: 'https://readifysignatures.blob.core.windows.net/images/got5-logo.png',
+    alt: 'Got 5',
   },
 
   default: {
-    countryCode: '+61'
-  }
+    countryCode: '+61',
+  },
 };
 
 export default constants;

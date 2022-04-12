@@ -4,34 +4,34 @@
 trigger:
   branches:
     include:
-    - main
+      - main
 resources:
   repositories:
-  - repository: self
-    type: git
-    ref: master
+    - repository: self
+      type: git
+      ref: master
 jobs:
-- job: Phase_1
-  displayName: CI
-  cancelTimeoutInMinutes: 1
-  pool:
-    vmImage: 'ubuntu-latest'
-  steps:
-  - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
-    displayName: 'Install Yarn'
-  - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@3
-    displayName: 'yarn install'
-    inputs:
-      arguments: install
-  - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@3
-    displayName: 'yarn test'
-    inputs:
-      arguments: test
-  - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@3
-    displayName: 'yarn build'
-    inputs:
-      arguments: build
-  - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: drop'
-    inputs:
-      PathtoPublish: build
+  - job: Phase_1
+    displayName: CI
+    cancelTimeoutInMinutes: 1
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+      - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
+        displayName: 'Install Yarn'
+      - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@3
+        displayName: 'yarn install'
+        inputs:
+          arguments: install
+      - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@3
+        displayName: 'yarn test'
+        inputs:
+          arguments: test
+      - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@3
+        displayName: 'yarn build'
+        inputs:
+          arguments: build
+      - task: PublishBuildArtifacts@1
+        displayName: 'Publish Artifact: drop'
+        inputs:
+          PathtoPublish: build

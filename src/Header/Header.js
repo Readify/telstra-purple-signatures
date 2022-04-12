@@ -12,7 +12,10 @@ const Header = () => {
               alt={this.props.brandInfo.companyName}
               style={{ height: 60 }}
             />
-            <a className="navbar-item brand-name" href={this.props.brandInfo.brandLink}>
+            <a
+              className="navbar-item brand-name"
+              href={this.props.brandInfo.brandLink}
+            >
               {this.props.brandInfo.appName}
             </a>
           </div>
@@ -21,6 +24,6 @@ const Header = () => {
       </div>
     </nav>
   );
-}
+};
 
 export default Header;

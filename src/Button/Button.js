@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Button = (props) => {
-
   let {
     textBefore,
     textAfter,
@@ -9,7 +8,7 @@ const Button = (props) => {
     classBefore,
     classAfter,
     classState,
-    onClickHandler
+    onClickHandler,
   } = props;
 
   textState = textBefore;
@@ -17,21 +16,21 @@ const Button = (props) => {
 
   const onClick = () => {
     onClickHandler();
-    
+
     textState = textAfter;
     classState = classAfter;
 
     setTimeout(() => {
       textState = textBefore;
       classState = classBefore;
-    }, 1000)
-  }
-  
+    }, 1000);
+  };
+
   return (
     <button type="button" className={classState} onClick={onClick}>
       {textState}
     </button>
   );
-}
+};
 
 export default Button;
