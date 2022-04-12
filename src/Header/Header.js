@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Header.scss';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="section" style={{ width: '100%' }}>
@@ -9,14 +9,14 @@ const Header = () => {
           <div className="navbar-brand">
             <img
               src="/logo.png"
-              alt={this.props.brandInfo.companyName}
+              alt={props.brandInfo.companyName}
               style={{ height: 60 }}
             />
             <a
               className="navbar-item brand-name"
-              href={this.props.brandInfo.brandLink}
+              href={props.brandInfo.brandLink}
             >
-              {this.props.brandInfo.appName}
+              {props.brandInfo.appName}
             </a>
           </div>
         </div>
