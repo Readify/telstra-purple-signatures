@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { purple } from '../constants';
+import constants from '../constants';
 import { parseMobile, parseLandLine } from '../util';
-const { brandInfo } = purple;
+const brandInfo = constants.brandInfo;
 
 const RepliesAndForwards = props => {
   const {

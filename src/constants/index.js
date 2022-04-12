@@ -1,4 +1,4 @@
-export const purple = {
+const constants = {
   brandInfo: {
     brandName: 'Telstra Purple',
     brandLink: 'https://purple.telstra.com/',
@@ -25,7 +25,9 @@ export const purple = {
     twitter: 'myTwitterHandle',
     qualifications: 'Jedi Master | PSM I',
     supportHotline: '1800 xyz xyz',
-    supportEmail: 'support@some.domain'
+    supportEmail: 'support@some.domain',
+    addGot5: false,
+    useAnimatedLogo: false
   },
 
   EMEAInfo: {
@@ -44,4 +46,4 @@ export const purple = {
   }
 };
 
-export default { purple };
+export default constants;

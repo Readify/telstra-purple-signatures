@@ -1,12 +1,14 @@
 import React from 'react';
 import { entries } from 'lodash/object';
-import { compose, mapProps, withProps } from 'recompose';
 
 import constants from '../constants';
 import './SignatureContainer.scss';
-import { PurpleSignatureContainer } from './presentational-components';
+import { BrandSignatureContainer } from './presentational-components';
 import { createButtons } from './createSignatureButtons';
 import { stripObject } from '../util';
+
+import { useSelector } from 'react-redux';
+
 
 const assignPlaceholders = (props, placeholders) => {
   const isBlank = a => a === '' || a === null || a === undefined;
@@ -18,11 +20,13 @@ const assignPlaceholders = (props, placeholders) => {
   }, {});
 };
 
-export const containerChooser = props => ({
-  Container: PurpleSignatureContainer
-});
+export const createContainerProps = props => {
 
-export const createContainer = props => {
+};
+
+const SignatureContainer = (props) => {
+  var profile = useSelector((state) => state.signature.profile);
+
   const {
     name,
     pronoun,
@@ -36,17 +40,16 @@ export const createContainer = props => {
     supportEmail,
     addGot5,
     useAnimatedLogo,
-    Container,
     brandLogo,
     brandName,
     brandLink,
     brandLinkName,
     brandAnimatedLogo
-  } = props;
+  } = profile;
 
-  const placeholders = constants.purple.placeholders;
-  const brandInfo = constants.purple.brandInfo;
-  const got5Logo = constants.purple.got5Logo;
+  const placeholders = constants.placeholders;
+  const brandInfo = constants.brandInfo;
+  const got5Logo = constants.got5Logo;
 
   const signatureProps = stripObject({
     title,
@@ -55,14 +58,14 @@ export const createContainer = props => {
     twitter,
     phone: null,
     ...assignPlaceholders(
-      stripObject({
+      {
         name,
         mobile,
         email,
         sigType,
         supportHotline,
         supportEmail
-      }),
+      },
       placeholders
     ),
     addGot5,
@@ -76,20 +79,14 @@ export const createContainer = props => {
 
   const buttons = createButtons(signatureProps, placeholders, false);
 
-  return {
-    containerProps: {
+  var containerProps =  {
       signatureProps,
       ...buttons
-    },
-    Container
   };
-};
 
-const SignatureContainer = ({ containerProps, Container }) => (
-  <Container {...containerProps} />
-);
+   return (
+    <BrandSignatureContainer {...containerProps} />
+  );
+}
 
-export default compose(
-  withProps(containerChooser),
-  mapProps(createContainer)
-)(SignatureContainer);
+export default SignatureContainer;

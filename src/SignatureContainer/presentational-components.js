@@ -3,7 +3,7 @@ import React from 'react';
 import Signature from '../Signature';
 import RepliesAndForwards from '../RepliesAndForwards';
 
-export const PurpleSignatureContainer = ({
+export const BrandSignatureContainer = ({
   signatureProps,
   CopySignatureText,
   CopySignatureHtml,

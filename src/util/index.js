@@ -1,5 +1,5 @@
 import React from 'react';
-import { purple } from '../constants';
+import constants from '../constants';
 import ReactDOMServer from 'react-dom/server';
 import { entries } from 'lodash/object';
 import {
@@ -7,10 +7,17 @@ import {
   isValidPhoneNumber
 } from 'react-phone-number-input';
 
-const { brandInfo } = purple;
+const brandInfo = constants.brandInfo;
 
 const multiSplice = (toAddIndexes, val, array) =>
   toAddIndexes.forEach(index => array.splice(index, 0, val));
+
+export const camelize = str => {
+  return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function(match, index) {
+    if (+match === 0) return "";
+    return index === 0 ? match.toLowerCase() : match.toUpperCase();
+  });
+}
 
 export const parseMobile = mobileNum => {
   if (mobileNum === undefined) return null;
@@ -18,12 +25,12 @@ export const parseMobile = mobileNum => {
   // some random number, trust the user
   if (
     !isValidPhoneNumber(mobileNum) &&
-    !isValidPhoneNumber(purple.default.countryCode + mobileNum)
+    !isValidPhoneNumber(constants.default.countryCode + mobileNum)
   )
     return mobileNum;
   // default to preset country code when the international prefix '+' is absence
   if (mobileNum.search(/\+/) < 0) {
-    mobileNum = purple.default.countryCode + mobileNum;
+    mobileNum = constants.default.countryCode + mobileNum;
   }
 
   return formatPhoneNumberIntl(mobileNum);

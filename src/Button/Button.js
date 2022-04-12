@@ -1,30 +1,37 @@
 import React from 'react';
-import { compose, withState, withHandlers, mapProps } from 'recompose';
-import { pick } from 'lodash/object';
 
-const Button = ({ classState, textState, onClick }) => (
-  <button type="button" className={classState} onClick={onClick}>
-    {textState}
-  </button>
-);
+const Button = (props) => {
 
-export default compose(
-  withState('classState', 'setClass', ({ classBefore }) => classBefore),
-  withState('textState', 'setText', ({ textBefore }) => textBefore),
-  withHandlers({
-    onClick: ({
-      setClass,
-      setText,
-      onClickHandler,
-      classAfter,
-      textAfter,
-      classBefore,
-      textBefore
-    }) => event => {
-      onClickHandler(event);
-      setClass(classAfter, () => setTimeout(() => setClass(classBefore), 1000));
-      setText(textAfter, () => setTimeout(() => setText(textBefore), 1000));
-    }
-  }),
-  mapProps(props => pick(props, ['classState', 'textState', 'onClick']))
-)(Button);
+  let {
+    textBefore,
+    textAfter,
+    textState,
+    classBefore,
+    classAfter,
+    classState,
+    onClickHandler
+  } = props;
+
+  textState = textBefore;
+  classState = classBefore;
+
+  const onClick = () => {
+    onClickHandler();
+    
+    textState = textAfter;
+    classState = classAfter;
+
+    setTimeout(() => {
+      textState = textBefore;
+      classState = classBefore;
+    }, 1000)
+  }
+  
+  return (
+    <button type="button" className={classState} onClick={onClick}>
+      {textState}
+    </button>
+  );
+}
+
+export default Button;
