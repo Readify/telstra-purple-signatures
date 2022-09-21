@@ -122,7 +122,7 @@ exports[`Renders Purple Signature 1`] = `
                       "authenticationState": "Unauthenticated",
                       "authorityInstance": AadAuthority {
                         "IsValidationEnabled": true,
-                        "canonicalAuthority": "https://login.microsoftonline.com/common/",
+                        "canonicalAuthority": "https://login.microsoftonline.com/purple.onmicrosoft.com/",
                         "canonicalAuthorityUrlComponents": Object {
                           "AbsolutePath": "/common/",
                           "HostNameAndPort": "login.microsoftonline.com",
@@ -140,7 +140,7 @@ exports[`Renders Purple Signature 1`] = `
                       "clientId": "3bc4e4c8-365a-494f-9344-ed26b3573a74",
                       "config": Object {
                         "auth": Object {
-                          "authority": "https://login.microsoftonline.com/common",
+                          "authority": "https://login.microsoftonline.com/purple.onmicrosoft.com",
                           "clientId": "3bc4e4c8-365a-494f-9344-ed26b3573a74",
                           "navigateToLoginRequestUrl": true,
                           "postLogoutRedirectUri": [Function],
@@ -1710,7 +1710,7 @@ exports[`Renders Purple support 1`] = `
                       "authenticationState": "Unauthenticated",
                       "authorityInstance": AadAuthority {
                         "IsValidationEnabled": true,
-                        "canonicalAuthority": "https://login.microsoftonline.com/common/",
+                        "canonicalAuthority": "https://login.microsoftonline.com/purple.onmicrosoft.com/",
                         "canonicalAuthorityUrlComponents": Object {
                           "AbsolutePath": "/common/",
                           "HostNameAndPort": "login.microsoftonline.com",
@@ -1728,7 +1728,7 @@ exports[`Renders Purple support 1`] = `
                       "clientId": "3bc4e4c8-365a-494f-9344-ed26b3573a74",
                       "config": Object {
                         "auth": Object {
-                          "authority": "https://login.microsoftonline.com/common",
+                          "authority": "https://login.microsoftonline.com/purple.onmicrosoft.com",
                           "clientId": "3bc4e4c8-365a-494f-9344-ed26b3573a74",
                           "navigateToLoginRequestUrl": true,
                           "postLogoutRedirectUri": [Function],
