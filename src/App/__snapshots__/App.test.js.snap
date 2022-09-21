@@ -122,7 +122,7 @@ exports[`Renders Purple Signature 1`] = `
                       "authenticationState": "Unauthenticated",
                       "authorityInstance": AadAuthority {
                         "IsValidationEnabled": true,
-                        "canonicalAuthority": "https://login.microsoftonline.com/purple.onmicrosoft.com",
+                        "canonicalAuthority": "https://login.microsoftonline.com/purple.onmicrosoft.com/",
                         "canonicalAuthorityUrlComponents": Object {
                           "AbsolutePath": "/purple.onmicrosoft.com/",
                           "HostNameAndPort": "login.microsoftonline.com",
