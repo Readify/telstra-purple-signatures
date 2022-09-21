@@ -1,6 +1,6 @@
 # Telstra Purple Signature Generator
 
-[![Azure DevOps builds](https://dev.azure.com/TelstraPurple-Engine/Operations/_apis/build/status/SignatureGenerator-CI)](https://dev.azure.com/TelstraPurple-Engine/Operations/_build?definitionId=43)
+[![Azure DevOps builds](https://dev.azure.com/TelstraPurple-Engine/Operations/_apis/build/status/SignatureGenerator-CI)](https://dev.azure.com/TelstraPurple-Engine/Operations/_build/latest?definitionId=43)
 [![Azure DevOps releases](https://vsrm.dev.azure.com/TelstraPurple-Engine/_apis/public/Release/badge/b08fef52-cecf-4455-80ba-0d7fb2e11521/4/5)](https://dev.azure.com/TelstraPurple-Engine/Operations/_release?view=mine&definitionId=4)
 [![Known Vulnerabilities](https://snyk.io/test/github/Readify/telstra-purple-signatures/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Readify/telstra-purple-signatures?targetFile=package.json)
 
