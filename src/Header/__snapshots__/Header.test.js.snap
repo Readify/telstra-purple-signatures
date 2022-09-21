@@ -70,7 +70,7 @@ exports[`Renders 1`] = `
                   "AbsolutePath": "/purple.onmicrosoft.com/",
                   "HostNameAndPort": "login.microsoftonline.com",
                   "PathSegments": Array [
-                    "common",
+                    "purple.onmicrosoft.com",
                   ],
                   "Protocol": "https:",
                 },
