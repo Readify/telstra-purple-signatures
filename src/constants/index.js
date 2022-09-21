@@ -6,12 +6,12 @@ export const purple = {
     brandLinkColour: '#0E39FB',
     brandLogo: {
       link:
-        'https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png',
+        'https://purplesignatures.blob.core.windows.net/images/purple-email-logo.png',
       alt: 'Telstra Purple'
     },
     brandAnimatedLogo: {
       link:
-        'https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif',
+        'https://purplesignatures.blob.core.windows.net/images/Purple_Signature_v1.gif',
       alt: 'Purpose and People animation'
     }
   },
@@ -35,7 +35,7 @@ export const purple = {
 
   got5Logo: {
     link:
-      'https://readifysignatures.blob.core.windows.net/images/got5-logo.png',
+      'https://purplesignatures.blob.core.windows.net/images/got5-logo.png',
     alt: 'Got 5'
   },
 

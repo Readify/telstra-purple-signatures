@@ -67,7 +67,7 @@ exports[`Renders 1`] = `
         <img
           alt="Telstra Purple"
           height="83"
-          src="https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png"
+          src="https://purplesignatures.blob.core.windows.net/images/purple-email-logo.png"
           style={
             Object {
               "height": "83px",
