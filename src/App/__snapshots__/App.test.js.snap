@@ -124,7 +124,7 @@ exports[`Renders Purple Signature 1`] = `
                         "IsValidationEnabled": true,
                         "canonicalAuthority": "https://login.microsoftonline.com/purple.onmicrosoft.com/",
                         "canonicalAuthorityUrlComponents": Object {
-                          "AbsolutePath": "/common/",
+                          "AbsolutePath": "/purple.onmicrosoft.com/",
                           "HostNameAndPort": "login.microsoftonline.com",
                           "PathSegments": Array [
                             "common",
@@ -1710,7 +1710,7 @@ exports[`Renders Purple support 1`] = `
                       "authenticationState": "Unauthenticated",
                       "authorityInstance": AadAuthority {
                         "IsValidationEnabled": true,
-                        "canonicalAuthority": "https://login.microsoftonline.com/purple.onmicrosoft.com/",
+                        "canonicalAuthority": "https://login.microsoftonline.com/purple.onmicrosoft.com",
                         "canonicalAuthorityUrlComponents": Object {
                           "AbsolutePath": "/common/",
                           "HostNameAndPort": "login.microsoftonline.com",
