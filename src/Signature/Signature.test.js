@@ -18,7 +18,7 @@ it('Renders', () => {
     brandLinkName: 'purple.telstra.com',
     brandLogo: {
       link:
-        'https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png',
+        'https://purplesignatures.blob.core.windows.net/images/purple-email-logo.png',
       alt: 'Telstra Purple'
     }
   };
