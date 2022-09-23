@@ -89,6 +89,7 @@ exports[`Renders Purple Signature 1`] = `
                 >
                   Outlook Signature
                 </a>
+/*
                 <AzureAD
                   provider={
                     MsalAuthProvider {
@@ -229,6 +230,7 @@ exports[`Renders Purple Signature 1`] = `
                     </button>
                   </div>
                 </AzureAD>
+*/
               </div>
             </div>
             <div
@@ -1674,6 +1676,7 @@ exports[`Renders Purple support 1`] = `
                 >
                   Outlook Signature
                 </a>
+/*
                 <AzureAD
                   provider={
                     MsalAuthProvider {
@@ -1817,6 +1820,7 @@ exports[`Renders Purple support 1`] = `
                     </button>
                   </div>
                 </AzureAD>
+*/
               </div>
             </div>
             <div
