@@ -21,6 +21,7 @@ const Header = ({ brandInfo }) => (
           <a className="navbar-item brand-name" href={brandInfo.brandLink}>
             {brandInfo.appName}
           </a>
+/*
           <AzureAD provider={authProvider} reduxStore={basicReduxStore}>
             {({ login, logout, authenticationState, accountInfo }) => {
               return (
@@ -48,6 +49,7 @@ const Header = ({ brandInfo }) => (
               );
             }}
           </AzureAD>
+*/
         </div>
       </div>
       <div className="column" />
