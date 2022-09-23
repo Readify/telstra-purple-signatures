@@ -21,35 +21,6 @@ const Header = ({ brandInfo }) => (
           <a className="navbar-item brand-name" href={brandInfo.brandLink}>
             {brandInfo.appName}
           </a>
-/*
-          <AzureAD provider={authProvider} reduxStore={basicReduxStore}>
-            {({ login, logout, authenticationState, accountInfo }) => {
-              return (
-                <React.Fragment>
-                  {authenticationState ===
-                    AuthenticationState.Unauthenticated && (
-                    <div className="navbar-item login">
-                      <button
-                        type="button"
-                        className="button"
-                        onClick={loginWithAAD}
-                      >
-                        Login
-                      </button>
-                    </div>
-                  )}
-
-                  {accountInfo && (
-                    <div className="navbar-item username">
-                      {' '}
-                      {accountInfo.account.name}{' '}
-                    </div>
-                  )}
-                </React.Fragment>
-              );
-            }}
-          </AzureAD>
-*/
         </div>
       </div>
       <div className="column" />
