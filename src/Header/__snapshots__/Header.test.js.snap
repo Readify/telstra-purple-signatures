@@ -34,6 +34,7 @@ exports[`Renders 1`] = `
         >
           Test App
         </a>
+/*
         <AzureAD
           provider={
             MsalAuthProvider {
@@ -162,6 +163,7 @@ exports[`Renders 1`] = `
         >
           <Component />
         </AzureAD>
+*/
       </div>
     </div>
     <div
