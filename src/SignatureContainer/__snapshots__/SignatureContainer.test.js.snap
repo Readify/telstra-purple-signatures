@@ -61,19 +61,19 @@ Object {
     "signatureProps": Object {
       "brandAnimatedLogo": Object {
         "alt": "Purpose and People animation",
-        "link": "https://purplesignatures.blob.core.windows.net/images/Purple_Signature_v1.gif",
+        "link": "https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif",
       },
       "brandLink": "https://purple.telstra.com/",
       "brandLinkName": "purple.telstra.com",
       "brandLogo": Object {
         "alt": "Telstra Purple",
-        "link": "https://purplesignatures.blob.core.windows.net/images/purple-email-logo.png",
+        "link": "https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png",
       },
       "brandName": "Telstra Purple",
       "email": "your.name@telstra.purple.net",
       "got5Logo": Object {
         "alt": "Got 5",
-        "link": "https://purplesignatures.blob.core.windows.net/images/got5-logo.png",
+        "link": "https://readifysignatures.blob.core.windows.net/images/got5-logo.png",
       },
       "mobile": "+61 111 222 333",
       "name": "your name",
@@ -120,19 +120,19 @@ Object {
     "signatureProps": Object {
       "brandAnimatedLogo": Object {
         "alt": "Purpose and People animation",
-        "link": "https://purplesignatures.blob.core.windows.net/images/Purple_Signature_v1.gif",
+        "link": "https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif",
       },
       "brandLink": "https://purple.telstra.com/",
       "brandLinkName": "purple.telstra.com",
       "brandLogo": Object {
         "alt": "Telstra Purple",
-        "link": "https://purplesignatures.blob.core.windows.net/images/purple-email-logo.png",
+        "link": "https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png",
       },
       "brandName": "Telstra Purple",
       "email": "your.name@telstra.purple.net",
       "got5Logo": Object {
         "alt": "Got 5",
-        "link": "https://purplesignatures.blob.core.windows.net/images/got5-logo.png",
+        "link": "https://readifysignatures.blob.core.windows.net/images/got5-logo.png",
       },
       "mobile": "+61 111 222 333",
       "name": "your name",

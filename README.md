@@ -27,7 +27,7 @@ This application defines a [content security policy](https://developer.mozilla.o
 At the time of writing, it allows:
 
 - loading scripts and stylesheets from the hosting domain
-- loading images from both the hosting domain and `purplesignatures.blob.core.windows.net`, which is where we host the logo used in the actual signature
+- loading images from both the hosting domain and `readifysignatures.blob.core.windows.net`, which is where we host the logo used in the actual signature
 - connecting to `login.microsoftonline.com` to log in to the app against Azure Active Directory
 
 It's important to edit this policy if loading a new external resource.
