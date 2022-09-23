@@ -28,7 +28,7 @@ At the time of writing, it allows:
 
 - loading scripts and stylesheets from the hosting domain
 - loading images from both the hosting domain and `readifysignatures.blob.core.windows.net`, which is where we host the logo used in the actual signature
-- connecting to `login.microsoftonline.com` to log in to the app against Azure Active Directory
+- connecting to `login.microsoftonline.com` to log in to the app against Azure Active Directory (note: log in to the app against Azure Active Directory has been disabled since moving Purple Peeps to Telstra tenant)
 
 It's important to edit this policy if loading a new external resource.
 
