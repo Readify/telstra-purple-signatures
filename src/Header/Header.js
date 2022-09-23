@@ -1,12 +1,5 @@
 import React from 'react';
 import './Header.scss';
-import { AzureAD, AuthenticationState } from 'react-aad-msal';
-import { authProvider } from '../AAD/authProvider';
-import { basicReduxStore } from '../reduxStore';
-
-const loginWithAAD = () => {
-  authProvider.login();
-};
 
 const Header = ({ brandInfo }) => (
   <nav className="navbar" role="navigation" aria-label="main navigation">
