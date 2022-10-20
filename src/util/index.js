@@ -82,7 +82,7 @@ export const copySignatureText = (props) => {
     '',
     `${name ? name : null}${pronounOptional}`,
     brandInfo.brandName,
-    title,
+    title ? title : null,
     qualifications ? `${qualifications}` : null,
     '',
     mobileText
