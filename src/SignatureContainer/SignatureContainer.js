@@ -30,6 +30,7 @@ const SignatureContainer = (props) => {
     title,
     qualifications,
     twitter,
+    location,
     sigType,
     mobile,
     email,
@@ -53,6 +54,7 @@ const SignatureContainer = (props) => {
     qualifications,
     pronoun,
     twitter,
+    location,
     phone: null,
     ...assignPlaceholders(
       {

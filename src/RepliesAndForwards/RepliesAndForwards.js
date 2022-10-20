@@ -13,6 +13,7 @@ const RepliesAndForwards = (props) => {
     email,
     sigType,
     twitter,
+    location,
     supportHotline,
     supportEmail,
     brandName,
@@ -26,6 +27,7 @@ const RepliesAndForwards = (props) => {
   };
   const titleOptional = title ? <>&nbsp;|&nbsp;{title}</> : null;
   const pronounOptional = pronoun ? <>({pronoun})&nbsp;</> : null;
+  const locationOptional = location ? <>&nbsp;|&nbsp;{location}</> : null;
   return (
     <div>
       <p style={styleObj}>
@@ -34,6 +36,7 @@ const RepliesAndForwards = (props) => {
         <b>
           {name}&nbsp;{pronounOptional}|&nbsp;{brandName}
           {titleOptional}
+          {locationOptional}
         </b>
         <br />
         <b>M</b>&nbsp;
