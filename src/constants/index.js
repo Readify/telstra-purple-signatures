@@ -28,6 +28,15 @@ const constants = {
     useAnimatedLogo: false,
   },
 
+  locations: [
+    'Brisbane / Meanjin, Jagera and Turrbal Land',
+    'Sydney / Warrane, Gadigal Land',
+    'Melbourne / Naarm, Wurundjeri Land',
+    'Hobart / Nipaluna, Muwinina Land',
+    'Adelaide / Tarndanya, Kaurna Land',
+    'Perth / Boorloo, Whadjuk Nyoongar Land',
+  ],
+
   EMEAInfo: {
     brandLink: 'http://telstrapurple.co.uk',
     brandLinkName: 'telstrapurple.co.uk',

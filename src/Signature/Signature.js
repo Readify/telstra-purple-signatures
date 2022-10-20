@@ -13,6 +13,7 @@ const Signature = (props) => {
     mobile,
     email,
     twitter,
+    location,
     sigType,
     supportHotline,
     supportEmail,
@@ -45,6 +46,16 @@ const Signature = (props) => {
     </>
   ) : null;
 
+  const locationElement = location ? (
+    <>
+      <br />
+      <span>
+        {location}
+        <br />
+      </span>
+    </>
+  ) : null;
+
   // Note: css classes do not work for email so you need to use inline styles!
   // Adding a tbody causes the email sig to break in certain clients :'(
   return (
@@ -72,6 +83,7 @@ const Signature = (props) => {
               <br />
               {brandName}
               {titleElement}
+              {locationElement}
               {qualificationsElemenent}
             </p>
           </td>

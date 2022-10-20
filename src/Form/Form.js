@@ -21,6 +21,11 @@ export const Form = () => {
     email: { label: 'Email', type: 'email', required: true },
     phone: { label: 'Phone', type: 'tel' },
     mobile: { label: 'Mobile', type: 'tel', required: true },
+    location: {
+      label: 'Location',
+      type: 'select',
+      options: constants.locations,
+    },
     twitter: { label: 'Twitter' },
     qualifications: { label: 'Qualifications' },
     addGot5: { label: 'Add #Got5', type: 'checkbox' },
@@ -36,12 +41,13 @@ export const Form = () => {
     name: { text: '', order: 2 },
     pronoun: { text: '', order: 3 },
     title: { text: '', order: 4 },
-    qualifications: { text: '', order: 5 },
-    mobile: { text: '', order: 6 },
-    email: { text: '', order: 7 },
-    twitter: { text: '', order: 8 },
-    addGot5: { text: false, order: 9 },
-    useAnimatedLogo: { text: false, order: 10 },
+    location: { text: '', order: 5 },
+    qualifications: { text: '', order: 6 },
+    mobile: { text: '', order: 7 },
+    email: { text: '', order: 8 },
+    twitter: { text: '', order: 9 },
+    addGot5: { text: false, order: 10 },
+    useAnimatedLogo: { text: false, order: 11 },
   };
 
   var profile = useSelector((state) => {
@@ -62,6 +68,23 @@ export const Form = () => {
           checked={inputVal}
           onChange={(e) => handleChange(inputName, e.target.checked)}
         />
+      );
+    }
+    if (type === 'select') {
+      return (
+        <div className="select">
+          <select
+            id={`input-${inputName}`}
+            style={{ width: '300px' }}
+            defaultValue=""
+            onChange={(e) => handleChange(inputName, e.target.value)}
+          >
+            <option value="">Leave blank</option>
+            {labels[inputName].options.map((location) => (
+              <option value={location}>{location}</option>
+            ))}
+          </select>
+        </div>
       );
     }
     return (
