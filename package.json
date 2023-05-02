@@ -1,6 +1,7 @@
 {
   "name": "signature-generator",
   "version": "0.1.0",
+  "homepage": "https://signatures.makerx.tech",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.8",
@@ -25,7 +26,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +52,7 @@
     "@svgr/webpack": "^7.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.12.0",
+    "gh-pages": "^5.0.0",
     "lint-staged": "^12.3.7",
     "prettier": "^2.6.2",
     "sass": "^1.50.0"

@@ -70,11 +70,43 @@ export default function BasicTabs() {
               onChange={handleChange}
               aria-label="basic tabs example"
             >
-              <Tab label="Outlook instructions" {...a11yProps(0)} />
-              <Tab label="Gmail Instructions" {...a11yProps(1)} />
+              <Tab label="Gmail Instructions" {...a11yProps(0)} />
+              <Tab label="Outlook instructions" {...a11yProps(1)} />
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>
+            <ol>
+              <li>Open Gmail</li>
+              <li>
+                <a
+                  style={{ fontWeight: 'bold', textDecoration: 'underline' }}
+                  href="https://support.google.com/mail/answer/8395?hl=en&co=GENIE.Platform%3DDesktop#:~:text=Add%20or%20change%20a%20signature&text=Open%20Gmail.,or%20changing%20the%20text%20style"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Follow the instuctions provided by Google.
+                </a>
+                <ul
+                  style={{
+                    margin: '0',
+                    paddingLeft: '1rem',
+                    paddingTop: '0.5rem',
+                  }}
+                >
+                  <li style={{ marginBottom: '0.5rem' }}>
+                    Settings icon and then See all settings.
+                  </li>
+                  <li style={{ marginBottom: '0.5rem' }}>
+                    "Signature" section, add your signature text in the box.
+                  </li>
+                  <li style={{ marginBottom: '0.5rem' }}>
+                    At the bottom of the page, click Save Changes.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </TabPanel>
+          <TabPanel value={value} index={1}>
             <ol>
               <li>Open Outlook</li>
               <li>
@@ -108,38 +140,6 @@ export default function BasicTabs() {
                     </span>
                     Cog (top-right) > "View all Outlook settings" link (bottom)
                     > Mail > Compose and reply > Email signature
-                  </li>
-                </ul>
-              </li>
-            </ol>
-          </TabPanel>
-          <TabPanel value={value} index={1}>
-            <ol>
-              <li>Open Gmail</li>
-              <li>
-                <a
-                  style={{ fontWeight: 'bold', textDecoration: 'underline' }}
-                  href="https://support.google.com/mail/answer/8395?hl=en&co=GENIE.Platform%3DDesktop#:~:text=Add%20or%20change%20a%20signature&text=Open%20Gmail.,or%20changing%20the%20text%20style"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Follow the instuctions provided by Google.
-                </a>
-                <ul
-                  style={{
-                    margin: '0',
-                    paddingLeft: '1rem',
-                    paddingTop: '0.5rem',
-                  }}
-                >
-                  <li style={{ marginBottom: '0.5rem' }}>
-                    Settings icon and then See all settings.
-                  </li>
-                  <li style={{ marginBottom: '0.5rem' }}>
-                    "Signature" section, add your signature text in the box.
-                  </li>
-                  <li style={{ marginBottom: '0.5rem' }}>
-                    At the bottom of the page, click Save Changes.
                   </li>
                 </ul>
               </li>

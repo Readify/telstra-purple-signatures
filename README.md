@@ -2,23 +2,36 @@
 
 [![Test and Build](https://github.com/MakerXStudio/signature-generator/actions/workflows/ci.yml/badge.svg)](https://github.com/MakerXStudio/signature-generator/actions/workflows/ci.yml)
 [![Build and Deploy](https://github.com/MakerXStudio/signature-generator/actions/workflows/cd.yml/badge.svg)](https://github.com/MakerXStudio/signature-generator/actions/workflows/cd.yml)
-[![Known Vulnerabilities](https://snyk.io/test/github/MakerXStudio/signature-generator/badge.svg?targetFile=package.json)](https://snyk.io/test/github/MakerXStudio/signature-generator/?targetFile=package.json)
 
 This app can be used to create a MakerX email signature.
 
-## Looks great, how can I use it for my company?
+[![Screenshot](./makerx-screenshot.png)](https://signatures.makerx.tech)
+
+### Looks great, how can I use it for my company?
 
 `src/constants` Contains brand specific information. Edit fields in there to rebrand the website.
 
 ## Licence
 
+Forked from Telstra Purple
+
 MIT, See: [LICENSE](https://github.com/Readify/telstra-purple-signatures/blob/master/LICENSE)
 
-## Create React App Stuff
+## Getting Started
+
+### Hosting
+
+We host this webpage using [GitHub Pages](https://pages.github.com/) and a custom domain [https://signatures.makerx.tech](https://signatures.makerx.tech) with HTTPS enforced.
+
+Check out the `CI.yml` and `CD.yml` files for how this is completed using GitHub Actions.
+
+### Visual Studio Code
+
+`launch.json` support is provided to launch this project by hitting F5.
+
+### Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-### Available Scripts
 
 In the project directory, you can run:
 
