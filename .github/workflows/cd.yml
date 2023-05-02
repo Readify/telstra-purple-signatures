@@ -6,6 +6,9 @@ on:
     branches:
       - improvements/makerx-2
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -29,6 +32,10 @@ jobs:
       - run: npm run build
         env:
           CI: true
+
+      # Prevent any issues/conflicts with Jekyll; https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
+      - name: Add .nojekyll file
+        run: touch ./build/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
