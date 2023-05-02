@@ -10,18 +10,6 @@ This app can be used to create a MakerX email signature.
 
 `src/constants` Contains brand specific information. Edit fields in there to rebrand the website.
 
-## Content security policy
-
-This application defines a [content security policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) through an HTTP header in the [`public\web.config`](./public/web.config) file, because we're hosting that application in Azure through IIS.
-
-At the time of writing, it allows:
-
-- loading scripts and stylesheets from the hosting domain
-- loading images from both the hosting domain and `readifysignatures.blob.core.windows.net`, which is where we host the logo used in the actual signature
-- connecting to `login.microsoftonline.com` to log in to the app against Azure Active Directory (note: log in to the app against Azure Active Directory has been disabled since moving Purple Peeps to Telstra tenant)
-
-It's important to edit this policy if loading a new external resource.
-
 ## Licence
 
 MIT, See: [LICENSE](https://github.com/Readify/telstra-purple-signatures/blob/master/LICENSE)
