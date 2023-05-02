@@ -1,15 +1,11 @@
 name: Test and Build
 
 # On a pull request to main, run the checks and build.
-#on:
-#  pull_request:
-#    branches:
-#      - main
-
 on:
-  push:
+  pull_request:
     branches:
-      - makerx-trents
+      - main
+
 jobs:
   test-and-build:
     runs-on: ubuntu-latest

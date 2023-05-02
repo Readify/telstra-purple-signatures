@@ -1,20 +1,10 @@
 # MakerX Signature Generator
 
-[![Azure DevOps builds](https://img.shields.io/azure-devops/build/readify/a1cfb701-86db-4671-943f-eb68ec17eb18/425.svg?style=flat)](https://readify.visualstudio.com/Labs/_build?definitionId=425)
-[![Azure DevOps releases](https://img.shields.io/azure-devops/release/readify/a1cfb701-86db-4671-943f-eb68ec17eb18/41/53.svg?style=flat)](https://readify.visualstudio.com/Labs/_release?view=mine&definitionId=41)
-[![Known Vulnerabilities](https://snyk.io/test/github/Readify/-makerx-signatures/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Readify/-makerx-signatures?targetFile=package.json)
+[![Test and Build](https://github.com/MakerXStudio/signature-generator/actions/workflows/ci.yml/badge.svg)](https://github.com/MakerXStudio/signature-generator/actions/workflows/ci.yml)
+[![Build and Deploy](https://github.com/MakerXStudio/signature-generator/actions/workflows/cd.yml/badge.svg)](https://github.com/MakerXStudio/signature-generator/actions/workflows/cd.yml)
+[![Known Vulnerabilities](https://snyk.io/test/github/MakerXStudio/signature-generator/badge.svg?targetFile=package.json)](https://snyk.io/test/github/MakerXStudio/signature-generator/?targetFile=package.json)
 
 This app can be used to create a MakerX email signature.
-
-![MakerX Signature Generator Screenshot](https://readifyvc.s3-ap-southeast-2.amazonaws.com/screenshot.png)
-
-## App Roadmap
-
-- [x] Host site
-- [x] Convert to create-react-app so that we get prod-react, and decent tooling
-- [x] Add MakerX Signature
-- [x] Leverage Azure Active Directory to autofill the form
-- [x] Write some tests
 
 ## Looks great, how can I use it for my company?
 
