@@ -4,7 +4,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main
+      - improvements/makerx-2
 
 jobs:
   build-and-deploy:

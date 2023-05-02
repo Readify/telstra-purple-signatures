@@ -2,9 +2,10 @@ name: Test and Build
 
 # On a pull request to main, run the checks and build.
 on:
-  pull_request:
+  #pull_request:
+  push:
     branches:
-      - main
+      - improvements/makerx-2
 
 jobs:
   test-and-build:
