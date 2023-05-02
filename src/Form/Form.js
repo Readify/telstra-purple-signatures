@@ -17,37 +17,22 @@ export const Form = () => {
   const labels = {
     name: { label: 'Your Name', required: true },
     pronoun: { label: 'Your Pronouns' },
-    title: { label: 'Job Title or Team' },
+    title: { label: 'Job Title' },
     email: { label: 'Email', type: 'email', required: true },
     phone: { label: 'Phone', type: 'tel' },
     mobile: { label: 'Mobile', type: 'tel', required: true },
-    location: {
-      label: 'Location',
-      type: 'select',
-      options: constants.locations,
-    },
     twitter: { label: 'Twitter' },
     qualifications: { label: 'Qualifications' },
-    addGot5: { label: 'Add #Got5', type: 'checkbox' },
-    useAnimatedLogo: {
-      label: 'Use animated logo',
-      type: 'checkbox',
-    },
-    supportHotline: { label: 'Support Hotline', type: 'tel', required: true },
-    supportEmail: { label: 'Support Email', type: 'email', required: true },
   };
 
   let formInputs = {
     name: { text: '', order: 2 },
     pronoun: { text: '', order: 3 },
     title: { text: '', order: 4 },
-    location: { text: '', order: 5 },
-    qualifications: { text: '', order: 6 },
-    mobile: { text: '', order: 7 },
-    email: { text: '', order: 8 },
-    twitter: { text: '', order: 9 },
-    addGot5: { text: false, order: 10 },
-    useAnimatedLogo: { text: false, order: 11 },
+    qualifications: { text: '', order: 5 },
+    mobile: { text: '', order: 6 },
+    email: { text: '', order: 7 },
+    twitter: { text: '', order: 8 },
   };
 
   var profile = useSelector((state) => {
@@ -68,23 +53,6 @@ export const Form = () => {
           checked={inputVal}
           onChange={(e) => handleChange(inputName, e.target.checked)}
         />
-      );
-    }
-    if (type === 'select') {
-      return (
-        <div className="select">
-          <select
-            id={`input-${inputName}`}
-            style={{ width: '300px' }}
-            defaultValue=""
-            onChange={(e) => handleChange(inputName, e.target.value)}
-          >
-            <option value="">Leave blank</option>
-            {labels[inputName].options.map((location) => (
-              <option value={location}>{location}</option>
-            ))}
-          </select>
-        </div>
       );
     }
     return (
@@ -110,7 +78,10 @@ export const Form = () => {
         return (
           <div className="field is-horizontal" key={inputName}>
             <div className="field-label is-normal">
-              <label className="label field-label" for={`input-${inputName}`}>
+              <label
+                className="label field-label"
+                htmlFor={`input-${inputName}`}
+              >
                 {label}
                 {required ? (
                   <span title="Required" style={{ color: 'red' }}>
@@ -120,7 +91,7 @@ export const Form = () => {
               </label>
             </div>
             <div className="field-body">
-              <div className="control" key={inputName}>
+              <div className="control">
                 {inputHtml(
                   inputName,
                   values[inputName],
@@ -137,11 +108,14 @@ export const Form = () => {
   const inputs = renderHtmlForInputs(formInputs, placeholders, profile);
 
   return (
-    <form>
-      {inputs}
-      <hr />
-      <SignatureContainer {...profile} />
-    </form>
+    <div className="content">
+      <h3 className="title">Your details</h3>
+      <form>
+        {inputs}
+        <hr />
+        <SignatureContainer {...profile} />
+      </form>
+    </div>
   );
 };
 

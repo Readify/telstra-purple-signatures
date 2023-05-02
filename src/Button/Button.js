@@ -1,28 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Button = (props) => {
-  let {
-    textBefore,
-    textAfter,
-    textState,
-    classBefore,
-    classAfter,
-    classState,
-    onClickHandler,
-  } = props;
+  const { textBefore, textAfter, classBefore, classAfter, onClickHandler } =
+    props;
 
-  textState = textBefore;
-  classState = classBefore;
+  const [textState, setTextState] = useState(textBefore);
+  const [classState, setClassState] = useState(classBefore);
 
   const onClick = () => {
     onClickHandler();
 
-    textState = textAfter;
-    classState = classAfter;
+    setTextState(textAfter);
+    setClassState(classAfter);
 
     setTimeout(() => {
-      textState = textBefore;
-      classState = classBefore;
+      setTextState(textBefore);
+      setClassState(classBefore);
     }, 1000);
   };
 

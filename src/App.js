@@ -11,10 +11,11 @@ class App extends Component {
         <Header
           brandInfo={{
             appName: 'Signature Generator',
+            companyName: 'MakerX',
             brandLink: 'https://makerx.com.au',
           }}
         ></Header>
-        <section className="section">
+        <section className="section notoppad">
           <div className="container">
             <Info />
             <Form />

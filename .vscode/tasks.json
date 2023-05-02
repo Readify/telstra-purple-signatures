@@ -1,0 +1,75 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "npm start",
+      "type": "npm",
+      "script": "start",
+      "path": "${workspaceFolder}",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "npm lint",
+      "type": "npm",
+      "script": "lint",
+      "path": "${workspaceFolder}",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "npm lint:fix",
+      "type": "npm",
+      "script": "lint:fix",
+      "path": "${workspaceFolder}",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "npm test",
+      "type": "npm",
+      "script": "test",
+      "path": "${workspaceFolder}",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "npm test:ci",
+      "type": "npm",
+      "script": "test:ci",
+      "path": "${workspaceFolder}",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "npm check-types",
+      "type": "npm",
+      "script": "check-types",
+      "path": "${workspaceFolder}",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "npm build",
+      "type": "npm",
+      "script": "build",
+      "path": "${workspaceFolder}",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

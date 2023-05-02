@@ -13,7 +13,7 @@ const buttonMaker = (clickHandler, isText) => {
   const isSuccessClass = 'button is-success';
   const copiedText = 'Copied!';
   const classText = 'button';
-  const classHtml = 'button is-primary';
+  const classHtml = 'button is-link';
   const textText = 'Copy text only';
   const textHtml = 'Copy signature';
   return (

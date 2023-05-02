@@ -1,16 +1,12 @@
 const constants = {
   brandInfo: {
-    brandName: 'Telstra Purple',
-    brandLink: 'https://purple.telstra.com/',
-    brandLinkName: 'purple.telstra.com',
+    brandName: 'MakerX',
+    brandLink: 'https://makerx.com.au/',
+    brandLinkName: 'www.makerx.com.au',
     brandLinkColour: '#0E39FB',
     brandLogo: {
-      link: 'https://readifysignatures.blob.core.windows.net/images/purple-email-logo.png',
-      alt: 'Telstra Purple',
-    },
-    brandAnimatedLogo: {
-      link: 'https://readifysignatures.blob.core.windows.net/images/Purple_Signature_v1.gif',
-      alt: 'Purpose and People animation',
+      link: 'https://blog.makerx.com.au/content/images/2022/01/makerx_Full.png',
+      alt: 'MakerX',
     },
   },
 
@@ -18,33 +14,12 @@ const constants = {
     name: 'Your Name',
     pronoun: 'he/him | she/her | they/them',
     title: 'Job Title',
-    email: 'your.name@purple.telstra.com',
+    email: 'your.name@makerx.com.au',
     mobile: '+61 111 222 333',
     twitter: 'myTwitterHandle',
     qualifications: 'Jedi Master | PSM I',
     supportHotline: '1800 xyz xyz',
     supportEmail: 'support@some.domain',
-    addGot5: false,
-    useAnimatedLogo: false,
-  },
-
-  locations: [
-    'Brisbane / Meanjin, Jagera and Turrbal Land',
-    'Sydney / Warrane, Gadigal Land',
-    'Melbourne / Naarm, Wurundjeri Land',
-    'Hobart / Nipaluna, Muwinina Land',
-    'Adelaide / Tarndanya, Kaurna Land',
-    'Perth / Boorloo, Whadjuk Nyoongar Land',
-  ],
-
-  EMEAInfo: {
-    brandLink: 'http://telstrapurple.co.uk',
-    brandLinkName: 'telstrapurple.co.uk',
-  },
-
-  got5Logo: {
-    link: 'https://readifysignatures.blob.core.windows.net/images/got5-logo.png',
-    alt: 'Got 5',
   },
 
   default: {

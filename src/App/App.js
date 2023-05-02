@@ -20,7 +20,7 @@ class App extends Component {
         <Header
           brandInfo={{
             appName: 'Outlook Signature',
-            brandLink: 'https://signatures.purple.tech/',
+            brandLink: 'https://signatures.makerx.tech/',
           }}
         />
         <section className="section">

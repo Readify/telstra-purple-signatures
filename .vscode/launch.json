@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug WebApp",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "start"],
+      "preLaunchTask": "npm start",
+      "sourceMaps": true,
+      "smartStep": true,
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
+}

@@ -20,7 +20,6 @@ const Header = (props) => {
             </a>
           </div>
         </div>
-        <div className="column" />
       </div>
     </nav>
   );

@@ -66,7 +66,6 @@ export const copySignatureText = (props) => {
     name,
     pronoun,
     title,
-    location,
     qualifications,
     mobile,
     email,
@@ -84,7 +83,6 @@ export const copySignatureText = (props) => {
     `${name ? name : null}${pronounOptional}`,
     brandInfo.brandName,
     title ? title : null,
-    location ? location : null,
     qualifications ? `${qualifications}` : null,
     '',
     mobileText
@@ -110,7 +108,6 @@ export const copyRepliesAndForwardsText = (props) => {
     name,
     pronoun,
     title,
-    location,
     mobile,
     email,
     twitter,
@@ -121,11 +118,10 @@ export const copyRepliesAndForwardsText = (props) => {
   const mobileText = parseMobile(mobile).replace(/&nbsp;/g, ' ');
 
   const titleOptional = title ? ` | ${title}` : '';
-  const locationOptional = location ? ` | ${location}` : '';
   const pronounOptional = pronoun ? ` (${pronoun})` : '';
   const textArr = [
     '--',
-    `${name}${pronounOptional} | ${brandInfo.brandName}${titleOptional}${locationOptional}`,
+    `${name}${pronounOptional} | ${brandInfo.brandName}${titleOptional}`,
     `M ${mobileText} | E ${email}${twitter ? ` | T ${twitter}` : ''} | W ${
       brandInfo.brandLinkName
     }`,

@@ -1,5 +1,4 @@
 import React from 'react';
-import { entries } from 'lodash/object';
 
 import constants from '../constants';
 import './SignatureContainer.scss';
@@ -11,12 +10,11 @@ import { useSelector } from 'react-redux';
 
 const assignPlaceholders = (props, placeholders) => {
   const isBlank = (a) => a === '' || a === null || a === undefined;
-  return entries(props).reduce((result, item) => {
-    const [key, value] = item;
-    return Object.assign(result, {
-      [key]: isBlank(value) ? placeholders[key] : value,
-    });
-  }, {});
+  const result = {};
+  for (const [key, value] of Object.entries(props)) {
+    result[key] = isBlank(value) ? placeholders[key] : value;
+  }
+  return result;
 };
 
 export const createContainerProps = (props) => {};
@@ -30,14 +28,11 @@ const SignatureContainer = (props) => {
     title,
     qualifications,
     twitter,
-    location,
     sigType,
     mobile,
     email,
     supportHotline,
     supportEmail,
-    addGot5,
-    useAnimatedLogo,
     brandLogo,
     brandName,
     brandLink,
@@ -47,14 +42,12 @@ const SignatureContainer = (props) => {
 
   const placeholders = constants.placeholders;
   const brandInfo = constants.brandInfo;
-  const got5Logo = constants.got5Logo;
 
   const signatureProps = stripObject({
     title,
     qualifications,
     pronoun,
     twitter,
-    location,
     phone: null,
     ...assignPlaceholders(
       {
@@ -67,9 +60,6 @@ const SignatureContainer = (props) => {
       },
       placeholders
     ),
-    addGot5,
-    got5Logo,
-    useAnimatedLogo,
     ...assignPlaceholders(
       { brandLogo, brandName, brandLink, brandLinkName, brandAnimatedLogo },
       brandInfo

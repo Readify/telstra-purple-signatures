@@ -1,13 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders 1`] = `
-<withState(withHandlers(mapProps(Button)))
-  classAfter="test after"
-  classBefore="test before"
-  classState="test before"
-  onClickHandler={[Function]}
-  setClass={[Function]}
-  textAfter="text after"
-  textBefore="text before"
+exports[`<Button> should render component 1`] = `
+<button
+  onClick={[Function]}
+  type="button"
 />
 `;

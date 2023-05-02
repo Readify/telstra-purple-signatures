@@ -1,7 +1,5 @@
 {
   "extends": "react-app",
   "plugins": ["prettier", "you-dont-need-lodash-underscore"],
-  "rules": {
-    "prettier/prettier": "error"
-  }
+  "rules": { "prettier/prettier": ["error", { "endOfLine": "auto" }] }
 }

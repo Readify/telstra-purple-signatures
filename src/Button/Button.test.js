@@ -1,17 +1,12 @@
+import renderer from 'react-test-renderer';
 import React from 'react';
-import { shallow } from 'enzyme';
-
 import Button from './Button';
 
-it('Renders', () => {
-  const tree = shallow(
-    <Button
-      onClickHandler={() => null}
-      classBefore={'test before'}
-      classAfter={'test after'}
-      textBefore={'text before'}
-      textAfter={'text after'}
-    />
-  );
-  expect(tree).toMatchSnapshot();
+const renderTree = tree => renderer.create(tree);
+describe('<Button>', () => {
+  it('should render component', () => {
+    expect(renderTree(<Button 
+    />).toJSON()).toMatchSnapshot();
+  });
+  
 });

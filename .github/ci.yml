@@ -1,0 +1,39 @@
+name: Test and Build
+
+# On a pull request to main, run the checks and build.
+#on:
+#  pull_request:
+#    branches:
+#      - main
+
+on:
+  push:
+    branches:
+      - makerx-trents
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Install Node 🔧
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Packages
+        run: npm ci
+
+      - name: Svelte diagnostics
+        run: npm run check
+
+      - run: npm run build
+        env:
+          CI: true

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import constants from '../constants';
-import { parseMobile, parseLandLine } from '../util';
+import { parseMobile } from '../util';
 const brandInfo = constants.brandInfo;
 
 const RepliesAndForwards = (props) => {
@@ -11,32 +11,26 @@ const RepliesAndForwards = (props) => {
     title,
     mobile,
     email,
-    sigType,
     twitter,
-    location,
-    supportHotline,
-    supportEmail,
     brandName,
     brandLink,
     brandLinkName,
   } = props;
   const styleObj = {
     color: 'black',
-    fontFamily: 'Arial, sans-serif',
-    fontSize: '9pt',
+    fontFamily: '"Segoe UI", Helvetica, Arial, sans-serif',
+    fontSize: '11pt',
   };
   const titleOptional = title ? <>&nbsp;|&nbsp;{title}</> : null;
   const pronounOptional = pronoun ? <>({pronoun})&nbsp;</> : null;
-  const locationOptional = location ? <>&nbsp;|&nbsp;{location}</> : null;
   return (
-    <div>
+    <div className="content">
       <p style={styleObj}>
-        --
+        <br />
         <br />
         <b>
           {name}&nbsp;{pronounOptional}|&nbsp;{brandName}
           {titleOptional}
-          {locationOptional}
         </b>
         <br />
         <b>M</b>&nbsp;
@@ -75,42 +69,7 @@ const RepliesAndForwards = (props) => {
         <a href={brandLink} style={{ color: brandInfo.brandLinkColour }}>
           {brandLinkName}
         </a>
-        {sigType === 'support' ? (
-          <span>
-            <br />
-            <b>Support&nbsp;Hotline</b>&nbsp;
-            <a
-              href={`tel:${parseLandLine(supportHotline).replace(
-                /&nbsp;/g,
-                ''
-              )}`}
-              dangerouslySetInnerHTML={{
-                __html: parseLandLine(supportHotline),
-              }}
-              style={{ color: brandInfo.brandLinkColour }}
-            />{' '}
-            | <b>Support&nbsp;Email</b>&nbsp;
-            <a
-              href={`mailto:${supportEmail}`}
-              style={{ color: brandInfo.brandLinkColour }}
-            >
-              {supportEmail}
-            </a>
-          </span>
-        ) : null}
       </p>
-      <div
-        style={{
-          color: '#4a4a4a',
-          fontFamily: 'Arial, sans-serif',
-          fontSize: '6.5pt',
-          lineHeight: '1.5',
-        }}
-      >
-        This email may contain confidential information.
-        <br />
-        If I've sent it to you by accident, please delete it immediately.
-      </div>
     </div>
   );
 };
