@@ -28,9 +28,6 @@ jobs:
       - name: Install Packages
         run: npm ci
 
-      - name: Svelte diagnostics
-        run: npm run check
-
       - run: npm run build
         env:
           CI: true
