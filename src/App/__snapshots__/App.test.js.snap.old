@@ -89,6 +89,146 @@ exports[`Renders Purple Signature 1`] = `
                 >
                   Outlook Signature
                 </a>
+                <AzureAD
+                  provider={
+                    MsalAuthProvider {
+                      "UserAgentApplication": [Circular],
+                      "_actionQueue": Array [],
+                      "_loginType": 1,
+                      "_onAccountInfoHandlers": Set {
+                        [Function],
+                      },
+                      "_onAuthenticationStateHandlers": Set {
+                        [Function],
+                      },
+                      "_onErrorHandlers": Set {
+                        [Function],
+                      },
+                      "_parameters": Object {
+                        "scopes": Array [
+                          "openid",
+                          "user.read",
+                        ],
+                      },
+                      "_reduxStore": Object {
+                        "dispatch": [Function],
+                        "getState": [Function],
+                        "replaceReducer": [Function],
+                        "subscribe": [Function],
+                        Symbol(observable): [Function],
+                      },
+                      "authResponseCallback": [Function],
+                      "authenticationRedirectCallback": [Function],
+                      "authenticationState": "Unauthenticated",
+                      "authorityInstance": AadAuthority {
+                        "IsValidationEnabled": true,
+                        "canonicalAuthority": "https://login.microsoftonline.com/purple.onmicrosoft.com/",
+                        "canonicalAuthorityUrlComponents": Object {
+                          "AbsolutePath": "/purple.onmicrosoft.com/",
+                          "HostNameAndPort": "login.microsoftonline.com",
+                          "PathSegments": Array [
+                            "purple.onmicrosoft.com",
+                          ],
+                          "Protocol": "https:",
+                        },
+                      },
+                      "cacheStorage": AuthCache {
+                        "cacheLocation": "sessionStorage",
+                        "clientId": "3bc4e4c8-365a-494f-9344-ed26b3573a74",
+                        "rollbackEnabled": true,
+                      },
+                      "clientId": "3bc4e4c8-365a-494f-9344-ed26b3573a74",
+                      "config": Object {
+                        "auth": Object {
+                          "authority": "https://login.microsoftonline.com/purple.onmicrosoft.com",
+                          "clientId": "3bc4e4c8-365a-494f-9344-ed26b3573a74",
+                          "navigateToLoginRequestUrl": true,
+                          "postLogoutRedirectUri": [Function],
+                          "redirectUri": "http://localhost",
+                          "validateAuthority": true,
+                        },
+                        "cache": Object {
+                          "cacheLocation": "sessionStorage",
+                          "storeAuthStateInCookie": true,
+                        },
+                        "framework": Object {
+                          "isAngular": false,
+                          "protectedResourceMap": Map {},
+                          "unprotectedResources": Array [],
+                        },
+                        "system": Object {
+                          "loadFrameTimeout": 6000,
+                          "logger": Logger {
+                            "correlationId": "",
+                            "level": 2,
+                            "localCallback": null,
+                            "piiLoggingEnabled": false,
+                          },
+                          "navigateFrameWait": 500,
+                          "tokenRenewalOffsetSeconds": 300,
+                        },
+                      },
+                      "dispatchAction": [Function],
+                      "errorReceivedCallback": null,
+                      "getAccessToken": [Function],
+                      "getAccountInfo": [Function],
+                      "getAuthenticationParameters": [Function],
+                      "getError": [Function],
+                      "getIdToken": [Function],
+                      "handleAcquireTokenSuccess": [Function],
+                      "handleLoginFailed": [Function],
+                      "handleLoginSuccess": [Function],
+                      "inCookie": true,
+                      "initializeProvider": [Function],
+                      "logger": Logger {
+                        "correlationId": "",
+                        "level": 2,
+                        "localCallback": null,
+                        "piiLoggingEnabled": false,
+                      },
+                      "login": [Function],
+                      "loginToRefreshToken": [Function],
+                      "logout": [Function],
+                      "processLogin": [Function],
+                      "redirectCallbacksSet": true,
+                      "registerAcountInfoHandler": [Function],
+                      "registerAuthenticationStateHandler": [Function],
+                      "registerErrorHandler": [Function],
+                      "registerReduxStore": [Function],
+                      "setAccountInfo": [Function],
+                      "setAuthenticationParameters": [Function],
+                      "setAuthenticationState": [Function],
+                      "setError": [Function],
+                      "setLoginType": [Function],
+                      "telemetryManager": null,
+                      "tokenReceivedCallback": null,
+                      "unregisterAccountInfoHandler": [Function],
+                      "unregisterAuthenticationStateHandler": [Function],
+                      "unregisterErrorHandler": [Function],
+                    }
+                  }
+                  reduxStore={
+                    Object {
+                      "dispatch": [Function],
+                      "getState": [Function],
+                      "replaceReducer": [Function],
+                      "subscribe": [Function],
+                      Symbol(observable): [Function],
+                    }
+                  }
+                >
+                  <div
+                    className="navbar-item login"
+                  >
+                    <button
+                      className="button"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Login
+                    </button>
+                  </div>
+                </AzureAD>
               </div>
             </div>
             <div
@@ -1534,6 +1674,149 @@ exports[`Renders Purple support 1`] = `
                 >
                   Outlook Signature
                 </a>
+                <AzureAD
+                  provider={
+                    MsalAuthProvider {
+                      "UserAgentApplication": [Circular],
+                      "_actionQueue": Array [],
+                      "_loginType": 1,
+                      "_onAccountInfoHandlers": Set {
+                        [Function],
+                        [Function],
+                      },
+                      "_onAuthenticationStateHandlers": Set {
+                        [Function],
+                        [Function],
+                      },
+                      "_onErrorHandlers": Set {
+                        [Function],
+                        [Function],
+                      },
+                      "_parameters": Object {
+                        "scopes": Array [
+                          "openid",
+                          "user.read",
+                        ],
+                      },
+                      "_reduxStore": Object {
+                        "dispatch": [Function],
+                        "getState": [Function],
+                        "replaceReducer": [Function],
+                        "subscribe": [Function],
+                        Symbol(observable): [Function],
+                      },
+                      "authResponseCallback": [Function],
+                      "authenticationRedirectCallback": [Function],
+                      "authenticationState": "Unauthenticated",
+                      "authorityInstance": AadAuthority {
+                        "IsValidationEnabled": true,
+                        "canonicalAuthority": "https://login.microsoftonline.com/purple.onmicrosoft.com/",
+                        "canonicalAuthorityUrlComponents": Object {
+                          "AbsolutePath": "/purple.onmicrosoft.com/",
+                          "HostNameAndPort": "login.microsoftonline.com",
+                          "PathSegments": Array [
+                            "purple.onmicrosoft.com",
+                          ],
+                          "Protocol": "https:",
+                        },
+                      },
+                      "cacheStorage": AuthCache {
+                        "cacheLocation": "sessionStorage",
+                        "clientId": "3bc4e4c8-365a-494f-9344-ed26b3573a74",
+                        "rollbackEnabled": true,
+                      },
+                      "clientId": "3bc4e4c8-365a-494f-9344-ed26b3573a74",
+                      "config": Object {
+                        "auth": Object {
+                          "authority": "https://login.microsoftonline.com/purple.onmicrosoft.com",
+                          "clientId": "3bc4e4c8-365a-494f-9344-ed26b3573a74",
+                          "navigateToLoginRequestUrl": true,
+                          "postLogoutRedirectUri": [Function],
+                          "redirectUri": "http://localhost",
+                          "validateAuthority": true,
+                        },
+                        "cache": Object {
+                          "cacheLocation": "sessionStorage",
+                          "storeAuthStateInCookie": true,
+                        },
+                        "framework": Object {
+                          "isAngular": false,
+                          "protectedResourceMap": Map {},
+                          "unprotectedResources": Array [],
+                        },
+                        "system": Object {
+                          "loadFrameTimeout": 6000,
+                          "logger": Logger {
+                            "correlationId": "",
+                            "level": 2,
+                            "localCallback": null,
+                            "piiLoggingEnabled": false,
+                          },
+                          "navigateFrameWait": 500,
+                          "tokenRenewalOffsetSeconds": 300,
+                        },
+                      },
+                      "dispatchAction": [Function],
+                      "errorReceivedCallback": null,
+                      "getAccessToken": [Function],
+                      "getAccountInfo": [Function],
+                      "getAuthenticationParameters": [Function],
+                      "getError": [Function],
+                      "getIdToken": [Function],
+                      "handleAcquireTokenSuccess": [Function],
+                      "handleLoginFailed": [Function],
+                      "handleLoginSuccess": [Function],
+                      "inCookie": true,
+                      "initializeProvider": [Function],
+                      "logger": Logger {
+                        "correlationId": "",
+                        "level": 2,
+                        "localCallback": null,
+                        "piiLoggingEnabled": false,
+                      },
+                      "login": [Function],
+                      "loginToRefreshToken": [Function],
+                      "logout": [Function],
+                      "processLogin": [Function],
+                      "redirectCallbacksSet": true,
+                      "registerAcountInfoHandler": [Function],
+                      "registerAuthenticationStateHandler": [Function],
+                      "registerErrorHandler": [Function],
+                      "registerReduxStore": [Function],
+                      "setAccountInfo": [Function],
+                      "setAuthenticationParameters": [Function],
+                      "setAuthenticationState": [Function],
+                      "setError": [Function],
+                      "setLoginType": [Function],
+                      "telemetryManager": null,
+                      "tokenReceivedCallback": null,
+                      "unregisterAccountInfoHandler": [Function],
+                      "unregisterAuthenticationStateHandler": [Function],
+                      "unregisterErrorHandler": [Function],
+                    }
+                  }
+                  reduxStore={
+                    Object {
+                      "dispatch": [Function],
+                      "getState": [Function],
+                      "replaceReducer": [Function],
+                      "subscribe": [Function],
+                      Symbol(observable): [Function],
+                    }
+                  }
+                >
+                  <div
+                    className="navbar-item login"
+                  >
+                    <button
+                      className="button"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Login
+                    </button>
+                  </div>
+                </AzureAD>
               </div>
             </div>
             <div

@@ -1,12 +1,12 @@
 # MakerX Signature Generator
 
-[![Azure DevOps builds](https://img.shields.io/azure-devops/build/readify/a1cfb701-86db-4671-943f-eb68ec17eb18/425.svg?style=flat)](https://readify.visualstudio.com/Labs/_build?definitionId=425)
-[![Azure DevOps releases](https://img.shields.io/azure-devops/release/readify/a1cfb701-86db-4671-943f-eb68ec17eb18/41/53.svg?style=flat)](https://readify.visualstudio.com/Labs/_release?view=mine&definitionId=41)
+[![Azure DevOps builds](https://dev.azure.com/TelstraPurple-Engine/Operations/_apis/build/status/SignatureGenerator-CI)](https://dev.azure.com/TelstraPurple-Engine/Operations/_build/latest?definitionId=43)
+[![Azure DevOps releases](https://vsrm.dev.azure.com/TelstraPurple-Engine/_apis/public/Release/badge/b08fef52-cecf-4455-80ba-0d7fb2e11521/4/5)](https://dev.azure.com/TelstraPurple-Engine/Operations/_release?view=mine&definitionId=4)
 [![Known Vulnerabilities](https://snyk.io/test/github/Readify/telstra-purple-signatures/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Readify/telstra-purple-signatures?targetFile=package.json)
 
 This app can be used to create a MakerX email signature.
 
-![Telstra Purple Signature Generator Screenshot](https://readifyvc.s3-ap-southeast-2.amazonaws.com/screenshot.png)
+![Telstra Purple Signature Generator Screenshot](https://github.com/Readify/telstra-purple-signatures/blob/master/screenshot.png)
 
 ## App Roadmap
 
@@ -28,13 +28,13 @@ At the time of writing, it allows:
 
 - loading scripts and stylesheets from the hosting domain
 - loading images from both the hosting domain and `readifysignatures.blob.core.windows.net`, which is where we host the logo used in the actual signature
-- connecting to `login.microsoftonline.com` to log in to the app against Azure Active Directory
+- connecting to `login.microsoftonline.com` to log in to the app against Azure Active Directory (note: log in to the app against Azure Active Directory has been disabled since moving Purple Peeps to Telstra tenant)
 
 It's important to edit this policy if loading a new external resource.
 
 ## Licence
 
-MIT, See: [LICENSE](https://github.com/Readify/readify-signatures/blob/master/LICENSE)
+MIT, See: [LICENSE](https://github.com/Readify/telstra-purple-signatures/blob/master/LICENSE)
 
 ## Create React App Stuff
 
